@@ -1,0 +1,126 @@
+\documentclass[11pt]{memoir}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{amsthm}%
+\usepackage{graphicx}
+\usepackage{ dsfont }
+\usepackage[hidelinks]{hyperref} %hyperlink
+\usepackage{subcaption} %NON SO SE SERVE
+\usepackage{enumitem} %enumerazioni con le i
+\usepackage{booktabs} %tabelle più belle
+\usepackage{placeins} %forza le immagini in posizione
+\usepackage{mathabx}
+\usepackage{epsfig}
+\usepackage{caption} %caption fuori da ambienti float
+\usepackage{appendix} %appendice per i codici
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{xcolor} %per colorare il testo
+
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\newcommand\norm[1]{\lVert#1\rVert}
+
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{algorithm} %Parte per gli algoritmi
+\usepackage{algpseudocode}
+\makeatletter
+\makeatother
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{amsmath,amsthm}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{tikz-cd}
+\usepackage{csquotes}
+\usepackage{lscape}
+\tikzcdset{
+    startcode/.style={
+        start anchor={[xshift=0.35cm]south west}
+        },
+    endcode/.style={
+        end anchor={[xshift=0.35cm]north west}
+    }
+}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage{varwidth}
+\usepackage{biblatex}
+\addbibresource{refs.bib}
+\usetikzlibrary{arrows}
+\newcommand{\encadrer}[1]{{%
+  
+  \fbox{%
+    \begin{varwidth}{\dimexpr\linewidth-2\fboxsep-2\fboxrule}
+      #1%
+    \end{varwidth}%
+  }
+  \par}%
+}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[chapter] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definizione} % definition numbers are dependent on theorem numbers
+\newtheorem{lemma}[theorem]{Lemma} % same for example numbers
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposizione}
+\newtheorem{observation}[theorem]{Osservazione}
+\renewcommand*{\proofname}{Dimostrazione}
+\newcommand\restr[2]{\ensuremath{\left.#1\right|_{#2}}}
+\newtheorem{corollary}[theorem]{Corollario}
+
+\chapterstyle{veelo}
+\checkandfixthelayout
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+\include{titolo}
+
+\par\vfill\break
+
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+\begin{flushright}
+%\itshape A Franca ed Emilia.
+
+\end{flushright}
+\vspace{\stretch{2}}
+\cleardoublepage
+
+\clearpage
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\thispagestyle{empty}
+\listoffigures
+
+\thispagestyle{empty}
+%\include{legenda}
+
+%\include{ringraziamenti}
+%\setcounter{chapter}{-1}
+%\include{abstract}
+\include{Capitolo1}
+%\include{capitolo2}
+%\include{capitolo3}
+%\include{conclusione}
+%\appendix
+%\include{appendice}
+\printbibliography
+\end{document}
