@@ -1,1 +1,61 @@
-\chapter{Introduzione}
+\chapter{Introduction}
+
+As in Riemannian geometry the \textit{most interesting} geometry of constant sectional curvature is the hyperbolic one, in Lorentzian geometry the analogus (as in with constant negative curvature) is the \textit{anti-de Sitter} geometry. In this chapter we will introduce the basic concepts of Lorentzian geometry and we will give a brief introduction to anti-de Sitter geometry. 
+We would then like to expand the study of anti-de Sitter geometry with a brief exposition of the most common model of ads spaces and with this "newly introduced" concept we would like to recover a celebrated theorem of Thurston related to hyperbolic surfaces following the work of G. Mess \cite{mess2007lorentz}. 
+
+\chapter{Lorentzian geometry}
+
+In what follows we will introduce Lorentzian manifold of constant curvature and shows that, as in the Riemannian case, two manifolds of constant sectional curvature $K$ are locally isometric. We will then define what we mean by a manifold with maximal isometry group as they provide models of manifold with constant curvature: if we have $M$ a Lorentzian manifold with costant sectional curvature $K$ and maximal isometry group, then any Lorentzian manifold with constant sectional curvature $K$ carries a natural (Isom($M$), $M$)-atlas made of local isometries. \\
+Simply connected space have maximal isometry group, but in general the converse is false. In particular we will focus on the case $K=-1$ and in that case it will be convenient to use non-simply connected models. 
+
+\subsection{Basic Definitions}
+By a \textit{Lorentzian metric} on a $n+1$-manifold we mean a non degenerate $2$-tensor $g$ of signature $(n,1)$. A \textit{Lorentzian manifold} is a connected manifold $M$ equipped with a Lorentzian metric $g$.\\
+In a Lorentzian manifold $M$ we say that a non-zero vector $v \in TM$ is \textit{time-like} if $g(v,v)<0$, \textit{space-like} if $g(v,v)>0$ and \textit{light-like} if $g(v,v)=0$. More generally, we say that a linear subspace $V \subset T_{x}M$ is \textit{spacelike, lightlike, timelike} if the restricion of $g_x$ to $V$ is positive definite, degenerate or negative definite respectively.\\
+The set of lightlike vectors, together with the null vector, disconnects $T_{x}M$ into 3 regions: two convex open cones formed by timelike vectors, one opposite to the other, and the region of spacelike vectors. 
+
+\textcolor{red}{Inserire figura del cono di Minkowski?}
+
+As a consequence the set of timelike in the total space $TM$ is either connected or is made by two connected components. In the latter case $M$ is said \textit{time-orientable}, and a time orientation is the choice of one of those components. Vectors is the chosen component are said     \textit{future-directed}, vectors in the other component are said \textit{past-directed}\\
+A differentiable curve is said \textit{timelike, spacelike, lightlike} if its tangent vector at every point is timelike, spacelike, lightlike respectively. The curve is said to be \textit{causal} if the tangent vector is either timelike or lightlike. \\ Given a point $x$ in a time-oriented Lorentzian manifold $M$, the \textit{future} of $x$ is the set $I^+(x)$ of points which are connected to $x$ by a future-directed causal curve. The \textit{past} of $x$, $I^-(x)$, is defined in an analogus way for past-directed causal curves. 
+As in the Riemannian setting, on a Lorentzian manifold $M$ there is a unique linear connection $\nabla$ which is symmetric and compatible with the Lorenzian metric $g$. We refer to it as the \textit{Levi-Civita connection} of $(M,g)$.\\ Following the analogy with Riemannian geometry the Levi-Civita connection determines the Riemann curvature tensor defined by: 
+\[
+    R(u,v)w=\nabla_u\nabla_v w-\nabla_v\nabla_u w-\nabla_{[u,v]}w
+\]  
+
+We then say that a Lorentzian manifold has constant sectional curvature $K$ if: 
+\[
+    g(R(u,v)v,u)=K(g(u,u)g(v,v)-g(u,v)^2) 
+\]
+
+for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the definition is analogus to the one given in the Riemannan realm we recall that in the Lorentzian setting the sectiona curvature can be defined only for planes in $T_{x}M$ where $g$ is non-degenerate. 
+
+\subsection{Maximal isometry group and geodesic completeness} 
+
+\begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature K. Then every linear isometry $L:T_{x}M\toT_y N$ extends to an isometry $f:U\to V$ where U, V are open neighbourhoods of $x,y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\capU^{\prime} $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
+\begin{proof}
+    Cartan-Ambrose-Hicks thm.
+\end{proof}
+As a consequence of the aforementioned lemma we have: 
+\begin{corollary}
+    Let $M$ and $N$ be simply connected, geodesically complete Lorentian manifolds of constant curvature $K$. Then any linear isometry $L:T_xM\to T_yN$ extends to a global isometry $f:M\to N.$   
+\end{corollary}
+
+In particular, there is a unique simply connected geodesically complete Lorentzian manifold of constant curvature $L$ up to isometries. For instance for $K=0$ a model is the Minkowski space $\R^{n,1}$, that is $\R^{n+1}$ provided with the standard metric: 
+\[
+    g=dx_1^{2}+\dots+dx_n^{2}-dx_{n+1}^2.   
+\]
+
+Another consequence of \ref{isometrie} is that, fixing a point $x_0 \in M$, the set of isometris of $M$, which we will denote by Isom($M$) can be realized as a subset of ISO($T_{x_0}M, TM$) namely the fiber bundle over $M$ whose fiber over $x\in M$ is the space of linear isometries of $T_{x_0}M$ into $T_{x}M$. \todo{Not clear what is going on here, he argues about some Lie structure.}
+
+\begin{definition}
+    A Lorentzian manifold $M$ has \textit{maixmal isometry group} if the action of Isom($M$) is transitive and, for every point $\x \in M$, every linear isometry $L:T_{x}M\toT_xM$ extends to an isometry of $M$. 
+\end{definition}
+
+Equivalently $M$ has maximal isometry group is the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence is $M$ has maximal isometry group, then the dimension of the isotropy group is maximal. 
+From corollary 1.2.2 bla bla bla. 
+
+\begin{lemma}
+    
+\end{lemma}
+
+\subsection{}
