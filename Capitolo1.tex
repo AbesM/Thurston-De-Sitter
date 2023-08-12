@@ -23,9 +23,11 @@ As in the Riemannian setting, on a Lorentzian manifold $M$ there is a unique lin
 \]  
 
 We then say that a Lorentzian manifold has constant sectional curvature $K$ if: 
-\[
+\begin{equation}\label{sectionalcurvature}
     g(R(u,v)v,u)=K(g(u,u)g(v,v)-g(u,v)^2) 
-\]
+\end{equation}
+    
+
 
 for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the definition is analogus to the one given in the Riemannan realm we recall that in the Lorentzian setting the sectiona curvature can be defined only for planes in $T_{x}M$ where $g$ is non-degenerate. 
 
@@ -36,7 +38,7 @@ for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the de
     Cartan-Ambrose-Hicks thm.
 \end{proof}
 As a consequence of the aforementioned lemma we have: 
-\begin{corollary}
+\begin{corollary}\label{122}
     Let $M$ and $N$ be simply connected, geodesically complete Lorentian manifolds of constant curvature $K$. Then any linear isometry $L:T_xM\to T_yN$ extends to a global isometry $f:M\to N.$   
 \end{corollary}
 
@@ -52,10 +54,15 @@ Another consequence of \ref{isometrie} is that, fixing a point $x_0 \in M$, the 
 \end{definition}
 
 Equivalently $M$ has maximal isometry group is the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence is $M$ has maximal isometry group, then the dimension of the isotropy group is maximal. 
-From corollary 1.2.2 bla bla bla. 
+From \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isometry group if it has constant sectional curvature and is geodesically complete. The converse holds even without the simply connectedness assumption. Namely: 
 
-\begin{lemma}
-    
+\begin{lemma}\label{maximalisometry}
+    If $M$ is a Lorentzian manifold with maximal isometry group, then $M$ has constant sectional curvature and is geodesically complete.
 \end{lemma}
+
+\begin{proof}
+    Fix a point $x\in M$. As the identity component of $O(T_x M)\simeq O(n,1)$ acts transitebly on spacelike planes, tehre exists a constant $K$ such that \ref{sectionalcurvature} holds for every pair $(u,v)$ of vector tangent at $x$ which generate a spacelike plane. Now, for every point $x\in M$ both sides of equations \ref{sectionalcurvature} are polynomial in $u,v \in T_xM$. Since the set of pairs $(u,v)$ which generate spacelike planes is open in $T_{x}M\times T_{x}M$, the equation \ref{sectionalcurvature} must holds for every pair of vectors $u,v \in T_xM$.\\ Since Isom($M$) acts transitively on $M$, it follows that $M$ has constant sectional curvature $K$.\\
+    Let us now show that the manifold is geodesically complete. Suppose $\gamma$ is a parametrized geodesic with $\gamma(0)=x$ and $\gamma^{\prime} (0)=v\in T_xM,$ which is definided for a finite maximal time $T>0.$ Let $T_0=T-\epsilon>0.$ By assumption one can find an isometry $f:M\to M$ such that $f(x)=\gamma(T_0)$ and $df_x(v)=\gamma^{\prime}(T_0).$ Then $t\to f\circ\gamma(t-T_0)$ is a parametrized geodesic which provides a continuation of $\gamma$ beyond $T$, a contradiction. 
+\end{proof}
 
 \subsection{}
