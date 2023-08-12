@@ -1,5 +1,5 @@
 \chapter{Model of Anti-de Sitter (n+1)-space}
-
+\section{Anti-de Sitter geometry}
 We want to construct models of Lorentian manifolds with constant sectional curvature -1 and maximal isometry group in any dimension. We are also interested in \textit{stressing} the analogies with the models of hyperbolic space in the Riemannian setting. 
 
 \subsection{The quadric model}
@@ -20,4 +20,35 @@ By \ref{maximalisometry}, $\H^{n,1}$ has constant sectional curvature. Let us no
     (D_{v}w)(x)=(\nabla_{v}w)(x)+\langle v,w\rangle x, 
 \]
 
-where $D$ is the flat connection of $R^{n+2}$ and $\nabla$ is the Levi-Civita connection of $\H^{n,1}$. 
+where $D$ is the flat connection of $R^{n+2}$ and $\nabla$ is the Levi-Civita connection of $\H^{n,1}$. Using the flatness of $D$ we get: 
+\[
+    R(u,v)w=\langle u,w\rangle v-\langle v,w\rangle u,
+\]
+
+so that 
+\[
+    <R(u,v)v,u\rangle =-(\langle u,u\rangle\langle v,v\rangle-\langle v,u\rangle^2), 
+\]
+
+and this shows that $\H^{n,1}$ has constant sectional curvature $-1$. We also remark that $H^{n,1}$ is not simply connected, being homeomorphic to $\R^{n}\times S^1$. \todo{It's a rotation manifold (circa)}
+
+\subsection{The "Klein model" and it's boundary.}
+Let us introduce a projective mode, or "Klein model", for anti-De Sitter geometry. Let us define: 
+\[
+    \A^{n,1}=\H^{n,1}/\{\pm \mathds{1}\}.
+\]
+
+Since $\mathds{1}$ is the center of $O(n,2)$ (hence normal), $\A^{n,1}$ (endowed with the Lorentzian metric induce by the quotient) has maximal isometry group by \ref{classification} and is therefore a model of constant sectional curvature $-1$. It can also be shown that the center of the isometri group of the Klein model is trivial, hence $\A^{n,1}$ is the \textit{minimal} model of AdS geometry, in the sense that any other model is a covering of $\A^{n,1}$.\\
+By definition $\A^{n,1}$ is naturally identified with a subspace of real projective space $\R P^{n+1}$, more explicitely with the subset of timelike directions of $\R^{n,2}$: 
+\[
+    \A^{n,1}=\{[x]\in \R P^{n+1}\;|\;q_{n,2}(x)<0\}.
+\]
+Like in hyperbolic geometry, the boundary of $\A^{n,1}$ in projective space is a quadric of signature $(n,2)$, that is the projectivization of the of lightlike vectors in $\R^{n,2}$. We denote this quadric by $\partial \A^{n,1}=\{[x]\in \R P^{n+1}\;|\;q_{n,2}(x)=0\}$.\\ We observe that isometries of $\A^{n,1}$ induce projective transformations which preserve $\partial \A^{n,1}$.  \\
+
+\textit{The conformal Lorentzian structure of the boundary.}
+
+\subsection{The Poincaré model for the universal cover.}
+
+\subsection{Geodesic.}
+
+\section{Anti-de Sitter space in dimension (2+1)}
