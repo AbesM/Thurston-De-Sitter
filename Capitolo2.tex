@@ -84,6 +84,23 @@ if $q_{n,2}(v)=1$ and
 if $q_{n,2}(v)=-1$.\\
 
 \textit{In the Klein model.}
+
+\textit{In the universal cover.} In the universal cover $\AS^{n,1},$ geodesics are just the lifts of geodesics in $\A^{n,1}$ or $\H^{n,1}$. Hence every spacelike or lightlike geodesic in $\A^{n,1}$ and $\H^{n,1}$, which is topologically a line, has a countable number of lifts to $\AS^{n,1}$. Timelike geodesics in $\A^{n,1}$ and $\H^{n,1}$ are topologically circles and are in bijections with timelike geodesics in $\AS^{n,1},$ as the covering map restricted to a timelike geodesic, induces a covering map onto the circle. Using the Poincaré model we can give an explicit description of lightlike geodesic.\todo{non chiarissimo cosa stia succedendo qua} In fact, in Lorentzian geometry not only the nature of a vector is conformally invariant but also unparametrized lightlike are a conformal invariant: 
+\begin{theorem}\label{ConformalMetric} If two Lorentianz metrics $g,g^{\prime} $ on a manifold $M$ are conformal, then they have the same unparametrized lightlike geodesics.
+\end{theorem}
+\begin{proof}
+    [GHL04, Proposition 2.131]
+\end{proof}
+Because of \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric given by:
+\begin{equation}\label{emispherical}
+    \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
+\end{equation} 
+Now we observe that the first term in \ref{emispherical} is exactly the form of the spherical metric on a hemispere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\S^n}$. Observe that the boundary of $\partial\D$ is an equator for the hemispherical metric, and in fact it's the only equator completely cointained in $(\D\cup\partial\D,g_{\S^n})$, a justification to the fact that we will refere to it as \textit{the} equator.\\
+As a consequence, unparametrized lightlike geodesic of $\AS^{n,1}$, goint trough a point $(p_0,t_0)$ are characterized by the coditions that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
+\[
+    t-t_0=d_{\S^n}(p,p_0)
+\] on the geodesic. \todo{what does it mean?} In particular, these lightlike geodesic meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slice $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. 
+\textcolor{red}{pagina 16 Bonsante-Seppi}   
 \section{Anti-de Sitter space in dimension (2+1)}
 We want now to specialize to dimension 3 Anti-de Sitter geometry. 
 \subsection{The \textnormal{PSL}(2,\R) model.} The fundamental observation is the existance of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$, hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie Group $SL(2,\R).$\\
@@ -99,5 +116,7 @@ As a direct consequence of the Binet formula, the action preserves the quadratic
 Since the center of $SL(2,\R)$ is $\{\pom\mathds{1}\},$ the Kernel of $\rho$ is $K=\{(\mathds{1},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity:
 
 \[
-    
+    \text{Isom}_0(\H^{2,1})=\text{SO}(\mathcal{M}(2,\R),q)\simeq \frac{\text{SL}(2,\R)\times \text{SL}(2,\R)}{K}\
 \]
+
+\textcolor{red}{da fare}
