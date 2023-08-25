@@ -16,9 +16,35 @@ Since acausality and achronality are conformally invariant notions, it will be o
     
 \end{proof}
 
-\textcolor{red}{mancano un po' di cose}
+Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the boundary of $D$. As a simple consequence to the previous lemma, we thus have: 
+
+\begin{lemma}\label{achronalgraph}
+    An achronal subset $X$ in $\AS^{2,1}$ is properly embedded if and only if it is a global graph over $\D$, and in this case it extends uniquely to the global graph of a 1-Lipschitz function over $\D\cup\partial\D$.
+\end{lemma}
+
+Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of propertis we shall remark how achronality and acasuality are global conditions.
 
 \begin{definition} Given a surface $S$ and a Lorentzian manifold $(M,g),$ a $\mathcal{C}^1$ immersion $\sigma:S\to M$ is \textit{spacelike} if the pull-back metric $\sigma^*g$ is Riemannian. If $\sigma$ is an embedding, we refer to its image as a \textit{spacelike surface}.
 \end{definition}
 
-A spacelike surface $S$ is locally acasual 
+A spacelike surface $S$ is locally acasual, but there are examples of spacelike surfaces which are not achronal (hence a fortiori not acasual), a fact that highlights the global character of the achronality condition. On the other hand the following is true: 
+
+\begin{lemma}
+    Any properly embedded spacelike surface in $\AS^{2,1}$ is acasual. 
+\end{lemma}
+\begin{proof}
+    By \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once. \todo{are we trying to model the fact that this is the present event?}
+\end{proof}
+
+\textcolor{red}{saltata un bel po' di roba}
+
+\subsection{Domain of dependece}
+We want to define a study properties of Cauchy surfaces and domains of dependece, a priori concept of Lorentianz geometry, in \AS^{2,1}$\dots 
+
+\begin{definition}
+    Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$ the \textit{domain of dependence} of $X$ is the set: 
+    \[
+        \mathcal{D}(X)=\{p\in M | \text{every inextensibile causal curve through} p \text{meets} X \}.
+    \]
+    We say that $X$ is a \textit{Cauchy surface} of $M$ if $\mathcal{D}(X)=M$. A spacetime $M$ is said \textit{globally hyperbolic} if it admits a Cauchy surface.
+\end{definition}
