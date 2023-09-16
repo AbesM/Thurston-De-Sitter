@@ -13,7 +13,11 @@ Since acausality and achronality are conformally invariant notions, it will be o
     Where we have denoted $D=\pi_{\D}(X).$ 
 \end{lemma}
 \begin{proof}
-    
+     Let's assume $X$ is achronal. Now, since vertical lines in the Poincaré model are of timelike type, the restrictions of the projections $\pi_\D:\D\times\R\to\D$ to $X$ are injective. But then, $X$ can be interpreted as the graph of a function $f:D\to\R$. By imposing that $(x,f(x))$ and $(y,f(y))$ are not connected by a timelike curve we deduce that: 
+     \begin{equation}\label{soloqua}
+        |f(x)-f(y)|\leq d_{\S^2}(x,y)
+     \end{equation}
+     where $d_{\S^2}$ is the distance induced by the hemispherical metric. By the same reasonment we show that a 1-lipschit< graph over $\D$ is achronal. Moreover two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $d_{S^2}(x,y)=|t-s|$. Hence $X$ is acausal if and only if the inequality \refeq{soloqua} is strict. \
 \end{proof}
 
 Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the boundary of $D$. As a simple consequence to the previous lemma, we thus have: 
