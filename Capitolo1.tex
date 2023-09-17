@@ -65,9 +65,23 @@ From \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isome
     Let us now show that the manifold is geodesically complete. Suppose $\gamma$ is a parametrized geodesic with $\gamma(0)=x$ and $\gamma^{\prime} (0)=v\in T_xM,$ which is definided for a finite maximal time $T>0.$ Let $T_0=T-\epsilon>0.$ By assumption one can find an isometry $f:M\to M$ such that $f(x)=\gamma(T_0)$ and $df_x(v)=\gamma^{\prime}(T_0).$ Then $t\to f\circ\gamma(t-T_0)$ is a parametrized geodesic which provides a continuation of $\gamma$ beyond $T$, a contradiction. 
 \end{proof}
 
-We conclude this preliminaries with a result of classification which will be useful in the following.
+We conclude this preliminaries with a result of classification which will be useful in the following and also explains our interest in spaces with maximal isometry group.
 \begin{proposition}\label{classification}
-    
+    Let $M_k$ be a simply connected Lorentzian manifold of constant sectional curvature $K$ with maximal isometry group, and let $M$ be a Lorentizian manifol of constant sectional curvature $K$. Then: 
+    \begin{itemize}
+        \item M is geodesically complete if and only if there is a local isometry $p:M_K\to M$ which is a universal covering.
+        \item $M$ has maximal isometry group if and only if $\text(Aut)(p:M_k\to M)$ is normal in Isom($M_k$). 
+    \end{itemize}
 \end{proposition}
 
-\subsection{}
+\begin{proof}
+    Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\tilde{M}$ one gets a simply connected geodesically complete Lorenztian manifold of constant sectional curvature $K$ which by corollary \ref{122} is isometric to $M_K$. The covering map $p:_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
+    Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$,where $\Gamma$ acts freely and properly discontinuosly on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\tilde{M}$ which normalies $\Gamma$ descends to an isometry of $M$, and conversly the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
+    Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\Isom(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \Isom(M_K)$, which is the same as saying that $\Gamma$ is normal in $\Isom(M_K)$.
+\end{proof}
+
+\begin{observation}
+Since $\Gamma=\text{Aut}(p:M_K\to M)$ is discrete, being normal in $\text{Isom}(M_K)$ implies that elements of $\Gamma$ commute with the elements of the identity components of $\text{Isom}(M_K)$. This remark suggest that there are usually not many Lorenztian manifolds of constant sectional curvature with maximal isometry group.
+\end{observation}
+
+Finally, any isometry between connected open subsets of a Lorenztian manifold $M$ with maximal isometry group extends to a global isometry. In particular if $M_K$ is a Lorenziant manifold of constant sectional curvature $K$ with maximal isometry group, then any Lorentzian manifold $M$ of constant sectional curvature $K$ admits a natural $(\text{Isom}(M_K), M_K)$-structure whose charts are isometries between open subsets of $M$ and open subsets of $M_K$. We will refer to Lorentzian manifolds of constant sectional curvature $K$ with maximal isometry group as \textit{models} of constant sectional curvature $K$ (following Klein's terminology). 
