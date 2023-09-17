@@ -57,7 +57,7 @@ Let $\H^n$ be the hyperboloid model of hyperbolic space. Then:
 defines a map $\pi:\H^n\times \R\to \H^{n,1}$ which is a covering with deck transformation of the form $(y,t)\mapsto (y,t+2k\pi)$ for $k\in \Z$. We denote the space by $\AS^{n,1}$ and we observe that it is also the universal cover of $\A^{n,1}$, where the covering map it's just the composition of $\pi$ and the double quotient.\\
 Pulling back the Lorentzian metric over $\AS^{n,1}$ we get a simply connected Lorentzian manifold of constant curvature -1. The metric on $\A{n,1}$ is a \textcolor{red}{warped product} of the form: 
 \begin{equation}\label{metric}
-     $\pi^*g_{\H^{n,1}}=g_{\H^n}-y_{n+1}^{2}dt^2 $.
+     \pi^*g_{\H^{n,1}}=g_{\H^n}-y_{n+1}^{2}dt^2.
 \end{equation}
    
 
@@ -65,13 +65,13 @@ Moreover $\AS^{n,1}$ has maximal isometry group, hence we have obtained a simply
 \[
     0\to \Z\to \textnormal{Isom}(\AS^{n,1})\to O(n,2)\to 1.
 \]
-It is convient to express the metric \ref{metric} using the Poincaré model of the hyperbolic space. Recall that the disk model of the hyperbolic space is the unit disk $\D^n$ endowed with the conformal metric: \frac{4}{(1-r^2)^2}\sum dx_i^2, where $r^2=\vert x\vert^2$. \todo{inserire l'isometria disco piano}
+It is convient to express the metric \ref{metric} using the Poincaré model of the hyperbolic space. Recall that the disk model of the hyperbolic space is the unit disk $\D^n$ endowed with the conformal metric: $\frac{4}{(1-r^2)^2}\sum dx_i^2$, where $r^2=\vert x\vert^2$. \todo{inserire l'isometria disco piano}
 The Poincaré model of the AdS geometry is then the cylinder $\D^n\times \R$ endowed with the metric \ref{metricdisk}\todo{mettere}.\\
 \subsection{Geodesic.}
 
 \textit{In the quadric model} Let us start with the exponential map in the hyperbloid model. Given a point $x\in \H^{n,1}$ and a vector $v\in T_x\H^{n,1}$, we want to determine the geodesic through $x$ with speed $v$. We will distinguish several cases according to the sign of $ q_{n,2}(v)$. If $v$ is lightlike, then: 
 \[
-    \gamma(t)=\x+tv
+    \gamma(t)=x+tv
 \] is a geodesic of $\R^{n,2}$ and is cointained in $\H^{n,1}$, hence $\gamma$ is a geodesic of $\H^{n,1}$. If $v$ is etiher timelike or spacelike, we claim that the geodesic $\gamma(t)=\exp_x(tv)$ is contained in the linear plane $W=\text{Span}(x,v).$ In fact, the linear transformation $T$ that fixes pointwise $W$ and whose restriction to $W^\perp$ is $-\1_{W^\perp}$ is in $O(n,2)$. By the uniqueness of the geodesic, $T\circ\gamma=\gamma$ hence $\gamma$ is contained in $\H^{n,1}\cap W$. We can easily derive the expressions\\
 \begin{equation}
     \gamma(t)=\cosh(t)x+\sinh(t)v
@@ -103,7 +103,7 @@ As a consequence, unparametrized lightlike geodesic of $\AS^{n,1}$, goint trough
 \textcolor{red}{pagina 16 Bonsante-Seppi}   
 \section{Anti-de Sitter space in dimension (2+1)}
 We want now to specialize to dimension 3 Anti-de Sitter geometry. 
-\subsection{The \textnormal{PSL}(2,\R) model.} The fundamental observation is the existance of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$, hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie Group $SL(2,\R).$\\
+\subsection{The {PSL}$(2,\R)$ model.} The fundamental observation is the existance of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$, hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie Group $SL(2,\R).$\\
 Let us observe that $SL(2,\R)\times SL(2,\R$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
 \[
     (A,B)\cdot X=AXB^{-1}.
@@ -113,7 +113,7 @@ As a direct consequence of the Binet formula, the action preserves the quadratic
     \rho:SL(2,\R)\times SL(2,\R)\to O(\mathcal{M}(2,\R),q).    
 \]
 
-Since the center of $SL(2,\R)$ is $\{\pom\mathds{1}\},$ the Kernel of $\rho$ is $K=\{(\mathds{1},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity:
+Since the center of $SL(2,\R)$ is $\{\pm \mathds{1}\},$ the Kernel of $\rho$ is $K=\{(\mathds{1},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity:
 
 \[
     \text{Isom}_0(\H^{2,1})=\text{SO}(\mathcal{M}(2,\R),q)\simeq \frac{\text{SL}(2,\R)\times \text{SL}(2,\R)}{K}\

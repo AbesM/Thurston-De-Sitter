@@ -1,8 +1,3 @@
-\chapter{Introduction}
-
-As in Riemannian geometry the \textit{most interesting} geometry of constant sectional curvature is the hyperbolic one, in Lorentzian geometry the analogus (as in with constant negative curvature) is the \textit{anti-de Sitter} geometry. In this chapter we will introduce the basic concepts of Lorentzian geometry and we will give a brief introduction to anti-de Sitter geometry. 
-We would then like to expand the study of anti-de Sitter geometry with a brief exposition of the most common model of ads spaces and with this "newly introduced" concept we would like to recover a celebrated theorem of Thurston related to hyperbolic surfaces following the work of G. Mess \cite{mess2007lorentz}. 
-
 \chapter{Lorentzian geometry}
 
 In what follows we will introduce Lorentzian manifold of constant curvature and shows that, as in the Riemannian case, two manifolds of constant sectional curvature $K$ are locally isometric. We will then define what we mean by a manifold with maximal isometry group as they provide models of manifold with constant curvature: if we have $M$ a Lorentzian manifold with costant sectional curvature $K$ and maximal isometry group, then any Lorentzian manifold with constant sectional curvature $K$ carries a natural (Isom($M$), $M$)-atlas made of local isometries. \\
@@ -33,7 +28,7 @@ for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the de
 
 \subsection{Maximal isometry group and geodesic completeness} 
 
-\begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature K. Then every linear isometry $L:T_{x}M\to T_yN$ extends to an isometry $f:U\to V$ where U, V are open neighbourhoods of $x,y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\capU^{\prime} $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
+\begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature K. Then every linear isometry $L:T_{x}M\to T_yN$ extends to an isometry $f:U\to V$ where U, V are open neighbourhoods of $x,y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\cap U^{\prime} $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
 \begin{proof}
     Cartan-Ambrose-Hicks thm.
 \end{proof}
@@ -50,7 +45,7 @@ In particular, there is a unique simply connected geodesically complete Lorentzi
 Another consequence of \ref{isometrie} is that, fixing a point $x_0 \in M$, the set of isometris of $M$, which we will denote by Isom($M$) can be realized as a subset of ISO($T_{x_0}M, TM$) namely the fiber bundle over $M$ whose fiber over $x\in M$ is the space of linear isometries of $T_{x_0}M$ into $T_{x}M$. \todo{Not clear what is going on here, he argues about some Lie structure.}
 
 \begin{definition}
-    A Lorentzian manifold $M$ has \textit{maixmal isometry group} if the action of Isom($M$) is transitive and, for every point $\x \in M$, every linear isometry $L:T_{x}M\to T_xM$ extends to an isometry of $M$. 
+    A Lorentzian manifold $M$ has \textit{maximal isometry group} if the action of Isom($M$) is transitive and, for every point $x \in M$, every linear isometry $L:T_{x}M\to T_xM$ extends to an isometry of $M$. 
 \end{definition}
 
 Equivalently $M$ has maximal isometry group is the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence is $M$ has maximal isometry group, then the dimension of the isotropy group is maximal. 
@@ -77,7 +72,7 @@ We conclude this preliminaries with a result of classification which will be use
 \begin{proof}
     Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\tilde{M}$ one gets a simply connected geodesically complete Lorenztian manifold of constant sectional curvature $K$ which by corollary \ref{122} is isometric to $M_K$. The covering map $p:_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
     Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$,where $\Gamma$ acts freely and properly discontinuosly on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\tilde{M}$ which normalies $\Gamma$ descends to an isometry of $M$, and conversly the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
-    Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\Isom(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \Isom(M_K)$, which is the same as saying that $\Gamma$ is normal in $\Isom(M_K)$.
+    Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\text{Isom}(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \text{Isom}(M_K)$, which is the same as saying that $\Gamma$ is normal in $\text{Isom}(M_K)$.
 \end{proof}
 
 \begin{observation}
