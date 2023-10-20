@@ -1,14 +1,31 @@
 \chapter{Anti-de Sitter space in dimension (2+1)}
-We want now to specialize to dimension 3 Anti-de Sitter geometry. 
-\section{The {PSL}$(2,\R)$ model.} The fundamental observation is the existance of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$, hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie Group $SL(2,\R).$\\
-Let us observe that $SL(2,\R)\times SL(2,\R$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
+We want now to specialize to dimension 3 Anti-de Sitter geometry as it will be the specific model geometry of the manifolds of our next interest. 
+\section{The {PSL}$(2,\R)$ model.} 
+
+The fundamental observation is the existance of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct such a model we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$. The associated bilinear form is expressed by the formula:
 \[
-    (A,B)\cdot X=AXB^{-1}.
+    \langle A,B\rangle=-\frac{1}{2}\text{tr}(A\cdot\text{adj}(B))
+\] 
+for $A,B\in\mathcal{M}(2,\R)$, where adj denotes the adjugate matrix, namely: 
+\[
+    \text{adj}(\begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix}) = \begin{bmatrix}
+        d & -b \\
+        -c & a
+    \end{bmatrix}
 \]
-As a direct consequence of the Binet formula, the action preserves the quadratic form $q=-\det$ and thus induces a representation: 
+
+hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie group $\text{SL}(2,\R).$\\
+Let us observe that $\text{SL}(2,\R)\times \text{SL}(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
+$$(A,B)\cdot X=AXB^{-1}.$$
+
+As a direct consequence of the Binet formula, the action preserves the quadratic form $q=$-det and thus induces a representation: 
+
 \[ \rho:SL(2,\R)\times SL(2,\R)\to O(\mathcal{M}(2,\R),q). \]
 
-Since the center of $SL(2,\R)$ is $\{\pm \mathds{1}\},$ the Kernel of $\rho$ is $K=\{(\mathds{1},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity:
+Since the center of $SL(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rho$ is $K=\{(\text{Id},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity: \text{Perché è immagine di un connesso e contiene l'identità. Per le dimensioni sono le stesse ma sto divendo per due per il ker? sus}
 
 \[
     \text{Isom}_0(\H^{2,1})=\text{SO}_0(\mathcal{M}(2,\R),q)\simeq (\text{SL}(2,\R)\times \text{SL}(2,\R))/K
@@ -19,17 +36,17 @@ Using this model, one has natural identification between $\A^{n,1}$ and the Lie 
     \text{Isom}_0(\A^{n,1})\simeq \text{PSL}(2,\R)\times\text{PSL}(2,\R)
 \]
 acting by left and right multiplication on $\text{PSL}(2,\R)$.\\
-The stabilizer of the identity in Isom$_0(\A^{n,1})$ is the diagonal subgroup $\Delta<\text{PSL}(2,\R)\times\text{PSL}(2,\R)$. Under the obvious identification of $\text{PSL}(2,\R)$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\mathds{1}}\text{PSL})2,\R)$ is the ajoint action of $\text{PSL}(2,\R)$. A direct consequences of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\mathds{1}}$ the restricion of $q$ to $T_{\mathds{1}}\text{SL}(2,\R)$, a direct computation shows that $q_\mathds{1}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
+The stabilizer of the identity in Isom$_0(\A^{n,1})$ is the diagonal subgroup $\Delta<\text{PSL}(2,\R)\times\text{PSL}(2,\R)$. Under the obvious identification of $\text{PSL}(2,\R)$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\text{PSL}(2,\R)$ is the adjoint action of $\text{PSL}(2,\R)$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
 
 \begin{observation}
-    The Lie algebra $\mathfrak{sl}(2,\R)$ equipped with the quadratic form $q_{\mathds{1}}$ is then a copy of the 3-dimensional Minkowski space, hence the adjoint action yelds a representation 
+    The Lie algebra $\mathfrak{sl}(2,\R)$ equipped with the quadratic form $q_{\text{Id}}$ is then a copy of the 3-dimensional Minkowski space, hence the adjoint action yelds a representation 
     \[
-        \text{PSL}(2,\R)\to O(\mathfrak{sl}(2,\R),q_{\mathds{1}})
+        \text{PSL}(2,\R)\to O(\mathfrak{sl}(2,\R),q_{\text{Id}})
     \]
 
 which in turn induces the well-known isomorphism: 
 \[
-    \text{SO}_0(2,1)\simeq\text{SO}_0(\mathfrak{sl}(2,\R), q_\mathds{1})\simeq \text{PSL}(2,\R),
+    \text{SO}_0(2,1)\simeq\text{SO}_0(\mathfrak{sl}(2,\R), q_\text{Id})\simeq \text{PSL}(2,\R),
 \] which is nothing but the restriction of the isomorphism \textcolor{red}{metti link} to the stabilizer of the identity in the left-hand side $\text{Isom}(\A^{2,1}),$ and to the diagonal subgroup $\Delta$ in the right-hand side $\text{PSL}(2,\R)\times\text{PSL}(2,\R).$
 \end{observation}
 

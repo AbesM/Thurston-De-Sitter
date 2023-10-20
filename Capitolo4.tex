@@ -7,7 +7,7 @@ We begin with some definitions:
 \begin{definition}
     A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if no pair of points in $X$ is connected by timelike (resp. causal) lines in $\AS^{2,1}$.
 \end{definition}
-Since acausality and achronality are conformally invariant notions, it will be often convenient to consider the metric $g_{\S^2}-dt^2$ on $\D\times\R$ introduced \todo{aggiustare.} which is confromal to the Poincaré model. We give now a first useful carachterization of achronal and acausal sets:
+Since acausality and achronality are conformally invariant notions, it will be often convenient to consider the metric $g_{\S^2}-dt^2$ on $\D\times\R$ introduced \todo{aggiustare.} which is conformal to the Poincaré model. We give now a first useful characterization of achronal and acausal sets:
 \begin{lemma}
     A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if and only if it is the graph of a function $f:D\to\R$ which is 1-Lipschitz, (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\S^2}$.\\
     Where we have denoted $D=\pi_{\D}(X).$ 
@@ -42,19 +42,185 @@ A spacelike surface $S$ is locally acasual, but there are examples of spacelike 
 
 \textcolor{red}{saltata un bel po' di roba}
 
-\subsection{Domain of dependece}
-We want to define a study properties of Cauchy surfaces and domains of dependece, a priori concept of Lorentianz geometry, in $\AS^{2,1}$
+\subsection{Domain of dependence}
+We want to define and study properties of Cauchy surfaces and domains of dependence, a priori concept of Lorentianz geometry adapted to the geometry of $\AS^{2,1}$
 
 \begin{definition}
     Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$ the \textit{domain of dependence} of $X$ is the set: 
     \[
-        \mathcal{D}(X)=\{p\in M | \text{every inextensibile causal curve through} p \text{meets} X \}.
+        \mathcal{D}(X)=\{p\in M |\;\text{every inextensibile causal curve through} p \text{meets} X \}.
     \]
     We say that $X$ is a \textit{Cauchy surface} of $M$ if $\mathcal{D}(X)=M$. A spacetime $M$ is said \textit{globally hyperbolic} if it admits a Cauchy surface.
 \end{definition}
 
-\begin{section}
-    We will now introduce the \textit{Gauss Map} associated to a spacelike surface in Anti de Sitter space, this tool will reveal useful in the study of the relation of Anti-de Sitter geometry and Teichmueller theory and hyperbolic surfaces.
+The theory of globally hyperbolic spacetimes is a well-developed topic in Lorentzian geometry, we will just state the facts that we will need in the following. 
+
+\begin{theorem}
+    Let M be a globally hyperbolic spacetime. Then:
+    \begin{enumerate}
+        \item Any two Cauchy surfaces in $M$ are diffeomorphic. 
+        \item There exists a submersion $\tau:M\to\R$ whose fibers are Cauchy surfaces.
+        \item M is diffeomorphic to $\Sigma\times\R$ where $\Sigma$ is any Cauchy surface in M.
+    \end{enumerate}
+\end{theorem}
+
+\begin{observation}
+    The spacetime $\AS^{2,1}$ is not globally hyperbolic. In fact if $X$ is achronal, it is contained in the graph of a 1-Lipschitz function \textcolor{red}{reference?} $f:(\D\cup\partial\D,g_{\S^2})\to\R.$ If $t_0>\text{sup}f$ and $\xi \in \partial\D$, then any lightlike ray with past end-point $(\xi,t_0)$ does not intersect $X.$ 
+\end{observation}
+
+\begin{observation}
+    As causality notions are invariant under conformal change of metrics, we observe that causal paths in $\AS^{2,1}$ are the graphs of 1-Lipschitz functions from (intervals in) $\R$ to $\D$ with respect to the hemispherical metric in the image. Hence an inextesible causal curve in $\AS^{2,1}$ is either the graph of a global 1-Lipschitz function from $\R$, or it is defined on a proper interval and has endpoint(s) in $\partial\AS^{2,1}.$
+\end{observation}
+
+\begin{lemma}
+    Given an achronal meridian $\Lambda$ in $\partial\AS^{2,1}$ any Cauchy surface in $\Omega(\Lambda)$ is properly embedded with boundary at infinity $\Lambda$. 
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+
+\begin{proposition}
+    Let $\Lambda$ be an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Let S be a properly embedded achronal surface in $\Omega(\Lambda)$. Then $\mathcal{D}(S)=\Omega(\Lambda)$. In particular $\Omega(\Lambda)$ is a globally hyperbolic spacetime.
+\end{proposition}
+\begin{proof}
+    
+\end{proof}
+
+
+\textcolor{red}{Remark 4.4.7 saltato}
+
+\begin{corollary}
+    If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\AS^{2,1}$ , then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$.
+\end{corollary}
+
+\subsection{Properly achronal sets in $\A^{2,1}$}
+For our interest will be important to consider the model $\A^{2,1}$. As $\A^{2,1}$ contains closed timelike lines, it does not contain any achronal subset. However if $P$ is a spacelike plane in $\A^{2,1}$ then $\A^{2,1}\setminus P$ does not contain closed causal curves. Indeed it is simply connected, so it admits an isometric embedding into $\AS^{2,1}$, given by a section of the covering map $\AS^{2,1}\to\A^{2,1},$ and whose image is a Dirichlet region \textcolor{red}{what is a dirichlet region?}
+
+\begin{definition}
+    A subset $X$ of $\A^{2,1}\cup\partial\A^{2,1}$ is a \textit{proper achronal subset} if there exists a spacelike plane $P$ such that $X$ is contained in $\A^{2,1}\cup\partial\A^{2,1}\setminus\overline{P}$ and is achronal as a subset of $\A^{2,1}\cup\partial\A^{2,1}\setminus\overline{P}.$  
+\end{definition}
+
+\textcolor{red}{Now they notice relations between dirichlet region and this proper achronal subsets}
+
+We provide now an example that will be useful in the following:
+
+\begin{lemma}
+    Let $\varphi:\R\text{P}^1\to\R\text{P}^1$ be an orientation preserving homeomorphism. Then the graph of $\varphi$, say $\Gamma_\varphi\subset \R\text{P}^1\times\R\text{P}^1\simeq\partial\A^{2,1}$ is a proper achronal subset and any lift $\tilde{\Gamma_\varphi}$ is an achronal meridian in $\partial\AS^{2,1}.$  
+\end{lemma}
+\begin{proof}
+\end{proof}
+
+With what we have shown until now for achronal sets in $\AS^{2,1}$ can be rephrased for proper achronal sets of $\A^{2,1}$. \text{red}{saltato il lemma particolare che dice lui, praticamente saltata la pagina 34}\\
+
+\begin{proposition}
+    Let $\sigma: S\to\A^{2,1}$ be a proper spacelike immersion. Then 
+    \begin{itemize}
+        \item $\sigma$ is a proper embedding.
+        \item $\sigma$ lifts to a proper embedding $\tilde{\sigma}:S\to\AS^{2,1}$.
+        \item The boundary at infinity of $\sigma(S)$ is a proper achronal meridian $\Lambda$ in $\partial\A^{2,1}$.
+        \item $\mathcal{D}(\sigma(S))=\Omega(\Lambda).$
+    \end{itemize}
+\end{proposition}
+
+\begin{proof}
+\end{proof}
+
+\begin{observation}
+    In the proof of the last proposition, once we proved that $\hat{S}$ is homeomorphic to $\R^2,$ we could have inferred immediately that $\hat{S}=S$ as $\Z/2\Z$ cannot act freely on $\R^2$ by diffeomorphism. 
+\end{observation}
+
+We therefore have an analogue version of \text{red}{citare lemma analogo} in $\A^{2,1}$.
+
+\begin{corollary}
+    If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\A^{2,1}$, then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$. 
+\end{corollary}
+
+\subsection{Convexity properties.}
+
+\section{Globally Hyperbolic three-manifolds}
+We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surfaces of genus $r$ (we will with a slight abuse of notation say that the spacetime has genus $r$.) We will show that there are no such manifolds when $r=0$. Furthermore, we will then give a rapid overview over the case $r=1$ and the focus on the most interesting case, $r\geq 2$, that will lead to a complete classification.
+
+\subsection{General facts.} We will now state some general that will be useful in our classification.
+
+\begin{lemma}\label{properembedding}
+    Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion. If $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+
+As an immediate consequence there cannot be any globally hyperbolic spacetime with genus $0$. In fact, suppose such a spacetime exists and denote by $\Sigma$ the Cauchy surfaces diffeomorphic to $\S^2$, the developing map restricted to $\Sigma$ would be a spacelike immersion, and the pull-back metric would be complete by compactness. But this contradicts \ref{properembedding}. Hence: 
+
+\begin{corollary}
+    There exists no globally hyperbolic Anti-de Sitter spacetime of genus 0. 
+\end{corollary}
+
+The following is a fundamental result on the structure of globally hyperbolic AdS spacetimes.
+
+\begin{proposition}\label{holorep}
+    Let $M$ be a globally hyperbolic Anti-de Sitter spacetimes of genus $r\geq 1$. Then: 
+    \begin{enumerate}
+        \item The developing map $\text{dev}:\tilde{M}  \to  \A^{2,1}$ is injective. 
+        \item If $\Sigma$ is a Cauchy surface of $M,$ then the image of dev is contained in $\Omega(\Lambda)$, where $\Lambda$ is boundary at infinity of $\text{dev}(\tilde{\Sigma}).$
+        \item If $\rho:\pi_1(M)\to\text{Isom}(\A^{2,1,})$ is the holonomy representation, $\rho(\pi_1(M))$ acts freely and properly discontinuosly on $\Omega(\Lambda)$, and $\Omega(\Lambda)$ is a globally hyperbolic spacetime containing $M$. 
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    
+\end{proof}
+
+A remarkable difference between Lorentianz and Riemannian geometry is the that in Lorentianz geometry completeness is a very strong assumption, \textcolor{red}{reference} and in fact interesting classification results are obtained removing such condition. However, it is necessary to impose some maximality condition to compensate for non-completeness. Among several  approaches, one of the most common is the classification of a maximal globally hyperbolic spacetimes. Following \cite{bonsanteseppi} we restrict to a less general setting, but one could give similar definitions in the lager class of Einstein spacetimes.
+
+\begin{definition}
+    A globally hyperbolic Anti-de Sitter manifold $(M,g)$ is \textit{maximal} if any isometric embedding of $(M,g)$ into a globally hyperbolic Anti-de Sitter manifold $(M^{\prime},g^{\prime})$ which sends a Cauchy surface of $M$ to a Cauchy surface of $M^{\prime}$ is surjective.
+\end{definition}
+
+In eyesight of this definition and as a direct consequence of propostion \ref{holorep} we have:
+
+\begin{corollary}
+An Anti-de Sitter globally hyperbolic spacetime $M$ is maximal is and only if $\tilde{M}$ is isometric to the invisibile domain of a proper achronal meridian in $\partial\A^{2,1}.$ \textcolor{red}{importante da capire credo}
+\end{corollary}
+
+%genere uno 
+
+\subsection{Examples of genus $r\geq 2$}
+Let's $\Sigma_r$ be an oriented surface of genus $r\geq 2.$ We recall the definiton of Fuchsian representation. 
+
+\begin{definition}
+    A representaion $\rho:\pi_1(S)\to \text{PSL}(2,\R)$ is called positive \textit{Fuchsian} if there is a $\rho$-equivariant orientation preserving homeomorphism $\delta:\widetilde{\Sigma}_r\to\H^2$.
+\end{definition}
+
+The definition is invariant under conjugation in $\text{PSL}(2,\R)\simeq\text{Isom}_0(\H^2),$ but not under conjugation in $\text{Isom}(\H^2).$ It is a result of Goldman \textcolor{red}{Reference}, that a representation $\rho$ is positive Fuchsian if and only if the associated flat $\R\text{P}^1$ bundle $E_\rho$ constructed as the quotient of $\widetilde{\Sigma}_r\times\R\text{P}^1$ by the diagonal action of $\pi(S)$ (via deck transformation and the representation) has Euler class $2-2r.$ An equivalent condition is the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_r.$ \\   
+
+Another useful tool for the classification of genus $r\geq 2$ is the following fact in Teichm\"uller theory \textcolor{red}{reference}:
+
+\begin{lemma}
+    Given two positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$, any $(\rho_l,\rho_r)$ equivariant orientation-preserving homeomorphism of $\H^2,$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\R\text{P}^1.$ Moreover, its extension $\varphi:\R\text{P}^1\to\R\text{P}^1$ is the unique $(\rho_l,\rho_r)-$equivariant orientation homeomorphism of $\R\text{P}^1$.     
+\end{lemma}
+
+Here by ($\rho_l,\rho_r$)-equivariant we mean that $\varphi\circ\rho_l=\rho_r\circ\varphi.$\\
+Now let $\rho_l,\rho_r$ be two positive Fuchsian representation of $\Sigma_r.$ We will be interested in the representation:
+
+\[
+    \rho=(\rho_l,\rho_r):\pi_1(S)\to\text{Isom}_0(\A^{2,1})\simeq \text{PSL}(2,\R)\times\text{PSL}(2,\R).
+\]
+
+\begin{definition}
+    Given a pair of positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$ we define $\Lambda(\rho)$ to be the graph in $\R\text{P}^1\times\R\text{P}^1$ of the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1,$ and $\Omega_\rho \coloneqq \Omega(\Lambda(\rho))$ its invisibile domain in $\A^{2,1}$
+\end{definition}
+
+Using the above construction, we can build examples of MGH spacetimes having holonomy any $\rho=(\rho_l,\rho_r)$ of this form. 
+
+\begin{proposition}
+    The domain $\Omega_\rho$ is invariant under the isometric action of $\pi_1(\Sigma_r)$ on $\A^{2,1}$ induced by $\rho.$ Moreover $\pi_1(\Sigma_r)$ acts freely and properly discontinuosly on $\Sigma_\rho$ and the quotient is a MGH spacetime of genus $r$ and holonomy $\rho.$ 
+\end{proposition}
+\begin{proof}
+    \textcolor{red}{da adesso in poi bisogna capire per forza.}
+\end{proof}
+
+\section{Je ne sais pas}
+    We will now introduce the \textit{Gauss Map} associated to a spacelike surface in Anti de Sitter space, this tool will reveal useful in the study of the relation of Anti-de Sitter geometry and Teichmuller theory and hyperbolic surfaces.
 
     We will start by fixing notation and recalling some general facts about immersed spacelike surfaces in Anti de Sitter space. We will assume that all our immersed surfaces are of class $C^1$. \\
     Given a regular immersion $\sigma: S\to\A^{2,1}$ we will say that it is \textit{spacelike} if the pull-back metric  
@@ -76,4 +242,3 @@ The first and second fundamental form of an immersion $\sigma$ satisfy contrains
 \[K_I=-1-\det_I II\] where $K_I$ is the curvature of $I$ and $\det_I II$ is $\det B$ by definition. On the other hand the Codazzi equation states that $\nabla^III$ is a totally symmetric $3-$form. We have: 
 \begin{equation} \nabla 
 \end{equation}
-\end{section}

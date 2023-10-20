@@ -1,0 +1,68 @@
+\chapter{Thurston's earthquake theorem}
+
+\begin{definition}
+    A geodesic lamination $\lambda$ of $\H^2$ is a collection of disjoint geodesic that foliate a closed subset $X$ of $\H^2$. The set $X$ is called the \textit{support} of $\lambda.$ The geodesic in $\lambda$ are called \textit{leaves} (as in classic foliation terminology). The connected components of $\H^2\;\setminus\;X$ are called \textit{gaps}. The \textit{strata} of $\lambda$ are the leaves and the gaps.
+\end{definition}
+
+Consider $\gamma$ an isometry of $\H^2$, the \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. As a consequence we have that the geodesic is preserved by the isometry, when restricted to such a curve $\gamma_\ell:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
+Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly separated} $A$ and $B$ if $A$ and $B$ are contained in the closure of different connected components of $\H^2\;\setminus\;\ell.$ 
+
+\begin{definition}
+    A \textit{left earthquake} of $\H^2$ is a bijective map $E:\H^2\to\H^2$ such that there exists a geodesic lamination $\lambda$ for which the restriction $E_S$ to any stratum $S$ of $\lambda$ is equal to the restriction of an isometry of $\H^2,$ and for any two strata $S$ and $S^{\prime}$ of $\lambda$ the comparison isometry 
+    
+    \[
+        \text{Comp}(S,S^{\prime})\coloneqq (E_S)^{-1}\circ E_S^{\prime}
+    \]
+
+    is the restriction of an isometry of $\H^2$ such that:
+    \begin{itemize}
+        \item $\gamma$ is different from the identity, unless possibly where one of the two strata $S$ and $S^{\prime}$ is contained in the closure of the other;
+        \item when it's note the identity, $\gamma$ is a hyperbolic transformation whose axis $\ell$ weakly separetes $S$ and $S^{\prime};$
+        \item moreover, $\gamma$ translates to the left, seen from $S$ to $S^{\prime}$. 
+    \end{itemize}
+\end{definition}
+
+Let's explain more carefully what we mean with the last condition. Suppose $f:[0,1]\to\H^2$ is a smooth path such that $f(0)\in S,\;f(1)\in S^{\prime}$ and the image of $f$ intersects $\ell$ transversally and exactly at one point $z_0=f(t_0)\in\ell.$ Let $v=f^{\prime}(t_0)\in T_{z_0}\H^2$ be the tangent vector at the intersection point. Let $w\in T_{z_0}\H^2$ be a vector tangent to the geodesic $\ell$ pointing towards $\gamma(z_0).$ Then we say that $\gamma$ translates to the left seen from $S$ to $S^{\prime} $ if $v,w$ is a positive basis of $T_{z_0}\H^2$, for the standard orientation of $\H_2.$\\
+We observe that such a condition is independent of the order we order in which we choose $S$ and $S^{\prime},$  if $\text{Comp}(S,S^{\prime})$ translates to the left seen from $S$ to $S^{\prime},$ then $\text{Comp}(S^{\prime} ,S)$ translates to the left seen from $S^{\prime} $ to $S.$ 
+
+%ok ma cosa vuol dire davvero questa cosa?
+
+\begin{observation} The earthquake $E$ is not required to be (and in fact in some case won't be) continuous. For instance this happens when the lamination $\lambda$ is finite, meaning that $\lambda$ is a collection of a finite number of geodesics. 
+\end{observation}
+
+Let's consider a first basic example: 
+
+\textit{Esempio}\todo{creare un ambiente ah-hoc} The map 
+\[
+    E:\H^2\to\H^2
+\]
+
+defined by:
+\[
+  E(z)= \begin{cases}
+    z & \text{if Re(z)}<0 \\
+    az & \text{if Re(z)}=0 \\
+    bz & \text{if Re(z)}>0 \\    
+\end{cases}
+\]
+
+is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition is composed of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
+Such a map is clearly not continuous along $\ell$.
+Thurston proved (\textcolor{red}{dove?}) that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $f:\partial\H^2\to\partial\H^2$ such that the map: 
+\[
+    \begin{cases}
+        E(z), &\text{ if z }\in \H^2\\
+        f(z), &\text{ if z}\in \partial\H^2  ;\\
+        
+    \end{cases}
+\]
+is continuous in any point $\partial(\H^2.)$\\
+Then Thurston proved the following theorem, that he called \textit{"geology is transitive}:
+
+\begin{theorem}
+    Given any orientation-preserving homeomorphism $f:\partial\H^2\to\partial\H^2,$ there exists a left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $f$ on $\partial\H^2.$
+\end{theorem}
+
+
+    
+

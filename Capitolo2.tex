@@ -116,6 +116,16 @@ We will now refer to "Poincaré model" as the cylinder $\D^n\times \R$ endowed w
     Exception made for the central line passing through $x_1=\dots=x_n=t=0,$ vertical lines are not geodesic for the metric defined in \refeq{metricdisk}.  
 \end{observation}
 
+\textit{The conformal metric of the boundary.} As we did with $\A^{n,1}$ we would like to give a conformal Lorentzian structure to the boundary of $\AS^{n,1}$. The construction actually works for any covering space of $\A^{n,1}.$ The covering map (we are now considering the projective model of $\H^n$)
+\[
+    \pi^{\prime} ([y_1:\dots:y_{n}:y_{n+1}],t)=[y_1:\dots:y_n:y_{n+1}\cos t:y_{n+1}\sin t]
+\]
+
+extends to a map $\pi^{\prime}:\H^n\cup \partial\H^n\times \R\to \A^{n,1}\cup \partial\A^{n,1}$. In order to compute the conformal structure of the boundary, we consider the map $\tau: \H^n\times \R\to\R^{n+2}$ defined by:
+\[
+    \tau([y_1:\dots:y_n:y_{n+1}],t)=(y_1/y_{n+1},\dots,y_n/y_{n+1},\cos t,\sin t)
+\]  
+that extends to the boundary and induces a (local) section of the projection $\R^{n,2}\to \A^{n,1}$. In fact, let $\eta$ be the generator of the group of deck transformation of the covering $\pi^{\prime}:\AS^{n,1}   \to \A^{n,1}$, then $\tau$ has the equivariance $\tau\circ\eta^i=(-1)^i\tau.$ \todo{Is he kinda of flipping Ads with every deck lifting?}
 \subsection{Geodesic.}
 
 \textit{In the quadric model} Let us start with the exponential map in the hyperbloid model. Given a point $x\in \H^{n,1}$ and a vector $v\in T_x\H^{n,1}$, we want to determine the geodesic through $x$ with speed $v$. We will distinguish several cases according to the sign of $ q_{n,2}(v)$. If $v$ is lightlike, then: 
