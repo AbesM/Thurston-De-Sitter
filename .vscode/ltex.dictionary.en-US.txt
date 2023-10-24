@@ -3,3 +3,6 @@ convient
 existance
 achronal
 diffeomorphic
+homeomorphism
+Fuchsian
+spacelike
