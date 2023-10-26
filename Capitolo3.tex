@@ -97,9 +97,31 @@ We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are a
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\} 
 \] for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. \todo{How so?} The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
 \textit{Example}
-Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. 
+Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \textcolor{red}{lemma sulla convergenza al bordo}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
+\begin{equation}\label{graphino}
+    \partial\text{P}_\gamma=\text{graph{Id}}\subset \T.
+\end{equation}
 
-\section{affine charts}
+Now consider a point $z\in\H^2$, and let us denote by $\mathcal{R}_z$ the order-two elliptic isometry with fixed point $z$. We claim that the map 
+\[
+    \iota:\H^2\to\text{P}_{\text{Id}},\;\;\;\ \iota(z)=\mathcal{R}_z
+\]
+
+is an isometry with respect to the hyperbolic metric of $\H^2$ and the induced metric on $\text{P}_{\text{Id}}.$ First, the inverse of $\iota$ is simply the fixed-point map $\text{Fix}:\text{P}_{\text{Id}}\to\H^2$ sending an elliptic isometry to its fixed point, which also shows that $\iota$ is equivariant with respect to the action of $\PSL on \H^2$ by homographies and on $\text{P}_\text{Id}$ by conjugation, since $\text{Fix}(\alpha\gamma\alpha^{-1})=\alpha\text{Fix}(\gamma).$ That is, the following holds: 
+\begin{equation}
+    \iota(\alpha\cdot p)=\alpha\circ\iota(p)\circ\alpha^{-1}.
+\end{equation} 
+A direct consequence is that $\iota$ is isometric, since the pull-back of the metric of $\text{P}_\text{Id}$ is necessarily $\PSL$-invariant and has constant curvature -1, hence it coincides with the standard hyperbolic metric on the upper half-plane.\\
+This simple example is actually the key case to understand general spacelike totally geodesic planes as every spacelike totally geodesic plane is of the form $\text{P}_\gamma$ for some $\gamma\in\PSL.$ To see this, observe that the action of the isometry group of $\A^{2,1}$ on spacelike totally geodetic planes is transitive, and that $\text{P}_\gamma=(\gamma,\text{Id})\text{P}_{\text{Id}}$ as the isometry $(\gamma,Id)$ maps $\text{Id}\to\gamma$, and therefore the dual plane of $\text{Id}$ to the dual plane of $\gamma.$ In view of \textcolor{red}{missinho} and \refeq{graphino}, we can conclude the following: 
+\begin{lemma}
+    Every spacelike totally geodesic plane of $\A^{2,1}$ is of the form $\text{P}_\gamma$ for some orientation-preserving isometry $\gamma\in\PSL,$ and 
+    \[
+        \partial\text{P}_\gamma=\text{graph}(\gamma^{-1})\subset\T.
+    \]
+\end{lemma}
+\section{Timelike planes}
+\section{Lightlike planes}
+\section{affine charts MAYBE TO MOVE INTO MESS SECTION OR EITHER DELETE THE WHOLE MESS THING?}
 The initial step in our proof is to consider the graph of an orientation-preserving homeomorphism $f:\R\text{P}^1\to\R\text{P}^1$ as a subset of $\partial\A^{2,1}$, and taking its convex hull. However, the convex hull of a set in projective space can be defined in affine chart, but $\overline{\A^{2,1}}$ is not contained in any affine chart. The following lemma has the purpose to show that the convex hull of the graph of $f$ is well-defined: 
 \begin{lemma}
     Let $f:\R\text{P}^1\to\R\text{P}^1$ be an orientation-preserving homeomorphism. Then: 
