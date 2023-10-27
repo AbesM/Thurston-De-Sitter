@@ -84,7 +84,7 @@ The initial step in our proof is to consider the graph of an orientation-preserv
 \end{proof}
 
 Now, given a spacelike plane $\text{P}_\gamma$ in $\A^{2,1}$, let $\mathcal{P}_\gamma$ be the unique projective subspaces in $\text{P}\mathcal{M}(2,\R)$ that contains $\text{P}_\gamma$, which is identified by the equation \refeq{spacelike} (where now $[A]=\gamma$). Let us denote by $\mathcal{A}_\gamma$ the complement of $\mathcal{P}_\gamma$, which we will call a (\textit{spacelike}) \textit{affine chart}. In this setting the first item of the lemma \ref{bdconvex} can be riformulated as: 
-\begin{corollary}
+\begin{corollary}\label{affinechart}
     Let $f:\S\to\S$ be an oriented-preserving homeomorphism. There exists a spacelike affine chart $\mathcal{A}_\gamma$ containing $\text{graph}(f)$.
 \end{corollary} 
 
@@ -93,25 +93,44 @@ Resolved any matter with the good definition of convex hull of $\text{graph}(f)$
 This is the only case where $\text{graph}(\sigma)$ is contained in a plane, and therefore it's convex hull as empty interior. If $f$ is not the restriction to $\S$ of an element of $\PSL$, then the convex hull of $\text{graph}(f)$ is a convex body in the affine chart $\mathcal{A}_\gamma.$
 
 To continue in our exploration of convexity in $\A^{2,1}$ we will need one last technical Lemma similar in spirit to \ref{bdconvex}: 
-\begin{lemma}
+\begin{lemma}\label{convI}
     Let $f:\S\to\S$ be and orientation-preserving homeomorphism and let $\text{P}_\gamma$ in $\A^{2,1}$ be a spacelike plane such that $\partial\text{P}_\gamma\cap\text{graph}(f)=\emptyset.$ Given any two distinct points $(x,f(x)), (x^{\prime} ,f(x^{\prime} ))$ in $\text{graph}(f)$, there exists a spacelike plane, disjoint from P$_\gamma$, containing them in its boundary at infinity. 
 \end{lemma}
-\begin{lemma}
+\begin{proof}
     Acting via $\PSL\times\PSL$ we can assume that $\gamma=\text{Id}$. The hypothesis $\partial\text{P}_{\text{Id}}\cap\text{graph(f)}=\emptyset$ can be rephrased as saying that $f$ has no fixed point. We are looking for a $\sigma\in\PSL$ such that:
     \begin{itemize}
         \item P$_{\text{Id}}\cap\text{P}_\sigma=\emptyset$ 
         \item $(x,f(x)),(x^{\prime} ,f(x^{\prime}))\in\partial\text{P}_{\sigma^{-1}}=\text{graph}(\sigma).$
     \end{itemize}
-\end{lemma}
-\begin{proof}
     For the first condition to hold it is suffices that the boundary of $\text{P}_{\text{Id}},\text{P}_{\sigma^{-1}}$ do not intersect, that is to say, $\sigma(y)\neq y$ for every $y\in\S$. We are then asking for a $\sigma$ with no fixed points on $\S$, namely $\sigma$ has to be an elliptic isometry. The second condition can be restated as $\sigma(x)=f(x)$ and $\sigma(x^{\prime})=f(x^{\prime}).$\\
 Now, since $f$ has no fixed points, $f(x)\neq x$ and $f(x^{\prime})\neq x^{\prime}$. There are various case to distinguish (refer to figure \textcolor{red}{inserire} for a visual aid). First we suppose for $(x,f(x),x^{\prime})$ to be a positive triple. Then either $(x,f(x^{\prime}),f(x),x^{\prime})$ or $(x,f(x),x^{\prime},f(x^{\prime}))$ are in cyclic order, because the remaining possibility, namely that $(x,f(x),f(x^{\prime}) ,x^{\prime})$ are in cyclic order, would imply that $f$ has a fix point. \todo{why so?} If $(x,f(x^{\prime}),f(x),x^{\prime})$ are in cyclic order, then the hyperbolic geodesic $\ell$ connecting $x$ to $f(x)$ and $\ell^{\prime}$ conntecting $x^{\prime} $ to $f(x^{\prime})$ must intersect, and the order two elliptic isometry $\sigma$ fixing $\ell\cap\ell^{\prime}$ maps $x\to f(x)$ and $x^{\prime} \to f(x^{\prime})$.\\
-If $(x,f(x),x^{\prime},f(x^{\prime}))$ are in cyclic order, then the geodesic $\ell_1$ connecting $x$ to $x^{\prime}$ and the geodesic $\ell_2$ connecting $f(x)$ to $f(x^{\prime})$ must intersect and one can find an elliptic element $\sigma$ fixing $\ell_1\cap\ell_2$ sending $x\to f(x)$ and $x^{\prime} \to f(x^{\prime}).$\\ \todo{manca da aggiungere la fine di questo lemmetto tencnicotecnico.}
+If $(x,f(x),x^{\prime},f(x^{\prime}))$ are in cyclic order, then the geodesic $\ell_1$ connecting $x$ to $x^{\prime}$ and the geodesic $\ell_2$ connecting $f(x)$ to $f(x^{\prime})$ must intersect and one can find an elliptic element $\sigma$ fixing $\ell_1\cap\ell_2$ sending $x\to f(x)$ and $x^{\prime} \to f(x^{\prime}).$ Second, if $(x,f(x),x^{\prime} )$ is a negative triple, then the argument works \textit{verbatim}. Finally, there is the possibility that $f(x)=x^{\prime}$. If $f(x^{\prime})\neq f(x)$, the $\sigma$ we are looking for is an order-three elliptic isometry with fixed point in the barycenter of the triangle of vertices $x,f(x)=x^{\prime},f(x^{\prime})$. If $f(x^{\prime})=x$, we run out of cases by taking as $\sigma$ the order-two elliptic isometry with fixed point on the geodesic $\ell$ from $x$ to $x^{\prime}$. \\
 \end{proof}
 
-\textcolor{green}{basically pag 12 of Diaf-Seppi}
+In particular, as a consequence of Lemma \ref{convI}, we have that given any spacelike affine chart $\mathcal{A}_\gamma$ containing $\text{graph}(f)$ and any two distinct points in $\text{graph}(f)$ the line connecting them is contained in $\A^{2,1}\cap\mathcal{A}_\gamma$ (excepts for the endpoints, which are in $\partial\A^{2,1}$), and it is a spacelike geodesic of $\A^{2,1}$.\\
+We are now ready to prove the following: 
+\begin{proposition}\label{convII}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, let $\text{P}_\gamma$ in $\A^{2,1}$ be a spacelike plane such that $\partial\text{P}_\gamma\cap\text{graph}(f)=\emptyset,$ and let $K$ be the convex hull of $\text{graph}(f)$ in the affine chart $\mathcal{A}_\gamma$. Then: 
+    \begin{itemize}
+        \item The interior of $K$ is contained in $\A^{2,1}$
+        \item The intersection of $K$ with $\partial\A^{2,1}$ is equal to $\text{graph}(f)$.
+    \end{itemize}
+    In particular, $K$ is a convex body that is a subset of $\overline{\A^{2,1}}$.
+\end{proposition}
+\begin{proof}
+    Given a point in $\partial\A^{2,1}\setminus\text{graph}(f)$, by the second item of Lemma \ref{bdconvex} there exists a spacelike plane $\text{P}_\eta$ passing through $p$ that does not intersect $\text{graph}(f).$ This implies $\text{P}_\eta\cap K=\emptyset,$ hence $K\cap\partial\A^{2,1}=\text{graph}(f).$ Since $K$ is connected, it is contained in the closure of one component of the complement of $\partial\A^{2,1}$ in $\mathcal{A}_\gamma.$ But $K$ is connected and intersects $\A^{2,1}\setminus\text{P}_\gamma$ because, by \ref{convI}, the line segment connecting any two point of $\text{graph}(f)$ in the affine chart $\mathcal{A}_\gamma$ is contained in $\A^{2,1}\cap\mathcal{A}_\gamma.$ Hence $K$ is contained in $\overline{\A^{2,1}}$ with interior in $\A^{2,1}$. \\
+\end{proof}
 
+In light of Corollary \ref{affinechart} and Proposition \ref{convII}, we give the following definition: 
+\begin{definition}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, we define $\mathcal{C}(f)$ to be the subset of $\overline{\A^{2,1}}$ that is the convex hull of $\text{graph}(f)$ in any spacelike affine chart $\mathcal{A}_\gamma$ such that $\partial\text{P}_\gamma\cap\text{graph}(f)=\emptyset.$
+\end{definition}
 
+The definition is well-posed because lines and planes are well-defined in projective space, hence the change of coordinates from an affine chart to another preserves convex sets. Because of this when referring to convexity notion in the following, we will implicitly assume that we have chosen a spacelike affine chart $\mathcal{A}_\gamma$ that contains $\text{graph}(f)$.
+
+\section{Support planes.}
+We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
+We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\mathcal{C}(f)$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\mathcal{C}(f)$ (at $p\in\partial\mathcal{C}(f))$ is $p\in\mathcal{C}(f)\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\mathcal{C}(f)$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
 
     
 
