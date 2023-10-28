@@ -71,11 +71,24 @@ We endow $\overline{\A^{2,1}}=\A^{2,1}\cup\partial\A^{2,1}$ with the topology in
 \] \todo{definire la funzione con latex }
 
 where we are considering $\R\text{P}^1$ as the space of one-dimensional subspaces of $\R^2$. Since we have that $\text{Im}(AXB^{-1})=A\cdot\text{Im}(X)$ and $\text{Ker} (AXB^{-1})=B\cdot\text{Ker}(X),$ the map $\delta$ is equivariant with respect to the action of $\PSL\times\PSL,$ acting on $\partial\A^{2,1}$ as the natural extension of the group of isometries of $\A^{2,1}$ and on $\R\text{P}^1\times\R\text{P}^1$ by the obvious product action.\\
+In this setting our choice of a time-orientation \textit{can be modified} by the following Lemma:
+\begin{lemma}\label{invertime}
+    The inversion map $\iota[X]=[X]^{-1}$ \todo{non è più bello con il -1 dentro?} is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
+\end{lemma}
+\begin{proof}
+    It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\T$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\
+    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now is $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X=\text{Ker}X$ 
+\end{proof}
+
+
 Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ and $\text{PSL}(2,\R)$ is identified to $\text{Isom}_0(\H^2$.) In this key we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
 
 \begin{lemma}
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
+\begin{proof}
+    $\PSL$ acts on $\H^2$ via isometry, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper halp-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime}
+\end{proof}
 
 In dimension $3 \partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
 \[
@@ -93,7 +106,7 @@ We refer to $\lambda_{y_0}$ as the \textit{left ruling} through $(x_0,y_0)$, and
 
 \section{Spacelike planes}
 We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
-\begin{equation}\label{spacelike}
+\begin{equation}\label{geoplanes}
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\}
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. \todo{How so?} The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
@@ -121,5 +134,24 @@ This simple example is actually the key case to understand general spacelike tot
     \]
 \end{lemma}
 \section{Timelike planes}
+Let's consider now a matrices $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_[A]$ by $P_\eta$. \\
+The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map: 
+\begin{equation}\label{refspa}
+    \mathcal{I}\to\mathcal{I}_\eta
+\end{equation}
+from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. It's image it precisely $P_\eta.$ As seen in the proof of \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined \refeq{refspa} is the entire plane $P_\eta$.\\  
+In similar fashion to the spacelike case, using the transitivity of the group of isometries on timelike planes, every timelike planes is of the form above. We can show the following: 
+\begin{lemma}
+    Every timelike totally geodesic plane of $\A^{2,1}$ is of the form $P_\eta$ for some orientation-reversing isometry $\eta\in\PSL,$ and 
+    \[
+        \partial\text{P}_\eta=\text{graph}(\eta^{-1})\subset\T.
+    \]
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+\begin{proof}
+    Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric \textcolor{red}{quale} on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail in \textcolor{red}{Reference}
+    \end{proof}
 \section{Lightlike planes}
 \section{affine charts MAYBE TO MOVE INTO MESS SECTION OR EITHER DELETE THE WHOLE MESS THING?}
