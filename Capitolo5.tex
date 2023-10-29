@@ -226,8 +226,19 @@ We can also extend the two map to the boundary of $P_{\sigma^{-1}}$: recalling t
 \end{equation}
 
 Equation \refeq{simproj} is immediately checked when $\sigma=\text{Id},$ because in that case we have that $\pi_l,\pi_r$ simply coincide with the fixed point map $\text{Fix}:P_1\to\H^2$, and we observed previously that $\text{Fix}$ extends to the map $(x,x)\to x$ from $\partial P_{\text{Id}}$ to $\partial\H^2$. The general case of Equation \refeq{simproj} is then consequences of equations \textcolor{red}{ref}, with the additional observation that the isometry $(\text{Id},\sigma)$ maps $\text{graph}(\text{Id})$ to $\text{graph}(\sigma)$ and $P_\text{Id}$ to $P_{\sigma^{-1}}$. \\
-  
+We can now compute the map of $\H^2$ obtained by composing the inverse of the left projection with the right projection. Indeed, this is the induced by the map $P_{\text{Id}}\to P_\text{Id}$ sending an order-two elliptic element $\mathcal{R}=p\circ\sigma\in P_{\text{Id}}$ to $\sigma\circ p=\sigma\mathcal{R}\circ\sigma^{-1}$. Hence we have   
+\begin{equation}\label{composition}
+    \pi_r\circ\pi_l^{-1}=\sigma:\H^2\to\H^2
+\end{equation}
+In conclusion we have that the composition of the maps $\pi_r\circ\pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\sigma$ of which $\partial P_{\sigma^{-1}}$is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $f$, the composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $f$.
 
-\section{The fundamental example.} We want to now finally link Ads geometry, in particular pleated surfaces, with the earthquake theory. Before stating the precise results we explore what we can consider the \textit{fundamental example.} Let $S$ be a piecewise totally geodesic surfaces consisting in the union of two half-planes in $\A^{2,1}$ meeting along a spacelike geodesic as in \textcolor{red}{inserire figura}
+\section{The fundamental example.} We want to now finally link Ads geometry, in particular pleated surfaces, with the earthquake theory. Before stating the precise results we explore what we can consider the \textit{fundamental example.} Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \textcolor{red}{inserire una figura}\\
+Let's formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
 
-We want to understand the left and right projection for this surface $S$. Observe that these are well-defined in the complement of spacelike geodesic which constitutes the bending locus of $S.$ The projections $\Pi_l$ and $\Pi_r$ are isometric on each (totally geodesic) connected component of the complement of such bendind geodesic in $S$ [refernece]. Let us call the two components $S_1,S_2$. Without loss of generality we can assum that $S_1$ is contained in the plane $P_{Id}$ composed of order-two elliptic elements in $\PSL$. Therefore the bending locus is a spacelike geodesic contained in $P_{Id}$, namely the set of order-two elliptic elements having a fixed point in a geodesic $\ell $ of $\H^2$.  
+\begin{lemma}
+    Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ@{\gamma_1^{-1}}$ is a hyperbolic isometry. 
+\end{lemma}
+\begin{proof}
+    As in example \textcolor{red}{text} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by \textcolor{red}{text}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
+    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is hyperbolic.
+\end{proof}
