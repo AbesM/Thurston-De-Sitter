@@ -189,15 +189,44 @@ We have shown the existance of such a $P_\gamma$ but in general it might not be 
 
 Now, we choose a support plane $P_\gamma$ at $p$, left or right multiplication by $\gamma^{-1}$ maps $\gamma$ to the identity, and therefore it maps $P_\gamma$ to $P_{\text{Id}},$ which we have already studied in \textcolor{red}{reference} it is the space of order-two elliptic elements and is therefore naturally identified with $\H^2$ via the map: $\text{Fix}:P_{\text{Id}}\to\H^2.$ \\
 In classic Lie group theory fashion we denote by $L_{\gamma^{-1}}:\PSL\to\PSL$ and $\R_{\gamma^{-1}}:\PSL\to\PSL$ the left and right multiplication by $\gamma^{-1}$; these can also be viewed as the action of the elements $(\gamma,\text{Id})$ and $(\text{Id},\gamma^{-1})$ of $\PSL\times\PSL$. We now have that both $L_{\gamma^{-1}}(p)$ and $R_{\gamma^{-1}}(p)$ are elements of $P_{\text{Id}}$ and $L_{\gamma^{-1}}(p)$ (resp. $R_{\gamma^{-1}}(p)$) is a bijection between $P_\gamma$ and $P_\text{Id}.$ We can now define: 
-\[
+\begin{equation}\label{defproj}
     \pi_l^\pm(p)=Fix(R_{\gamma^{-1}}(p))\;\ \pi_r^\pm(p)=Fix(L_{\gamma^{-1}}(p)).
-\]
+\end{equation}
+    
+
 
 The choice of define left and right projection in this apparently counterintuitive way is motivated by the following:
 
 \begin{lemma}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $(\alpha, \beta)\in \PSL\times\PSL$. Let us denote $K=\CF$ and $\hat{K}=(\alpha,\beta)\cdot\CF$ and let, \textcolor{red}{Pagina 14}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $(\alpha, \beta)\in \PSL\times\PSL$. Let us denote $K=\CF$ and $\hat{K}=(\alpha,\beta)\cdot\CF$ and let, $\pi_l^{\pm},\pi_r^{\pm}:\partial_{\pm}K\to\H^2$ and $\hat{\pi}_l^\pm,\hat{\pi}_r^\pm:\hat{K}\to\H^2$ be the left and right projection of $K$ and $\hat{K}$ respectively. Then:
+    \begin{equation}\label{equivariance}
+        \hat{\pi}_l^\pm\circ(\alpha,\beta)=\alpha\circ\pi_l^\pm\;\;\;\ \hat{\pi}_r^\pm\circ(\alpha,\beta)=\beta\circ\pi_r^\pm.
+    \end{equation}
 \end{lemma}
+Let's clarify the statement. The isometry $(\alpha,\beta)$ maps a point $p\in K$ to a point $\hat{p}\in\hat{K}$, and maps support planes at $p\in K$ to support planes at $\hat{p}$. Hence the relation introduced in \refeq{equivariance} holds when we consider the projections $\hat{\pi}_l^\pm$ and $\pi_r^\pm$ defined with the choice of support planes of $\hat{K}$ given by the images $\hat{P}$ chosen in the definitions of $\pi_l^\pm$ and $\pi_r^\pm$.
+
+\begin{proof}
+    We recall that for any $\pi \in \partial^\pm K$, we consider $\hat{p}\coloneqq(\alpha,\beta)\cdot p\in\hat{K},$ and for a chosen support plane $P=P_\gamma$ for $K$ at $p,$ $(\alpha,\beta)\cdot P=P_{\hat{\gamma}}$ is the chosen support plane for $\hat{K}$ at $\hat{p}.$\\
+    By the duality, $\hat{\gamma}=(\alpha,\beta)\cdot\gamma=\alpha\gamma\beta^{-1}.$ It follows that: 
+    \begin{align*}
+        \hat{\pi}_l^\pm(\hat{p}) &= \text{Fix}(R_{\hat{\gamma}^{-1}}(\hat{p}))=\text{Fix}(R_{(\beta\gamma^{-1}\alpha^{-1})}(\alpha p\beta^{-1}))\\
+        &=\text{Fix}(R_{(\gamma^{-1}\alpha^{-1})}(\alpha p))=\text{Fix}(\alpha\circ R_{\gamma^{-1}}(p)\circ\alpha^{-1}) \\
+        &=\alpha(\text{Fix}(R_\gamma^{-1})(p))=\alpha\circ\pi_l^\pm(p).
+    \end{align*}
+    And a completely analogous argument holds for the right projection.
+\end{proof}
+
+\textit{Esempio.} Let's consider a toy case where $f=\sigma\in\PSL$ so that $\CF=P_{\sigma^{-1}}$ as in the previous example \textcolor{red}{ref}. This is  in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\sigma^{-1}}$ itself is the unique support plane at any of its points, from the definition in \refeq{defproj} we have the following expressions for the left and right projections $\pi_l,\pi_r:P_{\sigma^{-1}}\to\H^2:$
+\begin{equation}
+    \pi_l(p)=\text{Fix}(p\circ\sigma)\;\;\pi_r(p)=\text{Fix}(\sigma\circ p).
+\end{equation}   
+We can also extend the two map to the boundary of $P_{\sigma^{-1}}$: recalling that its boundary coincides with the graph of $\sigma$ (Lemma \textcolor{red}{yktd}) we have: 
+\begin{equation}\label{simproj}
+    \pi_l(x,\sigma(x))=x \;\;\;\pi_r(x,\sigma(x))=\sigma(x). 
+\end{equation}
+
+Equation \refeq{simproj} is immediately checked when $\sigma=\text{Id},$ because in that case we have that $\pi_l,\pi_r$ simply coincide with the fixed point map $\text{Fix}:P_1\to\H^2$, and we observed previously that $\text{Fix}$ extends to the map $(x,x)\to x$ from $\partial P_{\text{Id}}$ to $\partial\H^2$. The general case of Equation \refeq{simproj} is then consequences of equations \textcolor{red}{ref}, with the additional observation that the isometry $(\text{Id},\sigma)$ maps $\text{graph}(\text{Id})$ to $\text{graph}(\sigma)$ and $P_\text{Id}$ to $P_{\sigma^{-1}}$. \\
+  
 
 \section{The fundamental example.} We want to now finally link Ads geometry, in particular pleated surfaces, with the earthquake theory. Before stating the precise results we explore what we can consider the \textit{fundamental example.} Let $S$ be a piecewise totally geodesic surfaces consisting in the union of two half-planes in $\A^{2,1}$ meeting along a spacelike geodesic as in \textcolor{red}{inserire figura}
 
