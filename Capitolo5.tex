@@ -137,7 +137,7 @@ We will adopt the terminology to the Anti-de Sitter setting, given a convex hull
 Recall \textcolor{orange}{from where?} that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
 
 \begin{equation}\label{suplane}
-    P1\cap\mathcal{C}(f)=\mathcal{C}(\partial P\cap\text{graph}(f)).
+    P\cap\mathcal{C}(f)=\mathcal{C}(\partial P\cap\text{graph}(f)).
 \end{equation}
     
 We can characterize support planes by considering intersection with the convex hull as follows: 
@@ -240,5 +240,63 @@ Let's formalize this idea in a more precise way. Consider the union of two half-
 \end{lemma}
 \begin{proof}
     As in example \textcolor{red}{text} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by \textcolor{red}{text}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
-    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is hyperbolic.
+    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a hyperbolic isometry.
 \end{proof}
+
+Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilites to produce a homeomorphism of $\S$ by compining the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
+
+\begin{equation}
+    \text{Da mettere}
+\end{equation}
+
+Both $f_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
+We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. Then with these notations we can state: 
+
+\begin{proposition}\label{gettinthere}
+    Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $l$ to the left, as seen from $D_1$ to $D_2$. Then:
+    \begin{itemize}
+        \item The future boundary component $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^{-1})$ coincides with the union of the convex envelope of $\text{graph}(\gamma_1^{-1}$ \textcolor{red}{aggiungere le restrizioni} and the convex envelope of \text{graph}()
+        \item The past boundary component 
+    \end{itemize}
+    \textcolor{blue}{To fill}
+\end{proposition}
+\begin{proof}
+    
+\end{proof}
+
+From \ref{gettinthere} we get the following consequence that we state as a:
+
+\begin{corollary}
+    Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left (resp. right), as seen from $D_1$ to $D_2$, and write $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ for some $\mathfrak{a}\in\mathfrak{sl}(2,\R)$. Let $p$ be a point in the future (resp. past) boundary components of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+}).$ Then:
+    \begin{itemize}
+        \item If $p\in\text{int}(A_1)$, then $P_{\gamma_1}$ is the unique support plane of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$. 
+        \item If $p\in\text{int}(A_2)$, then $P_{\gamma_2}$ is the unique support plane of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$. 
+        \item If $p\in A_1\cap A_2= P_{\gamma_1}\cap P_{\gamma_2}$, the the support planes of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\text{exp}(t\mathfrak{a})$ for $t\in [0,1].$ 
+    \end{itemize}
+\end{corollary}
+
+Where we are still consistent with the notations introduced in the proof of the proposition \ref{gettinthere}: $A_i\subset P_{\gamma_i}$ is the convex envelope of the graph of $\gamma_i^{-1}$ restricted to the interval $I_i,$ which is a half-plane bounded by the geodesic $P_{\gamma_1}\cap P_{\gamma_2}.$ As expected a completely analogous statement could be formulated for $\mathcal{C}(f_{\gamma_1,\gamma_2}^{-})$ but we restrict to the study of $f_{\gamma_1,\gamma_2}^{+}$ for simplicity. 
+
+\begin{proof}
+    From Proposition \ref{gettinthere}, the pleated surface that we obtained as the union of $A_1\subset P_{\gamma_1}$ and $A_2\subset P_{\gamma_2}$ coincides with $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^+)$ if $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left, and with $\partial_-\mathcal{C}(f_{\gamma_1,\gamma_2}^+)$ if it translates to the right, by Proposition \ref{gettinthere}. \\
+    The firs two items are then clear, since $P_{\gamma_i}$ are smooth surfaces, hence $A_i$ is smooth at any interior point, and therefore has a unique support plane at the point. The last item can be proved in the same spirit as Proposition \ref{gettinthere}. First, we can assume $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a hyperbolic isometry translating on the left (resp. right) along $\ell.$ By \refeq{suplane}, if $P_\sigma$ is a support plane at $p,$ then $p$ is in the convex hull of the pairs $(y,\sigma^{-1}(y))$ where $y$ satisfies the relation $\sigma^{-1}(y)=f_{\text{Id},\gamma}^{\pm}(y).$ The only possibility is then for $p$ to lie in the geodesic connecting the points $(x,x)$ and $(x^{\prime},x^{\prime})$ in $\T,$ where $x,x^{\prime}$ are the fixed points of $\gamma$. Hence $\sigma$ must have the same fixed point as $\gamma$. It follows that $\sigma$ is then a hyperbolic isometry with axis $\ell$ (or the identity). Moreover, following the same reasoning as in \ref{gettinthere}, $P_\sigma$ is in the future (resp. past) of $\mathcal{C}(f_{\gamma_1,\gamma_2}^+)$ if and only if $\sigma$ translates on the left (resp. right), and its translation length is less than that of $\gamma.$ Hence $\gamma$ is of the form $\exp(t\mathfrak{a})$ for $t\in [0,1].$
+\end{proof}
+
+\section{Simple earthquake.}
+We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\pi_l^{\pm}$ and $\pi_r^\pm$ provide the earthquake map as in Example \textcolor{green}{mettere referenza}. In first instance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
+
+\begin{proposition}\label{estensione}
+    Let $\gamma_1,\gamma_2 \in \PSL$ be such that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry, and let $\pi_l^\pm,\pi_r^\pm$ be the projections associated with the convex envelope of $f_{\gamma_1,\gamma_2}^+.$ Then:
+    \begin{enumerate}
+        \item $\pi_l^\pm,\pi_r^\pm:\partial_\pm\mathcal{C}(f_{\gamma_1,\gamma_2}^+)\to\H^2$ are bijections.
+        \item Assume that $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left), as senn grom $D_1$ to $D_2.$ Then the composiiton $\pi_r^-\circ(\pi_l^-)^{-1}:\H^2\to\H^2$ (resp. $\pi_r^+\circ(\pi_l^+))^{-1}:\H^2\to\H^2)$ is a left (resp. right) earthquake map extending $f_{\gamma_1,\gamma_2}^+.$
+    \end{enumerate} 
+\end{proposition}
+
+We remark that we are limiting to the case of $f_{\gamma_1,\gamma_2}^+$ for simplicity and completely analogous results could be formulated in terms of $f_{\gamma_1,\gamma_2}^-.$ Before proving it we remark that proposition \ref{estensione} holds for \textit{any choice}  of support planes that is needed to define the projections.
+
+\begin{proof}
+    For the first point, recall that $A_i\subset P_{\gamma_i}$, and that the union $A_1\cup A_2$ is the past (resp. future) boundary component for $f_{\gamma_1,\gamma_2}^+$ if $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left). \\
+    Hence \textcolor{blue}{he goes via reference}
+\end{proof}
+
