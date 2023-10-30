@@ -142,7 +142,7 @@ Recall \textcolor{orange}{from where?} that if $X$ is a set, $\mathcal{C}(X)$ it
     
 We can characterize support planes by considering intersection with the convex hull as follows: 
 
-\begin{proposition}
+\begin{proposition}\label{supportinho}
     Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $P$ be a support plane of $\mathcal{C}(f)$ at a point $p\in\partial\mathcal{C}(f).$ Then:
     \begin{itemize}
         \item If $p\in\A^{2,1}$, then $P$ is a spacelike plane. 
@@ -235,7 +235,7 @@ In conclusion we have that the composition of the maps $\pi_r\circ\pi_l^{-1}$ is
 \section{The fundamental example.} We want to now finally link Ads geometry, in particular pleated surfaces, with the earthquake theory. Before stating the precise results we explore what we can consider the \textit{fundamental example.} Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \textcolor{red}{inserire una figura}\\
 Let's formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
 
-\begin{lemma}
+\begin{lemma}\label{Mati}
     Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ@{\gamma_1^{-1}}$ is a hyperbolic isometry. 
 \end{lemma}
 \begin{proof}
@@ -297,6 +297,38 @@ We remark that we are limiting to the case of $f_{\gamma_1,\gamma_2}^+$ for simp
 
 \begin{proof}
     For the first point, recall that $A_i\subset P_{\gamma_i}$, and that the union $A_1\cup A_2$ is the past (resp. future) boundary component for $f_{\gamma_1,\gamma_2}^+$ if $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left). \\
-    Hence \textcolor{blue}{he goes via reference}
+    Hence \textcolor{blue}{he goes via reference} 
 \end{proof}
 
+\section{The example is prototypical.} We have just treated what seems to be a very \textit{special and convenient} simple earthquake. What we want to show now is that it is actually the prototypical example, that will serve to treat the general case of the earthquake theorem. The following lemma explains \textit{how} the situation of two intersecting planes is actually pretty common. 
+
+\begin{lemma}\label{condor}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then: 
+    \begin{itemize}
+        \item Any two support panes of $\mathcal{C}(f)$ at points of $\partial_+\CF$ intersects in $\A^{2,1}$. Analogously, any two past support planes of $\CF$ at points of $\partial_-\CF$ intersects in $\A^{2,1}$.
+        \item Given a point $p\in\partial_\pm\CF,$ if there exist two support planes at $p$, then their intersection (which is a spacelike geodesic) is contained in $\partial_\pm\CF$. As a consequence, any other support plane at $p$ contains this spacelike geodesic.
+    \end{itemize}
+\end{lemma}
+
+\begin{proof}
+    Let us consider future support planes, the other case being analogous, For the first item, let $P$ and $Q$ be support planes intersecting $\partial_+\CF$, which are spacelike by Proposition \ref{supportinho}, and suppose by contradiction that $P$ and $Q$ are disjoint. Then we can slightly move them in the future to get spacelike planes, $P^{\prime}, Q^{\prime}$ such that $P,Q,P^{\prime}$ and $Q^{\prime}$ are mutually disjoint and $P^{\prime}\cap \partial_+\CF=Q^{\prime}\cap\partial_+\CF=\emptyset.$ (For example, if $P=P_{\gamma_1}$ and $Q=P_{\gamma_2}$ then we can use Lemma \ref{Mati} and consider $P^{\prime}=P_{\sigma\gamma_1}$) for $\sigma$ an elliptic element of small clockwise angle of rotation.)\\
+    Now notice that the complement of $P^{\prime}\cup Q^{\prime}$ in $\A^{2,1}$ is the disjoint union of two cylinders and $P$ and $Q$ are lie in different connected components of this complement. See \textcolor{blue}{Figura}. However, $\partial_+\CF$ is connected, and has empty intersection with $P$ and $Q$, leading to a contradiction. \\
+    Let's move on to the second item. Let $P=P_{\gamma_1}$ and $Q=P_{\gamma_2}$ be support planes such that $p\in\partial_+\CF\cap P\cap Q.$ By Lemma \ref{Mati}, $\gamma_2\circ\gamma_1^{-1}$ is loxodromic.  Up to switching the roles of $\gamma_1$ and $\gamma_2$ we can assume that $\gamma_2\circ\gamma_1^{-1}$ translates to the left seen from $D_1$ and $D_2$, where as usual $D_i$ is the convex hull of the interval $I_i,$ and the common endpoints $x,x^{\prime}$ of $I_1$ and $I_2$ are the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Hence $\partial P_{\gamma_1}\cap\partial P_{\gamma_2}=\{(x,y),(x^{\prime}, y^{\prime})\}$ where $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$ and $y^{\prime}=\gamma_1^{-1}(x^{\prime})=\gamma_2^{-1}(x^{\prime})$. \\
+    Now, via \refeq{suplane}, $P_{\gamma_i}\cap\text{graph}(f)$ consist of at least two points for $i=1,2$. We claim that the aforementioned interections contains at least $(x,y)$ and $(x^{\prime},y^{\prime})$. Indeed, since $P_{\gamma_2}$ is a support plane, $\CF\cap P_{\gamma_1}$ is contained in the half-plane $A_1 \subset P_{\gamma_1}.$ If $\text{graph}(f)\cap P_{\gamma_1}$ had not contained $(x,y)$ and $(x^{\prime} ,y^{\prime}),$ then $\CF\cap P_{\gamma_1}$ would not contain the boundary geodesic $A_1 \cap A_2$, and thus would not contain $p$. A \textit{verbatim} argument holds also for $P_{\gamma_2}$. This shows that both $(x,y)$ and $(x^{\prime},y^{\prime})$ are in $\text{graph}$, and therefore the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ is in $\partial_+\CF$. \\ 
+\end{proof}
+
+\begin{observation}
+In the first item of \ref{condor}, the hypothesis that $P$ and $Q$ are support planes at points of $\partial_\pm\CF$ (and not at points of graph($f$) $\subset\partial\A^{2,1}$) is necessary. In light of \ref{supportinho} we know support planes of $\CF$ are either spacelike or lightlike, and they are necessarily spacelike if they intersect $\CF$ at points of $\partial_\pm\CF$. \\
+Now, if one of the two plane $P$ and $Q$ must intersect in $\overline{\A^{2,1}}$, but not necessarily in the interior. It can happen that two future (or past) support planes (one of which possibly lightlike) at a point $(x,f(x))$ intersect at $(x,f(x))$ but not in the interior of $\A^{2,1}$.
+\end{observation}
+ 
+The Lemma \ref{condor} allows us to notice the following. Recall that we have defined the left and right projections $\pi_l^\pm,\pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chose to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show:
+
+\begin{corollary}
+    Let $f:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in \PSL,$ and suppose $p\in\partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
+    In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\pi_l^\pm$ and $\pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
+\end{corollary}
+
+\begin{proof}
+    Diaf_Seppi 5.7 pagina 20.
+\end{proof}
