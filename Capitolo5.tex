@@ -157,7 +157,7 @@ Now, given a spacelike support plane $P$ of $\mathcal{C}(f)$ at a point $p$, we 
 $p\in\overline{\A^{2,1}}, \mathcal{C}(f)$ is contained in the closure of the connected components of $U\setminus P$ which is the past (resp. future) of $P$. This means that there exists a future-oriented (resp past-oriented) timelike curves leaving $\mathcal{C}(f)\cap U$ and reaching $P\cap U$. \\
 We observe that $\mathcal{C}(f)$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $f$ is an element of $\PSL$, the example treated previously.\\
 We can now state the following related to convergence of support planes: 
-\begin{lemma}
+\begin{lemma}\label{49}
     Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
     \begin{itemize}
         \item If $p\in\A^{2,1}$, then $P=P_\gamma$ is a future (resp. past) support plane of $\CF$, for $\gamma_n\to\gamma\in\PSL$.
@@ -330,5 +330,48 @@ The Lemma \ref{condor} allows us to notice the following. Recall that we have de
 \end{corollary}
 
 \begin{proof}
-    Diaf_Seppi 5.7 pagina 20.
+Suppose\end{proof}
+
+\section{Proof of the earthquake theorem.}
+
+We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $f:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\pi_{l}^\pm,\pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
+
+\section{Extension to the boundary}
+We study the extension of the projections $\pi_l^\pm,\pi_r^\pm$ to the boundary of $\CF$. 
+
+\begin{proposition}\label{seiuno}
+    The projections $\pi_l^\pm,\pi_r^\pm$ extend to $\text{graph}(f)$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\text{graph}(f),$ then $\pi_l^\pm(p_n)\to x$ and $\pi_r^\pm(p_n)\to y$.
+\end{proposition}
+
+We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choice} of the projections, regardless of the chosen support planes where several choices are available. \textcolor{pink}{magari metterlo dopo la proof?}
+
+\begin{proof}
+    Let $p_n\in\partial_\pm\CF$ be a sequence converging to $(x,y)\in\text{graph}(f),$ and let $P_{\gamma_n}$ be a sequence of support planes of $\CF$ at $p_n$, which are necessarily spacelike because of the results of Proposition \ref{supportinho}. By Lemma \ref{49}, up to extracting a subsequence, there are two possibilities: either $\gamma_n\to\gamma$ and $P_{\gamma_n}$ converges to the spacelike support plane $P_\gamma$, or $\gamma_n$ diverges in $\PSL$ and $P_{\gamma_n}$ converges to the lighlike plane whose boundary is $(\{x\}\times\S)\cup(\S\times\{y\})$. We treat the two cases separately, and we remand to \textcolor{red}{convergence}.
+    We start by supposing the convergence $\gamma_n\to\gamma.$ By hypothesis: 
+    \begin{equation}\label{18}
+        p_n(z_0)\to x \;\;\; p_n^{-1}(z_0)\to y
+    \end{equation}
+    for any $z_0\in\H^2.$ It also follows from the definition of the projections: 
+    \begin{equation}\label{19}
+        \pi_l^\pm(p_n)=\text{Fix}(p_n\gamma_n^{-1}) \;\; \text{and}\;\; \pi_r^\pm(p_n)=\text{Fix}(\gamma_n^{-1}p_n).
+    \end{equation}
+  We consider the identification of $P_\text{Id}$ with $\S$ via $(x,x)\to x,$ we thus have show (choosing for instance the point $z_0=i$) that: $p_n\gamma_n^{-1}(i)\to x$ and $\gamma_n^{-1}p_n(i)\to y.$ \\
+  However, since 
+\end{proof}
+
+\begin{observation}
+    Seppi 6.4 
+\end{observation}
+
+\begin{proposition}\label{seitre}
+    The projections $\pi_l^\pm,\pi_r^\pm:\partial_\pm\CF\to\H^2$ are bijections. 
+\end{proposition}
+
+As a direct consequence of Proposition \ref{seitre}, the composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$ is well-defined and is a bijection of $\H^2$ to itself. This and Proposition \ref{seiuno} let us show the following: 
+
+\begin{corollary}
+    The composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itseld, which equals $f$ on $\partial\H^2$ and is continuos at any point of $\partial\H^2$.
+\end{corollary}
+\begin{proof}
+    
 \end{proof}
