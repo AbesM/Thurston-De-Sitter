@@ -4,11 +4,11 @@
     A geodesic lamination $\lambda$ of $\H^2$ is a collection of disjoint geodesic that foliate a closed subset $X$ of $\H^2$. The set $X$ is called the \textit{support} of $\lambda.$ The geodesic in $\lambda$ are called \textit{leaves} (as in classic foliation terminology). The connected components of $\H^2\;\setminus\;X$ are called \textit{gaps}. The \textit{strata} of $\lambda$ are the leaves and the gaps.
 \end{definition}
 
-Consider $\gamma$ an isometry of $\H^2$, the \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. As a consequence we have that the geodesic is preserved by the isometry, when restricted to such a curve $\gamma_\ell:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
+\noindent Consider $\gamma$ a loxodromic isometry of $\H^2$, the \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. As a consequence we have that the geodesic is preserved by the isometry, when restricted to such a curve $\gamma_\ell:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
 Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly separated} $A$ and $B$ if $A$ and $B$ are contained in the closure of different connected components of $\H^2\;\setminus\;\ell.$ 
 
 \begin{definition}
-    A \textit{left earthquake} of $\H^2$ is a bijective map $E:\H^2\to\H^2$ such that there exists a geodesic lamination $\lambda$ for which the restriction $E_S$ to any stratum $S$ of $\lambda$ is equal to the restriction of an isometry of $\H^2,$ and for any two strata $S$ and $S^{\prime}$ of $\lambda$ the comparison isometry 
+    A \textit{left earthquake} (resp. \textit{right}) of $\H^2$ is a bijective map $E:\H^2\to\H^2$ such that there exists a geodesic lamination $\lambda$ for which the restriction $E_S$ to any stratum $S$ of $\lambda$ is equal to the restriction of an isometry of $\H^2,$ and for any two strata $S$ and $S^{\prime}$ of $\lambda$ the comparison isometry 
     
     \[
         \text{Comp}(S,S^{\prime})\coloneqq (E_S)^{-1}\circ E_S^{\prime}
@@ -17,8 +17,8 @@ Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly sepa
     is the restriction of an isometry of $\H^2$ such that:
     \begin{itemize}
         \item $\gamma$ is different from the identity, unless possibly where one of the two strata $S$ and $S^{\prime}$ is contained in the closure of the other;
-        \item when it's note the identity, $\gamma$ is a hyperbolic transformation whose axis $\ell$ weakly separetes $S$ and $S^{\prime};$
-        \item moreover, $\gamma$ translates to the left, seen from $S$ to $S^{\prime}$. 
+        \item when it's note the identity, $\gamma$ is a loxodromic transformation whose axis $\ell$ weakly separates $S$ and $S^{\prime};$
+        \item moreover, $\gamma$ translates to the left (resp right), seen from $S$ to $S^{\prime}$. 
     \end{itemize}
 \end{definition}
 
@@ -77,7 +77,7 @@ The initial step in our proof is to consider the graph of an orientation-preserv
 
 \begin{proof}
     \begin{enumerate}
-        \item We recall that $\PSL$ acts transitively on pairs of distinct points of $\R\text{P}^1\simeq\R\cup\{\infty\}$ (actually more is true, as it acts simply transitively on \textit{positively oriented triples}). Hence we may assume, up to the action of the isometry group of $\A^{2,1}$ by post-composition on $f$ (remark something that I have to cite), that $f(0)=0$ and $f(\infty)=\infty.$ The $f$ induces a monotone increasing homeomorphism from $R\to\R$. Since $f(0)=0,$ the map $f$ preserves the two intervals: $(-\infty,0)$ and $(0,\infty).$ Let now $\gamma=\mathcal{R}_i$ be the order-two elliptic isometry fixing $i$. Clearly $\gamma$ is an involution that maps $0\to\infty,$ \todo{show this}, and switches the two intervals $(-\infty,0)$ and $(0,\infty)$. Hence $f(x)\neq\gamma(x)$ for all $x\in\R\cup\{\infty\}$, that is $\text{graph}(f)\cap\text{graph}(\gamma)=\emptyset.$ Now by lemma \textcolor{red}{cite} and the fact that $\gamma$ is an involution, $\text{graph}(f)\cap\partial\text{P}_\gamma=\emptyset.$
+        \item We recall that $\PSL$ acts transitively on pairs of distinct points of $\R\text{P}^1\simeq\R\cup\{\infty\}$ (actually more is true, as it acts simply transitively on \textit{positively oriented triples}). Hence we may assume, up to the action of the isometry group of $\A^{2,1}$ by post-composition on $f$ (we observe that because of equivariance given $(\alpha,\beta)\in\T$ it holds $(\alpha,\beta)\cdot\text{graph}(f)=\text{graph}(\beta f\alpha^{-1})$), that $f(0)=0$ and $f(\infty)=\infty.$ The $f$ induces a monotone increasing homeomorphism from $R\to\R$. Since $f(0)=0,$ the map $f$ preserves the two intervals: $(-\infty,0)$ and $(0,\infty).$ Let now $\gamma=\mathcal{R}_i$ be the order-two elliptic isometry fixing $i$. Clearly $\gamma$ is an involution that maps $0\to\infty,$ \todo{show this}, and switches the two intervals $(-\infty,0)$ and $(0,\infty)$. Hence $f(x)\neq\gamma(x)$ for all $x\in\R\cup\{\infty\}$, that is $\text{graph}(f)\cap\text{graph}(\gamma)=\emptyset.$ Now by lemma \textcolor{red}{cite} and the fact that $\gamma$ is an involution, $\text{graph}(f)\cap\partial\text{P}_\gamma=\emptyset.$
         \item In proving this point we will use the aforementioned $\PSL$-transitivy on triples, and we will apply both pre and post-composition of an element of $\PSL$. We observe that if $(x_0,y_0)\notin\text{graph}(f)$, then we can find points $x,x^{\prime}$ such that $f$ maps the unoriented arc of $\R\text{P}^1$ connecting $x,x^{\prime}$ containing $x_0$ to the unoriented arc connecting $f(x),f(x^{\prime})$ \textit{not} containing $f(y_0),$ the proof is just figure \textcolor{red}{inserire la figura}. Now, since $f$ preserve the orientation of $\R\text{P}^1,$ up to switching $x,x^{\prime}$, we have that $(x, x_0, x^{\prime})$ is a positive triple in $\S$, while $(f(x),y_0,f(x^{\prime}))$ is a negative triple. \\
         Following the observation, and using simply transitivity on oriented triples, we can assume $(x,x_0,x^{\prime})=(0,1,\infty)$ and $(f(x),y_0,f(x^{\prime}))=(0,-1,\infty).$ At this point choosing $\gamma=\mathcal{R}_i$ as in the first point of the proof satisfies the condition in the second item as well, since $\gamma(1)=-1$.  
     \end{enumerate}

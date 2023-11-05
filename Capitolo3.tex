@@ -23,9 +23,9 @@ $$(A,B)\cdot X=AXB^{-1}.$$
 
 As a direct consequence of the Binet formula, the action preserves the quadratic form $q=$-det and thus induces a representation: 
 
-\[ \rho:SL(2,\R)\times SL(2,\R)\to O(\mathcal{M}(2,\R),q). \]
+\[ \rho:\text{SL}(2,\R)\times \text{SL}(2,\R)\to O(\mathcal{M}(2,\R),q). \]
 
-Since the center of $SL(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rho$ is $K=\{(\text{Id},1),(-\1,-\1)\},$ and by a dimensional argument it turns out that the image of the representation is the connected component of the identity: \todo{Perché è immagine di un connesso e contiene l'identità. Per le dimensioni sono le stesse ma sto divendo per due per il ker? sus}
+Since the center of $\text{SL}(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rho$ is $K=\{(\text{Id},\text{Id}),(-\text{Id},-\text{Id})\},$ and by a dimensional argument (and connectedness of $\text{SL}(2,\R)$z) it turns out that the image of the representation is the connected component of the identity: \todo{Perché è immagine di un connesso e contiene l'identità. Per le dimensioni sono le stesse ma sto divendo per due per il ker? sus}
 
 \[
     \text{Isom}_0(\H^{2,1})=\text{SO}_0(\mathcal{M}(2,\R),q)\simeq (\text{SL}(2,\R)\times \text{SL}(2,\R))/K
@@ -37,8 +37,17 @@ Using this model, one has natural identification between $\A^{n,1}$ and the Lie 
 \]
 acting by left and right multiplication on $\text{PSL}(2,\R)$.\\ We are mostly interested in orientation-preserving and time-preserving notions that do not depend on a chosen orientation, nevertheless we will fix here an orientation and a time-orientation of $\A^{2,1}\simeq\text{PSL}(2,\R).$ As we are dealing with a Lie group it is sufficient to define on orientation of the Lie algebra, namely the tangent at the identity Id. We declare as (positive) oriented basis of $\mathfrak{sl}(2,\R):$ 
 \[
-    \text{Inserire V,W,U}
-\]  
+V=\begin{pmatrix}
+  0 & 1 \\ 1 & 0
+\end{pmatrix}\;\;
+W=\begin{pmatrix}
+  1 & 0 \\ 0 & -1
+\end{pmatrix}
+\;\;
+U=\begin{pmatrix}
+  0 & -1 \\ 1 & 0
+\end{pmatrix}
+\]
 
 The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ ficing $i\in\H^2$, parametrized by the angle of clockwise rotation; $V,W$ are vectors tangent to the one-parameter groups of hyperbolic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is future-pointing timelike vector. \\
 
@@ -66,12 +75,14 @@ From the aforementioned identification we obtain a new one between $\partial\A^{
     \partial\A^{2,1}=\{[X]\in\text{P}(\mathcal{M}(2,\R))|\;\text{rank}(X)=1\}
 \]
 We endow $\overline{\A^{2,1}}=\A^{2,1}\cup\partial\A^{2,1}$ with the topology induced by seeing both as subsets of the real projective space $\text{P}(\mathcal{M}(2,\R)).$ We want to observe that we have the following homeomorphism: 
-\[
-    \delta:\partial\A^{2,1}\to\R\text{P}^1\times\R\text{P}^1
-\] \todo{definire la funzione con latex }
+\begin{align*}\label{delta}
+    \delta:\partial\A^{2,1}&\rightarrow\R\text{P}^1\times\R\text{P}^1\\
+    [X]&\mapsto (\text{Im}(X),\text{Ker}(X))
+\end{align*}
+
 
 where we are considering $\R\text{P}^1$ as the space of one-dimensional subspaces of $\R^2$. Since we have that $\text{Im}(AXB^{-1})=A\cdot\text{Im}(X)$ and $\text{Ker} (AXB^{-1})=B\cdot\text{Ker}(X),$ the map $\delta$ is equivariant with respect to the action of $\PSL\times\PSL,$ acting on $\partial\A^{2,1}$ as the natural extension of the group of isometries of $\A^{2,1}$ and on $\R\text{P}^1\times\R\text{P}^1$ by the obvious product action.\\
-In this setting our choice of a time-orientation \textit{can be modified} by the following Lemma:
+In this setting our choice of a time-orientation \textit{can be modified} according to the following Lemma:
 \begin{lemma}\label{invertime}
     The inversion map $\iota[X]=[X]^{-1}$ \todo{non è più bello con il -1 dentro?} is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
 \end{lemma}
@@ -83,7 +94,7 @@ In this setting our choice of a time-orientation \textit{can be modified} by the
 
 Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ and $\text{PSL}(2,\R)$ is identified to $\text{Isom}_0(\H^2$.) In this key we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
 
-\begin{lemma}
+\begin{lemma}\label{convergenza}
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
@@ -104,6 +115,13 @@ We refer to $\lambda_{y_0}$ as the \textit{left ruling} through $(x_0,y_0)$, and
     \mu_{x_0}\coloneqq\{(x_0,y)|y\in\R\text{P}^1\}
 \]
 
+One of the fundamental idea of the earthquake theorem is that to any given map $f:\partial\H^2\to\partial \H^2$ we can associate a subset of $\partial\A^{2,1}$, namely (via the map $\delta$ introduced in \refeq{delta}) the graph of $f$. It follows from the equivariance of $\delta$ that for any $(\alpha,\beta)\in\T$:
+\begin{equation}
+    (\alpha,\beta)\cdot\text{graph}(f)=\text{graph}(\beta f\alpha^{-1}).
+\end{equation} 
+
+We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via the \textit{recipe} given by $\delta$.
+
 \section{Spacelike planes}
 We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
 \begin{equation}\label{geoplanes}
@@ -111,7 +129,7 @@ We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are a
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. \todo{How so?} The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
 \textit{Example}
-Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \textcolor{red}{lemma sulla convergenza al bordo}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
+Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \ref{convergenza}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
     \partial\text{P}_\gamma=\text{graph{Id}}\subset \T.
 \end{equation}
@@ -134,7 +152,7 @@ This simple example is actually the key case to understand general spacelike tot
     \]
 \end{lemma}
 \section{Timelike planes}
-Let's consider now a matrices $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_[A]$ by $P_\eta$. \\
+Let's consider now a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_[A]$ by $P_\eta$. \\
 The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map: 
 \begin{equation}\label{refspa}
     \mathcal{I}\to\mathcal{I}_\eta
@@ -148,7 +166,7 @@ In similar fashion to the spacelike case, using the transitivity of the group of
     \]
 \end{lemma}
 \begin{proof}
-    
+    Suppose we have a sequence $\mathcal{I}_n$
 \end{proof}
 \begin{proof}
     Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric \textcolor{red}{quale} on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail in \textcolor{red}{Reference}
