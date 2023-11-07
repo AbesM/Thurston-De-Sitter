@@ -6,3 +6,4 @@ diffeomorphic
 homeomorphism
 Fuchsian
 spacelike
+isometries
