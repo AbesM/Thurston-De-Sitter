@@ -34,7 +34,7 @@ We observe that such a condition is independent of the order we order in which w
 
 Let's consider a first basic example: 
 
-\begin{example}
+\begin{example}\label{simplequake}
 The map 
 \[
     E:\H^2\to\H^2
@@ -258,7 +258,7 @@ Let's formalize this idea in a more precise way. Consider the union of two half-
     We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a hyperbolic isometry.
 \end{proof}
 
-Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilites to produce a homeomorphism of $\S$ by compining the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
+Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
 
 \begin{equation}
     \text{Da mettere}
@@ -268,16 +268,23 @@ Both $f_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, sin
 We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. Then with these notations we can state: 
 
 \begin{proposition}\label{gettinthere}
-    Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $l$ to the left, as seen from $D_1$ to $D_2$. Then:
+    Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left, as seen from $D_1$ to $D_2$. Then:
     \begin{itemize}
-        \item The future boundary component $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^{-1})$ coincides with the union of the convex envelope of $\text{graph}(\gamma_1^{-1}$ \textcolor{red}{aggiungere le restrizioni} and the convex envelope of \text{graph}()
+        \item The future boundary component $\partial_+\mathcal{C}(f_{\gamma^+,\gamma_2}^{-1})$ coincides with the union of the convex envelope of $\text{graph}(\restr{\gamma_1^{-1}}{I_1})$ and the convex envelope of $\text{graph}(\restr{\gamma_2^{-1}}{I_2})$
         \item The past boundary component 
     \end{itemize}
     \textcolor{blue}{To fill}
 \end{proposition}
 \begin{proof}
-    
+    Let us consider the case where $\gamma_2\circ\gamma_1^{-1}$ translates to the left along $\ell$, and let us prove the first item. Let $x,x^{\prime}$ be the fixed points of $\gamma_2\circ\gamma_1^{-1},$ let $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$ and $y^{\prime}=\gamma_1^{-1}(x^{\prime})=\gamma_2^{-1}(x^{\prime})$. Then the convex envelope of graph($\restr{gamma_i^{-1}}{I_i}$) is a half-plane $A_i$ in $P_{\gamma_i}$ bounded by the goedesic $P_{\gamma_1}\cap P_{\gamma_2}$, which has endpoints $(x,y)$ and $(x^{\prime} ,y^{\prime})$, Clearly both the convex envelope of graph($\restr{\gamma_i^{-1}}{I_i}$) are contained in $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+}).$\\
+    We could be even more precise. We claim that $P_{\gamma_1}$ and $P_{\gamma_2}$ are future support planes for $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+}).$. The claim will imply that the union of $A_1$ and $A_2$ is contained in the future boundary component $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$, because every point $p\in A_1\cup A_2$ admits a future support plane through $p$ which is either $P_{\gamma_1}$ or $P_{\gamma_2}$. However $A_1\cup A_2$ is a topological disc in $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^{+}),$ whose boundary is precisely the curve $\text{graph}(f_{\gamma_1,\gamma_2}^{+})$ by construction. Hence the claim will hold that $A_1\cup A_2=\partial_+(f_{\gamma_1,\gamma_2}^{+}).$\\
+    We prove the claim for $P_{\gamma_1}$, proof for $P_{\gamma_2}$ is analogous. For convenience, we set $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a loxodromic isometry with fixed points $x,x^{\prime}$, translating to the left as seen from $D_1$ to $D_2$. Indeed, we can apply $(\text{Id},\gamma_1),$ which sends $P_{\gamma_1}$ to $P_1$, $P_{\gamma_2}$ to $P_{\gamma_2\gamma_1^{-1}}$, and graph($f_{\gamma_1,\gamma_2}^+$) to graph($f_{\text{Id},\gamma_2\gamma_1^{-1}}^+$). \\
+    We can now consider a path $\sigma_t,$ for $t\in[0,\epsilon]$ of elliptic elements fixing a given point $z_0\in\H^2,$ that rotate clockwise by an angle $t.$ As in the proof of \textcolor{red}{madonna} the planes $P_{\sigma_t}$ are pairwise disjoint in $\overline{\A^{2,1}}$, because $\sigma_{t_2}\circ\sigma_{t_1}^{-1}$ is still an elliptic element fixing $z_0$ for $t_1\neq t_2$, hence it has no fixed points in $\S$. Moreover recall that $\gamma^{-1}$ has a fixed axis $\ell$ and translates along $\ell$ to the right as seen from $D_1$ to $D_2$. Now $f_{\text{Id},\gamma}^+$ equals the identity on $I_1$ and $\gamma_2$ on $I_2,$ it fixes $I_1$ pointwise and moves points on $I_2$ clockwise. It follows that the equation $f_{\text{Id},\gamma}^+(x)=\gamma_t^{-1}(x)$ has no solution for $t>0$, because $\sigma_{t}^{-1}=\sigma_{-t}$ moves all the points counterclockwise if $t$ is positive. This shows that $P_{\sigma_t}\cap\mathcal{C}(f^+_{\text{Id},\gamma})=\emptyset$ for $t>0,$ and thus $P_{\text{Id}}$ is a support plane for $\mathcal{C}(f^+_{\text{Id},\gamma})$ by Observation \textcolor{green}{da aggiungere}.\\
+    Moreover if it is a future support plane: indeed one can check that $\sigma_{t+\pi/2}=\mathcal{R}_{z_0}\circ\sigma_t\in P_{\sigma_t}$, and the path $t\mapsto\sigma_t$ is future-directed because, from the discussion after \textcolor{green}{same}, its tangent vector is future-directed, hence $\mathcal{C}(f_{\text{Id},\gamma}^+)$ is locally in the past of $P_{\text{Id}}$. \\
+    We have shown the first item of the proposition, all the others follow with completely analogous arguments.
 \end{proof}
+
+
 
 From \ref{gettinthere} we get the following consequence that we state as a:
 
@@ -286,11 +293,13 @@ From \ref{gettinthere} we get the following consequence that we state as a:
     \begin{itemize}
         \item If $p\in\text{int}(A_1)$, then $P_{\gamma_1}$ is the unique support plane of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$. 
         \item If $p\in\text{int}(A_2)$, then $P_{\gamma_2}$ is the unique support plane of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$. 
-        \item If $p\in A_1\cap A_2= P_{\gamma_1}\cap P_{\gamma_2}$, the the support planes of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\text{exp}(t\mathfrak{a})$ for $t\in [0,1].$ 
+        \item If $p\in A_1\cap A_2= P_{\gamma_1}\cap P_{\gamma_2}$, the the support planes of $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+})$ at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\text{exp}(t\mathfrak{a})$ for $t\in [0,1].$  
     \end{itemize}
+
+    
 \end{corollary}
 
-Where we are still consistent with the notations introduced in the proof of the proposition \ref{gettinthere}: $A_i\subset P_{\gamma_i}$ is the convex envelope of the graph of $\gamma_i^{-1}$ restricted to the interval $I_i,$ which is a half-plane bounded by the geodesic $P_{\gamma_1}\cap P_{\gamma_2}.$ As expected a completely analogous statement could be formulated for $\mathcal{C}(f_{\gamma_1,\gamma_2}^{-})$ but we restrict to the study of $f_{\gamma_1,\gamma_2}^{+}$ for simplicity. 
+Where we are still using the notation introduced in the proof of \ref{gettinthere}: $A_i\subset P_{\gamma_i}$ is the convex envelope of $\text{graph}(\restr{\gamma_i^{-1}}{I_i}$), an half-plane bounded by the geodesic $P_{\gamma_1}\cap P_{\gamma_2}.$ As expected a completely analogous statement could be formulated for $\mathcal{C}(f_{\gamma_1,\gamma_2}^{-})$ but we restrict to the study of $f_{\gamma_1,\gamma_2}^{+}$ for simplicity. 
 
 \begin{proof}
     From Proposition \ref{gettinthere}, the pleated surface that we obtained as the union of $A_1\subset P_{\gamma_1}$ and $A_2\subset P_{\gamma_2}$ coincides with $\partial_+\mathcal{C}(f_{\gamma_1,\gamma_2}^+)$ if $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left, and with $\partial_-\mathcal{C}(f_{\gamma_1,\gamma_2}^+)$ if it translates to the right, by Proposition \ref{gettinthere}. \\
@@ -298,7 +307,7 @@ Where we are still consistent with the notations introduced in the proof of the 
 \end{proof}
 
 \section{Simple earthquake.}
-We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\pi_l^{\pm}$ and $\pi_r^\pm$ provide the earthquake map as in Example \textcolor{green}{mettere referenza}. In first instance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
+We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\pi_l^{\pm}$ and $\pi_r^\pm$ provide the earthquake map as in Example \ref{simplequake}. In first instance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
 
 \begin{proposition}\label{estensione}
     Let $\gamma_1,\gamma_2 \in \PSL$ be such that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry, and let $\pi_l^\pm,\pi_r^\pm$ be the projections associated with the convex envelope of $f_{\gamma_1,\gamma_2}^+.$ Then:
