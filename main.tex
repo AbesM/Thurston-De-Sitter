@@ -33,6 +33,21 @@
 \def\CF{\mathcal{C}(f)}
 \newcommand\norm[1]{\lVert#1\rVert}
 
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{lemma}[theorem]{Lemma} % same for example numbers
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Remark}
+\renewcommand*{\proofname}{Proof}
+\newcommand\restr[2]{\ensuremath{\left.#1\right|_{#2}}}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+
 
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
@@ -78,17 +93,7 @@
   \par}%
 }
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter] % reset theorem numbering for each chapter
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
-\newtheorem{lemma}[theorem]{Lemma} % same for example numbers
-\theoremstyle{plain}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{observation}[theorem]{Remark}
-\renewcommand*{\proofname}{Proof}
-\newcommand\restr[2]{\ensuremath{\left.#1\right|_{#2}}}
-\newtheorem{corollary}[theorem]{Corollary}
+
 
 \chapterstyle{veelo}
 \checkandfixthelayout
@@ -123,7 +128,6 @@
 %\include{legenda}
 
 %\include{ringraziamenti}
-\setcounter{chapter}{-1}
 \include{Introduzione}
 \include{Capitolo1}
 \include{Capitolo2}

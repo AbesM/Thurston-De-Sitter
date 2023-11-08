@@ -25,8 +25,7 @@ As a direct consequence of the Binet formula, the action preserves the quadratic
 
 \[ \rho:\text{SL}(2,\R)\times \text{SL}(2,\R)\to O(\mathcal{M}(2,\R),q). \]
 
-Since the center of $\text{SL}(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rho$ is $K=\{(\text{Id},\text{Id}),(-\text{Id},-\text{Id})\},$ and by a dimensional argument (and connectedness of $\text{SL}(2,\R)$z) it turns out that the image of the representation is the connected component of the identity: \todo{Perché è immagine di un connesso e contiene l'identità. Per le dimensioni sono le stesse ma sto divendo per due per il ker? sus}
-
+Since the center of $\text{SL}(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rho$ is $K=\{(\text{Id},\text{Id}),(-\text{Id},-\text{Id})\},$ and by a dimensional argument (and connectedness of $\text{SL}(2,\R)$z) it turns out that the image of the representation is the connected component of the identity: 
 \[
     \text{Isom}_0(\H^{2,1})=\text{SO}_0(\mathcal{M}(2,\R),q)\simeq (\text{SL}(2,\R)\times \text{SL}(2,\R))/K
 \]
@@ -120,18 +119,19 @@ One of the fundamental idea of the earthquake theorem is that to any given map $
     (\alpha,\beta)\cdot\text{graph}(f)=\text{graph}(\beta f\alpha^{-1}).
 \end{equation} 
 
-We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via the \textit{recipe} given by $\delta$.
+We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via $\delta$.
+\subsection{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory.  We would like to start considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, where under
 
 \section{Spacelike planes}
 We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
 \begin{equation}\label{geoplanes}
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\}
 \end{equation}
-for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. \todo{How so?} The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
+for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
 \textit{Example}
 Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \ref{convergenza}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
-    \partial\text{P}_\gamma=\text{graph{Id}}\subset \T.
+    \partial\text{P}_\gamma=\text{graph(Id)}\subset \T.
 \end{equation}
 
 Now consider a point $z\in\H^2$, and let us denote by $\mathcal{R}_z$ the order-two elliptic isometry with fixed point $z$. We claim that the map 
