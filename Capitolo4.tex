@@ -1,13 +1,13 @@
 \chapter{Mess Work}
 
-In his 1990 paper "Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess ideas, with a special attention to AdS geometry. 
+In his 1990 paper "Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess ideas, with a special attention to AdS geometry. Our treatment will follow the setting introduced by Bonsante and Seppi in \cite{bonsanteseppi}.
 
 \section{Causality and Convexity properties}
 We begin with some definitions:
 \begin{definition}
     A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if no pair of points in $X$ is connected by timelike (resp. causal) lines in $\AS^{2,1}$.
 \end{definition}
-Since acausality and achronality are conformally invariant notions, it will be often convenient to consider the metric $g_{\mathbb{S}^2}-dt^2$ on $\D\times\R$ introduced \todo{aggiustare.} which is conformal to the Poincaré model. We give now a first useful characterization of achronal and acausal sets:
+Since acausality and achronality are conformally invariant notions, it will be often convenient to consider the metric $g_{\mathbb{S}^2}-dt^2$ on $\D\times\R$ introduced in \refeq{emispherical} which is conformal to the Poincaré model. We give now a first useful characterization of achronal and acausal sets:
 \begin{lemma}
     A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if and only if it is the graph of a function $f:D\to\R$ which is 1-Lipschitz, (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2}$.\\
     Where we have denoted $D=\pi_{\D}(X).$ 
@@ -26,7 +26,7 @@ Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the bou
     An achronal subset $X$ in $\AS^{2,1}$ is properly embedded if and only if it is a global graph over $\D$, and in this case it extends uniquely to the global graph of a 1-Lipschitz function over $\D\cup\partial\D$.
 \end{lemma}
 
-Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of propertis we shall remark how achronality and acasuality are global conditions.
+Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acasuality are global conditions.
 
 \begin{definition} Given a surface $S$ and a Lorentzian manifold $(M,g),$ a $\mathcal{C}^1$ immersion $\sigma:S\to M$ is \textit{spacelike} if the pull-back metric $\sigma^*g$ is Riemannian. If $\sigma$ is an embedding, we refer to its image as a \textit{spacelike surface}.
 \end{definition}
@@ -52,6 +52,10 @@ We want to define and study properties of Cauchy surfaces and domains of depende
     \]
     We say that $X$ is a \textit{Cauchy surface} of $M$ if $\mathcal{D}(X)=M$. A spacetime $M$ is said \textit{globally hyperbolic} if it admits a Cauchy surface.
 \end{definition}
+
+\begin{observation}
+    Equivalently the domain of dependence  $D(X)$ of $X$ is the set of points $p\in\A^{2,1}$ such that the plane $p^*,$ the projective dual of $p$ as introduced in \textcolor{red}{define} is disjoint from $X.$ Domain of dependence are always contained in an affine chart and admit only light-like support planes. \textcolor{red}{Ancora non ho davvero definito i support planes a questo punto}
+\end{observation}
 
 The theory of globally hyperbolic spacetimes is a well-developed topic in Lorentzian geometry, we will just state the facts that we will need in the following. 
 
@@ -254,33 +258,91 @@ As a consequence of Proposition [...], the left and right components of the holo
     \mathcal{T}(\Sigma_r)\simeq\{\rho:\pi_1(\Sigma_r)\to\PSL\;\text{positive Fuchsian representation}\}/\PSL
 \]
 
-Therefore the holonomy map can be cosidered as a map from $ \mathcal{MGH}(\Sigma_r)$ with values in $\mathcal{T}(\Sigma_r)\times\mathcal{T}(\Sigma_r).$ Restating the classification in the original set of Mess \cite{Mess}: 
+Therefore the holonomy map can be considered as a map from $ \mathcal{MGH}(\Sigma_r)$ with values in $\mathcal{T}(\Sigma_r)\times\mathcal{T}(\Sigma_r).$ Restating the classification in the original set of Mess \cite{Mess}: 
 \begin{theorem}
     The holonomy map $\rho:\mathcal{MGH}(\Sigma_r)\to\mathcal{T}(\Sigma_r)\times\mathcal{T}(\Sigma_r)$ is a homeomorphism.
 \end{theorem}
 \section{Gauss map of spacelike surfaces}
-    We will now introduce the \textit{Gauss Map} associated to a spacelike surface in Anti de Sitter space, this tool will reveal useful in the study of the relation of Anti-de Sitter geometry and Teichm\"uller theory and hyperbolic surfaces.
+    We will now introduce the \textit{Gauss Map} associated to a spacelike surface in Anti de Sitter space, this tool will be  useful in the study of the relation of Anti-de Sitter geometry and Teichm\"uller theory and hyperbolic surfaces.
 
     We will start by fixing notation and recalling some general facts about immersed spacelike surfaces in Anti de Sitter space. We will assume that all our immersed surfaces are of class $C^1$. \\
-    Given a regular immersion $\sigma: S\to\A^{2,1}$ we will say that it is \textit{spacelike} if the pull-back metric  
-
-
-\textcolor{red}{maybe here something is repeated lol}
+    Given a regular immersion $\sigma: S\to\A^{2,1}$ we will say that it is \textit{spacelike} if the pull-back metric $I\coloneqq\sigma^*g_{\A^{2,1}}$ is Riemannian, we call $I$ firs fundamental form of $\sigma$. 
 
 The tangent bundle $TS$ is naturally identified to a subbundle of $T\A^{2,1}$ by means of $d\sigma$. The normal bundle $N_\sigma$ is then defined as the $g_{\A}$-orthogonal complement of $TS$ in $T\A^{2,1}$, The restricion of $g_{\A}$ to $N_\sigma$ is negative definite. Using the $g_\A$ induced decomposition: 
 \[
 \sigma^*T\A^{2,1}=TS\oplus N_\sigma,    
 \]
 
-the pull-back of the ambient Levi-Civita connection $\nabla$, restricted to sections tangent to $S$ splits as the sum of the Levi-Civita connection $\nabla^I$ of the first fundamental form $I$, and a symmetric 2-form with value in $N_\sigma$. As a consequence of time-orientability of $\A^{2,1}$, the normal bundle admits a natural trivialization, which is the same as a choice of a continuos unit normal vector field for $\sigma.$ We will denote by $\nu:S\to N_\sigma$ the future-directed unit normal section, and consider the decomposition for all vector field $X,Y$ tangent to $S$: 
+the pull-back of the ambient Levi-Civita connection $\nabla$, restricted to sections tangent to $S$ splits as the sum of the Levi-Civita connection $\nabla^I$ of the first fundamental form $I$, and a symmetric 2-form with value in $N_\sigma$. As a consequence of time-orientability of $\A^{2,1}$, the normal bundle admits a natural trivialization, which is the same as a choice of a continuous unit normal vector field for $\sigma.$ We will denote by $\nu:S\to N_\sigma$ the future-directed unit normal section, and consider the decomposition for all vector field $X,Y$ tangent to $S$: 
 \[
     \nabla_V W=\nabla^I_V W+II(V,W)\nu,
 \]
-where the symmetric $(2,0)$ tensor $II$ is called \textit{second fundamental form}. It will reveal useful to consider the $I-$symmetric $(1,1)$-tensor $B\in (TS)^*\otimes TS$ defined by $II(V,W)=I(B(V),W)$ which is called the \textit{shaper operator} of $\sigma.$ As in the Riemannian case, it turns out that $\sigma_*(B(v))=\nabla_v\nu.$\\  
-The first and second fundamental form of an immersion $\sigma$ satisfy contrainst equations, known as $\textit{Gauss-Codazzi equations}$, More preciselly the Gauss equation consists of the identity: 
-\[K_I=-1-\det_I II\] where $K_I$ is the curvature of $I$ and $\det_I II$ is $\det B$ by definition. On the other hand the Codazzi equation states that $\nabla^III$ is a totally symmetric $3-$form. We have: 
+where the symmetric $(2,0)$ tensor $II$ is called \textit{second fundamental form}. It will reveal useful to consider the $I-$symmetric $(1,1)$-tensor $B\in (TS)^*\otimes TS$ defined by $II(V,W)=I(B(V),W)$ which is called the \textit{shape operator} of $\sigma.$ As in the Riemannian case, it turns out that $\sigma_*(B(v))=\nabla_v\nu.$\\  
+The first and second fundamental form of an immersion $\sigma$ satisfy constraint equations, known as \textit{Gauss-Codazzi equations}. More preciselly the Gauss equation consists of the identity: 
+\begin{equation}\label{Gauss}
+    K_I=-1-\det_I II
+\end{equation}
+where $K_I$ is the curvature of $I$ and $\det_I II$ is $\det B$ by definition. On the other hand the Codazzi equation states that $\nabla^III$ is a totally symmetric $3-$form. We have: 
 \begin{equation} \nabla 
 \end{equation}
 
+\textcolor{red}{mancano eq. di codazzi}
+
+What can be shown is that the Gauss-Codazzi equations relating first and second fundamental forms are \textit{necessary} but also \textit{sufficient}, more explicitly we mean:
+
+\begin{theorem}\label{immcondition}
+    Let $S$ e a simply connected surface, let $I$ be a Riemannian metric on $S$ and $II$  be a symmetric $(2,0)-$tensor on $S$. If $I$ and $II$ satisfy the Gauss-Codazzi equations \refeq{Gauss} and  \textcolor{red}{blablabla}
+\end{theorem}
+
 \subsection{Germs of spacelike immersions in Ads manifolds.}
 
+Let us now consider the case of an oriented surface $\Sigma,$ not necessarily simply connected. Given a spacelike immersion $\sigma:\Sigma\to(M,g)$ where $(M,g)$ is an oriented Anti-de Sitter manifold, we can associate to $\sigma$ the pair $(I,II)$ as done in the previous section, where $II$ is computed with respect to the future unit normal vector $\nu$ of $\sigma$. We will always assume that the orientation of $\Sigma$ and $\nu$ are compatible with the orientation on $M.$\\
+The pair $(I, II)$ only depends on the \textit{germ} of the immersion $\sigma.$\\
+Given a pair $(I,II)$ on a surface $\Sigma$, we can perform the following construction. Let $\pi:\tilde{\Sigma}\to\Sigma$ be a universal cover, it follows that the pair $(\pi^*I,\pi^*II)$ satisfies the Gauss-Codazzi equations on $\tilde{\Sigma},$ hence by the existance part of Theorem \ref{immcondition} there exist a spacelike immersion $\tilde{\sigma}:\tilde{\Sigma}\to\A^{2,1}$ having \textit{immersion data} $(\pi^*I,\pi^*II)$. The uniqueness part of Theorem \ref{immcondition} has two main consequences: 
+
+\begin{itemize}
+    \item Any two such immersion differ by post-composition by a global isometry of $\A^{2,1}$. 
+    \item Given any such $\tilde{\sigma},$ there exists a map $\rho:\pi_1(\Sigma)\to\text{Isom}_0(\A^{2,1})$ such that, for every $\gamma\in\pi_1(\Sigma),$ $f\circ\gamma=\rho(\gamma)\circ f$. 
+\end{itemize}
+
+More can be proved, $\rho$ is a group representation and changing $\tilde{\sigma}$ by post-composition with an isometry $f$ has the effect of conjugating $\rho$ by $f$. The immersion $\sigma$ can then be extended to an immersion of $U$, an open neighborhood of $\Sigma\times\{0\}$ in $\Sigma\times\R$, into $\A^{2,1}$, by mapping $(x,t)$ to the point $\gamma(t)$ on the timelike geodesic $\gamma$ such that $\gamma(0)=\sigma(p)$ and $\gamma^{\prime}(0)$ is the future normal vector of $\sigma$ at $x$. We want to explicit the expressions of the Anti-de Sitter metric in such a tubular neighborhood of $\sigma$ as it will be useful in the following: 
+
+\begin{lemma}
+    
+
+\begin{equation}\label{64}
+    4
+\end{equation}
+
+
+\end{lemma}
+
+In short, given a pair $(I,II)$, the expression \refeq{64} provides a Lorentianz metric of constant curvature $-1$ on an open set $U$in $\Sigma\times\R$ containing the slice $\Sigma\times\{0\}$, and thus a germ of immersion of $\Sigma$ into an Anti-de Sitter three-manifold with immersion data $(I,II)$.\\
+We want now to move on the case where $\Sigma$ is a closed surfaces. In such instance, the equivariant immersion $\tilde{\sigma}$ via the representation \textcolor{red}{scritto male qua} is necessarily an embedding, which can be extended to an embedding of $\tilde{\Sigma}\times\R$ onto a domain of dependence in $\A^{2,1}.$
+The representation $\rho:\pi_1(\Sigma)\to\T$ coincides with the holonomy of a maximal globally hyperbolic Anti-de Sitter manifold $(M,g)$ (after the identification between $\pi_1(\Sigma)$ with $\pi_1(M)$ via embedding of $\Sigma\to M\simeq\Sigma\times\R)$, therefore $\rho$ consists of a pair of positive Fuchsian representation by Proposition \textcolor{red}{5.5.3}. \\ 
+
+\subsection{Gauss map and projections}
+\textcolor{red}{it's the fixed point of the projection}
+
+\begin{observation}
+    Under the identification given by Fix, the left and right projections can be interpreted in the following way. Given $p\in S$, $\Pi_l(p)$ is the parallel transport in Id of the future unit vector $\nu(p)$ at $\sigma(p)$ with respect to the right-invariant connection $D^r$. The right projection is then obtained using the left-invariant connection. 
+
+    \textcolor{red}{In realtà Diaf fa il remark sotto 6.3.6}
+\end{observation}
+
+We want now to prove formulae which express the pull-back of the hyperbolic metrics by the left and right projections. When applying these formulae to the embedding data of a surface in an MGH Cauchy compact Anti-de Sitter spacetime $(M,g)$, we obtain a pair of hyperbolic metrics whose isotopy classes are the parameters of $(M,g)$
+in $\mathcal{T}(S)\times\mathcal{T}(S).$
+
+\begin{proposition}
+    Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion, let $\Pi_l,\Pi_r:S\to\H^2$ be the left and right projections and let $g_{\H^2}$ be the hyperbolic metric. Then 
+    \begin{equation}
+        \Pi_l^*
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    
+\end{proof}
+
+\textit{Non-smooth surfaces.} The construction of the Gauss map can be extended (\textit{how?}) in the non-smooth setting, for instance for convex spacelike surfaces $S\in\A^{2,1}$. Then one define the set-valued Gauss map as the map sending each $x\in S$ to the set of future unit vectors in $T_x^{1,+}\A^{2,1}$ orthogonal to support planes of $S$ at $x$. Hence the image of $x$ is a convex subset of $T_x\A^{2,1}$, and it reduces to a single point if and only if $S$ is differentiable at $x$. The image of $G$ in $T^{1,+}_x\A^{2,1}$ is a $C^{1.1}$ surface. \\
+Mess highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}C(\Lambda)$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see \textcolor{red}{guess}. 
