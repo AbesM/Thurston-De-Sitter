@@ -51,15 +51,15 @@ Another consequence of \ref{isometrie} is that, fixing a point $x_0 \in M$, the 
     A Lorentzian manifold $M$ has \textit{maximal isometry group} if the action of Isom($M$) is transitive and, for every point $x \in M$, every linear isometry $L:T_{x}M\to T_xM$ extends to an isometry of $M$. 
 \end{definition}
 
-Equivalently $M$ has maximal isometry group is the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence is $M$ has maximal isometry group, then the dimension of the isometry group is maximal as a justification for the nomenclature used. 
-From \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isometry group if it has constant sectional curvature and is geodesically complete. The converse holds even without the simply connectedness assumption. Namely: 
+Equivalently $M$ has maximal isometry group if the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence if $M$ has maximal isometry group, then the dimension of the isometry group is maximal, as a justification for the nomenclature used. 
+From Corollary \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isometry group if it has constant sectional curvature and is geodesically complete. The converse holds even without the simply connectedness assumption. Namely: 
 
 \begin{lemma}\label{maximalisometry}
     If $M$ is a Lorentzian manifold with maximal isometry group, then $M$ has constant sectional curvature and is geodesically complete.
 \end{lemma}
 
 \begin{proof}
-    Fix a point $x\in M$. As the identity component of $O(T_x M)\simeq O(n,1)$ acts transitively on spacelike planes, there exists a constant $K$ such that \ref{sectionalcurvature} holds for every pair $(u,v)$ of vector tangent at $x$ which generate a spacelike plane. Now, for every point $x\in M$ both sides of equations \ref{sectionalcurvature} are polynomial in $u,v \in T_xM$. Since the set of pairs $(u,v)$ which generate spacelike planes is open in $T_{x}M\times T_{x}M$, the equation \ref{sectionalcurvature} must hold for every pair of vectors $u,v \in T_xM$.\\ Since Isom($M$) acts transitively on $M$, it follows that $M$ has constant sectional curvature $K$.\\
+    Fix a point $x\in M$. As the identity component of $O(T_x M)\simeq O(n,1)$ acts transitively on spacelike planes, there exists a constant $K$ such that the equation \ref{sectionalcurvature} holds for every pair $(u,v)$ of vector tangent at $x$ which generate a spacelike plane. Now, for every point $x\in M$ both sides of equations \ref{sectionalcurvature} are polynomial in $u,v \in T_xM$. Since the set of pairs $(u,v)$ which generate spacelike planes is open in $T_{x}M\times T_{x}M$, the equation \ref{sectionalcurvature} must hold for every pair of vectors $u,v \in T_xM$.\\ Since Isom($M$) acts transitively on $M$, it follows that $M$ has constant sectional curvature $K$.\\
     Let us now show that the manifold is geodesically complete. Suppose $\gamma$ is a parametrized geodesic with $\gamma(0)=x$ and $\gamma^{\prime} (0)=v\in T_xM,$ which is defined for a finite maximal time $T>0.$ Let $T_0=T-\epsilon>0.$ By assumption one can find an isometry $f:M\to M$ such that $f(x)=\gamma(T_0)$ and $df_x(v)=\gamma^{\prime}(T_0).$ Then $t\to f\circ\gamma(t-T_0)$ is a parametrized geodesic which provides a continuation of $\gamma$ beyond $T$, a contradiction. 
 \end{proof}
 
@@ -73,8 +73,8 @@ We conclude these preliminaries with a result of classification which will be us
 \end{proposition}
 
 \begin{proof}
-    Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\tilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which by corollary \ref{122} is isometric to $M_K$. The covering map $p:_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
-    Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuosly on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\tilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
+    Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\widetilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which by Corollary \ref{122} is isometric to $M_K$. The covering map $p:M_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
+    Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuosly on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\widetilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
     Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\text{Isom}(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \text{Isom}(M_K)$, which is the same as saying that $\Gamma$ is normal in $\text{Isom}(M_K)$.
 \end{proof}
 

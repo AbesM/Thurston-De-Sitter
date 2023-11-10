@@ -335,6 +335,54 @@ The situation is very similar to the counterpart in hyperbolic three-space. The 
 
 \end{observation}
 
+\section{Support planes.}
+We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
+We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\mathcal{C}(f)$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\mathcal{C}(f)$ (at $p\in\partial\mathcal{C}(f))$ is $p\in\mathcal{C}(f)\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\mathcal{C}(f)$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
+
+\textcolor{blue}{He goes for a remark that we might not need}\\
+
+Recall \textcolor{orange}{from where?} that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
+
+\begin{equation}\label{suplane}
+    P\cap\mathcal{C}(f)=\mathcal{C}(\partial P\cap\text{graph}(f)).
+\end{equation}
+    
+We can characterize support planes by considering intersection with the convex hull as follows: 
+
+\begin{proposition}\label{supportinho}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $P$ be a support plane of $\mathcal{C}(f)$ at a point $p\in\partial\mathcal{C}(f).$ Then:
+    \begin{itemize}
+        \item If $p\in\A^{2,1}$, then $P$ is a spacelike plane. 
+        \item If $p\in\partial\A^{2,1}$ then $P$ is either spacelike or lightlike.
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    The key observation is that if $P$ is a spacelike plane, then $\partial P$ and $\text{graph}(f)=\mathcal{C}(f)\cap\partial\A^{2,1}$ do not intersect transversely. From \textcolor{blue}{add reference}, if $P$ is timelike then $\partial P$ is the graph of an orientating-reversing homeomorphism of $\S$, hence it intersects $\text{graph}(f)$ transversally. From Lemma \textcolor{blue}{add reference}, if $P$ is lightlike, then its boundary is the union of the two circles: $\{x\}\times\S$ and $\S\times{y}$. So if $p\in\partial P\cap\text{graph}(f)$ and $p$ is not the point $p_0=(x,y),$ then $\partial P$ and $\text{graph}(f)$ intersect transversally. Hence the only case where $P$ can be a lightlike support plane is when it intersects $\text{graph}(f)$ only at $p_0.$ We are left with the task to show that $P\cap\mathcal{C}(f)=\{p_0\}$ and it does not contain any point of $\A^{2,1}.$ By contradiction suppose the existance of a $q\in P\cap\mathcal{C}(f)$ with $q$ different from $p_0,$ then by \refeq{suplane} $\partial P\cap\text{graph}(f)$ would also contain another point different from $p_0$, a contradiction.
+\end{proof}
+
+Now, given a spacelike support plane $P$ of $\mathcal{C}(f)$ at a point $p$, we say that $P$ is a \textit{future} (resp. \textit{past}) \todo{Forse la definizione del survey è migliore?} support plane if in a small simply connected neighbourhood of
+$p\in\overline{\A^{2,1}}, \mathcal{C}(f)$ is contained in the closure of the connected components of $U\setminus P$ which is the past (resp. future) of $P$. This means that there exists a future-oriented (resp past-oriented) timelike curves leaving $\mathcal{C}(f)\cap U$ and reaching $P\cap U$. \\
+We observe that $\mathcal{C}(f)$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $f$ is an element of $\PSL$, the example treated previously.\\
+We can now state the following related to convergence of support planes: 
+\begin{lemma}\label{49}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
+    \begin{itemize}
+        \item If $p\in\A^{2,1}$, then $P=P_\gamma$ is a future (resp. past) support plane of $\CF$, for $\gamma_n\to\gamma\in\PSL$.
+        \item If $p\in\partial\A^{2,1}$, then either $P$ is a lighlike plane whose boundary is the union of two circle meeting at $p$ or the previous point holds.        
+    \end{itemize}
+\end{lemma}
+\begin{proof}
+    Diaf-Seppi
+\end{proof}
+\begin{corollary}\label{nametag}
+    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support plane, and the other only admits past support plane. 
+\end{corollary}
+\begin{proof}
+    Diaf-Seppi
+\end{proof}
+
+According to Corollary \ref{nametag} we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits future support planes the \textit{future boundary component}, and denote it by $\partial_+\CF$. Similarly, we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits past support planes the \textit{past boundary component}, and denote it by $\partial_-\CF$.\\
+
 \section{Globally Hyperbolic three-manifolds}
 We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surfaces of genus $r$ (we will with a slight abuse of notation say that the spacetime has genus $r$.) We will show that there are no such manifolds when $r=0$. Furthermore, we will then give a rapid overview over the case $r=1$ and the focus on the most interesting case, $r\geq 2$, that will lead to a complete classification.
 
@@ -540,50 +588,3 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
 
 \textit{Non-smooth surfaces.} The construction of the Gauss map can be extended (\textit{how?}) in the non-smooth setting, for instance for convex spacelike surfaces $S\in\A^{2,1}$. Then one define the set-valued Gauss map as the map sending each $x\in S$ to the set of future unit vectors in $T_x^{1,+}\A^{2,1}$ orthogonal to support planes of $S$ at $x$. Hence the image of $x$ is a convex subset of $T_x\A^{2,1}$, and it reduces to a single point if and only if $S$ is differentiable at $x$. The image of $G$ in $T^{1,+}_x\A^{2,1}$ is a $C^{1.1}$ surface. \\
 
-section{Support planes.}
-We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
-We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\mathcal{C}(f)$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\mathcal{C}(f)$ (at $p\in\partial\mathcal{C}(f))$ is $p\in\mathcal{C}(f)\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\mathcal{C}(f)$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
-
-\textcolor{blue}{He goes for a remark that we might not need}\\
-
-Recall \textcolor{orange}{from where?} that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
-
-\begin{equation}\label{suplane}
-    P\cap\mathcal{C}(f)=\mathcal{C}(\partial P\cap\text{graph}(f)).
-\end{equation}
-    
-We can characterize support planes by considering intersection with the convex hull as follows: 
-
-\begin{proposition}\label{supportinho}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $P$ be a support plane of $\mathcal{C}(f)$ at a point $p\in\partial\mathcal{C}(f).$ Then:
-    \begin{itemize}
-        \item If $p\in\A^{2,1}$, then $P$ is a spacelike plane. 
-        \item If $p\in\partial\A^{2,1}$ then $P$ is either spacelike or lightlike.
-    \end{itemize}
-\end{proposition}
-\begin{proof}
-    The key observation is that if $P$ is a spacelike plane, then $\partial P$ and $\text{graph}(f)=\mathcal{C}(f)\cap\partial\A^{2,1}$ do not intersect transversely. From \textcolor{blue}{add reference}, if $P$ is timelike then $\partial P$ is the graph of an orientating-reversing homeomorphism of $\S$, hence it intersects $\text{graph}(f)$ transversally. From Lemma \textcolor{blue}{add reference}, if $P$ is lightlike, then its boundary is the union of the two circles: $\{x\}\times\S$ and $\S\times{y}$. So if $p\in\partial P\cap\text{graph}(f)$ and $p$ is not the point $p_0=(x,y),$ then $\partial P$ and $\text{graph}(f)$ intersect transversally. Hence the only case where $P$ can be a lightlike support plane is when it intersects $\text{graph}(f)$ only at $p_0.$ We are left with the task to show that $P\cap\mathcal{C}(f)=\{p_0\}$ and it does not contain any point of $\A^{2,1}.$ By contradiction suppose the existance of a $q\in P\cap\mathcal{C}(f)$ with $q$ different from $p_0,$ then by \refeq{suplane} $\partial P\cap\text{graph}(f)$ would also contain another point different from $p_0$, a contradiction.
-\end{proof}
-
-Now, given a spacelike support plane $P$ of $\mathcal{C}(f)$ at a point $p$, we say that $P$ is a \textit{future} (resp. \textit{past}) \todo{Forse la definizione del survey è migliore?} support plane if in a small simply connected neighbourhood of
-$p\in\overline{\A^{2,1}}, \mathcal{C}(f)$ is contained in the closure of the connected components of $U\setminus P$ which is the past (resp. future) of $P$. This means that there exists a future-oriented (resp past-oriented) timelike curves leaving $\mathcal{C}(f)\cap U$ and reaching $P\cap U$. \\
-We observe that $\mathcal{C}(f)$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $f$ is an element of $\PSL$, the example treated previously.\\
-We can now state the following related to convergence of support planes: 
-\begin{lemma}\label{49}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
-    \begin{itemize}
-        \item If $p\in\A^{2,1}$, then $P=P_\gamma$ is a future (resp. past) support plane of $\CF$, for $\gamma_n\to\gamma\in\PSL$.
-        \item If $p\in\partial\A^{2,1}$, then either $P$ is a lighlike plane whose boundary is the union of two circle meeting at $p$ or the previous point holds.        
-    \end{itemize}
-\end{lemma}
-\begin{proof}
-    Diaf-Seppi
-\end{proof}
-\begin{corollary}\label{nametag}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support plane, and the other only admits past support plane. 
-\end{corollary}
-\begin{proof}
-    Diaf-Seppi
-\end{proof}
-
-According to Corollary \ref{nametag} we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits future support planes the \textit{future boundary component}, and denote it by $\partial_+\CF$. Similarly, we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits past support planes the \textit{past boundary component}, and denote it by $\partial_-\CF$.\\
