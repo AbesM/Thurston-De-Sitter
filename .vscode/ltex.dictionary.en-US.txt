@@ -7,3 +7,5 @@ homeomorphism
 Fuchsian
 spacelike
 isometries
+lightcone
+timelike

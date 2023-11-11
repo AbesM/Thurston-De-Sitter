@@ -27,13 +27,13 @@ where $D$ is the flat connection of $R^{n+2}$ and $\nabla$ is the Levi-Civita co
 
 so that 
 \[
-    <R(u,v)v,u\rangle =-(\langle u,u\rangle\langle v,v\rangle-\langle v,u\rangle^2), 
+    \langle R(u,v)v,u \rangle =-(\langle u,u\rangle\langle v,v\rangle-\langle v,u\rangle^2), 
 \]
 
 and this shows that $\H^{n,1}$ has constant sectional curvature $-1$. We also remark that $\H^{n,1}$ is not simply connected, being homeomorphic to $\R^{n}\times S^1$. 
 
 \subsection{The ``Klein model" and it's boundary.}
-Let us introduce a projective mode, also knows as the ``Klein model", for anti-De Sitter geometry. Let us define: 
+Let us introduce a projective model, also knows as the ``Klein model", for anti-de Sitter geometry. Let us define: 
 \[
     \A^{n,1}=\H^{n,1}/\{\pm \text{Id}\}.
 \]
@@ -94,8 +94,8 @@ Let $\H^n$ be the hyperboloid model of hyperbolic space. Then:
     \pi(y,t)=(y_1,\dots,y_n,y_{n+1}\cos t,y_{n+2}\sin t)
 \]
 
-defines a map $\pi:\H^n\times \R\to \H^{n,1}$ which is a covering with deck transformation of the form $(y,t)\mapsto (y,t+2k\pi)$ for $k\in \Z$. We denote the space by $\AS^{n,1}$ and we observe that it is also the universal cover of $\A^{n,1}$, where the covering map it's just the composition of $\pi$ and the double quotient.\\
-Pulling back the Lorentzian metric over $\AS^{n,1}$ we get a simply connected Lorentzian manifold of constant curvature -1. The metric on $\A^{n,1}$ is a warped product of the form: 
+defines a map $\pi:\H^n\times \R\to \H^{n,1}$ which is a covering with deck transformations of the form $(y,t)\mapsto (y,t+2k\pi)$ for $k\in \Z$. We denote the space by $\AS^{n,1}$ and we observe that it is also the universal cover of $\A^{n,1}$, where the covering map it's just the composition of $\pi$ and the double quotient.\\
+Pulling back the Lorentzian metric over $\AS^{n,1}$ we get a simply connected Lorentzian manifold of constant curvature -1. The metric on $\AS^{n,1}$ is a warped product of the form: 
 \begin{equation}\label{metric}
      \pi^*g_{\H^{n,1}}=g_{\H^n}-y_{n+1}^{2}dt^2.
 \end{equation}
@@ -131,10 +131,12 @@ extends to a map $\pi^{\prime}:\H^n\cup \partial\H^n\times \R\to \A^{n,1}\cup \p
 that extends to the boundary and induces a (local) section of the projection $\R^{n,2}\to \A^{n,1}$. In fact, let $\eta$ be the generator of the group of deck transformation of the covering $\pi^{\prime}:\AS^{n,1}   \to \A^{n,1}$, then $\tau$ has the equivariance $\tau\circ\eta^i=(-1)^i\tau.$ \todo{Is he kinda of flipping Ads with every deck lifting?}
 \subsection{Geodesic.}
 
-\textit{In the quadric model} Let us start with the exponential map in the hyperbloid model. Given a point $x\in \H^{n,1}$ and a vector $v\in T_x\H^{n,1}$, we want to determine the geodesic through $x$ with speed $v$. We will distinguish several cases according to the sign of $ q_{n,2}(v)$. If $v$ is lightlike, then: 
+We have presented our various models as manifolds and now we would like to improve our knowledge of their geometry. As always we start by studying and characterizing geodesics.\\ 
+
+\textit{In the quadric model} Let us start with the exponential map in the hyperboloid model. Given a point $x\in \H^{n,1}$ and a vector $v\in T_x\H^{n,1}$, we want to determine the geodesic through $x$ with speed $v$. We will distinguish several cases according to the sign of $ q_{n,2}(v)$. If $v$ is lightlike, then: 
 \[
     \gamma(t)=x+tv
-\] is a geodesic of $\R^{n,2}$ and is contained in $\H^{n,1}$, hence $\gamma$ is a geodesic of $\H^{n,1}$. If $v$ is etiher timelike or spacelike, we claim that the geodesic $\gamma(t)=\exp_x(tv)$ is contained in the linear plane $W=\text{Span}(x,v).$ In fact, the linear transformation $T$ that fixes pointwise $W$ and whose restriction to $W^\perp$ is $-\1_{W^\perp}$ is in $O(n,2)$. By the uniqueness of the geodesic, $T\circ\gamma=\gamma$ hence $\gamma$ is contained in $\H^{n,1}\cap W$. We can easily derive the expressions\\
+\] is a geodesic of $\R^{n,2}$ and is contained in $\H^{n,1}$, hence $\gamma$ is a geodesic of $\H^{n,1}$. If $v$ is etiher timelike or spacelike, we claim that the geodesic $\gamma(t)=\exp_x(tv)$ is contained in the linear plane $W=\text{Span}(x,v).$ In fact, the linear transformation $T$ that fixes pointwise $W$ and whose restriction to $W^\perp$ is $-\text{Id}_{W^\perp}$ is in $O(n,2)$. By the uniqueness of the geodesic, $T\circ\gamma=\gamma$ hence $\gamma$ is contained in $\H^{n,1}\cap W$. We can easily derive the expressions\\
 \begin{equation}
     \gamma(t)=\cosh(t)x+\sinh(t)v
 \end{equation}
@@ -145,11 +147,11 @@ if $q_{n,2}(v)=1$ and
 \]
 if $q_{n,2}(v)=-1$.\\
 
-\textit{In the Klein model.} In analogy with the Riemannian case, in the Klein model $\A$ geodesics are intersections of projective lines with the domain of $\A\subset\R P^{n+1}.$ From what we have already said: 
+\textit{In the Klein model.} In analogy with the Riemannian case, in the Klein model $\A^{n,1}$ geodesics are intersections of projective lines with the domain of $\A^{n,1}\subset\R \text{P}^{n+1}.$ From what we have already said: 
 \begin{itemize}
-    \item Timelike geodesics correspond to projective lines that are entirely contained in $\A$, are closed non-trivial loops and have lenght $\pi.$ 
-    \item Spacelike geodesics correspond to lines that meet $\partial \A$ transversally in two points. They have infinite lenght.
-    \item Lightlike geodesics correspond to lines tangent to $\partial\A$.   
+    \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$, are closed non-trivial loops and have lenght $\pi.$ 
+    \item Spacelike geodesics correspond to lines that meet $\partial \A^{n,1}$ transversally in two points. They have infinite lenght.
+    \item Lightlike geodesics correspond to lines tangent to $\partial\A^{n,1}$.   
 \end{itemize}
 
 In particular the light cone through a point $[x]\in \A$ coincides with the cone of lines through $[x]$ tangent to $\partial \A$.\\ For instance in the affine chart $\mathbb{A}_{n+2}\neq\{x_{n+2}=0\},$ where in coordinates $(y_1, \dots, y_{n+1})=(x_1/x_{n+2},\dots, x_{n+1}/x_{n+2})$, the intersection $\A\cap\mathbb{A}_{n+2}$ is the interior of a one sheeted hyperboloid, that is: 
@@ -159,10 +161,10 @@ In particular the light cone through a point $[x]\in \A$ coincides with the cone
  while the boundary it's the one-sheeted hyperboloid itself: 
  \[
     \partial\A\cap\mathbb{A}_{n+2}=\{y_1^2+\dots+y_n^2-y_{n+1}^2<1\}.
-\]+
+\]
 In an affine chart, timelike geodesic corresponds to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one sheeted hyperboloid, or are asymptotic to it (tangent at infinity).
 
-\begin{observation} An important observation concerns the space of timelike geodesics. Any timelike line is the projectivisation of a negative definite plane. As Isom$(\A^{n+1})\simeq \text{PO}(n,2)$ acts transitevely on the space of timelike lines, and since the sabiliser of a timelike line is the group $P(O(n)\times O(2))$ which is the maximal compact subgroup of $\text{PO}(n,2)$, the space of timelike geodesics of $\A^{n,1}$ is naturally identified with the Riemannian symmetric space of PO$(n,2)$.
+\begin{observation} An important observation concerns the space of timelike geodesics. Any timelike line is the projectivisation of a negative definite plane. As Isom$(\A^{n,1})\simeq \text{PO}(n,2)$ acts transitevely on the space of timelike lines, and since the sabiliser of a timelike line is the group $P(O(n)\times O(2))$ which is the maximal compact subgroup of $\text{PO}(n,2)$, the space of timelike geodesics of $\A^{n,1}$ is naturally identified with the Riemannian symmetric space of PO$(n,2)$.
 \end{observation}
 
 \noindent\textit{Totally geodesic subspaces} Totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspaces $W$ of $\R^{n,2}$ of dimension $k+1.$ The negative index of $W$ can be $1, 2,$ for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty. We have several cases: 
@@ -172,10 +174,10 @@ In an affine chart, timelike geodesic corresponds to affine lines which are enti
     \item If $W$ is degenerate, then $P(W)\cap \A^{n,1},$ is a lightlike subspace foliated by lightlike geodesics tangent to the same point of $\partial\A^{n,1}$. 
 \end{itemize}  
 
-A particular case of the last point is when $W$ is degenerate and $\text{dim}(W)=n+1.$ Then $P(W)\cap \A^{n,1}$ is a projective hyperplane tangent to $\partial\A$ at a point $[x]$ and $P(W)\cap \partial\A^{n,1}$ is the lightlike cone of $\partial\A^{n,1}$ through $[x]$. \todo{check remark 2.2.2} 
+A particular case of the last point is when $W$ is degenerate and $\text{dim}(W)=n+1.$ Then $P(W)\cap \A^{n,1}$ is a projective hyperplane tangent to $\partial\A$ at a point $[x]$ and $P(W)\cap \partial\A^{n,1}$ is the lightlike cone of $\partial\A^{n,1}$ through $[x]$. \todo{Check remark 2.2.2} 
 
 \textit{In the universal cover.} In the universal cover $\AS^{n,1},$ geodesics are just the lifts of geodesics in $\A^{n,1}$ or $\H^{n,1}$. Hence every spacelike or lightlike geodesic in $\A^{n,1}$ and $\H^{n,1}$, which is topologically a line, has a countable number of lifts to $\AS^{n,1}$. Timelike geodesics in $\A^{n,1}$ and $\H^{n,1}$ are topologically circles and are in bijections with timelike geodesics in $\AS^{n,1},$ as the covering map restricted to a timelike geodesic, induces a covering map onto the circle. Using the Poincaré model we can give an explicit description of lightlike geodesic.\todo{non chiarissimo cosa stia succedendo qua} In fact, in Lorentzian geometry not only the nature of a vector is conformally invariant but also unparametrized lightlike are a conformal invariant: 
-\begin{theorem}\label{ConformalMetric} If two Lorentianz metrics $g,g^{\prime} $ on a manifold $M$ are conformal, then they have the same unparametrized lightlike geodesics.
+\begin{theorem}\label{ConformalMetric} If two Lorentzian metrics $g,g^{\prime} $ on a manifold $M$ are conformal, then they have the same unparametrized lightlike geodesics.
 \end{theorem}
 \begin{proof}
     [GHL04, Proposition 2.131]
@@ -184,14 +186,14 @@ Because of \ref{ConformalMetric} we can replace the Poincaré metric by the conf
 \begin{equation}\label{emispherical}
     \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
 \end{equation} 
-Now we observe that the first term in \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\mathbb{S}^n}$. Observe that the boundary of $\partial\D$ is an equator for the hemispherical metric, and in fact it's the only equator completely cointained in $(\D\cup\partial\D,g_{\mathbb{S}^n})$, a justification to the fact that we will refere to it as \textit{the} equator.\\
+Now we observe that the first term in \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\mathbb{S}^n}$. Observe that the boundary of $\partial\D$ is an equator for the hemispherical metric, and in fact it's the only equator completely contained in $(\D\cup\partial\D,g_{\mathbb{S}^n})$, a justification to the fact that we will refer to it as \textit{the} equator.\\
 As a consequence, unparametrized lightlike geodesic of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the conditions that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
 \[
     t-t_0=d_{\mathbb{S}^n}(p,p_0)
 \] on the geodesic. \todo{What does it mean?} In particular, these lightlike geodesic meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slice $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. 
 
 \section{Polarity in Ads}
-The quadratic form $q_{n,2}$ induces a polarity on the proective space $\R\text{P}^{n+1}$, explicitly the correspondence associates to a projective subspace $P(W)$ the subspace $P(W^\perp)$. In particular we have an induced duality between spacelike totally geodesic subspaces of $\A^{n,1}$ where the dual of a spacelike $k-$dimensional subspaces is a $n-k+1$ subspace. \\
+The quadratic form $q_{n,2}$ induces a polarity on the projective space $\R\text{P}^{n+1}$, explicitly the correspondence associates to a projective subspace $P(W)$ the subspace $P(W^\perp)$. In particular we have an induced duality between spacelike totally geodesic subspaces of $\A^{n,1}$ where the dual of a spacelike $k-$dimensional subspaces is a $n-k+1$ subspace. \\
 For instance, if we consider the dual of a point $[x]\in\A^{n,1}$ it will be an $n-$dimensional spacelike hyperplane $P_[x]=\text{P}^\perp.$ Projectively $P_{[x]}$ is characterized as the hyperplane spanned by the intersection of $\partial\A^{n,1}$ \todo{n o n-1} with the lightcone from $[x]$. More geometrically, it can be checked that $P_[x]$ is the set of antipodal point to $[x]$ along timelike geodesics through $[x].$ Also, every timelike geodesic through $[x]$ meets $P_{[x]}$ orthogonally at time $\pi/2.$ Conversely, given a totally geodesic spacelike hyperplane $H$, all the timelike geodesic that meet $H$ orthogonally intersect in a single point, which is the dual point of $H$.
 
 \subsection*{In the quadric model} We would \textit{extends} the idea of duality for coverings of $\A^{n,1}.$ Observe that in $\H^{n,1}$ there are two dual planes associated to any point $x$, namely the sets: 

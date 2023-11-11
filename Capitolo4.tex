@@ -563,14 +563,90 @@ In short, given a pair $(I,II)$, the expression \refeq{64} provides a Lorentianz
 We want now to move on the case where $\Sigma$ is a closed surfaces. In such instance, the equivariant immersion $\tilde{\sigma}$ via the representation \textcolor{red}{scritto male qua} is necessarily an embedding, which can be extended to an embedding of $\tilde{\Sigma}\times\R$ onto a domain of dependence in $\A^{2,1}.$
 The representation $\rho:\pi_1(\Sigma)\to\T$ coincides with the holonomy of a maximal globally hyperbolic Anti-de Sitter manifold $(M,g)$ (after the identification between $\pi_1(\Sigma)$ with $\pi_1(M)$ via embedding of $\Sigma\to M\simeq\Sigma\times\R)$, therefore $\rho$ consists of a pair of positive Fuchsian representation by Proposition \textcolor{red}{5.5.3}. \\ 
 
-\subsection{Gauss map and projections}
-\textcolor{red}{it's the fixed point of the projection}
+\subsection{Gauss map and projections} We can finally define our map for spacelike surfaces in $\A^{2,1}$. We have seen in \textcolor{red}{daje} that the space of timelike geodesic of $\PSL$ is naturally identified with $\H^2\times\H^2$, where the identification maps a geodesic of the form
+\[
+    L_p,q=\{X\in\PSL\;|\;X\cdot q =p\}
+\]
+to the pair $(p,q)\in \H^2\times\H^2$. We still suppose that the spacelike immersion is $C^1$ for the moment, we will deal later with the case of weaker regularity. 
+\begin{definition}
+    Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion. The \textit{Gauss map} of $\sigma$ is the map $G_\sigma:S\to\H^2\times\H^2$ defined by $G_\sigma(x)=(p,q)$ such that $L_{p,q}$ is the timelike geodesic orthogonal to $\text{Im}(d_x\sigma))$ at $\sigma(x).$\\
+    It follows from the equivariance shown in \textcolor{red}{inserire}, that the Gauss map $G_\sigma$ is natural with respect to the action of the isometry group, namely: 
+    \[
+        G_{f\circ\sigma}=f\cdot G_\sigma
+    \]
+    for every $f\in\text{Isom}_0(\A^{2,1})=\PSL\times\PSL$.
+    \end{definition}
+
+    \begin{example}
+        In Lemma \textcolor{red}{forse va messo qua e basa} we gave an isometric embedding of $\H^2$ in $\A^{2,1}$ with image the plane $P_{\text{Id}}$ dual to the identity. This isometric embedding is defined by sending $p\in\H^2$ to the unique
+    \end{example}
+
+    By construction, the Gauss map of a spacelike immersion $\sigma$ is invariant by reparametrization, in the sense that $G_{\sigma\circ\phi}=G_\sigma\circ\phi$ for a diffeomorphism $\phi:S^{\prime} \to S$. Hence it makes sense to talk about \textit{the} Gauss map of a spacelike surface in $\A^{2,1}$. For example, for the plane dual to the identity. 
+    
+    \begin{lemma}\label{633}
+        Given a spacelike immersion $\sigma:S\to\A^{2,1}$, with future unit normal vector field $\nu$, if $\sigma(p)=\text{Id}$, then 
+        \begin{equation}\label{gaussmap}
+            G_\sigma(p)=G_{P_\text{Id}}(\exp(\frac{\pi}{2}\nu(p)))
+        \end{equation}
+    \end{lemma}
+    \begin{proof}
+        It's a consequence of the example. We need to observe that the geodesic leaving from Id with velocity $\nu(p)$ meets orthogonally $P_\text{Id}$ at $\exp((\pi/2)\nu(p))$
+    \end{proof}
+
+    We want to consider now the map: 
+    \[
+        \text{Fix}:T_{\text{Id}}^{1,+}\A^{2.1}\to\H^2
+    \]
+    where $\hf$ denotes the hyperboloid of future unit timelike vectors in $T_{\text{Id}}\A^{2,1}$, such that $\text{Fix}(\nu)$ us the fixed point of the one-parameter elliptic group $\{\exp(t\nu)\;|\;t\in\R\}$. This map is equivariant for the action of $\PSL$, which acts on the hyperboloid $\hf$ by the adjoint representation and on $\H^2$ by the obvious action. Since both $\hf$ and $\H^2$ have constant curvature $-1$, it follows from equivariancy that $\text{Fix}$ is an isometry.  \\
+    In terms of the map $\textit{Fix},$ Equations \refeq{gaussmap} read as: 
+
+    \begin{equation}\label{66}
+        G_\sigma(p)=(\text{Fix}(\nu(p)),\text{Fix}(\nu(p))),
+    \end{equation}
+
+    provided that $\sigma(p)=\text{Id}.$\\ Via Lemma \ref{633} and the naturality, we can recover a different description of the Gauss map. 
+
+    \begin{lemma}
+        Given a spacelike immersion $\sigma: S\to \A^{2.1}$ with future unit normal vector field $\nu$,
+        \[
+            G_\sigma(p)=(\text{Fix}((R_{\sigma(p)^{-1}})_* (\nu(p)),\text{Fix}((L_{\sigma(p)^{-1}})_* (\nu(p))).
+     \]
+    \end{lemma}
+
+    \begin{proof}
+        If $\sigma(p)=\text{Id}$, the the equality holds true by Equation \refeq{66}. For the general case, the immersion $\sigma^{\prime} =(\text{Id},\sigma(p))\circ\sigma$ has the property that $\sigma^{\prime}(p)=\text{Id}$, and the future normal vector at $\sigma^{\prime} (p)$ equals $\nu^{\prime} (p)=(R_{\sigma(p)^{-1}}))_{\ast} (\nu(p))$. Therefore: 
+        \[
+            G_{\sigma^{\prime} }(p)=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))).
+        \]
+
+        Now by the naturality of the Gauss map it follows, 
+        
+        \begin{align*}
+            G_\sigma(p)&=(\text{Id},\sigma(p)^{-1})\cdot G_{\sigma^{\prime}}(p) \\
+            &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\sigma(p)^{-1}\circ\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))) \\
+            &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((L_{\sigma(p)^{-1}})_{\ast} (\nu(p))).
+        \end{align*}
+        
+        where in the last line we used that Fix is equivariant with respect to the adjoint action on the hyperboloid $\hf$.
+        
+    \end{proof}
+
+    We will refer to the components of the Gauus map as the \textit{left} and \textit{right projections,} and will denote them accordingly: $\Pi_{l},\Pi_{r}:S\to\H^2.$\\
 
 \begin{observation}
     Under the identification given by Fix, the left and right projections can be interpreted in the following way. Given $p\in S$, $\Pi_l(p)$ is the parallel transport in Id of the future unit vector $\nu(p)$ at $\sigma(p)$ with respect to the right-invariant connection $D^r$. The right projection is then obtained using the left-invariant connection. 
 
     \textcolor{red}{In realtà Diaf fa il remark sotto 6.3.6}
 \end{observation}
+
+
+     \begin{observation}
+        In the work of Mess, we can find yet a different interpretation of the Gauss map. Given $p\in S$, one can find a unique left isometry $f_l(p)$ and a unique right isometry $f_r(p),$ sending the tangent plane $P$ to the image of $\sigma$ at $\sigma(p)$ to $P_{\text{Id}}$. Indeed the isometries $f_l(p)$ and $f_r(p)$ are siply obtained by left and right multiplicationby the inverse of dual point of the tangent plane $P$, namely $\zeta(p)=\exp_{\sigma(p)}((\pi/2)\nu(p))$. Using the identification of the dual plane $P_{\text{Id}}$ with $\H^2$, provided by Lemma \textcolor{red}{uk}, $\Pi_l(p)$ and $\Pi_r(p)$ are the image of $\sigma(p)$ under the right and left isometries, respectively:
+        \[
+        \Pi_l(p)=f_r(p)\circ\sigma(p)=(\text{Id},\zeta(p))\cdot \sigma(p)\;\text{and}\;\Pi_r(p))=f_l\circ\sigma(p)=(\zeta(p)^{-1},\text{Id})\cdot\sigma(p)\
+        \]
+    \end{observation}
+
 
 We want now to prove formulae which express the pull-back of the hyperbolic metrics by the left and right projections. When applying these formulae to the embedding data of a surface in an MGH Cauchy compact Anti-de Sitter spacetime $(M,g)$, we obtain a pair of hyperbolic metrics whose isotopy classes are the parameters of $(M,g)$
 in $\mathcal{T}(S)\times\mathcal{T}(S).$
