@@ -64,10 +64,6 @@ which in turn induces the well-known isomorphism:
 \] which is nothing but the restriction of the isomorphism \textcolor{red}{metti link} to the stabilizer of the identity in the left-hand side $\text{Isom}(\A^{2,1}),$ and to the diagonal subgroup $\Delta$ in the right-hand side $\text{PSL}(2,\R)\times\text{PSL}(2,\R).$
 \end{observation}
 
-\begin{observation}
-    The identification between $\H^{n,1}$ and $\text{SL}(2,\R)$ it's the analogue of the more famous identification between $S^3$ and $SU(2)$. Stuff about quaternions, we are kinda of changing the metric over quaternions (circa?)
-\end{observation}
-
 \section{The boundary of PSL(2, $\R$)} 
 From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\text{PSL}(2,\R)$, namely $P(\mathcal{M}(2,\R))$, the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
 \[
@@ -83,7 +79,7 @@ We endow $\overline{\A^{2,1}}=\A^{2,1}\cup\partial\A^{2,1}$ with the topology in
 where we are considering $\R\text{P}^1$ as the space of one-dimensional subspaces of $\R^2$. Since we have that $\text{Im}(AXB^{-1})=A\cdot\text{Im}(X)$ and $\text{Ker} (AXB^{-1})=B\cdot\text{Ker}(X),$ the map $\delta$ is equivariant with respect to the action of $\PSL\times\PSL,$ acting on $\partial\A^{2,1}$ as the natural extension of the group of isometries of $\A^{2,1}$ and on $\R\text{P}^1\times\R\text{P}^1$ by the obvious product action.\\
 In this setting our choice of a time-orientation \textit{can be modified} according to the following Lemma:
 \begin{lemma}\label{invertime}
-    The inversion map $\iota[X]=[X]^{-1}$ \todo{non è più bello con il -1 dentro?} is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
+    The inversion map $\iota[X]=[X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
 \end{lemma}
 \begin{proof}
     It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\T$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\
@@ -100,7 +96,7 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     $\PSL$ acts on $\H^2$ via isometry, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper halp-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime}
 \end{proof}
 
-In dimension $3 \partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
+In dimension 3 $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
 \[
     \lambda_{y_0}\coloneqq\{(x,y_0)|x\in\R\text{P}^1\}
 \]  
@@ -114,12 +110,12 @@ We refer to $\lambda_{y_0}$ as the \textit{left ruling} through $(x_0,y_0)$, and
     \mu_{x_0}\coloneqq\{(x_0,y)|y\in\R\text{P}^1\}
 \]
 
-One of the fundamental idea of the earthquake theorem is that to any given map $f:\partial\H^2\to\partial \H^2$ we can associate a subset of $\partial\A^{2,1}$, namely (via the map $\delta$ introduced in \refeq{delta}) the graph of $f$. It follows from the equivariance of $\delta$ that for any $(\alpha,\beta)\in\T$:
-\begin{equation}
-    (\alpha,\beta)\cdot\text{graph}(f)=\text{graph}(\beta f\alpha^{-1}).
-\end{equation} 
-
+When we will deal with earthquake theory we will often consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle. The associated graph $\Lambda_\varpi$ via means of the identification given by $\delta$ is a subset of $\partial\A^{2,1}$. We observe that from equivariance of $\delta$ the following holds for every $(\alpha,\beta)\in\text{PSL}(2,\R)\times\text{PSL}(2,\R)$: 
+\begin{equation}\label{graphequivariancy}
+(\alpha,\beta)\cdot\Lambda_\varphi=\Lambda_{\beta\circ\varphi\circ\alpha^{-1}}.
+\end{equation}
 We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via $\delta$.
+
 \subsection{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory.  We would like to start considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, where under
 
 \section{Spacelike planes}
@@ -128,7 +124,7 @@ We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are a
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\}
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
-\textit{Example}
+\textit{Example}\label{spacelikeisometry}
 Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \ref{convergenza}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
     \partial\text{P}_\gamma=\text{graph(Id)}\subset \T.
@@ -172,4 +168,21 @@ In similar fashion to the spacelike case, using the transitivity of the group of
     Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric \textcolor{red}{quale} on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail in \textcolor{red}{Reference}
     \end{proof}
 \section{Lightlike planes}
-\section{affine charts MAYBE TO MOVE INTO MESS SECTION OR EITHER DELETE THE WHOLE MESS THING?}
+We are only left with case of lightlike totally geodesic planes. Those are the form $P_{[A]}$ for a nonzero matrix $A$ with $\det(A)=0$. Before giving an explicit description of such planes, we want to observe that their boundary will not be a graph in $\T$, unlike the case of spacelike and timelike planes. 
+
+\begin{lemma}
+    Every lightlike toatlly geodesic plane of $\A^{2,1}$ is of the form $P_[A]$ for some rank one matrix $A$, and: 
+    \[
+        \partial P_[A]=(\text{Im}(A)\times\S)\cup(\S\times\text{Ker}(A)).
+    \]
+\end{lemma}
+\begin{proof}
+    The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfyin $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
+    \begin{equation}
+        \text{Im}(X)=\text{Ker}(\text{adj}(A))\;\text{or}\;\text{Im}(\text{adj}(A))=\text{Ker}(A).
+    \end{equation}
+    Now, since $\det(A)=0$ implies $\text{adj}(A)A=A\text{adj}(A)=0$, the relations $\text{Ker}(\text{adj}(A))=\text{Im}(A)$ and $\text{Im}(\text{adj}(A))=\text{Ker}(A)$ hold. Hence $X\in P_[A]$ if and only if $\text{Im}(X)=\text{Im}(A)$ or $\text{Ker}(X)=\text{Ker}(A),$ which concludes because of the definition of the homeomorphism $\delta$.  
+\end{proof}
+
+Geometrically $\partial P_[A]$ is the union of two circles in $\T,$ one horizontal and one vertical, which intersect exactly at the point in $\T$ corresponding to $[A]\in \partial\A^{2,1}$ via $\delta$.\\
+
