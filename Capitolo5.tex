@@ -154,7 +154,7 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 
 % \section{Left and right projections.} We want to introduce two maps, \textit{left and right projections,} which will have a key role in the proof of the earthquake theorem. These are the maps: 
 % \[
-%     \pi_l^\pm:\partial_\pm\CF\to\H^2 \;\;\; \pi_r^\pm:\partial_\pm\CF\to\H^2
+%     \Pi_l^\pm:\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^\pm:\partial_\pm\CF\to\H^2
 % \] 
 
 % defined on the past or future of $\partial\CF$ constructed as follows. Given a point $p\in\partial_\pm\CF$, let $P$ be a support plane of $\CF$ at $p$. By Proposition \textcolor{red}{ref}, the support plane is necessarily spacelike, hence of the form $P=P_\gamma$ for some $\gamma\in\PSL$.
@@ -166,7 +166,7 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 % Now, we choose a support plane $P_\gamma$ at $p$, left or right multiplication by $\gamma^{-1}$ maps $\gamma$ to the identity, and therefore it maps $P_\gamma$ to $P_{\text{Id}},$ which we have already studied in \textcolor{red}{reference} it is the space of order-two elliptic elements and is therefore naturally identified with $\H^2$ via the map: $\text{Fix}:P_{\text{Id}}\to\H^2.$ \\
 % In classic Lie group theory fashion we denote by $L_{\gamma^{-1}}:\PSL\to\PSL$ and $\R_{\gamma^{-1}}:\PSL\to\PSL$ the left and right multiplication by $\gamma^{-1}$; these can also be viewed as the action of the elements $(\gamma,\text{Id})$ and $(\text{Id},\gamma^{-1})$ of $\PSL\times\PSL$. We now have that both $L_{\gamma^{-1}}(p)$ and $R_{\gamma^{-1}}(p)$ are elements of $P_{\text{Id}}$ and $L_{\gamma^{-1}}(p)$ (resp. $R_{\gamma^{-1}}(p)$) is a bijection between $P_\gamma$ and $P_\text{Id}.$ We can now define: 
 % \begin{equation}\label{defproj}
-%     \pi_l^\pm(p)=Fix(R_{\gamma^{-1}}(p))\;\ \pi_r^\pm(p)=Fix(L_{\gamma^{-1}}(p)).
+%     \Pi_l^\pm(p)=Fix(R_{\gamma^{-1}}(p))\;\ \Pi_r^\pm(p)=Fix(L_{\gamma^{-1}}(p)).
 % \end{equation}
     
 
@@ -174,12 +174,12 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 % The choice of define left and right projection in this apparently counterintuitive way is motivated by the following:
 
 % \begin{lemma}
-%     Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $(\alpha, \beta)\in \PSL\times\PSL$. Let us denote $K=\CF$ and $\hat{K}=(\alpha,\beta)\cdot\CF$ and let, $\pi_l^{\pm},\pi_r^{\pm}:\partial_{\pm}K\to\H^2$ and $\hat{\pi}_l^\pm,\hat{\pi}_r^\pm:\hat{K}\to\H^2$ be the left and right projection of $K$ and $\hat{K}$ respectively. Then:
+%     Let $f:\S\to\S$ be an orientation-preserving homeomorphism, and let $(\alpha, \beta)\in \PSL\times\PSL$. Let us denote $K=\CF$ and $\hat{K}=(\alpha,\beta)\cdot\CF$ and let, $\Pi_l^{\pm},\Pi_r^{\pm}:\partial_{\pm}K\to\H^2$ and $\hat{\pi}_l^\pm,\hat{\pi}_r^\pm:\hat{K}\to\H^2$ be the left and right projection of $K$ and $\hat{K}$ respectively. Then:
 %     \begin{equation}\label{equivariance}
-%         \hat{\pi}_l^\pm\circ(\alpha,\beta)=\alpha\circ\pi_l^\pm\;\;\;\ \hat{\pi}_r^\pm\circ(\alpha,\beta)=\beta\circ\pi_r^\pm.
+%         \hat{\pi}_l^\pm\circ(\alpha,\beta)=\alpha\circ\Pi_l^\pm\;\;\;\ \hat{\pi}_r^\pm\circ(\alpha,\beta)=\beta\circ\Pi_r^\pm.
 %     \end{equation}
 % \end{lemma}
-% Let's clarify the statement. The isometry $(\alpha,\beta)$ maps a point $p\in K$ to a point $\hat{p}\in\hat{K}$, and maps support planes at $p\in K$ to support planes at $\hat{p}$. Hence the relation introduced in \refeq{equivariance} holds when we consider the projections $\hat{\pi}_l^\pm$ and $\pi_r^\pm$ defined with the choice of support planes of $\hat{K}$ given by the images $\hat{P}$ chosen in the definitions of $\pi_l^\pm$ and $\pi_r^\pm$.
+% Let's clarify the statement. The isometry $(\alpha,\beta)$ maps a point $p\in K$ to a point $\hat{p}\in\hat{K}$, and maps support planes at $p\in K$ to support planes at $\hat{p}$. Hence the relation introduced in \refeq{equivariance} holds when we consider the projections $\hat{\pi}_l^\pm$ and $\Pi_r^\pm$ defined with the choice of support planes of $\hat{K}$ given by the images $\hat{P}$ chosen in the definitions of $\Pi_l^\pm$ and $\Pi_r^\pm$.
 
 % \begin{proof}
 %     We recall that for any $\pi \in \partial^\pm K$, we consider $\hat{p}\coloneqq(\alpha,\beta)\cdot p\in\hat{K},$ and for a chosen support plane $P=P_\gamma$ for $K$ at $p,$ $(\alpha,\beta)\cdot P=P_{\hat{\gamma}}$ is the chosen support plane for $\hat{K}$ at $\hat{p}.$\\
@@ -187,7 +187,7 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 %     \begin{align*}
 %         \hat{\pi}_l^\pm(\hat{p}) &= \text{Fix}(R_{\hat{\gamma}^{-1}}(\hat{p}))=\text{Fix}(R_{(\beta\gamma^{-1}\alpha^{-1})}(\alpha p\beta^{-1}))\\
 %         &=\text{Fix}(R_{(\gamma^{-1}\alpha^{-1})}(\alpha p))=\text{Fix}(\alpha\circ R_{\gamma^{-1}}(p)\circ\alpha^{-1}) \\
-%         &=\alpha(\text{Fix}(R_\gamma^{-1})(p))=\alpha\circ\pi_l^\pm(p).
+%         &=\alpha(\text{Fix}(R_\gamma^{-1})(p))=\alpha\circ\Pi_l^\pm(p).
 %     \end{align*}
 %     And a completely analogous argument holds for the right projection.
 % \end{proof}
@@ -215,8 +215,8 @@ Let's formalize this idea in a more precise way. Consider the union of two half-
     Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ{\gamma_1^{-1}}$ is a loxodromic isometry. 
 \end{lemma}
 \begin{proof}
-    As in example \textcolor{red}{text} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by \textcolor{red}{text}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
-    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a hyperbolic isometry.
+    As in Example \ref{43} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by \textcolor{red}{text}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
+    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
 \end{proof}
 
 Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
@@ -245,7 +245,7 @@ We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$
     If instead $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right as seen from $D_1$ to $D_2$, then:
     \begin{itemize}
         \item The past boundary component of $\partial_-\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ coincides with the union of the convex envelope of $\text{graph}\restr{\gamma_1^{-1}}{I_1}$ and of the convex envelope of $\text{graph}\restr{\gamma_2^{-1}}{I_2}$. 
-        \item The future bounary component $\partial_+\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^-)$ is the union of the convex envelope of $\text{graph}(\restr{\gamma_1^{-1}}{I_2})$ and of the convex envelope of $\text{graph}(\restr{\gamma_2^{-1}}{I_1}).$
+        \item The future boundary component $\partial_+\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^-)$ is the union of the convex envelope of $\text{graph}(\restr{\gamma_1^{-1}}{I_2})$ and of the convex envelope of $\text{graph}(\restr{\gamma_2^{-1}}{I_1}).$
     \end{itemize}
 \end{proposition}
 
@@ -253,8 +253,8 @@ We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$
     Let us consider the case where $\gamma_2\circ\gamma_1^{-1}$ translates to the left along $\ell$, and let us prove the first item. Let $x,x^{\prime}$ be the fixed points of $\gamma_2\circ\gamma_1^{-1},$ let $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$ and $y^{\prime}=\gamma_1^{-1}(x^{\prime})=\gamma_2^{-1}(x^{\prime})$. Then the convex envelope of graph($\restr{gamma_i^{-1}}{I_i}$) is a half-plane $A_i$ in $P_{\gamma_i}$ bounded by the geodesic $P_{\gamma_1}\cap P_{\gamma_2}$, which has endpoints $(x,y)$ and $(x^{\prime} ,y^{\prime})$, Clearly both the convex envelope of graph($\restr{\gamma_i^{-1}}{I_i}$) are contained in $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+}).$\\
     We could be even more precise. We claim that $P_{\gamma_1}$ and $P_{\gamma_2}$ are future support planes for $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+}).$. The claim will imply that the union of $A_1$ and $A_2$ is contained in the future boundary component $\partial_+\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+})$, because every point $p\in A_1\cup A_2$ admits a future support plane through $p$ which is either $P_{\gamma_1}$ or $P_{\gamma_2}$. However $A_1\cup A_2$ is a topological disc in $\partial_+\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+}),$ whose boundary is precisely the curve $\text{graph}(\varphi_{\gamma_1,\gamma_2}^{+})$ by construction. Hence the claim will hold that $A_1\cup A_2=\partial_+(\varphi_{\gamma_1,\gamma_2}^{+}).$\\
     We prove the claim for $P_{\gamma_1}$, proof for $P_{\gamma_2}$ is analogous. For convenience, we set $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a loxodromic isometry with fixed points $x,x^{\prime}$, translating to the left as seen from $D_1$ to $D_2$. Indeed, we can apply $(\text{Id},\gamma_1),$ which sends $P_{\gamma_1}$ to $P_1$, $P_{\gamma_2}$ to $P_{\gamma_2\gamma_1^{-1}}$, and graph($\varphi_{\gamma_1,\gamma_2}^+$) to graph($f_{\text{Id},\gamma_2\gamma_1^{-1}}^+$). \\
-    We can now consider a path $\sigma_t,$ for $t\in[0,\epsilon]$ of elliptic elements fixing a given point $z_0\in\H^2,$ that rotate clockwise by an angle $t.$ As in the proof of \textcolor{red}{madonna} the planes $P_{\sigma_t}$ are pairwise disjoint in $\overline{\A^{2,1}}$, because $\sigma_{t_2}\circ\sigma_{t_1}^{-1}$ is still an elliptic element fixing $z_0$ for $t_1\neq t_2$, hence it has no fixed points in $\S$. Moreover recall that $\gamma^{-1}$ has a fixed axis $\ell$ and translates along $\ell$ to the right as seen from $D_1$ to $D_2$. Now $f_{\text{Id},\gamma}^+$ equals the identity on $I_1$ and $\gamma_2$ on $I_2,$ it fixes $I_1$ pointwise and moves points on $I_2$ clockwise. It follows that the equation $f_{\text{Id},\gamma}^+(x)=\gamma_t^{-1}(x)$ has no solution for $t>0$, because $\sigma_{t}^{-1}=\sigma_{-t}$ moves all the points counterclockwise if $t$ is positive. This shows that $P_{\sigma_t}\cap\mathcal{C}(f^+_{\text{Id},\gamma})=\emptyset$ for $t>0,$ and thus $P_{\text{Id}}$ is a support plane for $\mathcal{C}(f^+_{\text{Id},\gamma})$ by Observation \textcolor{green}{da aggiungere}.\\
-    Moreover if it is a future support plane: indeed one can check that $\sigma_{t+\pi/2}=\mathcal{R}_{z_0}\circ\sigma_t\in P_{\sigma_t}$, and the path $t\mapsto\sigma_t$ is future-directed because, from the discussion after \textcolor{green}{same}, its tangent vector is future-directed, hence $\mathcal{C}(f_{\text{Id},\gamma}^+)$ is locally in the past of $P_{\text{Id}}$. \\
+    We can now consider a path $\sigma_t,$ for $t\in[0,\epsilon]$ of elliptic elements fixing a given point $z_0\in\H^2,$ that rotate clockwise by an angle $t.$ As in the proof of \textcolor{red}{madonna} the planes $P_{\sigma_t}$ are pairwise disjoint in $\overline{\A^{2,1}}$, because $\sigma_{t_2}\circ\sigma_{t_1}^{-1}$ is still an elliptic element fixing $z_0$ for $t_1\neq t_2$, hence it has no fixed points in $\S$. Moreover recall that $\gamma^{-1}$ has a fixed axis $\ell$ and translates along $\ell$ to the right as seen from $D_1$ to $D_2$. Now $\varphi_{\text{Id},\gamma}^+$ equals the identity on $I_1$ and $\gamma_2$ on $I_2,$ it fixes $I_1$ pointwise and moves points on $I_2$ clockwise. It follows that the equation $\varphi_{\text{Id},\gamma}^+(x)=\gamma_t^{-1}(x)$ has no solution for $t>0$, because $\sigma_{t}^{-1}=\sigma_{-t}$ moves all the points counterclockwise if $t$ is positive. This shows that $P_{\sigma_t}\cap\mathcal{C}(\varphi^+_{\text{Id},\gamma})=\emptyset$ for $t>0,$ and thus $P_{\text{Id}}$ is a support plane for $\mathcal{C}(\varphi^+_{\text{Id},\gamma})$ by Observation \textcolor{green}{da aggiungere}.\\
+    Moreover if it is a future support plane: indeed one can check that $\sigma_{t+\pi/2}=\mathcal{R}_{z_0}\circ\sigma_t\in P_{\sigma_t}$, and the path $t\mapsto\sigma_t$ is future-directed because, from the discussion after \textcolor{green}{same}, its tangent vector is future-directed, hence $\mathcal{C}(\varphi_{\text{Id},\gamma}^+)$ is locally in the past of $P_{\text{Id}}$. \\
     We have shown the first item of the proposition, all the others follow with completely analogous arguments.
 \end{proof}
 
@@ -277,17 +277,17 @@ Where we are still using the notation introduced in the proof of \ref{gettinther
 
 \begin{proof}
     From Proposition \ref{gettinthere}, the pleated surface that we obtained as the union of $A_1\subset P_{\gamma_1}$ and $A_2\subset P_{\gamma_2}$ coincides with $\partial_+\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ if $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left, and with $\partial_-\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ if it translates to the right, by Proposition \ref{gettinthere}. \\
-    The firs two items are then clear, since $P_{\gamma_i}$ are smooth surfaces, hence $A_i$ is smooth at any interior point, and therefore has a unique support plane at the point. The last item can be proved in the same spirit as Proposition \ref{gettinthere}. First, we can assume $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a hyperbolic isometry translating on the left (resp. right) along $\ell.$ By \refeq{suplane}, if $P_\sigma$ is a support plane at $p,$ then $p$ is in the convex hull of the pairs $(y,\sigma^{-1}(y))$ where $y$ satisfies the relation $\sigma^{-1}(y)=f_{\text{Id},\gamma}^{\pm}(y).$ The only possibility is then for $p$ to lie in the geodesic connecting the points $(x,x)$ and $(x^{\prime},x^{\prime})$ in $\T,$ where $x,x^{\prime}$ are the fixed points of $\gamma$. Hence $\sigma$ must have the same fixed point as $\gamma$. It follows that $\sigma$ is then a hyperbolic isometry with axis $\ell$ (or the identity). Moreover, following the same reasoning as in \ref{gettinthere}, $P_\sigma$ is in the future (resp. past) of $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ if and only if $\sigma$ translates on the left (resp. right), and its translation length is less than that of $\gamma.$ Hence $\gamma$ is of the form $\exp(t\mathfrak{a})$ for $t\in [0,1].$
+    The firs two items are then clear, since $P_{\gamma_i}$ are smooth surfaces, hence $A_i$ is smooth at any interior point, and therefore has a unique support plane at the point. The last item can be proved in the same spirit as Proposition \ref{gettinthere}. First, we can assume $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a hyperbolic isometry translating on the left (resp. right) along $\ell.$ By \refeq{suplane}, if $P_\sigma$ is a support plane at $p,$ then $p$ is in the convex hull of the pairs $(y,\sigma^{-1}(y))$ where $y$ satisfies the relation $\sigma^{-1}(y)=\varphi_{\text{Id},\gamma}^{\pm}(y).$ The only possibility is then for $p$ to lie in the geodesic connecting the points $(x,x)$ and $(x^{\prime},x^{\prime})$ in $\T,$ where $x,x^{\prime}$ are the fixed points of $\gamma$. Hence $\sigma$ must have the same fixed point as $\gamma$. It follows that $\sigma$ is then a hyperbolic isometry with axis $\ell$ (or the identity). Moreover, following the same reasoning as in \ref{gettinthere}, $P_\sigma$ is in the future (resp. past) of $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ if and only if $\sigma$ translates on the left (resp. right), and its translation length is less than that of $\gamma.$ Hence $\gamma$ is of the form $\exp(t\mathfrak{a})$ for $t\in [0,1].$
 \end{proof}
 
 \section{Simple earthquake.}
-We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\pi_l^{\pm}$ and $\pi_r^\pm$ provide the earthquake map as in Example \ref{simplequake}. In first instance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
+We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\Pi_l^{\pm}$ and $\Pi_r^\pm$ provide the earthquake map as in Example \ref{simplequake}. In first instance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
 
 \begin{proposition}\label{estensione}
-    Let $\gamma_1,\gamma_2 \in \PSL$ be such that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry, and let $\pi_l^\pm,\pi_r^\pm$ be the projections associated with the convex envelope of $\varphi_{\gamma_1,\gamma_2}^+.$ Then:
+    Let $\gamma_1,\gamma_2 \in \PSL$ be such that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry, and let $\Pi_l^\pm, \Pi_r^\pm$ be the projections associated with the convex envelope of $\varphi_{\gamma_1,\gamma_2}^+.$ Then:
     \begin{enumerate}
-        \item $\pi_l^\pm,\pi_r^\pm:\partial_\pm\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)\to\H^2$ are bijections.
-        \item Assume that $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left), as senn grom $D_1$ to $D_2.$ Then the composiiton $\pi_r^-\circ(\pi_l^-)^{-1}:\H^2\to\H^2$ (resp. $\pi_r^+\circ(\pi_l^+))^{-1}:\H^2\to\H^2)$ is a left (resp. right) earthquake map extending $\varphi_{\gamma_1,\gamma_2}^+.$
+        \item $\Pi_l^\pm, \Pi_r^\pm:\partial_\pm\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)\to\H^2$ are bijections.
+        \item Assume that $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left), as senn grom $D_1$ to $D_2.$ Then the composiiton $\Pi_r^-\circ(\Pi_l^-)^{-1}:\H^2\to\H^2$ (resp. $\Pi_r^+\circ(\Pi_l^+))^{-1}:\H^2\to\H^2)$ is a left (resp. right) earthquake map extending $\varphi_{\gamma_1,\gamma_2}^+.$
     \end{enumerate} 
 \end{proposition}
 
@@ -320,11 +320,11 @@ In the first item of \ref{condor}, the hypothesis that $P$ and $Q$ are support p
 Now, if one of the two plane $P$ and $Q$ must intersect in $\overline{\A^{2,1}}$, but not necessarily in the interior. It can happen that two future (or past) support planes (one of which possibly lightlike) at a point $(x,f(x))$ intersect at $(x,f(x))$ but not in the interior of $\A^{2,1}$.
 \end{observation}
  
-The Lemma \ref{condor} allows us to notice the following. Recall that we have defined the left and right projections $\pi_l^\pm,\pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chose to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show:
+The Lemma \ref{condor} allows us to notice the following. Recall that we have defined the left and right projections $\Pi_l^\pm, \Pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chose to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show:
 
 \begin{corollary}
     Let $f:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in \PSL,$ and suppose $p\in\partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
-    In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\pi_l^\pm$ and $\pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
+    In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\Pi_l^\pm$ and $\Pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
 \end{corollary}
 
 \begin{proof}
@@ -332,13 +332,13 @@ Suppose\end{proof}
 
 \section{Proof of the earthquake theorem.}
 
-We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $f:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\pi_{l}^\pm,\pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
+We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $f:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\Pi_l^\pm,\Pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
 
 \section{Extension to the boundary}
-We study the extension of the projections $\pi_l^\pm,\pi_r^\pm$ to the boundary of $\CF$. 
+We study the extension of the projections $\Pi_l^\pm, \Pi_r^\pm$ to the boundary of $\CF$. 
 
 \begin{proposition}\label{seiuno}
-    The projections $\pi_l^\pm,\pi_r^\pm$ extend to $\text{graph}(f)$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\text{graph}(f),$ then $\pi_l^\pm(p_n)\to x$ and $\pi_r^\pm(p_n)\to y$.
+    The projections $\Pi_l^\pm, \Pi_r^\pm$ extend to $\text{graph}(f)$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\text{graph}(f),$ then $\Pi_l^\pm(p_n)\to x$ and $\Pi_r^\pm(p_n)\to y$.
 \end{proposition}
 
 We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choice} of the projections, regardless of the chosen support planes where several choices are available. \textcolor{pink}{magari metterlo dopo la proof?}
@@ -351,7 +351,7 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
     \end{equation}
     for any $z_0\in\H^2.$ It also follows from the definition of the projections: 
     \begin{equation}\label{19}
-        \pi_l^\pm(p_n)=\text{Fix}(p_n\gamma_n^{-1}) \;\; \text{and}\;\; \pi_r^\pm(p_n)=\text{Fix}(\gamma_n^{-1}p_n).
+        \Pi_l^\pm(p_n)=\text{Fix}(p_n\gamma_n^{-1}) \;\; \text{and}\;\; \Pi_r^\pm(p_n)=\text{Fix}(\gamma_n^{-1}p_n).
     \end{equation}
   We consider the identification of $P_\text{Id}$ with $\S$ via $(x,x)\to x,$ we thus have show (choosing for instance the point $z_0=i$) that: $p_n\gamma_n^{-1}(i)\to x$ and $\gamma_n^{-1}p_n(i)\to y.$ \\
   However, since 
@@ -362,13 +362,13 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
 \end{observation}
 
 \begin{proposition}\label{seitre}
-    The projections $\pi_l^\pm,\pi_r^\pm:\partial_\pm\CF\to\H^2$ are bijections. 
+    The projections $\Pi_l^\pm, \Pi_r^\pm:\partial_\pm\CF\to\H^2$ are bijections. 
 \end{proposition}
 
-As a direct consequence of Proposition \ref{seitre}, the composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$ is well-defined and is a bijection of $\H^2$ to itself. This and Proposition \ref{seiuno} let us show the following: 
+As a direct consequence of Proposition \ref{seitre}, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ is well-defined and is a bijection of $\H^2$ to itself. This and Proposition \ref{seiuno} let us show the following: 
 
 \begin{corollary}
-    The composition $\pi_r^\pm\circ(\pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itseld, which equals $f$ on $\partial\H^2$ and is continuos at any point of $\partial\H^2$.
+    The composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itseld, which equals $f$ on $\partial\H^2$ and is continuos at any point of $\partial\H^2$.
 \end{corollary}
 \begin{proof}
     
