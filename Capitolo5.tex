@@ -208,7 +208,7 @@ We can now compute the map of $\H^2$ obtained by composing the inverse of the le
 \end{equation}
 In conclusion we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\sigma^{-1}}$is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $f$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $f$.
 
-\section{The fundamental example.} We want to now finally link Ads geometry, in particular pleated surfaces, with the earthquake theory. Before stating the precise results we explore what we can consider the \textit{fundamental example.} Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \textcolor{red}{inserire una figura}\\
+\section{The fundamental example.} We want to move one more intermediate step towards the final theorem. describing this time what we can consider \textit{the fundamental example}. Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
 Let's formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
 
 \begin{lemma}\label{Mati}
@@ -222,19 +222,31 @@ Let's formalize this idea in a more precise way. Consider the union of two half-
 Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
 
 \begin{equation}
-    \text{Da mettere}
-\end{equation}
-
+    \varphi_{\gamma_1,\gamma_2}(x) = \begin{dcases}
+        \gamma_1^{-1}, & \text{if } x \in I_1; \\
+        \gamma_2^{-1}, & \text{if } x \in I_2;
+    \end{dcases}
+    \;\text{and}\;
+    \varphi^-_{\gamma_1,\gamma_2}(x) = \begin{dcases}
+        \gamma_2^{-1}, & \text{if } x \in I_1 ;\\
+        \gamma_1^{-1} , & \text{if } x \in I_2.
+    \end{dcases}
+    \end{equation}
+    
 Both $f_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
 We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. Then with these notations we can state: 
 
 \begin{proposition}\label{gettinthere}
     Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left, as seen from $D_1$ to $D_2$. Then:
     \begin{itemize}
-        \item The future boundary component $\partial_+\mathcal{C}(f_{\gamma^+,\gamma_2}^{-1})$ coincides with the union of the convex envelope of $\text{graph}(\restr{\gamma_1^{-1}}{I_1})$ and the convex envelope of $\text{graph}(\restr{\gamma_2^{-1}}{I_2})$
-        \item The past boundary component 
+        \item The future boundary component $\partial_+\mathcal{C}(\varphi_{\gamma^+,\gamma_2}^{-1})$ coincides with the union of the convex envelope of $\text{graph}(\restr{\gamma_1^{-1}}{I_1})$ and the convex envelope of $\text{graph}(\restr{\gamma_2^{-1}}{I_2})$
+        \item The past boundary component $\partial\mathcal{C}(\varphi^-_{\gamma_1,\gamma_2})$ coincides with the union of the convex envelope of $\text{graph}(\restr{\gamma_1}{I_2})$ and of the convex envelope of $\text{graph}(\restr{\gamma_2}{I_1}).$
     \end{itemize}
-    \textcolor{blue}{To fill}
+    If instead $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right as seen from $D_1$ to $D_2$, then:
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
 \end{proposition}
 \begin{proof}
     Let us consider the case where $\gamma_2\circ\gamma_1^{-1}$ translates to the left along $\ell$, and let us prove the first item. Let $x,x^{\prime}$ be the fixed points of $\gamma_2\circ\gamma_1^{-1},$ let $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$ and $y^{\prime}=\gamma_1^{-1}(x^{\prime})=\gamma_2^{-1}(x^{\prime})$. Then the convex envelope of graph($\restr{gamma_i^{-1}}{I_i}$) is a half-plane $A_i$ in $P_{\gamma_i}$ bounded by the goedesic $P_{\gamma_1}\cap P_{\gamma_2}$, which has endpoints $(x,y)$ and $(x^{\prime} ,y^{\prime})$, Clearly both the convex envelope of graph($\restr{\gamma_i^{-1}}{I_i}$) are contained in $\mathcal{C}(f_{\gamma_1,\gamma_2}^{+}).$\\
