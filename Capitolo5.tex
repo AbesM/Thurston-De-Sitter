@@ -192,7 +192,7 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 %     And a completely analogous argument holds for the right projection.
 % \end{proof}
 
-\textit{Esempio.} Let's consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous example \textcolor{red}{ref}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition in \refeq{defproj} we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
+\begin{example}\label{413} Let's consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous example \textcolor{red}{ref}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition in \refeq{defproj} we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
 \begin{equation}
     \Pi_l(p)=\text{Fix}(p\circ\varphi)\;\;\Pi_r(p)=\text{Fix}(\varphi\circ p).
 \end{equation}   
@@ -207,6 +207,7 @@ We can now compute the map of $\H^2$ obtained by composing the inverse of the le
     \Pi_r\circ\Pi_l^{-1}=\varphi:\H^2\to\H^2
 \end{equation}
 In conclusion we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\sigma^{-1}}$is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $f$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $f$.
+\end{example}
 
 \section{The fundamental example.} We want to move one more intermediate step towards the final theorem. describing this time what we can consider \textit{the fundamental example}. Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
 Let's formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
@@ -262,7 +263,7 @@ We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$
 
 From \ref{gettinthere} we get the following consequence that we state as a:
 
-\begin{corollary}
+\begin{corollary}\ref{53}
     Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry that translates along $\ell$ to the left (resp. right), as seen from $D_1$ to $D_2$, and write $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ for some $\mathfrak{a}\in\mathfrak{sl}(2,\R)$. Let $p$ be a point in the future (resp. past) boundary components of $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+}).$ Then:
     \begin{itemize}
         \item If $p\in\text{int}(A_1)$, then $P_{\gamma_1}$ is the unique support plane of $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^{+})$ at $p$. 
@@ -287,7 +288,7 @@ We are finally arrived to the case of considering orientation-preserving homeomo
     Let $\gamma_1,\gamma_2 \in \PSL$ be such that $\gamma_2\circ\gamma_1^{-1}$ is a hyperbolic isometry, and let $\Pi_l^\pm, \Pi_r^\pm$ be the projections associated with the convex envelope of $\varphi_{\gamma_1,\gamma_2}^+.$ Then:
     \begin{enumerate}
         \item $\Pi_l^\pm, \Pi_r^\pm:\partial_\pm\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)\to\H^2$ are bijections.
-        \item Assume that $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left), as senn grom $D_1$ to $D_2.$ Then the composiiton $\Pi_r^-\circ(\Pi_l^-)^{-1}:\H^2\to\H^2$ (resp. $\Pi_r^+\circ(\Pi_l^+))^{-1}:\H^2\to\H^2)$ is a left (resp. right) earthquake map extending $\varphi_{\gamma_1,\gamma_2}^+.$
+        \item Assume that $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left), as seen from $D_1$ to $D_2.$ Then the composition $\Pi_r^-\circ(\Pi_l^-)^{-1}:\H^2\to\H^2$ (resp. $\Pi_r^+\circ(\Pi_l^+))^{-1}:\H^2\to\H^2)$ is a left (resp. right) earthquake map extending $\varphi_{\gamma_1,\gamma_2}^+.$
     \end{enumerate} 
 \end{proposition}
 
@@ -295,15 +296,21 @@ We remark that we are limiting to the case of $\varphi_{\gamma_1,\gamma_2}^+$ fo
 
 \begin{proof}
     For the first point, recall that $A_i\subset P_{\gamma_i}$, and that the union $A_1\cup A_2$ is the past (resp. future) boundary component for $\varphi_{\gamma_1,\gamma_2}^+$ if $\gamma_2\circ\gamma_1^{-1}$ translates along $\ell$ to the right (resp. left). \\
-    Hence \textcolor{blue}{he goes via reference} 
+    Hence $\restr{(\Pi_l^\pm)}{\text{int}(A_i)}$ and $\restr{(\Pi_r^\pm)}{\text{int}(A_i)}$ are the restrictions of the projections associate with the totally geodesic plane $P_{\gamma_i}$ just as seen in Example \ref{413}. In particular, $\restr{(\Pi_l^\pm)}{\text{int}(A_i)}$ and $\restr{(\Pi_r^\pm)}{\text{int}(A_i)}$ are the restriction to int($A_i$) of global isometries of $\A^{2,1}$ (those defined by multiplication on the left or on the right by $\gamma_i^{-1}$) sending $P_{\gamma_i}$ to $P_{\text{Id}}$, post-composed with the usual isometry $\text{Fix}:P_{\text{Id}}\to\H^2$. It follows that the restrictions of projection map geodesic of $P_{\gamma_i}$ to geodesic of $\H^2$. More is true, due to Equation \refeq{simproj}, $\restr{(\Pi_l^\pm)}{\text{int}(A_i)}$ maps int($\partial(A_i))=\text{graph(\restr{\gamma_i^{-1}}{\text{int}(I_i)})}$ to $\text{int}(I_i).$ Hence $\Pi_l^\pm(\text{int}(A_i))=\text{int}(D_i)$. In similar fashion, $\Pi_r^\pm(\text{int}(A_i))=\gamma_1^{-1}(\text{int}(D_1))=\gamma_2^{-1}(\text{int}(D_2)).$\\
+ We want to show that the projections are bijective. To do so we will show that the image of the geodesic $A_1\cap A_2=P_{\gamma_1}\cap P_{\gamma_2}$, via $\Pi_l^\pm$ is the geodesic $\ell=D_{1}\cap D_2$, while the image via $\Pi_r^\pm$ is the geodesic $\gamma_1^{-1}(\ell)=\gamma_2^{-1}(\ell).$ The definition of $\Pi_l^\pm$ and $\Pi_r^\pm$ on $A_1\cap A_2$ \textit{depends} on the choice of a support plane. We recall that we must choose the \textit{same} support plane at any point $p\in A_1\cap A_2$. Now, because of Corollary \ref{53}, the possible choices of support planes at $p$ are all of the form $P_{\sigma\gamma_1}$, for some $\sigma$ that has the same fixed points as $\gamma_2\circ\gamma_1^{-1}$, which are precisely the common endpoint of $I_1$ and $I_2$. \\
+ We stay consistent with the notation of Lemma \ref{Mati}, thus the endpoints at infinity of $A_1\cap A_2$ are the points $(x,y)$ and $(x^{\prime},y^{\prime})$ where $x,x^{\prime} $ are the fices point of $\gamma_2\circ\gamma_1^{-1}$ (and of $\sigma)$. Again from Equation \refeq{simproj} we have (for any choice of $\sigma$ as in the third item of Corollary \ref{53}) $\Pi_l^\pm(x,y)=x$ and $\Pi_l^\pm(x^{\prime} ,y^{\prime} )?y^{\prime},$ from which it follows that $\Pi_l^\pm(A_1\cap A_2)=\gamma_1^{-1}(\ell)=\gamma_2^{-1}(\ell).$ \\
+ We move now on item number two. Define $E\coloneqq\Pi_r^-\circ(\Pi_l^-)^{-1}$, which is a bijection of $\H^2$. Consider the geodesic lamination of $\H^2$ composed by the sole geodesic $\ell.$ Hence the strata of $\ell$ are $\text{int}{D_1},$ $\text{int}(D_2)$ and $\ell$. We will show that the comparison isometries $\text{Comp}(S,S^{\prime})\coloneqq(\restr{E}{S})^{-1}\circ\restr{E}{S^{\prime}}$ translate to the right or to the left seen from one stratum to another, according to as $ \gamma_2\circ\gamma_1^{-1}$ translates to the left or to the right seen from $D_1$ to $D_2$.\\
+ Let us consider $S=\text{int}(D_1)$ and $S^{\prime}=\text{int}(D_2)$. Then, by Example \ref{413}, $E$ equals $\gamma_i^{-1}$ on int($D_i)$, because $(\Pi_l^\pm)^{-1}(\text{int}(D_i))=\text{int}(A_i)\subset P_{\gamma_i^{-1}}$. \\
+ Hence the comparison isometry $\text{Comp}(\text{int}(D_1),\text{int}(D_2))$ equals $\gamma_1\circ\gamma_2^{-1}$, and it translates to the left (resp. right) seen from $\text{int}(D_1)$ to $\text{int}(D_2)$ exactly when $\gamma_2\circ\gamma_1^{-1}$, which is its inverse, translates to the right (resp. left).  
+ \textcolor{blue}{The proof when one of the two strata} $S$ or $S^{\prime}$ is $\ell$ is completely analogous, by using the third item of Corollary \ref{53}. Indeed (via Remark 4.11), by any choice of $\sigma$ of the form $\sigma=\exp(t\mathfrak{a})$ with $t\in(0,1)$, Comp($\ell,\text{int}(D_2))=\sigma\circ\gamma_2^{-1}$ translates to the left (resp. right) seen from $\ell$ to $\text{int}(D_2)$, and Comp(int($D_1$),$\ell)=\gamma_1\circ\sigma^{-1}$ translates to the left (resp. right) seen from int($D_1$) to $\ell.$ If instead $\sigma=\exp(t\mathfrak{a})$ with $t\in\{0,1\}$, then $\sigma$ coincides with $\gamma_1$ or with $\gamma_2,$ hence on of the comparison isometries Comp(int($D_1),\ell$) and Comp(int($D,2),\ell$) translates to the left, while the other it the identity, which is still \textit{allowed} in the definition of earthquake because $\ell$ is in the boundary on $\text{int}(D_i)$.
 \end{proof}
 
 \section{The example is prototypical.} We have just treated what seems to be a very \textit{special and convenient} simple earthquake. What we want to show now is that it is actually the prototypical example, that will serve to treat the general case of the earthquake theorem. The following lemma explains \textit{how} the situation of two intersecting planes is actually pretty common. 
 
 \begin{lemma}\label{condor}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then: 
+    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then: 
     \begin{itemize}
-        \item Any two support panes of $\mathcal{C}(f)$ at points of $\partial_+\CF$ intersects in $\A^{2,1}$. Analogously, any two past support planes of $\CF$ at points of $\partial_-\CF$ intersects in $\A^{2,1}$.
+        \item Any two support panes of $\mathcal{C}(\Lambda_\varphi)$ at points of $\partial_+\CF$ intersects in $\A^{2,1}$. Analogously, any two past support planes of $\CF$ at points of $\partial_-\CF$ intersects in $\A^{2,1}$.
         \item Given a point $p\in\partial_\pm\CF,$ if there exist two support planes at $p$, then their intersection (which is a spacelike geodesic) is contained in $\partial_\pm\CF$. As a consequence, any other support plane at $p$ contains this spacelike geodesic.
     \end{itemize}
 \end{lemma}
@@ -316,35 +323,43 @@ We remark that we are limiting to the case of $\varphi_{\gamma_1,\gamma_2}^+$ fo
 \end{proof}
 
 \begin{observation}
-In the first item of \ref{condor}, the hypothesis that $P$ and $Q$ are support planes at points of $\partial_\pm\CF$ (and not at points of graph($f$) $\subset\partial\A^{2,1}$) is necessary. In light of \ref{supportinho} we know support planes of $\CF$ are either spacelike or lightlike, and they are necessarily spacelike if they intersect $\CF$ at points of $\partial_\pm\CF$. \\
-Now, if one of the two plane $P$ and $Q$ must intersect in $\overline{\A^{2,1}}$, but not necessarily in the interior. It can happen that two future (or past) support planes (one of which possibly lightlike) at a point $(x,f(x))$ intersect at $(x,f(x))$ but not in the interior of $\A^{2,1}$.
+In the first item of \ref{condor}, the hypothesis that $P$ and $Q$ are support planes at points of $\partial_\pm\CF$ (and not at points of $\Lambda_\varphi$ $\subset\partial\A^{2,1}$) is necessary. In light of \ref{supportinho} we know support planes of $\CF$ are either spacelike or lightlike, and they are necessarily spacelike if they intersect $\CF$ at points of $\partial_\pm\CF$. \\
+Now, if one of the two plane $P$ and $Q$ must intersect in $\overline{\A^{2,1}}$, but not necessarily in the interior. It can happen that two future (or past) support planes (one of which possibly lightlike) at a point $(x,\varphi(x))$ intersect at $(x,\varphi(x))$ but not in the interior of $\A^{2,1}$.
 \end{observation}
  
-The Lemma \ref{condor} allows us to notice the following. Recall that we have defined the left and right projections $\Pi_l^\pm, \Pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chose to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show:
+The Lemma \ref{condor} allows us to notice the following. Recall that we have defined the left and right projections $\Pi_l^\pm, \Pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chosen to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show:
 
 \begin{corollary}
-    Let $f:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in \PSL,$ and suppose $p\in\partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
+    Let $\varphi:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in \PSL,$ and suppose $p\in\partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
     In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\Pi_l^\pm$ and $\Pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
 \end{corollary}
 
 \begin{proof}
-Suppose\end{proof}
+Suppose $P_{\widetilde{\gamma}_1}$ and $P_{\widetilde{\gamma}_2}$ are (say, future) distinct support planes at $p$. Write $ @\widetilde{\gamma_2}\circ\widetilde{\gamma_1}^{-1}=\exp(\widetilde{\mathfrak{a}}),$ which is a loxodromic element by Lemma \ref{Mati} and the first item of Lemma \ref{condor}. By the second item of Lemma \ref{condor}, any other support plane at $p$ must be of the form $P_{\sigma\widetilde{\gamma}_1}$ for $\sigma$ an element having the same fixed points as $\widetilde{\gamma_2}\circ\widetilde{\gamma_1}^{-1}$. That is, $\gamma$ is the form $\exp(s\widetilde{\mathfrak{a}})$ for some $s\in\R$.\\
+We claim now that the set: 
+\[
+    I=\{s\in\R\;|\;\exp(s\widetilde{\mathfrak{a}})\;\text{is a support plane of}\;\CF\;\text{at}\;p\}
+\]
+is a compact interval. This would conclude the proof, up to applying an affine change of variable mapping to the interval $I=[s_1,s_2]$ to $[0,1]$, and defining $\gamma_i=\exp(s_i\widetilde{\mathfrak{a}}).$\\
+Let's prove the compactness of $I$, suppose $s,s^{\prime} \in I$. Now $\CF$ is contained in the past of a pleated surface obtained as the union of two half-spaces, one contained in $P_{\exp(s\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$ and the other in $P_{\exp(s^{\prime}\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$, meeting along the spacelike geodesic $P_{\widetilde{\gamma}_1}\cap P_{\widetilde{\gamma}_2}$. Then every support plane for this pleated surface is a support plane for $\CF$ as well. That is, by the last item of Corollary \ref{53}, $[s,s^{\prime}]\subset I$. This shows that $I$ is an interval. It is compact by Lemma \ref{49}, applied to the constant sequence $p_n=p$ and to $\gamma_n=\exp(s_n\widetilde{\mathfrak{a}})$, showing that $s_n$ must by converging (up to subsequences) and its limit is in $I$. This concludes the proof.  
+
+\end{proof}
 
 \section{Proof of the earthquake theorem.}
 
-We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $f:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\Pi_l^\pm,\Pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
+We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $\varphi:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\Pi_l^\pm,\Pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
 
 \section{Extension to the boundary}
 We study the extension of the projections $\Pi_l^\pm, \Pi_r^\pm$ to the boundary of $\CF$. 
 
 \begin{proposition}\label{seiuno}
-    The projections $\Pi_l^\pm, \Pi_r^\pm$ extend to $\text{graph}(f)$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\text{graph}(f),$ then $\Pi_l^\pm(p_n)\to x$ and $\Pi_r^\pm(p_n)\to y$.
+    The projections $\Pi_l^\pm, \Pi_r^\pm$ extend to $\Lambda_\varphi$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\Lambda_\varphi,$ then $\Pi_l^\pm(p_n)\to x$ and $\Pi_r^\pm(p_n)\to y$.
 \end{proposition}
 
 We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choice} of the projections, regardless of the chosen support planes where several choices are available. \textcolor{pink}{magari metterlo dopo la proof?}
 
 \begin{proof}
-    Let $p_n\in\partial_\pm\CF$ be a sequence converging to $(x,y)\in\text{graph}(f),$ and let $P_{\gamma_n}$ be a sequence of support planes of $\CF$ at $p_n$, which are necessarily spacelike because of the results of Proposition \ref{supportinho}. By Lemma \ref{49}, up to extracting a subsequence, there are two possibilities: either $\gamma_n\to\gamma$ and $P_{\gamma_n}$ converges to the spacelike support plane $P_\gamma$, or $\gamma_n$ diverges in $\PSL$ and $P_{\gamma_n}$ converges to the lighlike plane whose boundary is $(\{x\}\times\S)\cup(\S\times\{y\})$. We treat the two cases separately, and we remand to \textcolor{red}{convergence}.
+    Let $p_n\in\partial_\pm\CF$ be a sequence converging to $(x,y)\in\Lambda_\varphi,$ and let $P_{\gamma_n}$ be a sequence of support planes of $\CF$ at $p_n$, which are necessarily spacelike because of the results of Proposition \ref{supportinho}. By Lemma \ref{49}, up to extracting a subsequence, there are two possibilities: either $\gamma_n\to\gamma$ and $P_{\gamma_n}$ converges to the spacelike support plane $P_\gamma$, or $\gamma_n$ diverges in $\PSL$ and $P_{\gamma_n}$ converges to the lightlike plane whose boundary is $(\{x\}\times\S)\cup(\S\times\{y\})$. We treat the two cases separately, and we remand to \ref{convergenza} as a reminder of our characterization of convergence to the boundary.
     We start by supposing the convergence $\gamma_n\to\gamma.$ By hypothesis: 
     \begin{equation}\label{18}
         p_n(z_0)\to x \;\;\; p_n^{-1}(z_0)\to y
@@ -354,12 +369,33 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
         \Pi_l^\pm(p_n)=\text{Fix}(p_n\gamma_n^{-1}) \;\; \text{and}\;\; \Pi_r^\pm(p_n)=\text{Fix}(\gamma_n^{-1}p_n).
     \end{equation}
   We consider the identification of $P_\text{Id}$ with $\S$ via $(x,x)\to x,$ we thus have show (choosing for instance the point $z_0=i$) that: $p_n\gamma_n^{-1}(i)\to x$ and $\gamma_n^{-1}p_n(i)\to y.$ \\
-  However, since 
+  However, since $\gamma_n\to\gamma$, $p_n\gamma_n^{-1}(i)$ is at bounded distance from $p_n\gamma^{-1}(i)$. Applying the hypothesis, namely \refeq{18}, to $z_0=\gamma^{-1}(i)$, we have $p_n\gamma^{-1}(i)\to x$ and therefore $p_n\gamma_n^{-1}(i)\to x$ as well. \\
+  The argument is analogous to show that $\gamma_n^{-1}p_n(i)\to y$, except that it it useful to observe that $\gamma_n^{-1}p_n=p_n^{-1}\gamma_n$ since it is an order-two isometry. Now $p_n^{-1}\gamma_n(i)$ is at bounded distance from $p_n^{-1}\gamma(i)$, which converges to $y$ by hypothesis. Hence $p_n^{-1}\gamma_n(i)\to y$ as well. \\
+  Let us move to the latter case, namely $\gamma_n$ diverges in $\PSL.$ Here we will use not only the assumption of \refeq{18}, but also: 
+  \begin{equation}\refeq{20}
+    \gamma_n(z_0)\;\text{and}\;\gamma_n^{-1}(z_0)\to y,
+  \end{equation} 
+  for any $z_0\in\H^2$. The condition of \refeq{20} holds because $\gamma_n$ converges to the projective class of a rank one matrix $A$, such that $P_{[A]}$ is a lightlike support plane; we have already observed that the boundary at infinity of $P_[A]$ must be equal to $(\{x\}\times\S)\cup(\S\times\{y\})$. Combining ,\ref{convergenza} and Lemma \ref{}, we deduce that $\gamma_n(z_0)\to x$ and $\gamma_n^{-1}(z_0)\to y$ as claimed. \\
+  With this observation, we can rewrite \refeq{19} as the identities: 
+  \begin{equation}\label{21}
+    p_n=\mathcal{R}_{\Pi_l^\pm(p_n)}\circ\gamma_n \;\;\; \text{and}\;\;\; p_n^{-1}=\mathcal{R}_{\Pi_r^\pm(p_n)}\circ\gamma_n^{-1}, 
+  \end{equation} 
+  where we recall that for us $\mathcal{R}_w$ denotes the orderd two elliptic isometry with fixed point $w\in\H^2.$ \\
+  Up to extracting a subsequence, we can assume that $\Pi_l^{\pm}(p_n)\to\widehat{x}_\pm$ and $\Pi_r^\pm{p_n}\to\widehat{y}_\pm$, for some points $\widehat{x}_\pm, \widehat{y}_\pm\in\H^2\cup\partial\H^2$. We need tho show that $\widehat{x}_\pm=x$ and $\widehat{y}_\pm=y$. \\
+  In this direction, suppose by contradiction $\widehat{x}_\pm\neq x$. Suppose first that $\widehat{x}_\pm\in\H_2.$ We will use the fact (\textcolor{blue}{appendix})
+  that if $w_n\to w\in \H^2,$ then $\mathcal{R}_{w_n}$ converges to $\mathcal{R}_{w_n}$ uniformly on $\H^2\cup\partial\H^2$. From \refeq{21}, and the fact that, from \refeq{18} and \refeq{20}, both $p_n(z_0)$ and $\gamma_n(z_0)$ converge to $x$, we would then have: 
+  \[
+    x=\lim_n p_n(z_0)=\lim_n(\mathcal{R}_{\Pi_l^\pm(p_n)}(\gamma_n(z_0))=\mathcal{R}_{\widehat{x}_\pm}(x)\neq x
+  \]
+  since $\mathcal{R}_{\widehat{x}_\pm}$ does not have fixed points on $\partial\H^2$, thus giving a contradiction. If $\widehat{y}_\pm\in\H^2$, the same argument works flawless. \\
+  Lastly suppose $\widehat{x}_\pm\in\partial\H^2$, in this case we can find a neighbourhood $U$ of $\widehat{x}_\pm$ not containing $x$, such that for $n$ large $\mathcal{R}_{\Pi_l^\pm(p_n)}$ maps the complement of $U$ inside $U$ (again lemma in the appendix). This gives rise to a contradiction with the condition in \refeq{21} because $p_n(z_0)$ and $\gamma_n(z_0)$ are in the complement of $U$ for $n$ large, but at the same time $\mathcal{R}_{\Pi_l^{\pm}(p_n)}(\gamma_n(z_0))$ should be in $U$ for $n$ large. The argument for $\widehat{y}$ is the same \textit{verbatim}.
 \end{proof}
 
 \begin{observation}
-    Seppi 6.4 
+In the proof we have not used the full hypothesis of a surface on which the projections are defined in a boundary component of $\Lambda_\varphi$, but only the property that whenever a sequence $P_{\gamma_n}$ of spacelike support planes converges to a lightlike plane, then this limit is a support plane too, which is true for any general convex surface.
 \end{observation}
+
+
 
 \begin{proposition}\label{seitre}
     The projections $\Pi_l^\pm, \Pi_r^\pm:\partial_\pm\CF\to\H^2$ are bijections. 
@@ -368,8 +404,39 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
 As a direct consequence of Proposition \ref{seitre}, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ is well-defined and is a bijection of $\H^2$ to itself. This and Proposition \ref{seiuno} let us show the following: 
 
 \begin{corollary}
-    The composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itseld, which equals $f$ on $\partial\H^2$ and is continuos at any point of $\partial\H^2$.
+    The composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itself, which equals $\varphi$ on $\partial\H^2$ and is continuous at any point of $\partial\H^2$.
 \end{corollary}
 \begin{proof}
-    
+    Since $\Pi_l^\pm$ and $\Pi_r^\pm$ are bijective and extend to the bijections from $\Lambda_\varphi$ to $\partial\H^2$ sending $x,y\to x$ and $y\to\varphi(x)$ respectively, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ extends to a bijection of $\H^2\cup\partial\H^2$ to itself sending $x\to \phi(x).$ \\
+    We need to check continuity. Proposition \ref{seiuno} shows that the extensions $\Pi_l^\pm$ and $\Pi_r^\pm$ to $\partial_\pm\CF\cup\Lambda_\varphi$ are continuos at any point of $\Lambda_\varphi$. Hence it remains to check that $(\Pi_l^\pm)^{-1}$ is continuos at any point of $\partial\H^{2}$.\\
+    This is pretty straightforward: let $z_n$ be a sequence in $\H^2\cup\partial\H^2$ converging to $x\in\partial\H^2$, and let $p_n=(\Pi_l^\pm)^{-1}(z_n)$. Up to extracting a subsequence, $p_n\to p$. The limit $p$ must be in $\Lambda_\varphi$ because if $p\in\partial_\pm\CF$, altough $\Pi_l^\pm$ might not be continuos there, we have already seen in Proposition \ref{seitre} (in the passage about closeness of the image of $\Pi_l^\pm$) that $\lim_n\Pi_l^\pm(p_n)=\lim_n z_n$ is a point of $\H^2$, thus giving a contradiction with $\lim_n z_n=x\in\partial\H^2$. \\ 
+    If $p\in\Lambda_\varphi$, then we can use the continuity and injectivity of $\Pi_l^\pm$ on $\Lambda_\varphi$ to infer that $p=(\Pi_l^\pm)^{-1}(x)$.
+
+\end{proof}
+
+We are only left with verification that $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ satisfies the defining properties of an earthquake map. 
+
+\begin{proposition}
+    The composition $\Pi_r^-\circ(\Pi_l^-)^{-1}:\H^2\to\H^{2}$ is a left earthquake map. Analogously, $\Pi_r^+\circ(\Pi_l^+)^{-1}:\H^2\to\H^2$ is a right earthquake map.
+\end{proposition}
+\begin{proof}
+    Let us start by defining a geodesic lamination $\lambda.$ Let us consider all the support planes $P_\gamma$ of $\CF$ at points of $\partial_\pm\CF$ (which we recall must be spacelike by Proposition \ref{supportinho}). Define $\mathcal{L}$ to be the collection of all the connected components of $(P_\gamma\cap\partial_\pm\CF)\setminus\text{int}(P_\gamma\cap\partial_\pm\CF),$ as $P_\gamma$ varies over all support planes. As observed before, by \textcolor{red}{questa va messa ancora}, $P_\gamma\cap \partial_\pm\CF$ is the convex hull in $P_\gamma$ of $\partial P_\gamma\cap\Lambda_\varphi,$ which consist of at least two points. If it consists of exactly two points, then $P_\gamma\cap \partial_\pm\CF$ is a spacelike geodesic $L$; otherwise $P_\gamma\cap\partial_\pm\CF$ has nonempty interior and each connected component of its boundary is a spacelike geodesic. Now, $\Pi_l^\pm$ is an isometry onto its image when restricted to any $L\in\mathcal{L}$ (wich might depend on the choice of a support plane if there are several support planes at point of $L$, but the image does not depend on this choice by Corollary \refeq{57}). Hence we define $\lambda$ to be the collection of alle the $\Pi_l^\pm(L)$ as $L$ varies over $\mathcal{L}$. \\
+    To show that $\lambda$ is a geodesic lamination, we first observe that the geodesic $\ell\in\lambda$ are pairwise disjoint, because the spacelike geodesics $L$ in $\mathcal{L}$ are pairwise disjoint and $\Pi_l^\pm$ is injective. The in remains to show that their union is a closed subset of $\H^2$. But this follows immediately from the proof of Proposition \ref{seitre}. Indeed, suppose that $\ell_n=\Pi_l^\pm(L_n)$ converges to $\ell=\Pi_l^\pm(L)$, and let $z_n=\Pi_l^\pm(p_n)\in\ell_n$ be a sequence converging to $z\in\ell$. Since $\text{Im}(\Pi_l^\pm)$ is closed, $z\in\text{Im}(\Pi_l^\pm)$, and given the injectivity of $\Pi_l^\pm$, $z=\Pi_l^\pm(p)$ for some $p\in L$. The in the last part of the proof of Proposition \ref{seitre} we have shown that in this situation $\ell_n$ converges to $\ell$. \\
+    Having shown that $\lambda$ is a geodesic lamination, we are ready to check that $@\pi_r^-\circ(\pi_l^-)^{-1}$ is an earthquake map. Observe that the gaps of $\lambda$ are precisely the images under $\Pi_l^\pm$ of the interior of the sets $P_\gamma\cap\partial_\pm\CF$ (when this intersection is not reduced to a geodesic), as $P_\gamma$ varies among all the support planes. \\
+    Let $S_1$ and $S_2$ be two srata of $\lambda$, and let $\Sigma_i=(\Pi_l^\pm)^{-1})(S_i).$ Hence $\Sigma_i\subset P_{\gamma_i}\cap\partial_\pm\CF,$ where $P_{\gamma_i}$ is a support plane. As usual, there could be several support planes at points of $\Sigma_i$, and this can occour only if $\Sigma_i$ is reduced to a geodesic by Lemma \ref{condor}. Recalling from Remark \textcolor{blue}{aggiungere}  that the chose support plane is assumed to be constant alont $\Sigma_i$, we can suppose that $P_{\gamma_i}$ is the support plane chosen in the definition of $@\Pi_l^\pm$ and $\Pi_r^\pm$.\\
+    Now we proceed as in the proof of injectivity in Proposition \ref{seitre}. Consider first the case that $\gamma_1\neq\gamma_2$. By Lemma \ref{51} and Lemma \ref{55}, $\gamma_2\circ\gamma_1^{-1}$ is a loxodromic isometry; let $D_1$ and $D_2$ be the convex envelopes in $\H^2$ of the two intervals $I_1$ and $I_2$ with endpoints the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Up to switching $\gamma_1$ with $\gamma_2$, we assume that $\gamma_2\circ\gamma_1^{-1}$ translates to the left seen from $D_1$ to $D_2$. Then $\restr{\Pi_l^\pm}{\Sigma_i}=\restr{(\widehat{\Pi})_l^\pm}{\Sigma_i}$ and $\restr{\Pi_r^\pm}{\Sigma_i}=\restr{(\widehat{\Pi})_r^\pm}{\Sigma_i}$, where $\widehat{\Pi}_l^\pm$ and $\widehat{\Pi}_r^\pm$ are the left and right projections associated with $\mathcal{C}(\Lambda_{\varphi_{\gamma_1,\gamma_2}^+})$ and moreover $S_i\subset D_i$.\\
+    By the second part of Proposition \ref{54}, the comparison isometry $\widehat{\text{Comp}}(D_1,D_2)$ of the map $\widehat{\Pi}_r^\pm\circ(\widehat{\Pi}_l^\pm)^{-1}$ translates to the left (for $\Pi_r^-$ and $\Pi_l^-$) or right (for $\Pi_r^+$ and $\Pi_^+$) seen from $D_1$ to $D_2$. Then $\text{Comp}(S_1,S_2)$, which is indeed equal to $\widetilde{\text{Comp}}(D_1,D_2)$, translates to the left (or right) seen from $S_1$ to $S_2.$\\
+    Finally, we consider the cae $\gamma_1=\gamma_2$, which can only happen either if $\Sigma_1=\Sigma_2$ (hence $S_1=S_2)$ or if $\Sigma_1$ has nonempty interior and $\Sigma_2$ is one of its boundary components (or vice versa exchanging $\Sigma_1$ with $\Sigma_2$). In this case we already have that $\text{Comp}(S_1,S_2)=\text{Id}$. But the comparison isometry is allowed to be the identity, when one of the two strata is contained in the closure of the other. This concludes the proof. 
+\end{proof}
+
+\subsection{Revovering earthquakes of closed surfaces.}
+We have proved Thurston's theorem. We would like to recover the \textit{original} earthquake theorem due to Nielsen and recover the existence of earthquake maps between two homeomorphic closed hyperbolic surfaces.\\
+We recall briefly the definition of equivariance given in \textcolor{red}{given where}. 
+
+\begin{corollary}
+    Let $S$ be a closed oriented surface and let $\rho,\varrho:\pi_1(S)\to\PSL$ be two Fuchsian representations. Then there exists a $(\rho,\varrho)-$equivariant left earthquake map of $\H^2$, and a $(\rho,\varrho)-$equivariant right earthquake map. 
+\end{corollary}
+
+\begin{proof}
+    It's just a corollary of the classification of genus $g\geq 2$ MGHC Hyperbolic spaces.
 \end{proof}
