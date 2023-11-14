@@ -234,12 +234,12 @@ We would like to focus now on proper achronal meridians in $\partial\A^{2,1}$. T
 When $\Lambda$ is the graph of an orientation-preserving homomorphism $\varphi:\S\to\S$, there is a fairly simple characterization of $\Omega(\Lambda)$ exploiting the identificiation $\A^{2,1}\simeq \PSL$.
 
 
-\begin{corollary}
+\begin{corollary}\label{454}
     Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism. Then $x\in\A^{2,1}$ lies in $\Omega(\Lambda_\varphi)$ if and only if $x\circ\varphi$ has no fixed point as a homeomorphism of $\S$.
 \end{corollary}
 \begin{proof}
     The dual plane of $x,$ viewed as an element of $\PSL$, meets $\partial\A^{2,1}$ along the graph of $x^{-1}$, namely $\Lambda_{x^{-1}}$.\\
-    With this remark in hand, we have that $x\in\Omega(\Lambda_\varphi)$ if and only if $\Lambda_{x^{-1}}\cap @\Lambda_\varphi=\emptyset$, that is, if and only if $x^{-1}\circ\varphi$ has no fixed point on $\S$.
+    With this remark in hand, we have that $x\in\Omega(\Lambda_\varphi)$ if and only if $\Lambda_{x^{-1}}\cap \Lambda_\varphi=\emptyset$, that is, if and only if $x^{-1}\circ\varphi$ has no fixed point on $\S$.
 
 \end{proof}
 
@@ -439,7 +439,7 @@ An Anti-de Sitter globally hyperbolic spacetime $M$ is maximal is and only if $\
 Let's $\Sigma_r$ be an oriented surface of genus $r\geq 2.$ We recall the definiton of Fuchsian representation. 
 
 \begin{definition}
-    A representaion $\rho:\pi_1(S)\to \text{PSL}(2,\R)$ is called positive \textit{Fuchsian} if there is a $\rho$-equivariant orientation preserving homeomorphism $\delta:\widetilde{\Sigma}_r\to\H^2$.
+    A representation $\rho:\pi_1(S)\to \text{PSL}(2,\R)$ is called positive \textit{Fuchsian} if there is a $\rho$-equivariant orientation preserving homeomorphism $\delta:\widetilde{\Sigma}_r\to\H^2$.
 \end{definition}
 
 The definition is invariant under conjugation in $\text{PSL}(2,\R)\simeq\text{Isom}_0(\H^2),$ but not under conjugation in $\text{Isom}(\H^2).$ It is a result of Goldman \textcolor{red}{Reference}, that a representation $\rho$ is positive Fuchsian if and only if the associated flat $\R\text{P}^1$ bundle $E_\rho$ constructed as the quotient of $\widetilde{\Sigma}_r\times\R\text{P}^1$ by the diagonal action of $\pi(S)$ (via deck transformation and the representation) has Euler class $2-2r.$ An equivalent condition is the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_r.$ \\   
@@ -463,18 +463,59 @@ Now let $\rho_l,\rho_r$ be two positive Fuchsian representation of $\Sigma_r.$ W
 
 Using the above construction, we can build examples of MGH spacetimes having holonomy any $\rho=(\rho_l,\rho_r)$ of this form. 
 
-\begin{proposition}
+\begin{proposition}\label{examplesgenustwo}
     The domain $\Omega_\rho$ is invariant under the isometric action of $\pi_1(\Sigma_r)$ on $\A^{2,1}$ induced by $\rho.$ Moreover $\pi_1(\Sigma_r)$ acts freely and properly discontinuosly on $\Sigma_\rho$ and the quotient is a MGH spacetime of genus $r$ and holonomy $\rho.$ 
 \end{proposition}
 \begin{proof}
-    \textcolor{red}{da adesso in poi bisogna capire per forza.}
+    By the definition of $\varphi$ and the action of $\PSL\times\PSL$ we have that $\Lambda_(\rho)$ is invariant under the action of $(\rho_l(\gamma),\rho_r(\gamma))$, for every $\gamma\in\pi_1(\Sigma_r).$ We recall from Corollary \ref{454} that $\Omega_\rho$ is the set of elements $x\in\PSL,$ such that $x\circ\varpi$ has no fixed point on $\S,$ the invariance of $\Omega_\rho$ also follows immediately, indeed: 
+    \[
+        (\rho_l(\gamma)\circ x\circ \rho_r(\gamma)^{-1})\circ \varphi = \rho_l(\gamma)\circ (x\circ\varphi)\circ\rho_2(\gamma)
+    \]
+    acts freely on $\S$ if $x\circ\varphi$ does. \\
+    Let us show that for a compact set $K$ in $\Omega_\rho$, $\rho(\gamma)\cdot K$ stays in a compact region of $\Omega_{\rho}$ only for finitely many $\gamma\in\pi_1(\Sigma_r).$  This will also show that the action is free, since $\pi_1(\Sigma_r)$ has no torsion. For this purpose, take a sequence $x_n\in K$ and a sequence $\gamma_n\in \pi_1(\Sigma_r)$ not definitely constant. We claim that up to a subsequence, $(\rho(\gamma_n)\cdot x_n)$ converges to some $(\xi_+,\varphi(\xi_+))$ in $\Lambda(\rho).$ We will apply the criterion of convergence in $\partial\A^{2,1}$ seen in Lemma \ref{convergenza}.\\
+    Since Fuchsian representations act cocompactly \textcolor{red}{means? and its true because?} on $\H^2$, the sequence $\rho_l(\gamma_n)$ has no converging subsequence in $\PSL$. By a know dynamical property of $\PSL$ (for more information view [BZ06]), up to taking a subsequence, there exist $\xi_-,\xi_+\in\S$ such that $\rho_l(\gamma_n)^{\pm 1}(\xi)\to\xi_{\pm}$ for all $\xi\neq \xi_{\mp}$ and that the convergence is uniform on compact sets of $(H^2\cup\S)\setminus\{\xi_{\mp}\}.$ By the equivariance condition, the same holds for $\rho_r(\gamma_n)$ where not $\xi_\pm$ are replaced by $\varphi(\xi_\pm).$\\
+    To apply the criterion of Lemma \ref{convergenza}, pick any $p\in\H^2$, and recall taht $\rho(\gamma_n)\cdot x_n=\rho_l(\gamma_n)\circ x_n\circ \rho_r(\gamma_n)^{-1}.$ By the dynamical propery above, for any $\delta>0$ one can find $n_0$ such that $\rho_r(\gamma_{n})^{-1}(p)$ is in the $\delta$-neighborhood of $\varphi(\xi_-)$ (for the Euclidean metric on the closed disc), say $U_\delta$. Since $x_n$ lies in a compact region of $\Omega_\rho$, we can assume that is converges to $x_\infty \in \Omega_\rho$, hence $x_\infty\circ\varphi$ has no fixed point, and in particular $x_\infty\circ\varphi(\xi_-)\neq \xi_-.$\\
+    Up to taking $\delta$ sufficiently small and $n_0$ large, $x_n(U_\delta)$ lies in a neighborhood $V_\epsilon$ of $x_\infty\circ\varphi(\xi_-)$ such that the closure of $V_\epsilon$ is disjoint from $\xi_-$. By construction $x_n\circ \rho_r(\gamma_n)^{-1}(p)$ converges to $\xi_+$ for $n$ large. The very same argument then shows that $(\rho(\gamma_n)\cdot x_n)^{-1}(p)=\rho_r(\gamma_n)\circ x_n^{-1}\circ\rho_l(\gamma_n)^{-1}(p)$ converges to $\varphi(\xi_+)$. And this concludes the claim. \\
+    Finally, past and future boundary components $\partial_\pm\mathcal{C}(\Lambda(\rho))$ are contained in $\Omega_{\rho}$, since $\Lambda(\rho)$ is the graph of an otientation-preserving homeomorphism \textcolor{blue}{see remark 465}. Hence they are $\rho-$ invariant properly embedded Cauchy surfaces in $\Omega_\rho$ and project to Cauchy surfaces of the quotient of the action of $\rho(\pi_1(\Sigma_r)),$ which are homeomorphic to $\Sigma_r$. This shows that the quotient is a globally hyperbolic spacetime of genus $r$, which is maximal by Proposition \ref{513}.
 \end{proof}
 
-\subsection{Classification of genus $r\geq 2$.} We will now show that the examples of Proposition \textcolor{red}{citare} are \textit{all} the MGH spacetimes of genus $r$. 
+\subsection{Classification of genus $r\geq 2$.} We will now show that the examples of Proposition \ref{examplesgenustwo} are \textit{all} the MGH spacetimes of genus $r$. 
 
 \begin{lemma}
-    Let $\rho:(\rho_l,\rho_r)$ be a pair of Fuchsian representations, and $\varphi:\R\text{P}^1\to\R\text{P}^1$ be the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1.$ Then $\Lambda(\rho)$ is the unique propre achronal meridian in $\partial\A^{2,1}$ invariant under the action of $\pi_1(\Sigma_r)$ induced by $\rho.$
+    Let $\rho:(\rho_l,\rho_r)$ be a pair of Fuchsian representations, and $\varphi:\R\text{P}^1\to\R\text{P}^1$ be the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1.$ Then $\Lambda(\rho)$ is the unique proper achronal meridian in $\partial\A^{2,1}$ invariant under the action of $\pi_1(\Sigma_r)$ induced by $\rho.$
 \end{lemma}
+
+\begin{proof}
+    Let $\Lambda$ be a proper achronal meridian invariant under the action of $\pi_1(\Sigma_r)$. We claim that the intersection $\Lambda\cap \Lambda_\varphi$ is not empty. Once the claim will be showed, the proof is concluded in the following way. If $(\xi_0 , \varphi(\xi_0))\in\Lambda,$ then: 
+    \[
+        (\rho_l(\gamma)\cdot\xi_0,\varphi(\rho_l(\gamma)\cdot\xi_0))=(\rho_l(\gamma)\cdot\xi_0,\rho_r(\gamma)\cdot\varphi(\xi_0))\in\Lambda.
+    \] 
+    However the $\rho_l(\pi_1(\Sigma_r))$-orbit of $\xi_0$ is dense in $\S,$ hence we deduce that $\Lambda$ contains $\Lambda_\varphi$. But both $\Lambda$ and $\Lambda_\varphi$ are homeomorphic to $\mathbb{S}^1$, which necessarily implies $\Lambda=\Lambda_\varphi.$\\
+    Let us then show the claim. Let $\gamma$ be a non-trivial element in $\pi_1(\Sigma_r)$. It is knows that $\rho_l(\gamma)$ and $\rho_r(\gamma)$ are necessarily loxodromic elements in $\PSL$, hence we denote by $\xi_l^+(\gamma)$, and $\xi_r^+(\gamma)$ their attractive fixed points respectively. Notice that $\xi_r^+(\gamma)=\varphi(\xi_l^+(\gamma))$, hence: 
+    \[
+        (\xi_l^+(\gamma),\xi_r^+(\gamma))\in \Lambda_\varphi.
+    \]
+    By homological reasoning the curve $\Lambda$ must meet the leaf of the left ruling of $\partial\A^{2,1}$: 
+    \[
+        \lambda_{\xi_r^+(\gamma)}=\{(\eta,\xi_r^+(\gamma))\;|\;\eta\in\S\}.
+    \]
+    That is, there exists $\eta_0\in S$ such that $(\eta_0,\xi_r^+(\gamma))$ lies in $\Lambda$. But then $(\rho_l(\gamma))^k\eta_0,\xi_r^+(\gamma)$ lies in $\Lambda$ for $k>0$. If $\eta_0\neq \xi_l^-(\gamma)$ we can pass to the limit on $k$ and deduce that $(\xi_l^+(\gamma),\xi_r^+(\gamma))$ lies in $\Lambda.$ \\
+    So far, the choice of $\gamma$ was arbitrary. To conclude, assume now by contradiction that for every $\gamma\in\pi_1(\sigma_r)$ the point $(\xi_l^-(\gamma),\xi_r^+(\gamma))$ lies in $\Lambda$. Take $\alpha,\beta\in\pi_1(S)$ so that the axes of $\rho_l(\alpha)$ and $\rho_l(\beta)$ do not intersect. We may assume that the cyclic order of end-points of those axes is 
+    \begin{equation}\label{57}
+        \xi_l^+(\alpha)<\xi_l^+(\beta)<\xi_l^-(\beta)<\xi_l^-(\alpha).
+    \end{equation}
+    Now given that $\xi_r^\pm(\alpha)=\varphi(\xi_l^\pm(\alpha))$ and the same hold for $\beta$ we have: 
+\begin{equation}\label{58}
+    \xi_r^+(\alpha)<\xi_r^+(\beta)<\xi_r^-(\beta)<\xi_r^-(\alpha).
+\end{equation}
+On the other hand, by assumption (applied to $\alpha,\beta$ and their inverses) the curve $\Lambda$ contains $(\xi_l^+(\alpha),\xi_r^-(\alpha)),(\xi_l^+(\beta),\xi _r^-(\beta)), (\xi_l^-(\beta ),\xi_r^+(\beta ))$ and $(\xi_l^-(\alpha),\xi_r^+(\alpha).$ By achronality of $\Lambda$, the cyclic order to the secondo comenents must be the same as that of the first components, hence from \refeq{57} we obtain: 
+\[
+    \xi_r^-(\alpha)<\xi_r^-(\beta)<\xi_r^+(\beta)<\xi_r^+(\alpha),
+\]
+which contradicts \refeq{58}.
+\end{proof}
+
+Given a pair $\rho=(\rho_l,\rho_r)$ of positive Fuchsian representations of $\pi_1(\Sigma_r),$ we denote by $M_\rho$ the MGH spacetime $\Omega_\rho/\rho(\pi_1(\Sigma_r))$ constructed in Proposition \ref{examplesgenustwo}.
 
 \begin{corollary}
     For any pair $\rho=(\rho_l,\rho_r)$ of positive Fuchsian representations of $\pi_1(\Sigma_r)$, $M_\rho$ is the unique MGH spacetime with holonomy $\rho$.
@@ -490,8 +531,19 @@ We are only left with one last step for the classification result, we want to sh
 We refer to the honolomy $\rho$ with respect to an orientation-preserving developing map. Therefore $\rho$ is well-defined up to conjugacy in $\text{PSL}(2,\R)\times\text{PSL}(2,\R)$
 \end{observation}
 \begin{proof}
-    
+    We will prove that the $\S$-flat bundles with holonomy $\rho_l$ and $\rho_r$ are isomorphic to the unit tangent bundle of $\Sigma.$ For the sake of definiteness, let us focus on $\rho_l$. We will construct an isomorphism: 
+    \[
+        \Phi_l:T^1\widetilde{\Sigma}\to \widetilde{\Sigma}\times\S
+    \]
+    equivariant with the respect to the action on $T^1\widetilde{\Sigma}$ by the actions by deck transformation, and the diagonal action given by $\rho_l$ on $\widetilde{\Sigma}\times\S.$ \\
+    We define $\Phi_l$ as follows: for an element $(x,v)\in T^1\widetilde{\Sigma}$, let 
+    \[
+        \xi(x,v)=(\xi^l(x,v),\xi^r(x,v))\in \T
+    \]
+    be the end-point of the spacelike geodesic ray $\exp_x(tv)$ in $\A^{2,1}$ for positive $t$, Then we define $\Phi_l(x,v)=(x,\xi^l(x,v)).$ This map is clearly continuous, proper, equivariant and fiber preserving. \\
+    In order to prove that it a bijection it suffices to notice that for any $x\in\widetilde{\Sigma}$ the map $\xi_x:T_x^1(\widetilde{\Sigma})\to\T$ is an embedding with image the boundary of the totally geodesic plane tangent to $\widetilde{\Sigma}$ at $x$. This boundary is the graph of an orientation-preserving map of $\S,$ so the projection $v\to\xi^l(x,v)$ is bijective. Moreover, by our choice of the orientation on $\Sigma$, the orientation on $T_x^1\widetilde{\Sigma}$ corresponds to the orientation induced on $\xi_x(T^1_x\widetilde{\Sigma})$ as graph of an orientation-preserving homeomorphism. The proof for $\rho_r$ is analogous.
 \end{proof}
+
 
 We can now state the classification result. We denote the \textit{deformation space} of MGH spacetimes of genus $r$ by:
 
@@ -499,7 +551,7 @@ We can now state the classification result. We denote the \textit{deformation sp
     \mathcal{MGH}(\Sigma_r)=\{g\;\text{MGH AdS metric on}\;\Sigma_r\times\R\}/\text{Diff}_0(\Sigma_r\times\R)
 \]
 where the group of diffeomorphism isotopic to the identity is acting by pill-back. The holonomy map takes value in the space of representation of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ and is well-defined on the quotient $ \mathcal{MGH}(\Sigma_r).$
-As a consequence of Proposition [...], the left and right components of the holonomy of elements of $ \mathcal{MGH}(\Sigma_r)$ are positive Fuchsian representations. The space of these rrepresenations up to conjugacy is idetified with the Teichm\"uller space of $\Sigma_r$ by the aforementioned work of Goldman []:
+As a consequence of Proposition [...], the left and right components of the holonomy of elements of $ \mathcal{MGH}(\Sigma_r)$ are positive Fuchsian representations. The space of these representations up to conjugacy is idetified with the Teichm\"uller space of $\Sigma_r$ by the aforementioned work of Goldman []:
 \[
     \mathcal{T}(\Sigma_r)\simeq\{\rho:\pi_1(\Sigma_r)\to\PSL\;\text{positive Fuchsian representation}\}/\PSL
 \]
