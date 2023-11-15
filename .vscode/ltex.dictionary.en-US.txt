@@ -10,3 +10,7 @@ isometries
 lightcone
 timelike
 holonomy
+conformally
+achronality
+acausal
+acausality

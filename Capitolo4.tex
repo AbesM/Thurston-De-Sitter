@@ -1,6 +1,6 @@
 \chapter{Mess Work}
 
-In his 1990 paper "Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess ideas, with a special attention to AdS geometry. Our treatment will follow the setting introduced by Bonsante and Seppi in \cite{bonsanteseppi}. We want to introduce general \textit{Lorentianz} sets such as \textit{achronal subset, invisibile domain, domain of dependence} and how they relate to graph of circle homeomorphism (and its convex hull) in our specialized Anti-de Sitter setting. We will show that those graphs are \textit{proper achronal sets} in the projective model and always lift to achronal sets in the Poincaré model.
+In his 1990 paper "Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess ideas, with a special attention to AdS geometry. Our treatment will follow the setting introduced by Bonsante and Seppi in \cite{bonsanteseppi}. We want to introduce general Lorentzian sets such as \textit{achronal subset, invisible domain, domain of dependence} and how they relate to graph of circle homeomorphism (and its convex hull) in our specialized Anti-de Sitter setting. We will show that those graphs are \textit{proper achronal sets} in the projective model and always lift to achronal sets in the Poincaré model.
 
 \section{Causality and Convexity properties}
 We begin by giving some definitions:
@@ -17,7 +17,7 @@ Since acausality and achronality are conformally invariant notions, it will be o
      \begin{equation}\label{soloqua}
         |f(x)-f(y)|\leq d_{\mathbb{S}^2}(x,y)
      \end{equation}
-     where $d_{\mathbb{S}^2}$ is the distance induced by the hemispherical metric. By the same reasonment we show that a 1-lipschit< graph over $\D$ is achronal. Moreover two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $d_{\mathbb{S}^2}(x,y)=|t-s|$. Hence $X$ is acausal if and only if the inequality \refeq{soloqua} is strict. \
+     where $d_{\mathbb{S}^2}$ is the distance induced by the hemispherical metric. By the same reasoning we show that a 1-lipschitz graph over $\D$ is achronal. Moreover two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $d_{\mathbb{S}^2}(x,y)=|t-s|$. Hence $X$ is acausal if and only if the inequality \refeq{soloqua} is strict. \
 \end{proof}
 
 Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the boundary of $D$. As a simple consequence of the previous lemma, we thus have: 
@@ -26,39 +26,39 @@ Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the bou
     An achronal subset $X$ in $\AS^{2,1}$ is properly embedded if and only if it is a global graph over $\D$, and in this case it extends uniquely to the global graph of a 1-Lipschitz function over $\D\cup\partial\D$.
 \end{lemma}
 
-Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acasuality are global conditions. 
+Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acausality are global conditions. 
 
 \begin{definition} Given a surface $S$ and a Lorentzian manifold $(M,g),$ a $\mathcal{C}^1$ immersion $\sigma:S\to M$ is \textit{spacelike} if the pull-back metric $\sigma^*g$ is Riemannian. If $\sigma$ is an embedding, we refer to its image as a \textit{spacelike surface}.
 \end{definition}
 
-A spacelike surface $S$ is locally acasual, but there are examples of spacelike surfaces which are not achronal (hence a fortiori not acasual), a fact that highlights the global character of the achronality condition. On the other hand the following is true: 
+A spacelike surface $S$ is locally acausal, but there are examples of spacelike surfaces which are not achronal (hence a fortiori not acausal), a fact that highlights the global character of the achronality condition. On the other hand the following is true: 
 
 \begin{lemma}
-    Any properly embedded spacelike surface in $\AS^{2,1}$ is acasual. 
+    Any properly embedded spacelike surface in $\AS^{2,1}$ is acausal. 
 \end{lemma}
 \begin{proof}
     By \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once. \todo{are we trying to model the fact that this is the present event?}
 \end{proof}
 
-We have remarked in Theorem \ref{ConformalMetric} that unparametrized lighlike geodesic only depend on the conformal class of the Lorentzian metric, hence we will just refer to lighlike in $\AS^{2,1},$ even when we are considering it endowed with the hemispherical metric of \refeq{emispherical}. 
+We have remarked in Theorem \ref{ConformalMetric} that unparametrized lightlike geodesic only depend on the conformal class of the Lorentzian metric, hence we will just refer to lightlike in $\AS^{2,1},$ even when we are considering it endowed with the hemispherical metric of \refeq{emispherical}. 
 
 
 \begin{lemma}\label{containedgeo}
     Let $S$ be a properly embedded achronal surface of $\AS^{2,1}\cup\partial\AS^{2,1}$ and assume that a lightlike geodesics segment $\gamma$ joins two points of $S$. Then $\gamma$ is entirely contained in $S.$
 \end{lemma}
 \begin{proof}
-    We want to exploit Lemma \ref{achronalgraph}, let $f^S:\overline{\D}\to\R$ be the function that definins $S$, which is $1$-Lipschitz with respect to the emispherical metric. Not if our segment $\gamma$ joins $(x,f^S(x))$ to $(y,f^S(y))$, then (up to switching the role of $x$ and $y$) it holds: $f(y)^S=f^(x)+d_{\mathbb{S}^2}(x,y).$ More is true; if $\gamma$ consists of points of the form $(z,f^S(x)+d_{\mathbb{S}^2}(x,z))$, for $z$ that lie on the $g_{\mathbb{S}^2}$ geodesic connecting $x$ to $y$. For such a point $z$ on the geodesic, because of achronality of $S$, it holds: 
+    We want to exploit Lemma \ref{achronalgraph}, let $f^S:\overline{\D}\to\R$ be the function that defines $S$, which is $1$-Lipschitz with respect to the hemispherical metric. Now if our segment $\gamma$ joins $(x,f^S(x))$ to $(y,f^S(y))$, then (up to switching the role of $x$ and $y$) it holds: $f^S(y)=f^S(x)+d_{\mathbb{S}^2}(x,y).$ More is true; if $\gamma$ consists of points of the form $(z,f^S(x)+d_{\mathbb{S}^2}(x,z))$, for $z$ that lie on the $g_{\mathbb{S}^2}$ geodesic connecting $x$ to $y$. For such a point $z$ on the geodesic, because of achronality of $S$, it holds: 
         \[
             f^S(z)-f^S(x)\leq d_{\mathbb{S}^2}(x,z)\;\;\text{and}\;\;f^S(y)-f^S(z)\leq d_{\mathbb{S}^2}(z,y)=d_{\mathbb{S}^2}(x,y)-d_{\mathbb{S}^2}(x,z).
         \]
-        Second inequality implies that $f^S(z)\geq f^S(x)+d_{\mathbb{S^2}}(x,z),$ it follows that $f^S(z)=f(x)+d_{\mathbb{S}^2}(x,z)$ and hence $\gamma$ is entirely contained in $S.$
+        Second inequality implies that $f^S(z)\geq f^S(x)+d_{\mathbb{S}^2}(x,z),$ it follows that $f^S(z)=f(x)+d_{\mathbb{S}^2}(x,z)$ and hence $\gamma$ is entirely contained in $S.$
 \end{proof}
 
 \subsection{Invisible domain}
 Invisible domain where introduced by Barbot in \textcolor{red}{inserire}. We give general definition and properties for a generic $X$ subset of $\AS^{2,1}\cup\partial  \AS^{2,1}$ and then we will focus on $X$ entirely contained in the boundary. 
 
 \begin{definition}
-    Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisibile domain} of $X$ is the subset $\Omega(X)$ of $\AS^{2,1}$ defined as the set of points which are not connected to $X$ by no causal path.   
+    Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset, that we will denote by $\Omega(X),$ of $\AS^{2,1}$ defined as the set of points which are not connected to $X$ by no causal path.   
 \end{definition}
 
 Any 1-Lipschitz function on a subset of a metric space admits a $1-$Lipschitz extension everywhere (Mc Shane's theorem). In our setting allows us show that any achronal set $X$ is a subset of a properly embedded achronal surface.\\
@@ -70,9 +70,9 @@ We consider two particular extensions $f_\pm^X:\D\cup\partial\D,$ which we will 
 \begin{lemma}\label{422}
     Let X be any closed achronal subset $X$ of $\AS^{2,1}\cup\partial\AS^{2,1}$, and let $S_\pm(X)$ be the graphs of the extremal extensions $f_\pm^X$. 
     \begin{itemize}
-        \item The properly embedded surfaces $S_(X)$ and $S_+(X)$ are achronal with $S_-(X)\subset \overline{I^-(S_+(X))}$, and $\Omega(X)=I^+(S_(X))\cap I^-(S_+(X)).$
-        \item Every achronal subset containing $X$ is contained in $S_(X)\cup\Omega(X)\cup S_+(X).$
-        \item Every point of $S_\pm(X)$ is connected to $X$ by at least one lightlike geodesic segment, which is contained in $S_\pm(X).$ Finally $S_+(X)\cap S_(X)$ is the union of $X$ and all lightlike geodesic segment joining points of $X$.
+        \item The properly embedded surfaces $S_-(X)$ and $S_+(X)$ are achronal with $S_-(X)\subset \overline{I^-(S_+(X))}$, and $\Omega(X)=I^+(S_(X))\cap I^-(S_+(X)).$
+        \item Every achronal subset containing $X$ is contained in $S_-(X)\cup\Omega(X)\cup S_+(X).$
+        \item Every point of $S_\pm(X)$ is connected to $X$ by at least one lightlike geodesic segment, which is contained in $S_\pm(X).$ Finally $S_+(X)\cap S_-(X)$ is the union of $X$ and all lightlike geodesic segment joining points of $X$.
     \end{itemize}
 \end{lemma}
 \begin{proof}
@@ -85,24 +85,50 @@ We consider two particular extensions $f_\pm^X:\D\cup\partial\D,$ which we will 
     \[
         S_+(X)\cup\Omega(X)\cup S_-(X)=\{(y,t)\;|\; f_-^X(y)\leq t\leq f_+^X(y)\}
     \]
-    consist of all the points that are connected to any point of $X$ by spacelike or lightlike geodesics. Moreover $\Omega(X)$ consist of points connected to any point of $X$ by a spacelike geodesic. \textcolor{blue}{quindi l'invisibile domain sarebbe una sezione del tempo? Come si lega alla Cauchy Surface?} We observe that $\Omega(X)$ could be empty, for instance when $X$ is a global graph then $S_-(X)=S_+(X)=X$ and $\Omega(X)$ is empty.
+    consist of all the points that are connected to any point of $X$ by spacelike or lightlike geodesics. Moreover $\Omega(X)$ consist of points connected to any point of $X$ by a spacelike geodesic. We observe that $\Omega(X)$ could be empty, for instance when $X$ is a global graph then $S_-(X)=S_+(X)=X$ and $\Omega(X)$ is empty.
 \end{observation}
 
 \begin{observation}
     Since any point of $S_\pm(X)$ is connected to $X$ by a lightlike geodesic, it follows from Lemma \ref{containedgeo} that the intersection of any properly embedded achronal surface containing $X$ with $S_\pm(X)$ is a union of lightlike geodesic segments with an endpoint in $X$. In particular any properly embedded acausal surface containing $X$ is contained in $\Omega(X).$
 \end{observation}
 
-\subsection{Achronal meridian in $\partial\AS^{2,1}$}
-We will be interested in the study of invisibile domains of achronal meridians $\Gamma$ in the boundary of $AS^{2,1},$ that are graphs of 1-Lipschitz functions $f:\partial\D\to\R.$
+We will need the following technical definition: 
 
-\begin{lemma}
+\begin{definition}
+    Given a function $f:\overline{\D}\to\R$, we define its oscillation as: 
+    \[
+        \text{osc}(f)\coloneqq \text{max}_{y\in\overline{\D}}f(y)-\min_{y\in\overline{\D}}f(y).
+    \]
+    We observe that such a quantity is \textit{not} invariant under the action of the isometry group of $\AS^{2,1}.$
+\end{definition}
+
+With this definition we can state the following lemma that we will soon use: 
+
+\begin{lemma}\label{417}
+    Let $S$ be a properly embedded achronal surface, defined as the graph of $f^S:\overline{\D}\to\R$. Then $\text{osc}(f^S)\leq\pi$ moreover $\text{osc}f^S=\pi$ if and only if $S$ is a lightlike plane. 
+\end{lemma}
+\begin{proof}
+    We observe that $f^S$ is $1-$Lipschitz for the hemispherical metric, and the diameter of $\D$ for $g_{\mathbb{S}^2}$ is $\pi$, hence we easily obtain that $\text{osc}(f^S)$ is bounded by $\pi$. Moreover if the value is attained it follows that there are two antipodal points $y,y^{\prime} \in \partial\D$ such that: $f^S(y^{\prime})=f^S(y)+\pi$. We have already notice that the lightlike plane with past and future points $(y,f^S(y))$ and $(y^{\prime},f^S(y)+\pi)$ is: 
+    \[
+        P=\{(x,t)\;|\;t=f^S(x)+d_{\mathbb{S}^2}(x,y)\}
+    \]
+    and it is foliated by lightlike geodesic joining $(y,f^S(y))$ to $(y^{\prime},f^S(y)+\pi)$. By Lemma \ref{containedgeo}, $P$ is included in $S$. Since both are global graph over $\overline{\D}$ we have $S=P$.
+\end{proof}
+
+\subsection{Achronal meridian in $\partial\AS^{2,1}$}
+We will be interested in the study of invisibile domains of achronal meridians $\Lambda$ in the boundary of $\AS^{2,1},$ that are graphs of 1-Lipschitz functions $f:\partial\D\to\R.$
+
+\begin{lemma}\label{431}
     Let $\Lambda$ be an achronal meridian in $\partial\AS^{2,1}$. Then either $\Lambda$ is the boundary of a lightlike plane, or $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda.$ In the latter case there is an achronal properly embedded surface in $\Omega(\Lambda)$ whose boundary in $\partial\AS^{2,1}$ is $\Lambda$.  
 \end{lemma}
 
 \begin{proof}
-    Let $f:\pi\D\to\R$ be the function whose graph is $\Lambda.$ \textcolor{blue}{servono le oscillazioni}
+    Let $f:\pi\D\to\R$ be the function whose graph is $\Lambda.$ We recall from Lemma \ref{417} that $\text{osc}(f)\leq\pi$. If there are points $x_0,x_0^{\prime}$ such that $f(x_0^{\prime})=f(x_0)+\pi$ then combining both Lemma \ref{417} and Lemma \ref{422} we deduce that $\Lambda$ is the boundary of a lightlike lane, and this lightlike plane coincides with $S_+(\Lambda)\cap S_-(\Lambda).$\\
+    Assume now that the maximal oscillation of $f$ is smaller than $\pi$, and let us show that $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda.$ By the assumption, if a lightlike geodesic connects $(x_0,f(x_0))$ to $(x_0^{\prime} ,f(x_0^{\prime}))$ then $x_0$ and $x_0^{\prime}$ are not antipodal. But then $x_0,x_0^{\prime}$ are connected by a unique lenght-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x_0,f(x_0))$ to $(x_0^{\prime},f(x_0^{\prime}))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{422} we conclude that $S_-(\Lambda)$ and $S_+(\Lambda)$ do not meet in $\AS^{2,1}$ and therefore $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda.$\\
+    Finally, in this latter case the function $F=(f^\Lambda_{-+f^\Lambda_+})/2$ is $1-$Lipschitz and defines an achronal properly embedded surface contained in $\Omega(\Lambda)$, whose boundary is $\Lambda$. 
 \end{proof}
 
+We remark that in fact for any achronal meridian there is a spacelike surface whose boundary at infinity is $\Lambda$, we will expand on this this in Remark \ref{447}
 Now, given a point $x \in \AS^{2,1}$, the Dirichlet domain of $x$ is the region $R_x$ containing $x$ and bounded by two spacelike plane ''dual" to $x$. Namely the planes that we denote (with a slight abuse of notation) $P_x^+$ and $P_x^-$, consisting of points at timelike distance $\pi/2$ in the future (resp. past) along timelike geodesic with initial point $x$.
 
 \begin{proposition}\ref{432}
@@ -129,15 +155,18 @@ Arguing in similar fashion, we obtain that the invisibile domain of an achronal 
     Given an achronal meridian $\Lambda$ in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane, the invisibile domain $\Omega(\Lambda)$ is contained in a Dirichlet region unless $\Lambda$ is the boundary of a spacelike plane. 
 \end{proposition}
 \begin{proof}
-    
+    We start by defining $a_+=\sup f_+^{\Lambda}$ and $a_-=\inf f_-^{\Lambda}$, and we consider the planes: 
+    \[
+        Q_{a_+}=\{(x,t)\;|\;t=a_+\} \;\;\text{and}\;\; Q_{a_-}=\{(x,t)\;|\;t=a_-\}
+   \]
+
+   in the Poincaré model. Since $\Omega(\Lambda)$ lies in the open region bounded by those planes, it is sufficient to show that $a_+-a_-\leq\pi.$ Assume by contradiction the converse. Notice tht $P_{a_+}$ meets $S_+(\Lambda)$ at some point $p_+=(x_+,a_+)$ and $P_{a_-}$ meets $S_-(\Lambda)$ at some point $p_-=(x_-,a_-)$ where $x_+$ and $x_-$ are points on $\overline{\D}$. For $\epsilon=(a_+ + a_- -\pi )/2$ we can find $x^{\prime}_+$ and $x_-^{\prime} $ in $\D$ such that $p_+^{\prime}=(x^{\prime}_+,a_+-\epsilon)$ and $p_-^{\prime}=(x_-^{\prime},a_- +\epsilon)$ lie in $\Omega(\Lambda)$ (clearly if $x_\pm$ lies in $\D$ we can take $x_\pm^{\prime}=x_\pm)$. As $(a_+-\epsilon)-(a_- - \epsilon )=\pi$, the geodesic segment $\gamma$ joining $p_+^{\prime}$ and $p_-^{\prime}$ is timelike of length $\pi$. Its end-points are in $\text{I}^+(S_-(\Lambda))\cap\text{I}^-(S_+(\Lambda))$, so $\gamma$ is entirely contained in $\Omega(\Lambda)$. As end-points of $\gamma$ are contained in $\Omega(\Lambda).$ $\gamma$ can be extended within $\Omega(\Lambda)$ but this contradicts the third point of Proposition \ref{432}.       
+   The third point of Proposition \ref{432} then shows that if $a_+-a_-=\pi$ then $\Lambda$ is the boundary of a spacelike plane. Hence, apart from this case, one has $a_+ - a_-<\pi$, so the closure of $\Omega(\Lambda)$ is contained in a Dirichlet region. 
+
 \end{proof}
     
-
-
-\textcolor{red}{magari inserire figura dell'invisibile domain}
-
 \begin{observation}
-    When $\Lambda$ is the boundary of a spacelike plane $P$, then tehre are two points $x_-$ and $x_+$ such that $P=P_{x_-}^+=P_{x_+}^-.$ The previous argument shows that $\Omega(\Lambda)$ is the union of all timelike geodesics joininx $x_-$ to $x_+$ In this case $S_-(\Lambda$) is the union of the future directed lightlike geodesic rays emanating from $x_-$, whereas $S+(\Lambda)$ is the union of future directed lighlike rays endin at $x_+$.  
+    When $\Lambda$ is the boundary of a spacelike plane $P$, then there are two points $x_-$ and $x_+$ such that $P=P_{x_-}^+=P_{x_+}^-.$ The previous argument shows that $\Omega(\Lambda)$ is the union of all timelike geodesics joining $x_-$ to $x_+$ In this case $S_-(\Lambda$) is the union of the future directed lightlike geodesic rays emanating from $x_-$, whereas $S+(\Lambda)$ is the union of future directed lightlike rays ending at $x_+$.  
 \end{observation}
 
 \subsection{Domain of dependence}
@@ -152,7 +181,7 @@ We want to define and study properties of Cauchy surfaces and domains of depende
 \end{definition}
 
 \begin{observation}
-    Equivalently the domain of dependence  $D(X)$ of $X$ is the set of points $p\in\A^{2,1}$ such that the plane $p^*,$ the projective dual of $p$ as introduced in \textcolor{red}{define} is disjoint from $X.$ Domain of dependence are always contained in an affine chart and admit only light-like support planes. \textcolor{red}{Ancora non ho davvero definito i support planes a questo punto}
+    Equivalently the domain of dependence  $D(X)$ of $X$ is the set of points $p\in\A^{2,1}$ such that the plane $p^*,$ the projective dual of $p$ as introduced in \ref{polarsec} is disjoint from $X.$ Domain of dependence are always contained in an affine chart and admit only light-like support planes (for more detail about support planes we will study them in detail in \ref{sectionplanes})
 \end{observation}
 
 The theory of globally hyperbolic spacetimes is a well-developed topic in Lorentzian geometry, we will just state the facts that we will need in the following. 
@@ -189,8 +218,8 @@ The theory of globally hyperbolic spacetimes is a well-developed topic in Lorent
     Conversely, consider a $x$ that is not in $\Omega(\Lambda)$, the one can find a causal path joining $x$ to $\Lambda$, which is necessarily inextensibile. Hence $x$ is not in $\mathcal{D}(S)$.  
 \end{proof}
 
-\begin{observation}
-    As a direct consequence of Theorem \ref{442} and Proposition \ref{446} we have that $\Lambda$ is the boundary of a spacelike surface in $\Omega(\Lambda)$, namely a Cauchy surface in $\Omega(\Lambda)$. By Lemma \ref{445}, the surface is properly embedded, hence the graph of a global 1-Lipschitz function. This shows that any proper achronal meridian $\Lambda$ is the boundary at infinity of a properly embedded spacelike surface, we have improved Lemma 431.
+\begin{observation}\label{447}
+    As a direct consequence of Theorem \ref{442} and Proposition \ref{446} we have that $\Lambda$ is the boundary of a spacelike surface in $\Omega(\Lambda)$, namely a Cauchy surface in $\Omega(\Lambda)$. By Lemma \ref{445}, the surface is properly embedded, hence the graph of a global 1-Lipschitz function. This shows that any proper achronal meridian $\Lambda$ is the boundary at infinity of a properly embedded spacelike surface, we remark that we have improved the statement of Lemma \ref{431}.
 \end{observation}
 
 The most remarkable property of domain of dependence of a properly embedded surface in $\AS^{2,1}$, and it is a direct consequence of Proposition \ref{446}, is that it only depends on the boundary at infinity. In detail:
@@ -339,7 +368,7 @@ The situation is very similar to the counterpart in hyperbolic three-space. The 
 
 \end{observation}
 
-\section{Support planes.}
+\section{Support planes.}\label{sectionplanes}
 We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
 We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\mathcal{C}(f)$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\mathcal{C}(f)$ (at $p\in\partial\mathcal{C}(f))$ is $p\in\mathcal{C}(f)\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\mathcal{C}(f)$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
 
@@ -550,7 +579,7 @@ We can now state the classification result. We denote the \textit{deformation sp
 \[
     \mathcal{MGH}(\Sigma_r)=\{g\;\text{MGH AdS metric on}\;\Sigma_r\times\R\}/\text{Diff}_0(\Sigma_r\times\R)
 \]
-where the group of diffeomorphism isotopic to the identity is acting by pill-back. The holonomy map takes value in the space of representation of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ and is well-defined on the quotient $ \mathcal{MGH}(\Sigma_r).$
+where the group of diffeomorphism isotopic to the identity is acting by pull-back. The holonomy map takes value in the space of representation of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ and is well-defined on the quotient $ \mathcal{MGH}(\Sigma_r).$
 As a consequence of Proposition [...], the left and right components of the holonomy of elements of $ \mathcal{MGH}(\Sigma_r)$ are positive Fuchsian representations. The space of these representations up to conjugacy is idetified with the Teichm\"uller space of $\Sigma_r$ by the aforementioned work of Goldman []:
 \[
     \mathcal{T}(\Sigma_r)\simeq\{\rho:\pi_1(\Sigma_r)\to\PSL\;\text{positive Fuchsian representation}\}/\PSL

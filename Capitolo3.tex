@@ -1,8 +1,8 @@
 \chapter{Anti-de Sitter space in dimension (2+1)}
-We want now to specialize to dimension 3 Anti-de Sitter geometry as it will be the specific model geometry of the manifolds of our next interest. 
+We want now to specialize to dimension three Anti-de Sitter geometry as it will be the specific model geometry of the manifolds of our next interest. 
 \section{The {PSL}$(2,\R)$ model.} 
 
-The fundamental observation is the existence of a special model in dimension 3 which endows Anti-de Sitter space with a Lie group structure. To construct such a model we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$. The associated bilinear form is expressed by the formula:
+The fundamental observation is the existence of a special model in dimension three which endows Anti-de Sitter space with a Lie group structure. To construct such a model we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$. The associated bilinear form is expressed by the formula:
 \begin{equation}\label{quadratic}
     \langle A,B\rangle=-\frac{1}{2}\text{tr}(A\cdot\text{adj}(B))
 \end{equation}
@@ -93,14 +93,14 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts on $\H^2$ via isometry, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper halp-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime}
+    $\PSL$ acts on $\H^2$ via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime}
 \end{proof}
 
-In dimension 3 $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
+In dimension three $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
 \[
     \lambda_{y_0}\coloneqq\{(x,y_0)|x\in\R\text{P}^1\}
 \]  
-describe a projective line in $\R\text{P}^3$ which is contained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1}$ \textcolor{red}{according to a remark that i dont have,}. In fact $\lambda_{y_0}$ is the orbit of $(x_0,y_0)$ by the action of $\text{PSL}(2,\R)\times\{\text{Id}\},$ or by the (now free) action of $\text{PSO}(2,\R)\times\{\text{Id}\}.$ Here $\text{PSO}(2,\R)$ corresponds to a 1-paramater elliptic subgroup in $\text{PSL}(2,\R)$. In short: 
+describe a projective line in $\R\text{P}^3$ which is contained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1},$ as seen in Remark \ref{222}. In fact $\lambda_{y_0}$ is the orbit of $(x_0,y_0)$ by the action of $\text{PSL}(2,\R)\times\{\text{Id}\},$ or by the (now free) action of $\text{PSO}(2,\R)\times\{\text{Id}\}.$ Here $\text{PSO}(2,\R)$ corresponds to a 1-parameter elliptic subgroup in $\text{PSL}(2,\R)$. In short: 
 \[
     \lambda_{y_0}=\text{PSL}(2,\R)\cdot(x_0,y_0)=\text{PSO}(2,\R)\cdot(x_0,y_0).
 \]
@@ -110,7 +110,7 @@ We refer to $\lambda_{y_0}$ as the \textit{left ruling} through $(x_0,y_0)$, and
     \mu_{x_0}\coloneqq\{(x_0,y)|y\in\R\text{P}^1\}
 \]
 
-When we will deal with earthquake theory we will often consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle. The associated graph $\Lambda_\varpi$ via means of the identification given by $\delta$ is a subset of $\partial\A^{2,1}$. We observe that from equivariance of $\delta$ the following holds for every $(\alpha,\beta)\in\text{PSL}(2,\R)\times\text{PSL}(2,\R)$: 
+When we will deal with earthquake theory we will often consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle. The associated graph $\Lambda_\varphi$ via means of the identification given by $\delta$ is a subset of $\partial\A^{2,1}$. We observe that from equivariance of $\delta$ the following holds for every $(\alpha,\beta)\in\text{PSL}(2,\R)\times\text{PSL}(2,\R)$: 
 \begin{equation}\label{graphequivariancy}
 (\alpha,\beta)\cdot\Lambda_\varphi=\Lambda_{\beta\circ\varphi\circ\alpha^{-1}}.
 \end{equation}
@@ -124,7 +124,7 @@ We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are a
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\}
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\text{PSL}(2,\R)$ is a spacelike totally geodesic plane. \\
-\textit{Example}\label{spacelikeisometry}
+\begin{example}\label{spacelikeisometry}
 Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\text{PSL}(2,\R).$ Now because of \refeq{quadratic}, $\text{P}_{\text{Id}}$ is the subset of $\text{PSL}(2,\R)$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $\text{P}_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $\text{P}_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using \ref{convergenza}, we can see that the boundary of $\text{P}_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
     \partial\text{P}_\gamma=\text{graph(Id)}\subset \T.
@@ -139,8 +139,9 @@ is an isometry with respect to the hyperbolic metric of $\H^2$ and the induced m
 \begin{equation}
     \iota(\alpha\cdot p)=\alpha\circ\iota(p)\circ\alpha^{-1}.
 \end{equation} 
-A direct consequence is that $\iota$ is isometric, since the pull-back of the metric of $\text{P}_\text{Id}$ is necessarily $\PSL$-invariant and has constant curvature -1, hence it coincides with the standard hyperbolic metric on the upper half-plane.\\
-This simple example is actually the key case to understand general spacelike totally geodesic planes as every spacelike totally geodesic plane is of the form $\text{P}_\gamma$ for some $\gamma\in\PSL.$ To see this, observe that the action of the isometry group of $\A^{2,1}$ on spacelike totally geodetic planes is transitive, and that $\text{P}_\gamma=(\gamma,\text{Id})\text{P}_{\text{Id}}$ as the isometry $(\gamma,Id)$ maps $\text{Id}\to\gamma$, and therefore the dual plane of $\text{Id}$ to the dual plane of $\gamma.$ In view of \textcolor{red}{missinho} and \refeq{graphino}, we can conclude the following: 
+A direct consequence is that $\iota$ is isometric, since the pull-back of the metric of $\text{P}_\text{Id}$ is necessarily $\PSL$-invariant and has constant curvature -1, hence it coincides with the standard hyperbolic metric on the upper half-plane.
+\end{example}
+This simple example is actually the key case to understand general spacelike totally geodesic planes as every spacelike totally geodesic plane is of the form $\text{P}_\gamma$ for some $\gamma\in\PSL.$ To see this, observe that the action of the isometry group of $\A^{2,1}$ on spacelike totally geodetic planes is transitive, and that $\text{P}_\gamma=(\gamma,\text{Id})\text{P}_{\text{Id}}$ as the isometry $(\gamma,Id)$ maps $\text{Id}\to\gamma$, and therefore the dual plane of $\text{Id}$ to the dual plane of $\gamma.$ In view of \refeq{graphequivariancy} and \refeq{graphino}, we can conclude the following: 
 \begin{lemma}\label{32}
     Every spacelike totally geodesic plane of $\A^{2,1}$ is of the form $\text{P}_\gamma$ for some orientation-preserving isometry $\gamma\in\PSL,$ and 
     \[
@@ -148,7 +149,7 @@ This simple example is actually the key case to understand general spacelike tot
     \]
 \end{lemma}
 \section{Timelike planes}
-Let's consider now a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_[A]$ by $P_\eta$. \\
+Let's consider now a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_{[A]}$ by $P_\eta$. \\
 The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map: 
 \begin{equation}\label{refspa}
     \mathcal{I}\to\mathcal{I}_\eta
@@ -171,18 +172,18 @@ In similar fashion to the spacelike case, using the transitivity of the group of
 We are only left with case of lightlike totally geodesic planes. Those are the form $P_{[A]}$ for a nonzero matrix $A$ with $\det(A)=0$. Before giving an explicit description of such planes, we want to observe that their boundary will not be a graph in $\T$, unlike the case of spacelike and timelike planes. 
 
 \begin{lemma}
-    Every lightlike toatlly geodesic plane of $\A^{2,1}$ is of the form $P_[A]$ for some rank one matrix $A$, and: 
+    Every lightlike toatlly geodesic plane of $\A^{2,1}$ is of the form $P_{[A]}$ for some rank one matrix $A$, and: 
     \[
-        \partial P_[A]=(\text{Im}(A)\times\S)\cup(\S\times\text{Ker}(A)).
+        \partial P_{[A]}=(\text{Im}(A)\times\S)\cup(\S\times\text{Ker}(A)).
     \]
 \end{lemma}
 \begin{proof}
-    The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfyin $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
+    The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfyin $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it is nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
     \begin{equation}
         \text{Im}(X)=\text{Ker}(\text{adj}(A))\;\text{or}\;\text{Im}(\text{adj}(A))=\text{Ker}(A).
     \end{equation}
-    Now, since $\det(A)=0$ implies $\text{adj}(A)A=A\text{adj}(A)=0$, the relations $\text{Ker}(\text{adj}(A))=\text{Im}(A)$ and $\text{Im}(\text{adj}(A))=\text{Ker}(A)$ hold. Hence $X\in P_[A]$ if and only if $\text{Im}(X)=\text{Im}(A)$ or $\text{Ker}(X)=\text{Ker}(A),$ which concludes because of the definition of the homeomorphism $\delta$.  
+    Now, since $\det(A)=0$ implies $\text{adj}(A)A=A\text{adj}(A)=0$, the relations $\text{Ker}(\text{adj}(A))=\text{Im}(A)$ and $\text{Im}(\text{adj}(A))=\text{Ker}(A)$ hold. Hence $X\in P_{[A]}$ if and only if $\text{Im}(X)=\text{Im}(A)$ or $\text{Ker}(X)=\text{Ker}(A),$ which concludes because of the definition of the homeomorphism $\delta$.  
 \end{proof}
 
-Geometrically $\partial P_[A]$ is the union of two circles in $\T,$ one horizontal and one vertical, which intersect exactly at the point in $\T$ corresponding to $[A]\in \partial\A^{2,1}$ via $\delta$.\\
+Geometrically $\partial P_{[A]}$ is the union of two circles in $\T,$ one horizontal and one vertical, which intersect exactly at the point in $\T$ corresponding to $[A]\in \partial\A^{2,1}$ via $\delta$.\\
 
