@@ -224,7 +224,7 @@ The theory of globally hyperbolic spacetimes is a well-developed topic in Lorent
 
 The most remarkable property of domain of dependence of a properly embedded surface in $\AS^{2,1}$, and it is a direct consequence of Proposition \ref{446}, is that it only depends on the boundary at infinity. In detail:
 
-\begin{corollary}
+\begin{corollary}\label{448}
     If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\AS^{2,1}$ , then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$.
 \end{corollary}
 
@@ -285,13 +285,16 @@ When $\Lambda$ is the graph of an orientation-preserving homomorphism $\varphi:\
 \end{proposition}
 
 \begin{proof}
+
+    Denote by $\widehat{S}$ the covering of $S$ admitting a lift $\widehat{\sigma}:\widehat{S}\to\H^{2.1}$. In general either $\widehat{S}=S$ or it is a $2:1$ covering. Since the covering is finite, $\widehat{\sigma}$ is a proper immersion. Let us consider the identification $\H^2\times\mathbb{S^1}$ that follows from \refeq{ogcover}. The induced projection: $\text{pr}:H^{2,1}\to\H^2$ is a proper fibration with timelike fibers. In particular $\widehat{\sigma}$ is trasverse to the fibers of $\text{pr}.$ It follows that the composition $\text{pr}\circ\sigma:\widehat{S}\to\H^2$ is a proper local diffeomorphism, hence a covering map. Since $H^2$ is simply connected, we deduce that the covering is actually a homeomorphism, $\widehat{\sigma}$ is an embedding, and $\widehat{S}$ is homeomorphic to the hyperbolic plane. \\
+    In particular we can lift $\widehat{\sigma}$ to the universal covering, say $\widehat{\sigma}:\widehat{S}\to\AS^{2,1},$ which is still a proper spacelike embedding $\widehat{S}\to \AS^{2,1}$. By Lemma \ref{413} and Lemma \ref{415} we know that the image is an achronal meridian, and it is contained in a Dirichlet domain by Lemma \ref{417}. It follows that $\widehat{\sigma}(\widehat{S})$ is contained in a Dirichlet domain of the covering map $\H^{2,1}\to\A^{2,1}$, on which we know that the covering map is injective. In particular $\sigma$ is injective, hence $S=\widehat{S}$ as desired.  
 \end{proof}
 
 \begin{observation}
-    In the proof of the last proposition, once we proved that $\hat{S}$ is homeomorphic to $\R^2,$ we could have inferred immediately that $\hat{S}=S$ as $\Z/2\Z$ cannot act freely on $\R^2$ by diffeomorphism. 
+    In the proof of the last proposition, once we proved that $\hat{S}$ is homeomorphic to $\R^2,$ we could have inferred immediately that $\hat{S}=S$ as $\Z/2\Z$ cannot act freely on $\R^2$ by diffeomorphisms. 
 \end{observation}
 
-We therefore have an analogue version of \text{red}{citare lemma analogo} in $\A^{2,1}$.
+We therefore have an analogue version of Lemma \ref{448} in $\A^{2,1}$.
 
 \begin{corollary}
     If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\A^{2,1}$, then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$. 
@@ -346,9 +349,19 @@ For $\mathcal{C}(\Lambda),$ let be $\mathcal{C}(\widetilde{\Lambda})$ a lifting,
 We want to show a kind of duality between boundary components $\partial_\pm\mathcal{C}(\Lambda)$ and $S_\pm(\Lambda)$. 
 
 \begin{proposition}
-Let $\Lambda$ be a proper achronal meridian suality condition 
+Let $\Lambda$ be a proper achronal meridian in $\A^{2,1}$, $x\in\A^{2,1}$ and let's denote by $P_x$ the dual plane to $x$. Then: 
+\begin{itemize}
+    \item $x\in\Omega(\Lambda)$ if and only if $P_x\cap\mathcal{C}(\Lambda)=\emptyset$. 
+    \item $x\in\mathcal{C}(\Lambda)$ if and only if $P_x\cap \Omega(\Lambda)=\emptyset$.
+\end{itemize} 
+In particular if $\Lambda$ is not the boundary of a spacelike plane, then: 
+\begin{itemize}
+    \item $x\in\partial_\pm\Omega(\Lambda)$ if and only if $P_x$ is a support plane for $\partial_\mp\mathcal{C}(\Lambda).$
+    \item $x\in\partial_\pm\CF$ if and only if $P_x$ is a support plane for $S_\mp(\Lambda)$.
+\end{itemize}
 \end{proposition}
 \begin{proof}
+    \textcolor{blue}{da controllare davvero come si relaziona con le cose di Diaf}
     
 \end{proof}
 
