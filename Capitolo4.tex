@@ -37,7 +37,7 @@ A spacelike surface $S$ is locally acausal, but there are examples of spacelike 
     Any properly embedded spacelike surface in $\AS^{2,1}$ is acausal. 
 \end{lemma}
 \begin{proof}
-    By \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once. \todo{are we trying to model the fact that this is the present event?}
+    By \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once.
 \end{proof}
 
 We have remarked in Theorem \ref{ConformalMetric} that unparametrized lightlike geodesic only depend on the conformal class of the Lorentzian metric, hence we will just refer to lightlike in $\AS^{2,1},$ even when we are considering it endowed with the hemispherical metric of \refeq{emispherical}. 
@@ -55,7 +55,7 @@ We have remarked in Theorem \ref{ConformalMetric} that unparametrized lightlike 
 \end{proof}
 
 \subsection{Invisible domain}
-Invisible domain where introduced by Barbot in \textcolor{red}{inserire}. We give general definition and properties for a generic $X$ subset of $\AS^{2,1}\cup\partial  \AS^{2,1}$ and then we will focus on $X$ entirely contained in the boundary. 
+Invisible domain were not treated in the original Mess work but were later introduced by Barbot in the literature in \cite{barbot2008causal}. We give general definition and properties for a generic $X$ subset of $\AS^{2,1}\cup\partial  \AS^{2,1}$ and then we will focus on $X$ entirely contained in the boundary. 
 
 \begin{definition}
     Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset, that we will denote by $\Omega(X),$ of $\AS^{2,1}$ defined as the set of points which are not connected to $X$ by no causal path.   
@@ -70,13 +70,29 @@ We consider two particular extensions $f_\pm^X:\D\cup\partial\D,$ which we will 
 \begin{lemma}\label{422}
     Let X be any closed achronal subset $X$ of $\AS^{2,1}\cup\partial\AS^{2,1}$, and let $S_\pm(X)$ be the graphs of the extremal extensions $f_\pm^X$. 
     \begin{itemize}
-        \item The properly embedded surfaces $S_-(X)$ and $S_+(X)$ are achronal with $S_-(X)\subset \overline{I^-(S_+(X))}$, and $\Omega(X)=I^+(S_(X))\cap I^-(S_+(X)).$
+        \item The properly embedded surfaces $S_-(X)$ and $S_+(X)$ are achronal with $S_-(X)\subset \overline{I^-(S_+(X))}$, and $\Omega(X)=I^+(S_-(X))\cap I^-(S_+(X)).$
         \item Every achronal subset containing $X$ is contained in $S_-(X)\cup\Omega(X)\cup S_+(X).$
         \item Every point of $S_\pm(X)$ is connected to $X$ by at least one lightlike geodesic segment, which is contained in $S_\pm(X).$ Finally $S_+(X)\cap S_-(X)$ is the union of $X$ and all lightlike geodesic segment joining points of $X$.
     \end{itemize}
 \end{lemma}
 \begin{proof}
-    BS 4.2.2
+    We begin by showing that $S_-(X)\subset \overline{\text{I}^-(S_+(X))}$. Given a point $(y,t),\;t\leq f_+^X(y)$ if and only if $t\leq f^X(x)+d_{\mathbb{S}^2}(x,y)$ for every $x\in\pi_{\D}(X),$ that is, if and only if $(y,t)$ lies outside $\text{I}^+(X)$. Similary $(y,t)$ lies outside $\text{I}^-(X)$ if and only if $t\geq f_-^X(y).$ By achronality, $S_+(X)$ does not meet the past of $X$, so we deduce that $f_+^X(y)\geq f_-^X(y)$ for all $y\in\overline{\D}$. Hence $S_-(X)\subset \overline{\text{I}^-(S_+(X))}$.\\
+    As a similar observation, given a point $(y,t)$ we have that $\{(y,t)\}\cup X$ is achronal if and only if $f_-^X(t)\leq t\leq f_+^X(y)$. Moreover $(y,t)$ is connected to $X$ by no causal curve if and only if $f_-^X(y)<t<f_+^X(y)$. THis shows that 
+    \[
+        \Omega(X)=\{(y,t)\;|\;f_-^X(y)<t<f_+^X(y)\}.
+    \]
+    and also the second item, by applying the previous observation to any point of an achronal set containin $X$ which is not in $X$ itself. \\
+    To prove the third item, fix a point $(y,t)\in S_+(X)$. As we are assuming that $X$ is closed in $\AS^{2,1}\cup\partial\AS^{2,1}$, the fact that $f^X$ is 1-Lipschitz implies that $\pi_{\D}(X)$ is closed in $\D\cup\partial\D$, so it is also compact. In particular, there exists $x\in\partial\D$ such that $t=f_+^X(y)?f^X(x)+d_{\mathbb{S}^2}(x,y)$. Thus $(y,t)$ is connected to $(x,f^X(x))$ by a lightlike geodesic segment. By Lemma \ref{containedgeo} this geodesic is entirely contained in $S_+(X)$. Clearly the same proof works for $S_.(X)$. \\
+    We are left with the computation of $S_-(X)\cap S_+(X)$. For this purpose, notice that if two points of $X$ are connected by a lightlike goedesic segment, again via Lemma \ref{containedgeo}, we deduce that $\gamma\subset S_-(X)\cap S_+(X).$ Converely let $(y,t)\in S_-(X)\cap S_+(X)$ so that $f_-^X(y)=f_+^X(y).$ There exist $x$ and $x^{\prime}$ in $\pi_{\D}(X)$ such that 
+    \[
+        f_+^X(y)=f^{X}(x)+d_{\mathbb{S}^2}(x,y) \;\;\text{and}\;\;f_-^X(y)=f^X(x^{\prime})-d_{\mathbb{S}^2}(x^{\prime},y). 
+    \]
+    Using the equality $f_-^X(y)=f_+^X(y),$ the triangle inequality and the fact that $f^X$ is 1-Lipschitz we deduce that 
+    \begin{equation}\label{42}
+        f^{X}(x)-f^X(x^{\prime})=d_{\mathbb{S}^2}(x,x^{\prime})=d_{\mathbb{S}^2}(x,y)+d_{\mathbb{S}^2}(y,x^{\prime}). 
+       \end{equation}
+       Hence the points $(x,f^X(x))$ and $(x^{\prime},f^X(x^{\prime} ))$ are joined by a lightlike segment. If $x,x^{\prime}$ are not antipodal points on $\partial\D$, there is a unique hemispherical geodesic $\eta$ in $\overline{\D}$ joining $x$ to $x^{\prime}$, which must pass through $y$ by \refeq{42}, and which we may assume parametrized by arcleght. In this case the geodesic segment joining $(x,f^X(x))$ to $(x^{\prime},f^X(x^{\prime} ))$ take the form $t\mapsto(\eta(t),f^X(x^{\prime})+t)$, so it passes through $(y,f_+^X(y))=(y,f_-^X(y)).$\\
+       If $x$ and $x^{\prime}$ are antipodal, then there are infinitely many geodesic joining $x$ to $x^{\prime}$, and we can pick one going through $y$. Then the same argument as above applies. 
 \end{proof}
 
 \begin{observation}\label{423}
