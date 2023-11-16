@@ -52,7 +52,7 @@ The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tan
 
 The stabilizer of the identity in Isom$_0(\A^{n,1})$ is the diagonal subgroup $\Delta<\text{PSL}(2,\R)\times\text{PSL}(2,\R)$. Under the obvious identification of $\text{PSL}(2,\R)$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\text{PSL}(2,\R)$ is the adjoint action of $\text{PSL}(2,\R)$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
 
-\begin{observation}
+\begin{observation}\label{311}
     The Lie algebra $\mathfrak{sl}(2,\R)$ equipped with the quadratic form $q_{\text{Id}}$ is then a copy of the 3-dimensional Minkowski space, hence the adjoint action yelds a representation 
     \[
         \text{PSL}(2,\R)\to O(\mathfrak{sl}(2,\R),q_{\text{Id}})
@@ -82,8 +82,8 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
     The inversion map $\iota[X]=[X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
 \end{lemma}
 \begin{proof}
-    It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\T$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\
-    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now is $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X=\text{Ker}X$ 
+    It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\
+    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now is $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
 \end{proof}
 
 
@@ -116,10 +116,63 @@ When we will deal with earthquake theory we will often consider $\varphi:\S\to\S
 \end{equation}
 We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via $\delta$.
 
-\subsection{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory.  We would like to start considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, where under
+\section{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory.  We would like to start considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguis geodesic by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
+
+\begin{itemize}
+    \item Timelike geodesic are, up to conjugacy, of the form: 
+    \[
+    \begin{bmatrix}
+    \cos(t) & -\sin(t) \\
+    \sin(t) & \cos(t)
+     \end{bmatrix}
+\]
+namely, under the identification of $\PSL$ with $\text{Isom}(\H^2)$, they are elliptic one-parameter groups fixing a point in $\H^2$. In this example, the tangent vector is the matrix
+\[
+    \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+    \end{bmatrix}.
+    \]
+These are closed geodesics, parametrized by arclenght, of total lenght $\pi$. 
+\item Spacelike geodesic are, again up to conjugacy, of the form: 
+\[
+    \begin{bmatrix}
+    \cosh(t) & \sinh(t) \\
+    \sinh(t) & \cosh(t) \end{bmatrix}
+\]
+with initial velocity: 
+\[
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}.
+\]
+In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in the particular case, $\pm 1$)-
+\item Finally, lightlike geodesic are the parabolic one-parameter groups conjugate to: 
+\[
+    \begin{bmatrix}
+        1 & t \\
+        0 & 1 
+    \end{bmatrix},
+\]
+whose initial vector has indeed zero lenght.
+\end{itemize}
+
+\subsection{Timelike geodesics}
+When looking for a complete description of timelike geodesics it suffices to let (the identity component of) the isometry group of $\A^{2,1}$ (namely $\PSL\times\PSL)$ act on $\PSL$ via left and right multiplication. In particular, we can describe the whole space of timelike geodesic of $\A^{2,1}$ as follows: 
+
+\begin{proposition}\label{352}
+    There is a homeomorphism between the space of (unparametrized) timelike geodesics of $\A^{2,1}$ and $\H^2\times\H^2$. The homomorphism is equivariant for the action of $\text{Isom}_{0} (\A^{2,1})\simeq \PSL\times\PSL$.
+\end{proposition}
+\begin{proof}
+    The homeomorphism is defined as follows. Given a point $(p,q)\in \H^2\times\H^2,$ we associate to it the subset: 
+    \[
+        L_{p,q}=\{X\in\PSL\;|\;X\cdot q=p\}
+    \]
+\end{proof}
 
 \section{Spacelike planes}
-We want to study now totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
+Now we want to study totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
 \begin{equation}\label{geoplanes}
     P_{[A]}=\{[X]\in\text{PSL}(2,\R)\;|\;\langle X,A\rangle=0\}
 \end{equation}
