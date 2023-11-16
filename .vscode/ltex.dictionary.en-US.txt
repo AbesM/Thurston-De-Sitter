@@ -14,3 +14,5 @@ conformally
 achronality
 acausal
 acausality
+equivariant
+unparameterized

@@ -169,7 +169,33 @@ When looking for a complete description of timelike geodesics it suffices to let
     \[
         L_{p,q}=\{X\in\PSL\;|\;X\cdot q=p\}
     \]
+    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It reimans to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $o^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique since the identity is the only isometry of $\H^2$ fixing two different points. This gives rise to a contradiction and concludes.  
 \end{proof}
+
+\subsection{Spacelike geodesics}
+Let's consider $\ell$ an oriented geodesic of the hyperbolic plane $\H^2$. From what we have already discuss the one-parameter group of hyperbolic transformation fixing $\ell$ as an \textit{oriented} geodesic contituites a spacelike geodesic through the origin. By an argumen analogous to the one given in Proposition \ref{352}, relying on the equivariance of the construction by the actions of $\PSL\times\PSL$, one proves that every spacelike geodesic is of the form: 
+\[
+    L_{\ell,\jmath}=\{X\in\PSL\;|\;X\cdot\jmath=\ell\;\text{as oriented geodesics}\},
+\]
+where $\ell$ and $\jmath$ denote oriented geodesic of $\H^2$. We want to emphasize that every (unparameterized, unoriented) spacelike geodesic can be expressed in the above form in two ways, as we could change the orientation of both $\ell$ and $\jmath$. Rephrasing we can state: 
+\begin{proposition}\label{353}
+    There is a homeomorphism between the space of (unparametrized) oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial\H^2\times\partial\H^2\setminus\Delta,$ the space of oriented geodesics of $\H^2$. The homeomorphism is equivariant for the action of $\text{Isom}_0(\A^{2,1})\simeq\PSL\times\PSL$.
+\end{proposition}
+
+However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath}$ where with $\ell^{\prime} $ with denote $\ell$ endowed with the opposite orientation.\todo{diverso da survey, controllare, qua qualcosa non torna, vedi anche l'esempio successivo}\\
+Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic, which we define using the projectivity duality between points and planes discussed in \ref{polarsec}: 
+\begin{definition}
+    Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to point of $L_{\ell,\jmath}.$  
+\end{definition}
+
+The construction of the dual geodesic is involutive, let's see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
+We can explicitely describe the points at infinity in $\partial\A^{2,1}$ of these geodesic. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
+Recall the description of the left and right rulings of $\partial\A^{2,1}$ \textcolor{red}{inserire reference}, we can conclude that the endpoints of a spacelike geodesic and it's dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{ora lui dice di guardare due figure.}\\
+The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
+\begin{proposition}
+    Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
+\end{proposition}
+
 
 \section{Spacelike planes}
 Now we want to study totally geodesic spacelike planes in $\A^{2,1}.$ They are all obtained as the intersection of $\A^{2,1}$ with a projective subspace in the projective space $\text{P}\mathcal{M}(2,\R).$ Hence they are all of the the following form: 
