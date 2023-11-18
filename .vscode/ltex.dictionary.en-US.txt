@@ -16,3 +16,4 @@ acausal
 acausality
 equivariant
 unparameterized
+equivariance

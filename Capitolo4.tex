@@ -26,7 +26,7 @@ Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the bou
     An achronal subset $X$ in $\AS^{2,1}$ is properly embedded if and only if it is a global graph over $\D$, and in this case it extends uniquely to the global graph of a 1-Lipschitz function over $\D\cup\partial\D$.
 \end{lemma}
 
-Because of \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acausality are global conditions. 
+Because of Lemma \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acausality are global conditions. 
 
 \begin{definition} Given a surface $S$ and a Lorentzian manifold $(M,g),$ a $\mathcal{C}^1$ immersion $\sigma:S\to M$ is \textit{spacelike} if the pull-back metric $\sigma^*g$ is Riemannian. If $\sigma$ is an embedding, we refer to its image as a \textit{spacelike surface}.
 \end{definition}
@@ -37,7 +37,7 @@ A spacelike surface $S$ is locally acausal, but there are examples of spacelike 
     Any properly embedded spacelike surface in $\AS^{2,1}$ is acausal. 
 \end{lemma}
 \begin{proof}
-    By \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once.
+    By Lemma \ref{achronalgraph}, any properly embedded spacelike surfaces $S$ in $\AS^{2,1}$ disconnects the spaces in two regions $U,V$ whose common boundary is $S$, and we can assume that the outward pointing normal from $U$ (resp. $V$) is past-directed (resp. future directed). It then turns out that any future oriented causal path that meets $S$ passes from $V$ towards $U$. This implies that any causal path meets $S$ at most once.
 \end{proof}
 
 We have remarked in Theorem \ref{ConformalMetric} that unparametrized lightlike geodesic only depend on the conformal class of the Lorentzian metric, hence we will just refer to lightlike in $\AS^{2,1},$ even when we are considering it endowed with the hemispherical metric of \refeq{emispherical}. 
@@ -61,12 +61,13 @@ Invisible domain were not treated in the original Mess work but were later intro
     Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset, that we will denote by $\Omega(X),$ of $\AS^{2,1}$ defined as the set of points which are not connected to $X$ by no causal path.   
 \end{definition}
 
-Any 1-Lipschitz function on a subset of a metric space admits a $1-$Lipschitz extension everywhere (Mc Shane's theorem). In our setting allows us show that any achronal set $X$ is a subset of a properly embedded achronal surface.\\
+We recall that any 1-Lipschitz function on a subset of a metric space admits a $1-$Lipschitz extension everywhere (Mc Shane's theorem \cite{mcshane1934extension}). In our setting this allows us show that any achronal set $X$ is a subset of a properly embedded achronal surface.\\
 We consider two particular extensions $f_\pm^X:\D\cup\partial\D,$ which we will refer to as \textit{extremal} extensions:
-\[
-    f_-^X(y)=\sup\{f^X(x)-d_{\mathbb{S}^2}(x,y)\;|\;x\in\pi_\D(X)\} \;\;     f_+^X(y)=\inf\{f^X(x)-d_{\mathbb{S}^2}(x,y)\;|\;x\in\pi_\D(X)\}.
-\]
-
+\begin{align*}
+    f_-^X(y)&=\sup\{f^X(x)-d_{\mathbb{S}^2}(x,y)\;|\;x\in\pi_\D(X)\}    \\
+    f_+^X(y)&=\inf\{f^X(x)+d_{\mathbb{S}^2}(x,y)\;|\;x\in\pi_\D(X)\}.
+\end{align*}
+    
 \begin{lemma}\label{422}
     Let X be any closed achronal subset $X$ of $\AS^{2,1}\cup\partial\AS^{2,1}$, and let $S_\pm(X)$ be the graphs of the extremal extensions $f_\pm^X$. 
     \begin{itemize}
