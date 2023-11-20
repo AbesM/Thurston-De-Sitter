@@ -1,6 +1,6 @@
 \chapter{Thurston's earthquake theorem}
 
-We pause for the moment with our exploration of the Anti-de Sitter realm. We want to recall basic definitions of geodesic laminations and earthquakes, with the introduction of a first \textit{basic} example. We will then give an outline of the deep underlying relation between pleated surfaces and earthquakes discovered by Mess and then finally move on the proof of the earthquake theorem. 
+We pause for the moment with our exploration of the Anti-de Sitter realm. We want to recall basic definitions of geodesic lamination and earthquakes, with the introduction of a first \textit{basic} example. We will then give an outline of the deep underlying relation between pleated surfaces and earthquakes discovered by Mess and then finally move on the proof of the earthquake theorem. 
 
 \begin{definition}
     A geodesic lamination $\lambda$ of $\H^2$ is a collection of disjoint geodesic that foliate a closed subset $X$ of $\H^2$. The set $X$ is called the \textit{support} of $\lambda.$ The geodesic in $\lambda$ are called \textit{leaves} (as in classic foliation terminology). The connected components of $\H^2\;\setminus\;X$ are called \textit{gaps}. The \textit{strata} of $\lambda$ are the leaves and the gaps.
@@ -97,8 +97,7 @@ Given the previous discussion, we can now start with the details.
 % \end{corollary} 
 
 % Resolved any matter with the good definition of convex hull of $\text{graph}(f)$ we want to understand the matter with an example: \\
-% \textit{Example:} Given $\sigma \in \PSL,$ the convex hull of $\text{graph}(\sigma)$ is the closure of the totally geodesic spacelike plane $\text{P}_{\sigma^{-1}}$ in $\A^{2,1}.$ Actually, because of lemma \textcolor{red}{u know the drill}, the boundary at inifinity of $P_{\sigma^{-1}}$ equals $\text{graph}(\sigma),$ and moreover $\text{P}_{\sigma^{-1}}$ is convex, since spacelike geodesics of $\A^{2,1}$ (which are the intersection of two transverse spacelike planes) are lines in an affine chart, and any two points of $\partial\H^2$ are connected by a geodesic. Hence $\text{P}_{\sigma^{-1}}$ is clearly the smallest convex set containing $\text{graph}(\sigma).$\\
-% This is the only case where $\text{graph}(\sigma)$ is contained in a plane, and therefore it's convex hull as empty interior. If $f$ is not the restriction to $\S$ of an element of $\PSL$, then the convex hull of $\text{graph}(f)$ is a convex body in the affine chart $\mathcal{A}_\gamma.$
+
 
 % To continue in our exploration of convexity in $\A^{2,1}$ we will need one last technical Lemma similar in spirit to \ref{bdconvex}: 
 % \begin{lemma}\label{convI}
@@ -184,11 +183,11 @@ We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the cir
 %     And a completely analogous argument holds for the right projection.
 % \end{proof}
 
-\begin{example}\label{413} Let's consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous example \textcolor{red}{ref}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition in \refeq{defproj} we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
+\begin{example}\label{413} Let us consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous Example \ref{43}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition in \refeq{defproj} we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
 \begin{equation}
     \Pi_l(p)=\text{Fix}(p\circ\varphi)\;\;\Pi_r(p)=\text{Fix}(\varphi\circ p).
 \end{equation}   
-We can also extend the two map to the boundary of $P_{\varphi^{-1}}$: recalling that its boundary coincides with the graph of $\varphi$ (Lemma \textcolor{red}{yktd}) we have: 
+We can also extend the two map to the boundary of $P_{\varphi^{-1}}$: recalling that its boundary coincides with the graph of $\varphi$ (Lemma \ref{32}) we have: 
 \begin{equation}\label{simproj}
     \Pi_l(x,\varphi(x))=x \;\;\;\Pi_r(x,\varphi(x))=\varphi(x). 
 \end{equation}
