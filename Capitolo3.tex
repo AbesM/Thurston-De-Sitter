@@ -49,7 +49,7 @@ U=\begin{pmatrix}
 \end{pmatrix}
 \]
 
-The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ fixing $i\in\H^2$, parametrized by the angle of clockwise rotation; $V,W$ are vectors tangent to the one-parameter groups of hyperbolic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is future-pointing timelike vector. \\
+The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ fixing $i\in\H^2$, parametrized by the angle of clockwise rotation; $V,W$ are vectors tangent to the one-parameter groups of loxodromic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is future-pointing timelike vector. \\
 
 The stabilizer of the identity in Isom$_0(\A^{n,1})$ is the diagonal subgroup $\Delta<\PSL\times\PSL$. Under the obvious identification of $\PSL$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\PSL$ is the adjoint action of $\PSL$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
 
@@ -66,7 +66,7 @@ which in turn induces the well-known isomorphism:
 \end{observation}
 
 \section{The boundary of $\PSL$)} 
-From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\PSL$, namely $P(\mathcal{M}(2,\R))$, the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
+From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\PSL$, namely $\text{P}(\mathcal{M}(2,\R))$, the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
 \[
     \partial\A^{2,1}=\{[X]\in\text{P}(\mathcal{M}(2,\R))|\;\text{rank}(X)=1\}
 \]
@@ -116,9 +116,21 @@ Our interest in $\partial\A^{2,1}$ is mainly justified by the following: when we
 \begin{equation}\label{graphequivariancy}
 (\alpha,\beta)\cdot\Lambda_\varphi=\Lambda_{\beta\circ\varphi\circ\alpha^{-1}}.
 \end{equation}
-We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified $\T$ via $\delta$.
+We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified with $\T$ via $\delta$.
 
-\section{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory.  We would like to start considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguis geodesic by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
+\section{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory. In particular we recall the following: 
+\begin{lemma}\label{331}[Per più informazioni \cite{bonsanteseppi}]
+    Given left-invariant vector fields $V$ and $W$ on $G$, the Levi-Civita connection of a bi-invariant metric has the expression: 
+    \[
+        \nabla_VW=\frac{1}{2}[V,W].
+    \]
+    In particular, the Lie group exponential coincides with the pseudo-Riemannian exponential map.
+\end{lemma}
+
+
+
+
+We would like to start by considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguish geodesic by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
 
 \begin{itemize}
     \item Timelike geodesic are, up to conjugacy, of the form: 
@@ -135,7 +147,7 @@ namely, under the identification of $\PSL$ with $\text{Isom}(\H^2)$, they are el
     1 & 0
     \end{bmatrix}.
     \]
-These are closed geodesics, parametrized by arclenght, of total lenght $\pi$. 
+These are closed geodesics, parametrized by arclenght, of total length $\pi$. 
 \item Spacelike geodesic are, again up to conjugacy, of the form: 
 \[
     \begin{bmatrix}
@@ -149,7 +161,7 @@ with initial velocity:
         1 & 0
     \end{bmatrix}.
 \]
-In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in the particular case, $\pm 1$)-
+In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in the particular case, $\pm 1$). 
 \item Finally, lightlike geodesic are the parabolic one-parameter groups conjugate to: 
 \[
     \begin{bmatrix}
@@ -157,7 +169,7 @@ In the hyperbolic settings, these are loxodromic one-parameter groups, fixing tw
         0 & 1 
     \end{bmatrix},
 \]
-whose initial vector has indeed zero lenght.
+whose initial vector has indeed zero length.
 \end{itemize}
 
 \subsection{Timelike geodesics}
@@ -171,7 +183,7 @@ When looking for a complete description of timelike geodesics it suffices to let
     \[
         L_{p,q}=\{X\in\PSL\;|\;X\cdot q=p\}
     \]
-    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $o^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique since the identity is the only isometry of $\H^2$ fixing two different points. This gives rise to a contradiction and concludes.  
+    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $p^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique since the identity is the only isometry of $\H^2$ fixing two different points. This gives rise to a contradiction and concludes.  
 \end{proof}
 
 \subsection{Spacelike geodesics}
@@ -204,9 +216,9 @@ Now we want to study totally geodesic spacelike planes in $\A^{2,1}.$ They are a
 \begin{equation}\label{geoplanes}
     P_{[A]}=\{[X]\in\PSL\;|\;\langle X,A\rangle=0\}
 \end{equation}
-for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $\text{P}_\gamma$  of an element $\gamma\in\PSL$ is a spacelike totally geodesic plane. \\
+for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $P_\gamma$  of an element $\gamma\in\PSL$ is a spacelike totally geodesic plane. \\
 \begin{example}\label{spacelikeisometry}
-Before the general treatment we want to focus now on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
+Before the general treatment we want to focus on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
     \partial P_\gamma=\text{graph(Id)}\subset \T.
 \end{equation}
@@ -220,7 +232,7 @@ is an isometry with respect to the hyperbolic metric of $\H^2$ and the induced m
 \begin{equation}
     \iota(\alpha\cdot p)=\alpha\circ\iota(p)\circ\alpha^{-1}.
 \end{equation} 
-A direct consequence is that $\iota$ is isometric, since the pull-back of the metric of $\P_\text{Id}$ is necessarily $\PSL$-invariant and has constant curvature -1, hence it coincides with the standard hyperbolic metric on the upper half-plane.
+A direct consequence is that $\iota$ is isometric, since the pull-back of the metric of $P_\text{Id}$ is necessarily $\PSL$-invariant and has constant curvature -1, hence it coincides with the standard hyperbolic metric on the upper half-plane.
 \end{example}
 This simple example is actually the key case to understand general spacelike totally geodesic planes as every spacelike totally geodesic plane is of the form $P_\gamma$ for some $\gamma\in\PSL.$ To see this, observe that the action of the isometry group of $\A^{2,1}$ on spacelike totally geodetic planes is transitive, and that $P_\gamma=(\gamma,\text{Id})\cdot P_{\text{Id}}$ as the isometry $(\gamma,\text{Id})$ maps $\text{Id}\to\gamma$, and therefore the dual plane of $\text{Id}$ to the dual plane of $\gamma.$ In view of the observations given in \refeq{graphequivariancy} and \refeq{graphino}, we can conclude the following: 
 \begin{lemma}\label{32}
@@ -259,7 +271,7 @@ We are only left with case of lightlike totally geodesic planes. Those are the f
     \]
 \end{lemma}
 \begin{proof}
-    The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfyin $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it is nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
+    The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfying $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it is nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
     \begin{equation}
         \text{Im}(X)=\text{Ker}(\text{adj}(A))\;\text{or}\;\text{Im}(\text{adj}(A))=\text{Ker}(A).
     \end{equation}

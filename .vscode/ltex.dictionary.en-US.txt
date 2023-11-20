@@ -17,3 +17,5 @@ acausality
 equivariant
 unparameterized
 equivariance
+arclenght
+conjugacy

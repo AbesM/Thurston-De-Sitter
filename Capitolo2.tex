@@ -165,10 +165,10 @@ In particular the light cone through a point $[x]\in \A$ coincides with the cone
 \]
 In an affine chart, timelike geodesic corresponds to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one sheeted hyperboloid, or are asymptotic to it (tangent at infinity).
 
-\begin{observation} An important observation concerns the space of timelike geodesics. Any timelike line is the projectivisation of a negative definite plane. As Isom$(\A^{n,1})\simeq \text{PO}(n,2)$ acts transitevely on the space of timelike lines, and since the sabiliser of a timelike line is the group $P(O(n)\times O(2))$ which is the maximal compact subgroup of $\text{PO}(n,2)$, the space of timelike geodesics of $\A^{n,1}$ is naturally identified with the Riemannian symmetric space of PO$(n,2)$.
+\begin{observation} An important observation concerns the space of timelike geodesics. Any timelike line is the projectivisation of a negative definite plane. As Isom$(\A^{n,1})\simeq \text{PO}(n,2)$ acts transitively on the space of timelike lines, and since the stabilizer of a timelike line is the group $\text{P}(O(n)\times O(2))$ which is the maximal compact subgroup of $\text{PO}(n,2)$, the space of timelike geodesics of $\A^{n,1}$ is naturally identified with the Riemannian symmetric space of PO$(n,2)$.
 \end{observation}
 
-\noindent\textit{Totally geodesic subspaces} Totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspaces $W$ of $\R^{n,2}$ of dimension $k+1.$ The negative index of $W$ can be $1, 2,$ for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty. We have several cases: 
+\noindent\textit{Totally geodesic subspaces} Totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1.$ The negative index of $W$ can be $1, 2,$ for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty. We have several cases: 
 \begin{itemize}
     \item If $W$ has signature (k-1,2), then $P(W)\cap \A^{n,1}$ is isometric to $\A^{k-1,1}$. 
     \item If $W$ has signature $(k-2, 1)$ , then it is a copy of Minkowski space $\R^{k-2,1}$, hence $P(W)\cap \A^{n,1}$ is a copy of the Klein model of hyperbolic space. 
@@ -183,21 +183,21 @@ A particular case of the last point is when $W$ is degenerate and $\text{dim}(W)
 \begin{proof}
     [GHL04, Proposition 2.131]
 \end{proof}
-Because of \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric given by:
+Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric given by:
 \begin{equation}\label{emispherical}
     \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
 \end{equation} 
-Now we observe that the first term in \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\mathbb{S}^n}$. Observe that the boundary of $\partial\D$ is an equator for the hemispherical metric, and in fact it's the only equator completely contained in $(\D\cup\partial\D,g_{\mathbb{S}^n})$, a justification to the fact that we will refer to it as \textit{the} equator.\\
+Now we observe that the first term in Equation \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\mathbb{S}^n}$. Notice that the boundary of $\partial\D$ is an equator for the hemispherical metric, and in fact it's the only equator completely contained in $(\D\cup\partial\D,g_{\mathbb{S}^n})$, a justification to the fact that we will refer to it as \textit{the} equator.\\
 As a consequence, unparametrized lightlike geodesic of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the conditions that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
 \[
     t-t_0=d_{\mathbb{S}^n}(p,p_0)
-\] on the geodesic. \todo{What does it mean?} In particular, these lightlike geodesic meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slice $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. 
+\] on the geodesic. In particular, these lightlike geodesic meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slice $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. 
 
 \section{Polarity in Ads}\label{polarsec}
-The quadratic form $q_{n,2}$ induces a polarity on the projective space $\R\text{P}^{n+1}$, explicitly the correspondence associates to a projective subspace $P(W)$ the subspace $P(W^\perp)$. In particular we have an induced duality between spacelike totally geodesic subspaces of $\A^{n,1}$ where the dual of a spacelike $k-$dimensional subspaces is a $n-k+1$ subspace. \\
-For instance, if we consider the dual of a point $[x]\in\A^{n,1}$ it will be an $n-$dimensional spacelike hyperplane $P_[x]=\text{P}^\perp.$ Projectively $P_{[x]}$ is characterized as the hyperplane spanned by the intersection of $\partial\A^{n,1}$ \todo{n o n-1} with the lightcone from $[x]$. More geometrically, it can be checked that $P_[x]$ is the set of antipodal point to $[x]$ along timelike geodesics through $[x].$ Also, every timelike geodesic through $[x]$ meets $P_{[x]}$ orthogonally at time $\pi/2.$ Conversely, given a totally geodesic spacelike hyperplane $H$, all the timelike geodesic that meet $H$ orthogonally intersect in a single point, which is the dual point of $H$.
+The quadratic form $q_{n,2}$ induces a polarity on the projective space $\R\text{P}^{n+1}$, explicitly the correspondence associates to a projective subspace $P(W)$ the subspace $P(W^\perp)$. In particular, we have an induced duality between spacelike totally geodesic subspaces of $\A^{n,1}$ where the dual of a spacelike $k-$dimensional subspaces is an $n-k+1$ subspace. \\
+For instance, if we consider the dual of a point $[x]\in\A^{n,1}$ it will be an $n-$dimensional spacelike hyperplane $P_{[x]}=\text{P}^\perp.$ Projectively $P_{[x]}$ is characterized as the hyperplane spanned by the intersection of $\partial\A^{n,1}$ \todo{n o n-1} with the lightcone from $[x]$. More geometrically, it can be checked that $P_{[x]}$ is the set of antipodal point to $[x]$ along timelike geodesics through $[x].$ Also, every timelike geodesic through $[x]$ meets $P_{[x]}$ orthogonally at time $\pi/2.$ Conversely, given a totally geodesic spacelike hyperplane $H$, all the timelike geodesic that meet $H$ orthogonally intersect in a single point, which is the dual point of $H$.
 
-\subsection*{In the quadric model} We would \textit{extends} the idea of duality for coverings of $\A^{n,1}.$ Observe that in $\H^{n,1}$ there are two dual planes associated to any point $x$, namely the sets: 
+\subsection*{In the quadric model} We would like to \textit{lift} the idea of duality to coverings of $\A^{n,1}.$ Observe that in $\H^{n,1}$ there are two dual planes associated to any point $x$, namely the sets: 
 \[
     P_x^\pm=\{\exp_x(\pm(\pi/2)v)\;|\;q_{n,2}(v)=-1,\; v\;\text{future-directed}\}.
 \] 
@@ -214,8 +214,7 @@ Spacelike and lightlike geodesic through $x$ do not exit $U_x$, while all the ti
     \item by a timelike geodesic if and only if $|\langle x,y\rangle_{n,1}|<1.$ 
 \end{itemize}
 
-An immediate consequence is that if $y$ is connected to $x$ by a spacelike geodesic, there is no geodesic joining $y$ to $-x$. Hence the exponential map of $H^{n,1}$ is not surjective. But as any point $y\in\H^{n,1}$ can be connected through a geodesic either to $x$ or $-x$ hence the exponential over $\A^{2,1}$ is surjective\dots
-
+An immediate consequence is that if $y$ is connected to $x$ by a spacelike geodesic, there is no geodesic joining $y$ to $-x$. Hence the exponential map of $\H^{n,1}$ is not surjective. But as any point $y\in\H^{n,1}$ can be connected through a geodesic either to $x$ or $-x$ hence the exponential over $\A^{2,1}$ is surjective.
 \subsection{In the universal cover.}
 Recall that $\AS^{n,1}\simeq \H^n\times\R$ with the group of deck transformations being isomorphic to $\Z$, where a generator acts by translation of $2\pi$ in the $\R$ factor. It follows that the preimage of a spacelike plane $P\subset\A^{n,1}$ is the disjoint union of spacelike planes $(P^k)_{k\in\Z},$ enumerated so that the generator $\eta$ of $\Z$ acts by sending $P^k$ to $P^{k+1}.$ \\
 Each connected component of $\AS^{2,1}\setminus\bigcup_{k\in\Z} P^k$ is a fundamental domain for the action of deck transformation of the covering $\AS^{n,1}\to\A^{n,1}.$ Given a point $x$, let us apply the previous construction to the plane $P_x=P_{\pi^{\prime}(x)}$ which is the dual of the image $\pi^{\prime}(x)$ in $\A^{n,1}$, and let $V_x$ be the connected component which contains $x$. We will refer to $V_x$ as the \textit{Dirichlet domain} in $\AS^{2,1}$ centered at $x$, since the construction of $V_x$ is the analogue of a Dirichlet domain to our context. Then the restricted covering map: $\restr{\pi^{\prime}}{V_x}:V_x\to\A^{2,1}\setminus P_x$ is an isometry. Therefore lightlike and spacelike geodesic through $x$ are entirely contained in $V_x$.\\ 
