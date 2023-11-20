@@ -266,7 +266,7 @@ It follows from the definition that if $X$ is a proper achronal subset of $\over
 What we have shown until now for achronal sets in $\AS^{2,1}$ can be rephrased for proper achronal sets of $\A^{2,1}$. For example, any proper achronal set $X$ can be extended to a properly embedded proper achronal surface and there are two extremal extensions, just as in Lemma \ref{422}\\
 We would like to focus now on proper achronal meridians in $\partial\A^{2,1}$. They lift to achronal meridians in $\partial\AS^{2,1}$ different from the boundary of lightlike planes. Indeed the boundary of a lightlike plane is not contained in a Dirichlet region. Conversely any achronal meridian on $\partial\AS^{2,1}$ different from the boundary of a lightlike plane projects to an achronal meridian of $\A^{2,1}$.
 
-\begin{proposition}
+\begin{proposition}\label{453}
     Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$ and denote by $\widetilde{\Lambda}$ any lift to the universal covering. Then the universal covering map of $\A^{2,1}$ maps $\Omega(\widetilde{\Lambda})$ injectively to the domain: 
     \[
         \Omega(\Lambda)\coloneqq \{x\in\A^{2,1}\;|\;P_x\cap\Lambda=\emptyset\}.
@@ -361,11 +361,11 @@ What we have implicitly proved is that given $\Lambda$ an achronal meridian in $
     It follows, from the characterization of $\Omega(\Lambda)$ as the intersection of the $U(z)$ given in Proposition \ref{461}, that if $x$ is not in $\overline{\Omega(\Lambda)}$ it cannot be in $K$. Hence $\overline{\Omega(\Lambda)}$ is the biggest convex set of $\A^{2,1}$ containing $\Lambda$.
 \end{observation}
 
-Suppose now that $\Lambda$ is not the boundary of a spacelike plane. Now the topological frontiers in $\R\text{P}^3$ of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ are Lipschitz surfaces homeomorphic to a sphere. This sphere is disconneced by $\Lambda$ in two regions, homeomorphic to disks, which form the boundary of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ in $\A^{2,1}$. For $\Omega(\Lambda)$ those components are the image of $S_\pm(\widetilde{\Lambda})$ and will be denoted by $S_\pm(\Lambda$). \\
+Suppose now that $\Lambda$ is not the boundary of a spacelike plane. Now the topological frontiers in $\R\text{P}^3$ of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ are Lipschitz surfaces homeomorphic to a sphere. This sphere is disconnected by $\Lambda$ in two regions, homeomorphic to disks, which form the boundary of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ in $\A^{2,1}$. For $\Omega(\Lambda)$ those components are the image of $S_\pm(\widetilde{\Lambda})$ and will be denoted by $S_\pm(\Lambda$). \\
 For $\mathcal{C}(\Lambda),$ let be $\mathcal{C}(\widetilde{\Lambda})$ a lifting, which is necessarily contained in a Dirichlet region, say $R$. Let $P$ be a support plane for $\mathcal{C}(\Lambda)$, which is necessarily either spacelike or lightlike, and let $\widetilde{P}$ be its lift which touches $\mathcal{C}(\widetilde{\Lambda}).$ Hence either $\widetilde{\Lambda}$ is in $I^+(\widetilde{P})\cup\widetilde{P}$ or in $I^-(\widetilde{P})\cup\widetilde{P}$. This permits to distinguish the componets of $\partial\mathcal{C}(\Lambda)\setminus\Lambda:$ the \textit{past boundary component} $\partial\mathcal{C}_-(\Lambda)$ has the property that $\widetilde{\Lambda}$ is contained in $I^+(\widetilde{P})\cup \widetilde{P}$ for all support planes which touch $\partial_-\mathcal{C}(\Lambda)$, and analogously for the \textit{future boundary component} $\partial_+\mathcal{C}(\Lambda)$.\\
 We want to show a kind of duality between boundary components $\partial_\pm\mathcal{C}(\Lambda)$ and $S_\pm(\Lambda)$. 
 
-\begin{proposition}
+\begin{proposition}\label{464}
 Let $\Lambda$ be a proper achronal meridian in $\A^{2,1}$, $x\in\A^{2,1}$ and let's denote by $P_x$ the dual plane to $x$. Then: 
 \begin{itemize}
     \item $x\in\Omega(\Lambda)$ if and only if $P_x\cap\mathcal{C}(\Lambda)=\emptyset$. 
@@ -378,8 +378,8 @@ In particular if $\Lambda$ is not the boundary of a spacelike plane, then:
 \end{itemize}
 \end{proposition}
 \begin{proof}
-    \textcolor{blue}{da controllare davvero come si relaziona con le cose di Diaf}
-    
+From Proposition \ref{453}, points in $\Omega(\Lambda)$ are dual to planes disjoint from $\Lambda$, which are precisely those which do not intersect $@\mathcal{C}(\Lambda)$, by the definition of convex hull. For the second statement, fix $x$ and observe that $z\in P_x$ if and only if $x\in P_z$. Hence there exists a point $z$ in the intersection $P_x\cap \Omega(\Lambda)$ if and only if $x$ is in a plane $P_z$ which is disjoint from $\Lambda$, namely when $x$ is not in $\mathcal{C}(\Lambda)$. \\
+As a consequence $\partial\mathcal{C}(\Lambda)$ consists of points dual to support planes of $\Omega(\Lambda)$. Take a support plane $P_x$ of $S_+(\Lambda)$ (hence dual to a point $x$) which meets $S_+(\Lambda)$ at $z$. If $\widetilde{z}$ denotes the corresponding point of $S_+(\widetilde{\Lambda}),$ then $\widetilde{\Lambda}\subset I^+(P_{\widetilde{z}}^-),$ and $P_{\widetilde{z}}^-\cap\widetilde{\Lambda}=\emptyset.$ Thus $P_z$, which is the projection of $P_{\widetilde{z}}^-$, is a support plane of $\mathcal{C}(\Lambda)$ touching the past boundary. As $x\in P_z$ we conclude that $x$ lies in the past boundary. Similary points of the future boundary of $\mathcal{C}(\Lambda)$ correspond to support planes for $S_-(\Lambda)$.
 \end{proof}
 
 \begin{observation}\label{465}
@@ -388,10 +388,10 @@ In particular if $\Lambda$ is not the boundary of a spacelike plane, then:
 \end{observation}
 
 \begin{proposition}\label{466}
-The past and future boundary components of $@\mathcal{C}(\Lambda)$ are achronal surfaces.
+The past and future boundary components of $\mathcal{C}(\Lambda)$ are achronal surfaces.
 \end{proposition}
 \begin{proof}
-    
+    We will show it for $\partial_+\mathcal{C}(\Lambda)$. Take $x,y\in\partial_+\mathcal{C}(\Lambda)$ and consider the segment joining $x$ to $y$ in an affine chart containing $\Lambda$. If this segment is timelike then the dual planes $P_x$ and $P_y$ would be disjoint. Then (up to switching the roles of $x$ and $y$) we may assume that, in the universal cover $P_{\widetilde{x}}^1\subset I^+(P_{\widetilde{y}}^1)$, where $\widetilde{x}$ and $\widetilde{y}$ are the lifting of $x$ and $y$ in the same Dirichlet region mapping to the fixed affine chart. But then $S_+(\widetilde{\Lambda})$ would be contained in $\text{I}^-(P_{\widetilde{y}}^1)$ and could not meet $P_{\widetilde{x}}^\$$ thus a contradiction to Proposition \ref{464}
 \end{proof}
 
 \begin{observation}\label{467}
