@@ -350,7 +350,7 @@ As a consequence we have that $\Lambda$ is contained in an affine chart whose co
     Given a proper achronal meridian $\Lambda$ in $\partial\A^{2,1}$, we define $\mathcal{C}(\Lambda)$ to be the convex hull of $\Lambda$, which can be taken in an affine chart containing $\Lambda$
 \end{definition}
 
-What we have implicitly proved is that given $\Lambda$ an achronal meridian in $\partial\A^{2,1}$, then $\mathcal{C}(\Lambda)$ is contained in $\A^{2,1}$, which is not immediately obvious as $\A^{2,1}$ is not convex in $\R\text{P}^3$. \\
+What we have implicitly proved is that given $\Lambda$ an achronal meridian in $\partial\A^{2,1}$, then $\mathcal{C}(\Lambda)$ is contained in $\A^{2,1}$, which is not immediately obvious as $\A^{2,1}$ is not convex in $\R\text{P}^3$.
 
 \begin{example}\label{43}
     Consider $\sigma\in\PSL$, the convex hull of the graph $\Lambda_\sigma$ is the closure of the totally geodesic spacelike plane $P_{\sigma^{-1}}$ in $\A^{2.1}$. In particular, following Lemma \ref{32}, we have that the boundary at infinity of $P_{\sigma^{-1}}$ equals $\Lambda_\sigma$, and moreover $P_{\sigma^{-1}}$ is convex, since spacelike geodesics of $\A^{2,1}$ (which are the intersection of two transverse spacelike planes) are lines in an affine chart, and any two points in $\partial\H^2$ are connected by a geodesic. Hence $P_{\sigma^{-1}}$ is clearly the smallest convex set containing $\Lambda_\sigma$.  
@@ -404,16 +404,16 @@ The situation is very similar to the counterpart in hyperbolic three-space. The 
 We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
 We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\CF$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\CF$ (at $p\in\partial\CF)$ is $p\in\CF\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\CF$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
 
-\textcolor{blue}{He goes for a remark that we might not need}\\
-
-Recall \textcolor{orange}{from where?} that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
+\begin{observation}
+    We could rephrase the condition of being a support plane as the following: a totally geodesic plane $P$ is support plane for $\CF$ if there exists a continuos family $\{P_t\}_{t\in[0,\epsilon)}$ of totally geodesic planes, pairwise disjoint in $\overline{\A^{2,1}}$, such that $P_0=P$ and $P_t\cap\CF=\emptyset$ for $t>0$. 
+\end{observation}
+We observe that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
 
 \begin{equation}\label{suplane}
     P\cap\CF=\mathcal{C}(\partial P\cap\Lambda_\varphi).
 \end{equation}
     
-We can characterize support planes by considering intersection with the convex hull as follows: 
-
+We can also characterize what \textit{kind} of support planes of $\CF$ are allowed by considering how such planes touch $\CF$ at a boundary point. 
 \begin{proposition}\label{supportinho}
     Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism, and let $P$ be a support plane of $\mathcal{C}(\Lambda_\varphi)$ at a point $p\in\partial\mathcal{C}(\Lambda_\varphi).$ Then:
     \begin{itemize}
@@ -430,23 +430,24 @@ $p\in\overline{\A^{2,1}}, \CF$ is contained in the closure of the connected comp
 We observe that $\CF$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $f$ is an element of $\PSL$, the example treated previously.\\
 We can now state the following related to convergence of support planes: 
 \begin{lemma}\label{49}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
+    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
     \begin{itemize}
         \item If $p\in\A^{2,1}$, then $P=P_\gamma$ is a future (resp. past) support plane of $\CF$, for $\gamma_n\to\gamma\in\PSL$.
         \item If $p\in\partial\A^{2,1}$, then either $P$ is a lighlike plane whose boundary is the union of two circle meeting at $p$ or the previous point holds.        
     \end{itemize}
 \end{lemma}
 \begin{proof}
-    Diaf-Seppi
+We can extract a a converging subsequences from $p_{n}$ and $P_{\gamma_n}$, by compactness of $\CF$ and of the space of planes in projective space. Also, the limit of the sequence of support planes $P_{\gamma_n}$ at $p_n$ is a support plane of $P$ at $p$, since both conditions that $p_n\in\CF$ and that $\CF$ is contained in a closed half-space bounded by $P_{\gamma_n}$ are closed conditions. Now, by Proposition \ref{supportinho}, if the limit $p$ is in $\A^{2,1}$, then $P$ is a spacelike support plane, which is future (resp. past) if all the $P_{\gamma_n}$ are future (resp. past). The situation could also occour analogously if $p\in\partial\A^{2,1}$; the other possibility being that $P$ is lightlike, and in this case the proof of Propostiion \ref{supportinho} shows $P=P_{[A]}$ if $p$ is represented by the prokective class of the one-rank matrix $A$.
 \end{proof}
 \begin{corollary}\label{nametag}
-    Let $f:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support plane, and the other only admits past support plane. 
+    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support plane, and the other only admits past support plane. 
 \end{corollary}
 \begin{proof}
-    Diaf-Seppi
+    We have already hinted at this after \textcolor{red}{remark 4.36} let's give a more detailed proof. It a basic result in convex analysis that $\partial\CF$ is homeomorphic to $\mathbb{S}^2;$ by Proposition \ref{461} \textcolor{blue}{controlla davvero}, its intersection wit $\partial\A^{2,1}$ equals $\Lambda_\varphi$ and is therefore a simple closed curve. By the Jordan curve theorem, the complement of $\Lambda_\varphi$ is the disjoint union of two topological discs, each of which is contained in $\A^{2,1}$. \\
+    Now by Lemma \ref{49}, the set of point $p\in\partial\CF$ admitting a future support plane is close. But is is also open because its complement is the set of points admitting a past support plane, for which the same argument applies. Hence each connected components of the complement of $\CF$ admits only future support planes, or only past support planes. Finally, $\CF$ necessarily admits both a past and a future support plane, otherwise it would not be compact in an affine chart.    \\
 \end{proof}
 
-According to Corollary \ref{nametag} we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits future support planes the \textit{future boundary component}, and denote it by $\partial_+\CF$. Similarly, we will call the connected component of $\partial\CF\setminus\text{graph}(f)$ that only admits past support planes the \textit{past boundary component}, and denote it by $\partial_-\CF$.\\
+According to Corollary \ref{nametag} we will call the connected component of $\partial\CF\setminus\CF$ that only admits future support planes the \textit{future boundary component}, and denote it by $\partial_+\CF$. Similarly, we will call the connected component of $\partial\CF\setminus\CF$ that only admits past support planes the \textit{past boundary component}, and denote it by $\partial_-\CF$.\\
 
 \section{Globally Hyperbolic three-manifolds}
 We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surfaces of genus $r$ (we will with a slight abuse of notation say that the spacetime has genus $r$.) We will show that there are no such manifolds when $r=0$. Furthermore, we will then give a rapid overview over the case $r=1$ and the focus on the most interesting case, $r\geq 2$, that will lead to a complete classification.
