@@ -404,7 +404,7 @@ The situation is very similar to the counterpart in hyperbolic three-space. The 
 We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exixst a support plane at every point $p\in\partial K.$ \\
 We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\CF$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\CF$ (at $p\in\partial\CF)$ is $p\in\CF\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\text{graph}(f)$, $\CF$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\text{graph}(f)$.\\ 
 
-\begin{observation}
+\begin{observation}\label{diffsupp}
     We could rephrase the condition of being a support plane as the following: a totally geodesic plane $P$ is support plane for $\CF$ if there exists a continuos family $\{P_t\}_{t\in[0,\epsilon)}$ of totally geodesic planes, pairwise disjoint in $\overline{\A^{2,1}}$, such that $P_0=P$ and $P_t\cap\CF=\emptyset$ for $t>0$. 
 \end{observation}
 We observe that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
@@ -768,7 +768,7 @@ to the pair $(p,q)\in \H^2\times\H^2$. We still suppose that the spacelike immer
 \end{observation}
 
 
-     \begin{observation}
+     \begin{observation}\label{DiafGauss}
         In the work of Mess, we can find yet a different interpretation of the Gauss map. Given $p\in S$, one can find a unique left isometry $f_l(p)$ and a unique right isometry $f_r(p),$ sending the tangent plane $P$ to the image of $\sigma$ at $\sigma(p)$ to $P_{\text{Id}}$. Indeed the isometries $f_l(p)$ and $f_r(p)$ are simply obtained by left and right multiplication by the inverse of dual point of the tangent plane $P$, namely $\zeta(p)=\exp_{\sigma(p)}((\pi/2)\nu(p))$. Using the identification of the dual plane $P_{\text{Id}}$ with $\H^2$, provided by Example \ref{spacelikeisometry}, $\Pi_l(p)$ and $\Pi_r(p)$ are the image of $\sigma(p)$ under the right and left isometries, respectively:
         \[
         \Pi_l(p)=f_r(p)\circ\sigma(p)=(\text{Id},\zeta(p))\cdot \sigma(p)\;\text{and}\;\Pi_r(p))=f_l\circ\sigma(p)=(\zeta(p)^{-1},\text{Id})\cdot\sigma(p).
