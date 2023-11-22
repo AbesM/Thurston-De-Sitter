@@ -36,7 +36,7 @@ Using this model, one has natural identification between $\A^{n,1}$ and the Lie 
 \end{equation}
     
 acting by left and right multiplication on $\PSL$.\\ We are mostly interested in orientation-preserving and time-preserving notions that do not depend on a chosen orientation, nevertheless we will fix here an orientation and a time-orientation of $\A^{2,1}\simeq\PSL.$ As we are dealing with a Lie group it is sufficient to define on orientation of the Lie algebra, namely the tangent at the identity Id. We declare as (positive) oriented basis of $\mathfrak{sl}(2,\R):$ 
-\begin{equation}{tangent}
+\begin{equation}\label{tangent}
 V=\begin{pmatrix}
   0 & 1 \\ 1 & 0
 \end{pmatrix}\;\;
@@ -130,7 +130,7 @@ We remark one last time that we will consider $\partial\A^{2,1}$ as always impli
 
 
 
-We would like to start by considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguish geodesic by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
+We would like to start by considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguish geodesics by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
 
 \begin{itemize}
     \item Timelike geodesic are, up to conjugacy, of the form: 
@@ -204,7 +204,7 @@ Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike
 
 The construction of the dual geodesic is involutive, let's see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
 We can explicitely describe the points at infinity in $\partial\A^{2,1}$ of these geodesic. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
-Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and it's dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{ora lui dice di guardare due figure.}\\
+Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and it's dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
 The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
 \begin{proposition}
     Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
@@ -218,9 +218,9 @@ Now we want to study totally geodesic spacelike planes in $\A^{2,1}.$ They are a
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $P_\gamma$  of an element $\gamma\in\PSL$ is a spacelike totally geodesic plane. \\
 \begin{example}\label{spacelikeisometry}
-Before the general treatment we want to focus on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_\gamma$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
+Before the general treatment we want to focus on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_{\text{Id}}$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
-    \partial P_\gamma=\text{graph(Id)}\subset \T.
+    \partial P_{\text{Id}}=\text{graph(Id)}\subset \T.
 \end{equation}
 
 Now consider a point $z\in\H^2$, and let us denote by $\mathcal{R}_z$ the order-two elliptic isometry with fixed point $z$. We claim that the map 
@@ -242,14 +242,14 @@ This simple example is actually the key case to understand general spacelike tot
     \]
 \end{lemma}
 \section{Timelike planes}
-Let's consider now a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_{[A]}$ by $P_\eta$. \\
+Let us now consider a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_{[A]}$ by $P_\eta$. \\
 The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map: 
 \begin{equation}\label{refspa}
-    \mathcal{I}\to\mathcal{I}_\eta
+    \mathcal{I}\to\mathcal{I}\eta
 \end{equation}
 from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. It's image it precisely $P_\eta.$ As seen in the proof of \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined in Equation \refeq{refspa} is the entire plane $P_\eta$.\\  
 In similar fashion to the spacelike case, using the transitivity of the group of isometries on timelike planes, every timelike planes is of the form above. We can show the following: 
-\begin{lemma}
+\begin{lemma}\label{33}
     Every timelike totally geodesic plane of $\A^{2,1}$ is of the form $P_\eta$ for some orientation-reversing isometry $\eta\in\PSL,$ and 
     \[
         \partial P_\eta=\text{graph}(\eta^{-1})\subset\T.
@@ -259,12 +259,12 @@ In similar fashion to the spacelike case, using the transitivity of the group of
     We want to use Lemma \ref{convergenza} and the parametrization given in Equation \refeq{refspa}. Suppose we have a sequence $\mathcal{I}_n$ such that $\mathcal{I}_n\eta(z)\to x\in\partial\H^2$, for any $z\in\H^2$. Then, using that $\mathcal{I}_n$ is an involution and the continuity of the action of $\eta$ on $\overline{\H}^2$, $(\mathcal{I}_n\eta)^{-1}(z)=\eta^{-1}\mathcal{I}_n^{-1}(z)=\eta^{-1}\mathcal{I}_n(z)=\eta^{-1}(x).$ 
 \end{proof}
 \begin{observation}
-    Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail by El Emam e Seppi in [\cite{emam2022gauss}, Example $6.1$] 
+    Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail by El Emam e Seppi in \cite{emam2022gauss} (Example $6.1$).
     \end{observation}
 \section{Lightlike planes}
 We are only left with case of lightlike totally geodesic planes. Those are the form $P_{[A]}$ for a nonzero matrix $A$ with $\det(A)=0$. Before giving an explicit description of such planes, we want to observe that their boundary will not be a graph in $\T$, unlike the case of spacelike and timelike planes. 
 
-\begin{lemma}
+\begin{lemma}\label{35}
     Every lightlike totally geodesic plane of $\A^{2,1}$ is of the form $P_{[A]}$ for some rank one matrix $A$, and: 
     \[
         \partial P_{[A]}=(\text{Im}(A)\times\S)\cup(\S\times\text{Ker}(A)).

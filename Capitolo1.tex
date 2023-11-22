@@ -13,7 +13,7 @@ The set of lightlike vectors, together with the null vector, disconnects $T_{x}M
 As a consequence the set of timelike vectors in the total space $TM$ is either connected or is made by two connected components. In the latter case $M$ is said \textit{time-orientable}, and a time orientation is the choice of one of those components. Vectors in the chosen component are said \textit{future-directed}, vectors in the other component are said \textit{past-directed}\\
 A differentiable curve is said \textit{timelike, spacelike, lightlike} if its tangent vector at every point is timelike, spacelike, lightlike respectively. The curve is said to be \textit{causal} if the tangent vector is either timelike or lightlike. \\ Given a point $x$ in a time-oriented Lorentzian manifold $M$, the \textit{future} of $x$ is the set $I^+(x)$ of points which are connected to $x$ by a future-directed causal curve. The \textit{past} of $x$, $I^-(x)$, is defined in an analogous way for past-directed causal curves. \\As in the Riemannian setting, on a Lorentzian manifold $M$ there is a unique linear connection $\nabla$ which is symmetric and compatible with the Lorentzian metric $g$. We refer to it as the \textit{Levi-Civita connection} of $(M,g)$.\\ Following the analogy with Riemannian geometry, the Levi-Civita connection determines the Riemann curvature tensor defined by: 
 \[
-    R(u,v)w=\nabla_u\nabla_v w-\nabla_v\nabla_u w-\nabla_{[u,v]}w
+    R(u,v)w=\nabla_u\nabla_v w-\nabla_v\nabla_u w-\nabla_{[u,v]}w.
 \]  
 
 We then say that a Lorentzian manifold has constant sectional curvature $K$ if: 
@@ -27,7 +27,7 @@ for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the de
 
 \subsection{Maximal isometry group and geodesic completeness} 
 
-\begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature $K$. Then every linear isometry $L:T_{x}M\to T_yN$ extends to an isometry $f:U\to V$ where U, V are open neighbourhoods of $x, y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\cap U^{\prime}. $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
+\begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature $K$. Then every linear isometry $L:T_{x}M\to T_yN$ extends to an isometry $f:U\to V$ where $U, V$ are open neighbourhoods of $x, y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\cap U^{\prime}. $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
 \end{lemma}
 \begin{proof}
 
@@ -52,7 +52,7 @@ Another consequence of \ref{isometrie} is that, fixing a point $x_0 \in M$, the 
 \end{definition}
 
 Equivalently $M$ has maximal isometry group if the above inclusion of Isom($M$) into ISO($T_{x_0}M, TM$) is a bijection. Hence if $M$ has maximal isometry group, then the dimension of the isometry group is maximal, as a justification for the nomenclature used. 
-From Corollary \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isometry group if it has constant sectional curvature and is geodesically complete. The converse holds even without the simply connectedness assumption. Namely: 
+From Corollary \ref{122}, every simply connected Lorentzian manifold $M$ has maximal isometry group if it has constant sectional curvature and is geodesically complete. The converse holds even without the simple connectedness assumption. Namely: 
 
 \begin{lemma}\label{maximalisometry}
     If $M$ is a Lorentzian manifold with maximal isometry group, then $M$ has constant sectional curvature and is geodesically complete.
@@ -74,7 +74,7 @@ We conclude these preliminaries with a result of classification which will be us
 
 \begin{proof}
     Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\widetilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which by Corollary \ref{122} is isometric to $M_K$. The covering map $p:M_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
-    Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuosly on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\widetilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
+    Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuously on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\widetilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
     Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\text{Isom}(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \text{Isom}(M_K)$, which is the same as saying that $\Gamma$ is normal in $\text{Isom}(M_K)$.
 \end{proof}
 

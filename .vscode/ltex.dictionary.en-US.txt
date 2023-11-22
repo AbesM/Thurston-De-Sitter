@@ -19,3 +19,7 @@ unparameterized
 equivariance
 arclenght
 conjugacy
+geodesically
+submanifold
+surjective
+reparametrization
