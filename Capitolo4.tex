@@ -291,7 +291,7 @@ When $\Lambda$ is the graph of an orientation-preserving homomorphism $\varphi:\
 
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{455}
     Let $\sigma: S\to\A^{2,1}$ be a proper spacelike immersion. Then 
     \begin{itemize}
         \item $\sigma$ is a proper embedding.
@@ -472,14 +472,20 @@ The following is a fundamental result on the structure of globally hyperbolic Ad
 \begin{proposition}\label{holorep}
     Let $M$ be a globally hyperbolic Anti-de Sitter spacetimes of genus $r\geq 1$. Then: 
     \begin{enumerate}
-        \item The developing map $\text{dev}:\widetilde{M}  \to  \A^{2,1}$ is injective. 
+        \item The developing map $\text{dev}:\widetilde{M}  \to  \A^{2,1}$ is injective. \textcolor{red}{is this just the composition of dev with the projection?}
         \item If $\Sigma$ is a Cauchy surface of $M,$ then the image of dev is contained in $\Omega(\Lambda)$, where $\Lambda$ is boundary at infinity of $\text{dev}(\widetilde{\Sigma}).$
         \item If $\rho:\pi_1(M)\to\text{Isom}(\A^{2,1,})$ is the holonomy representation, $\rho(\pi_1(M))$ acts freely and properly discontinuously on $\Omega(\Lambda)$, and $\Omega(\Lambda)$ is a globally hyperbolic spacetime containing $M$. 
     \end{enumerate}
 \end{proposition}
-
 \begin{proof}
-    
+    Let $\widetilde{\text{dev}}:\widetilde{M}\to\AS^{2,1}$ be a lift of dev to the universal cover. By Theorem \ref{442}, the spacetime $M$ admits a foliation by smooth spacelike surfaces $(\Sigma_t)_{t\in\R}$ of genus $r\geq 1,$ such that $\Sigma_t\subset I^+(\Sigma_{t^{\prime}})$ for $t>t^{\prime}$. Let $\widetilde{\Sigma}_t$ the lift of the foliation on $\widetilde{M}$. Since $\Sigma_t$ is closed, the induced metric on $\Sigma_t$ is complete, and so is the induced metric on $\widetilde{\Sigma}_t$. As $\widetilde{\text{dev}}$ is a local isometry, we deduce by Lemma \ref{properembedding} that the restriction of $\widetilde{\text{dev}}$ is a proper embedding. Assume now by contradiction that $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)\cap \widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime}})\neq \emptyset$ for some $t\geq t^{\prime}.$ Then there is a point $x\in \widetilde{\Sigma}_t$ such that $\widetilde{\text{dev}}(x)\in\text{dev}(\widetilde{\Sigma}_t^{\prime}).$ By the assumption $x$ is connected to $\widetilde{\Sigma}_{t^{\prime} }$ by a timelike arc $\eta$ in $\widetilde{M}.$ Then $\widetilde{\text{dev}}(\eta)$ is a timelike arc in $\AS^{2,1}$ with end-points in $\widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime}})$ and this contradicts the achronality of $\widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime} }).$ This shows that $\widetilde{\text{dev}}$ is injective, and moreover we conclude that $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$ is a Cauchy surface of $\widetilde{\text{dev}}(\widetilde{M})$.\\
+    It follows from Proposition \ref{455} that $\widetilde{\text{dev}}(M)\subset \mathcal{D}(\widetilde{\text{dev}}(\widetilde{\Sigma}_t))=\Omega(\widetilde{\Lambda}),$ where $\widetilde{\Lambda}$ is the boundary at infinity of $\widetilde{\text{dev}}(\widetilde{\Sigma}_t),$ and this proves the second point.       
+    Now, the map $\widetilde{\text{dev}}$ is $\widetilde{\rho}-$equivariant, for a representation $\widetilde{\rho}:\pi_1(M)\to\text{Isom}(\AS^{2,1})$ which is a lift of the holonomy of $M$. As $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$ is $\widetilde{\rho}$-invariant, the so are $\widetilde{\Lambda}$ and $\Omega(\widetilde{\Lambda})$. We shall prove that the action of $\pi_1(M)$ on $\Omega(\widetilde{\Lambda})$ given by $\widetilde{\rho}$ is proper. This will also show that the action is free since $\frac{\pi_1}(M)$ is isomorphic to $\pi_1(\Sigma_r)$ and therefore has no torsion. \\
+    For this purpose, let us notice that if $K$ is relatively compact in $\Omega(\widetilde{\Lambda})$ then 
+    \[
+        X_k\coloneqq (I^+(K)\cup I^-(K))\cap \widetilde{\text{dev}}(\widetilde{\Sigma}_t) 
+    \]   
+    is relatively compact as well. As the action of $\pi_1(M)$ on $\widetilde{\Sigma}_t$, and thus on $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$, is proper and $X_{\gamma K}=\gamma(X_K),$ we deduce that the set of $\gamma$ such that $X_{\gamma K}\cap X_K\neq\emptyset$ is finite. On the other hand if $K\cap \gamma K\neq\emptyset$ then $X_K\cap X_{\gamma K}\neq \emptyset.$ We thus conclude that the action is proper. By applying the path lifting property, one sees that the quotient $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)/\pi_1(M)$ is a Cauchy surfaces of $\Omega(\widetilde{\Lambda})/\pi_1(M)$, which is therefore globally hyperbolic. This proves the third point as by Proposition \ref{453} the restriction of the covering map $\AS^{2,1}\to \A^{2,1}$ to $\Omega(\widetilde{\Lambda})\cup \widetilde{\Lambda}$ is injective. 
 \end{proof}
 
 A remarkable difference between Lorentzian and Riemannian geometry is the that in Lorentzian geometry completeness is a very strong assumption, \textcolor{red}{reference} and in fact interesting classification results are obtained removing such condition. However, it is necessary to impose some maximality condition to compensate for non-completeness. Among several  approaches, one of the most common is the classification of a maximal globally hyperbolic spacetimes. Following \cite{bonsanteseppi} we restrict to a less general setting, but one could give similar definitions in the lager class of Einstein spacetimes.
