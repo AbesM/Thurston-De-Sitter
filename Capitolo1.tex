@@ -1,7 +1,7 @@
 \chapter{Lorentzian geometry}
 
-In this first chapter we introduce Lorentzian manifolds of constant curvature and observe that, as in the Riemannian case, two manifolds of constant sectional curvature $K$ are locally isometric. We start by recalling some basic definitions of Lorentzian geometry to set notation. We will then define what we mean by a manifold with maximal isometry group as spaces with such property provide models of manifold with constant curvature: if we have $M$ a Lorentzian manifold with constant sectional curvature $K$ and maximal isometry group, then any Lorentzian manifold with constant sectional curvature $K$ carries a natural (Isom($M$), $M$)-atlas made of local isometries. \\
-Simply connected spaces have maximal isometry group, but in general the converse is false. In particular, in the course of the thesis, we will focus on $K=-1$ and in that case it will be convenient to use non-simply connected models. 
+In this first chapter we introduce Lorentzian manifolds of constant curvature and observe that, as in the Riemannian case, two manifolds of constant sectional curvature $K$ are locally isometric. We start by recalling some basic definitions of Lorentzian geometry to set notation. We will then define what we mean by a manifold with maximal isometry group as spaces with such property provide \textit{models} of manifold with constant curvature: if we have $M$ a Lorentzian manifold with constant sectional curvature $K$ and maximal isometry group, then any Lorentzian manifold with constant sectional curvature $K$ carries a natural (Isom($M$), $M$)-atlas made of local isometries. \\
+Simply connected spaces have maximal isometry group, but in general the converse is false. In particular, in the course of the dissertation, we will focus on $K=-1$ and in that case it will be convenient to use non-simply connected models. 
 
 \subsection{Basic Definitions}
 By a \textit{Lorentzian metric} on a $n+1$ manifold we mean a non degenerate $2$-tensor $g$ of signature $(n,1)$. A \textit{Lorentzian manifold} is a connected manifold $M$ equipped with a Lorentzian metric $g$.\\
@@ -25,7 +25,7 @@ We then say that a Lorentzian manifold has constant sectional curvature $K$ if:
 
 for every pair of vectors $u,v \in T_{x}M$ and every $x\in M$. Even tough the definition is analogous to the one given in the Riemannian realm we recall that in the Lorentzian setting the sectional curvature can be defined only for planes in $T_{x}M$ where $g$ is non-degenerate. The manifold $M$ is said \textit{geodesically complete} if every geodesic is defined for all times, equivalently the exponential map is defined everywhere.\\
 
-\subsection{Maximal isometry group and geodesic completeness} Two Riemannian manifolds $M$ and $N$ of constant curvature $K$ are locally isometric, the same statement holds for Lorentzian manifolds. The proof is analogous to the one in the Riemannian, and it is based on the use of the Cartan-Ambrose-Hicks theorem (the semi-Riemannian case is treated in \cite{piccione2005single}). More precisely we have the following:: 
+\subsection{Maximal isometry group and geodesic completeness} Two Riemannian manifolds $M$ and $N$ of constant curvature $K$ are locally isometric, the same statement holds for Lorentzian manifolds. The proof is analogous to the one in the Riemannian, and it is based on the use of the Cartan-Ambrose-Hicks theorem (the semi-Riemannian case is treated in \cite{piccione2005single}). More precisely we have the following:
 
 \begin{lemma}\label{isometrie} Let $M$ and $N$ be Lorentzian manifolds of constant curvature $K$. Then every linear isometry $L:T_{x}M\to T_yN$ extends to an isometry $f:U\to V$ where $U, V$ are open neighbourhoods of $x, y$ respectively. Any two extensions $f:U\to V$ and $f^{\prime}:U^{\prime} \to V^{\prime} $ of $L$ coincide on $U\cap U^{\prime}. $ Moreover $L$ extends to a local isometry $f:M\to N$ provided that $M$ is simply connected and $N$ is geodesically complete. 
 \end{lemma}
@@ -60,21 +60,21 @@ From Corollary \ref{122}, every simply connected Lorentzian manifold $M$ has max
 
 We conclude these preliminaries on Lorentzian geometry with a result of classification which will be useful in the following and also explains our interest in spaces with maximal isometry group.
 \begin{proposition}\label{classification}
-    Let $M_k$ be a simply connected Lorentzian manifold of constant sectional curvature $K$ with maximal isometry group, and let $M$ be a Lorentzian manifold of constant sectional curvature $K$. Then: 
+    Let $M_K$ be a simply connected Lorentzian manifold of constant sectional curvature $K$ with maximal isometry group, and let $M$ be a Lorentzian manifold of constant sectional curvature $K$. Then: 
     \begin{itemize}
         \item M is geodesically complete if and only if there is a local isometry $p:M_K\to M$ which is a universal covering.
-        \item $M$ has maximal isometry group if and only if $\text(Aut)(p:M_k\to M)$ is normal in Isom($M_k$). 
+        \item $M$ has maximal isometry group if and only if $\text(Aut)(p:M_K\to M)$ is normal in Isom($M_K$). 
     \end{itemize}
 \end{proposition}
 
 \begin{proof}
-    Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\widetilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which by Corollary \ref{122} is isometric to $M_K$. The covering map $p:M_k\to M$ is then a local isometry by construction. The converse is straightforward. \\   
+    Suppose $M$ is geodesically complete, then lifting the metric to the universal cover $\widetilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which by Corollary \ref{122} is isometric to $M_K$. The covering map $p:M_K\to M$ is then a local isometry by construction. The converse is straightforward. \\   
     Now let $\Gamma=\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuously on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\widetilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
     Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\text{Isom}(M_K)$ descends in the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \text{Isom}(M_K)$, which is the same as saying that $\Gamma$ is normal in $\text{Isom}(M_K)$.
 \end{proof}
 
 \begin{observation}
-Since $\Gamma=\text{Aut}(p:M_K\to M)$ is discrete, being normal in $\text{Isom}(M_K)$ implies that elements of $\Gamma$ commute with the elements of the identity components of $\text{Isom}(M_K)$. This remark suggests that there are usually not many Lorentzian manifolds of constant sectional curvature with maximal isometry group.
+Since $\Gamma=\text{Aut}(p:M_K\to M)$ is discrete, being normal in $\text{Isom}(M_K)$ implies that elements of $\Gamma$ commute with the elements of the identity components of $\text{Isom}(M_K)$. This remark suggests that there are usually not many Lorentzian manifolds of constant sectional curvature with maximal isometry group. \textcolor{red}{probabilmente toglierei, abbastanza vaga come affermazione e mai utilizzata di fatto.}
 \end{observation}
 
 Finally, any isometry between connected open subsets of a Lorentzian manifold $M$ with maximal isometry group extends to a global isometry. In particular if $M_K$ is a Lorentzian manifold of constant sectional curvature $K$ with maximal isometry group, then any Lorentzian manifold $M$ of constant sectional curvature $K$ admits a natural $(\text{Isom}(M_K), M_K)$-structure whose charts are isometries between open subsets of $M$ and open subsets of $M_K$. We will refer to Lorentzian manifolds of constant sectional curvature $K$ with maximal isometry group as \textit{models} of constant sectional curvature $K$ (following Klein's terminology).  
