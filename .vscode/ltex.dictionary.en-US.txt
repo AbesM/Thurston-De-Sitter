@@ -23,3 +23,4 @@ geodesically
 submanifold
 surjective
 reparametrization
+injectivity

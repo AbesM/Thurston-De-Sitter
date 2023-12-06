@@ -1,5 +1,5 @@
 \chapter{Anti-de Sitter space in dimension (2+1)}
-We want now to specialize to dimension three Anti-de Sitter geometry as it will be the specific model geometry of the manifolds of our next interest. In this chapter we will highlight the structure of Lie group that $\A^{2,1}$ has in dimension three and we will study its geometry using tools of Lie group theory. Most of the results are just a particular case of the theory developed in the previous chapter, but the Lie structure permits to give a more explicit description of the geometry of the phenomena we are interested in.\\
+We will now restrict our attention to dimension three Anti-de Sitter geometry, as it will be the specific model geometry of the manifolds of our next interest. In this chapter we will highlight the structure of Lie group that $\A^{2,1}$ has in this specific dimension and we will study its geometry using tools of Lie group theory. Most of the results are just a particular case of the theory developed in the previous chapter, but the Lie structure permits to give a more explicit description of the geometry of the phenomena we are interested in.\\
 
 \section{The {PSL}$(2,\R)$ model.} 
 The fundamental observation is the existence of a special model in dimension three which endows Anti-de Sitter space with a Lie group structure. To construct such a model we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$ (the signature is evident when we consider the basis consisting of elementary matrices). The associated bilinear form is expressed by the formula:
@@ -17,7 +17,7 @@ for $A,B\in\mathcal{M}(2,\R)$, where adj denotes the adjugate matrix, namely:
     \end{bmatrix}
 \]
 
-hence there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie group $\text{SL}(2,\R).$\\
+hence, via Sylvester's theorem, there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie group $\text{SL}(2,\R).$\\
 Let us observe that $\text{SL}(2,\R)\times \text{SL}(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
 $$(A,B)\cdot X=AXB^{-1}.$$
 
@@ -65,12 +65,12 @@ which in turn induces the well-known isomorphism:
 \] which is nothing but the restriction of the isomorphism of Equation \ref{isomiso} to the stabilizer of the identity in the left-hand side $\text{Isom}(\A^{2,1}),$ and to the diagonal subgroup $\Delta$ in the right-hand side $\PSL\times\PSL.$
 \end{observation}
 
-\section{The boundary of $\PSL$)} 
+\section{The boundary of $\PSL$} 
 From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\PSL$, namely $\text{P}(\mathcal{M}(2,\R))$, the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
 \[
     \partial\A^{2,1}=\{[X]\in\text{P}(\mathcal{M}(2,\R))|\;\text{rank}(X)=1\}
 \]
-We endow $\overline{\A^{2,1}}=\A^{2,1}\cup\partial\A^{2,1}$ with the topology induced by seeing both as subsets of the real projective space $\text{P}(\mathcal{M}(2,\R)).$ We want to observe that we have the following homeomorphism: 
+We endow $\overline{\A^{2,1}}\coloneqq \A^{2,1}\cup\partial\A^{2,1}$ with the topology induced by seeing both as subsets of the real projective space $\text{P}(\mathcal{M}(2,\R)).$ We want to observe that we have the following homeomorphism: 
 \begin{align*}\label{delta}
     \delta:\partial\A^{2,1}&\rightarrow\R\text{P}^1\times\R\text{P}^1\\
     [X]&\mapsto (\text{Im}(X),\text{Ker}(X))
@@ -88,7 +88,7 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
 \end{proof}
 
 
-Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ and $\PSL$ is identified to $\text{Isom}_0(\H^2$.) In this key we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
+Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ and $\PSL$ is identified to $\text{Isom}_0(\H^2$). From this perspective we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
 
 \begin{lemma}\label{convergenza}
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
@@ -118,8 +118,8 @@ Our interest in $\partial\A^{2,1}$ is mainly justified by the following: when we
 \end{equation}
 We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified with $\T$ via $\delta$.
 
-\section{Geodesic in $\PSL$.} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory. In particular we recall the following: 
-\begin{lemma}\label{331}[Per più informazioni \cite{bonsanteseppi}]
+\section{Geodesic in $\PSL$} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory. In particular we recall the following (the necessary tool in Lie groups theory are introduced in \cite{bonsanteseppi}): 
+\begin{lemma}\label{331}
     Given left-invariant vector fields $V$ and $W$ on $G$, the Levi-Civita connection of a bi-invariant metric has the expression: 
     \[
         \nabla_VW=\frac{1}{2}[V,W].
@@ -183,7 +183,7 @@ When looking for a complete description of timelike geodesics it suffices to let
     \[
         L_{p,q}=\{X\in\PSL\;|\;X\cdot q=p\}
     \]
-    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $p^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique since the identity is the only isometry of $\H^2$ fixing two different points. This gives rise to a contradiction and concludes.  
+    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $p^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique since the identity is the only isometry of $\H^2$ fixing two different points. This gives rise to a contradiction and concludes.  \textcolor{red}{correggere la dimostrazione}
 \end{proof}
 
 \subsection{Spacelike geodesics}
@@ -196,15 +196,15 @@ where $\ell$ and $\jmath$ denote oriented geodesic of $\H^2$. We want to emphasi
     There is a homeomorphism between the space of (unparametrized) oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial\H^2\times\partial\H^2\setminus\Delta,$ the space of oriented geodesics of $\H^2$. The homeomorphism is equivariant for the action of $\text{Isom}_0(\A^{2,1})\simeq\PSL\times\PSL$.
 \end{proposition}
 
-However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath}$ where with $\ell^{\prime} $ with denote $\ell$ endowed with the opposite orientation.\todo{diverso da survey, controllare, qua qualcosa non torna, vedi anche l'esempio successivo}\\
+However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath^{\prime}}$ where with $\ell^{\prime} $ with denote $\ell$ endowed with the opposite orientation.\\
 Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic, which we define using the projectivity duality between points and planes discussed in \ref{polarsec}: 
 \begin{definition}
     Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to point of $L_{\ell,\jmath}.$  
 \end{definition}
 
 The construction of the dual geodesic is involutive, let's see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
-We can explicitely describe the points at infinity in $\partial\A^{2,1}$ of these geodesic. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
-Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and it's dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
+We can explicitly describe the points at infinity in $\partial\A^{2,1}$ of these geodesic. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
+Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and is dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
 The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
 \begin{proposition}
     Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
@@ -247,7 +247,7 @@ The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows.
 \begin{equation}\label{refspa}
     \mathcal{I}\to\mathcal{I}\eta
 \end{equation}
-from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. It's image it precisely $P_\eta.$ As seen in the proof of \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined in Equation \refeq{refspa} is the entire plane $P_\eta$.\\  
+from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. Its image it precisely $P_\eta.$ As seen in the proof of \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined in Equation \refeq{refspa} is the entire plane $P_\eta$.\\  
 In similar fashion to the spacelike case, using the transitivity of the group of isometries on timelike planes, every timelike planes is of the form above. We can show the following: 
 \begin{lemma}\label{33}
     Every timelike totally geodesic plane of $\A^{2,1}$ is of the form $P_\eta$ for some orientation-reversing isometry $\eta\in\PSL,$ and 
