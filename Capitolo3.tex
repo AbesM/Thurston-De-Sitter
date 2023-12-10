@@ -8,10 +8,10 @@ The fundamental observation is the existence of a special model in dimension thr
 \end{equation}
 for $A,B\in\mathcal{M}(2,\R)$, where adj denotes the adjugate matrix, namely: 
 \[
-    \text{adj}(\begin{bmatrix}
+    \text{adj}\Big(\begin{bmatrix}
         a & b \\
         c & d
-    \end{bmatrix}) = \begin{bmatrix}
+    \end{bmatrix}\Big) = \begin{bmatrix}
         d & -b \\
         -c & a
     \end{bmatrix}
@@ -30,9 +30,9 @@ Since the center of $\text{SL}(2,\R)$ is $\{\pm \text{Id}\},$ the kernel of $\rh
     \text{Isom}_0(\H^{2,1})=\text{SO}_0(\mathcal{M}(2,\R),q)\simeq (\text{SL}(2,\R)\times \text{SL}(2,\R))/K
 \]
     
-Using this model, one has natural identification between $\A^{n,1}$ and the Lie group $\PSL$, in such a way that: 
+Using this model, one has a natural identification between $\A^{2,1}$ and the Lie group $\PSL$, in such a way that: 
 \begin{equation}\label{isomiso}
-    \text{Isom}_0(\A^{n,1})\simeq \PSL\times\PSL
+    \text{Isom}_0(\A^{2,1})\simeq \PSL\times\PSL
 \end{equation}
     
 acting by left and right multiplication on $\PSL$.\\ We are mostly interested in orientation-preserving and time-preserving notions that do not depend on a chosen orientation, nevertheless we will fix here an orientation and a time-orientation of $\A^{2,1}\simeq\PSL.$ As we are dealing with a Lie group it is sufficient to define on orientation of the Lie algebra, namely the tangent at the identity Id. We declare as (positive) oriented basis of $\mathfrak{sl}(2,\R):$ 
@@ -51,7 +51,7 @@ U=\begin{pmatrix}
 
 The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ fixing $i\in\H^2$, parametrized by the angle of clockwise rotation; $V,W$ are vectors tangent to the one-parameter groups of loxodromic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is future-pointing timelike vector. \\
 
-The stabilizer of the identity in Isom$_0(\A^{n,1})$ is the diagonal subgroup $\Delta<\PSL\times\PSL$. Under the obvious identification of $\PSL$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\PSL$ is the adjoint action of $\PSL$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
+The stabilizer of the identity in Isom$_0(\A^{2,1})$ is the diagonal subgroup $\Delta<\PSL\times\PSL$. Under the obvious identification of $\PSL$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\PSL$ is the adjoint action of $\PSL$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
 
 \begin{observation}\label{311}
     The Lie algebra $\mathfrak{sl}(2,\R)$ equipped with the quadratic form $q_{\text{Id}}$ is then a copy of the 3-dimensional Minkowski space, hence the adjoint action yields a representation 
@@ -66,9 +66,9 @@ which in turn induces the well-known isomorphism:
 \end{observation}
 
 \section{The boundary of $\PSL$} 
-From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\PSL$, namely $\text{P}(\mathcal{M}(2,\R))$, the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
+From the aforementioned identification we obtain a new one between $\partial\A^{2,1}$ with the boundary of $\PSL$, inside $\text{P}(\mathcal{M}(2,\R))$ as the projectivization of the cone of rank 1 matrices. Therefore from now on we shall consider 
 \[
-    \partial\A^{2,1}=\{[X]\in\text{P}(\mathcal{M}(2,\R))|\;\text{rank}(X)=1\}
+    \partial\A^{2,1}=\{[X]\in\text{P}(\mathcal{M}(2,\R))|\;\text{rank}(X)=1\}.
 \]
 We endow $\overline{\A^{2,1}}\coloneqq \A^{2,1}\cup\partial\A^{2,1}$ with the topology induced by seeing both as subsets of the real projective space $\text{P}(\mathcal{M}(2,\R)).$ We want to observe that we have the following homeomorphism: 
 \begin{align*}\label{delta}
@@ -83,8 +83,8 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
     The inversion map $\iota[X]=[X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
 \end{lemma}
 \begin{proof}
-    It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\
-    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now is $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
+    \todo{intendono dire che $\iota[(A,B)(X)]=(\varphi(A,B))[\iota(X)]$} It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\ 
+    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now if $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
 \end{proof}
 
 
@@ -94,15 +94,15 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts on $\H^2$ via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
+    $\PSL$ acts transitively on $\H^2$ via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof}
 
-In dimension three $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
+In dimension three, $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
 \begin{equation}\label{ruling}
         \lambda_{y_0}\coloneqq\{(x,y_0)|x\in\R\text{P}^1\}
 \end{equation}
 
-describe a projective line in $\R\text{P}^3$ which is contained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1},$ as seen in Remark \ref{222}. In fact $\lambda_{y_0}$ is the orbit of $(x_0,y_0)$ by the action of $\PSL\times\{\text{Id}\},$ or by the (now free) action of $\text{PSO}(2,\R)\times\{\text{Id}\}.$ Here $\text{PSO}(2,\R)$ corresponds to a 1-parameter elliptic subgroup in $\PSL$. In short: 
+describes a projective line in $\R\text{P}^3$ which is contained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1},$ as seen in Remark \ref{222}. In fact $\lambda_{y_0}$ is the orbit of $(x_0,y_0)$ by the action of $\PSL\times\{\text{Id}\},$ or by the (now free) action of $\text{PSO}(2,\R)\times\{\text{Id}\}.$ Here $\text{PSO}(2,\R)$ corresponds to a 1-parameter elliptic subgroup in $\PSL$. In short: 
 \[
     \lambda_{y_0}=\PSL\cdot(x_0,y_0)=\text{PSO}(2,\R)\cdot(x_0,y_0).
 \]
@@ -118,7 +118,7 @@ Our interest in $\partial\A^{2,1}$ is mainly justified by the following: when we
 \end{equation}
 We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified with $\T$ via $\delta$.
 
-\section{Geodesic in $\PSL$} We have already seen geodesic in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory. In particular we recall the following (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}): 
+\section{Geodesic in $\PSL$} We have already seen geodesics in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie Group theory. In particular we recall the following (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}): 
 \begin{lemma}\label{331}
     Given left-invariant vector fields $V$ and $W$ on $G$, the Levi-Civita connection of a bi-invariant metric has the expression: 
     \[
@@ -130,10 +130,10 @@ We remark one last time that we will consider $\partial\A^{2,1}$ as always impli
 
 
 
-We would like to start by considering geodesic through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguish geodesics by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
+We would like to start by considering geodesics through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. In short, this means that we shall distinguish geodesics by their type (timelike, spacelike, lightlike) and those will be equivalent under this action. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
 
 \begin{itemize}
-    \item Timelike geodesic are, up to conjugacy, of the form: 
+    \item Timelike geodesics are, up to conjugacy, of the form: 
     \[
     \begin{bmatrix}
     \cos(t) & -\sin(t) \\
@@ -148,7 +148,7 @@ namely, under the identification of $\PSL$ with $\text{Isom}(\H^2)$, they are el
     \end{bmatrix}.
     \]
 These are closed geodesics, parametrized by arclenght, of total length $\pi$. 
-\item Spacelike geodesic are, again up to conjugacy, of the form: 
+\item Spacelike geodesics are, again up to conjugacy, of the form: 
 \[
     \begin{bmatrix}
     \cosh(t) & \sinh(t) \\
@@ -162,7 +162,7 @@ with initial velocity:
     \end{bmatrix}.
 \]
 In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in the particular case, $\pm 1$). 
-\item Finally, lightlike geodesic are the parabolic one-parameter groups conjugate to: 
+\item Finally, lightlike geodesics are the parabolic one-parameter groups conjugate to: 
 \[
     \begin{bmatrix}
         1 & t \\
@@ -173,7 +173,7 @@ whose initial vector has indeed zero length.
 \end{itemize}
 
 \subsection{Timelike geodesics}
-When looking for a complete description of timelike geodesics it suffices to let (the identity component of) the isometry group of $\A^{2,1}$ (namely $\PSL\times\PSL)$ act on $\PSL$ via left and right multiplication. In particular, we can describe the whole space of timelike geodesic of $\A^{2,1}$ as follows: 
+When looking for a complete description of timelike geodesics it suffices to let (the identity component of) the isometry group of $\A^{2,1}$ (namely $\PSL\times\PSL)$ act on $\PSL$ via left and right multiplication. In particular, we can describe the whole space of timelike geodesics of $\A^{2,1}$ as follows: 
 
 \begin{proposition}\label{352}
     There is a homeomorphism between the space of (unparametrized) timelike geodesics of $\A^{2,1}$ and $\H^2\times\H^2$. The homomorphism is equivariant for the action of $\text{Isom}_{0} (\A^{2,1})\simeq \PSL\times\PSL$.
@@ -183,31 +183,31 @@ When looking for a complete description of timelike geodesics it suffices to let
     \[
         L_{p,q}=\{X\in\PSL\;|\;X\cdot q=p\}
     \]
-    By the previous discussion, geodesic through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized geodesic and that all the unparameterized geodesic are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry $X_1$ of $\H^2$ sending $p$ to $q$ and $p^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique. Suppose the existence of an $X_2\neq X_1$ isometry of $\H^2$ with the same property, then $X_2^{-1}\circ X_1$ fixes $p,p^{\prime}$, an absurd since the identity is the only isometry of $\H^2$ fixing two different points.
+    By the previous discussion, timelike geodesics through the identity are precisely of the form $L_{p,p}$ for some $p\in\H^2.$ The map $(p,q)\mapsto L_{p,q}$ is equivariant for the natural actions of $\PSL\times \PSL$, namely $(A,B)\cdot L_{p,q}=L_{A\cdot p,B\cdot q},$ which also implies that $L_{p,q}$ is an unparameterized timelike geodesic and that all the unparameterized timelike geodesics are of this form, namely the map we defined is surjective. It remains to show injectivity; if $L_{p,q}=L_{p^{\prime} ,q^{\prime} }$ for $(p,q)\neq(p^{\prime},q^{\prime} )$ then in particular there exists an isometry $X_1$ of $\H^2$ sending $p$ to $q$ and $p^{\prime} $ to $q^{\prime}$, but such an isometry is necessarily unique. Suppose the existence of an $X_2\neq X_1$ isometry of $\H^2$ with the same property, then $X_2^{-1}\circ X_1$ fixes $p,p^{\prime}$, an absurd since the identity is the only isometry of $\H^2$ fixing two different points.
 \end{proof}
 
 \subsection{Spacelike geodesics}
-Let us consider $\ell$ an oriented geodesic of the hyperbolic plane $\H^2$. From what we have already discussed the one-parameter group of loxodromic transformation fixing $\ell$ as an \textit{oriented} geodesic constitutes a spacelike geodesic through the origin. By an argument analogous to the one given in Proposition \ref{352}, relying on the equivariance of the construction by the actions of $\PSL\times\PSL$, one proves that every spacelike geodesic is of the form: 
+Let us consider $\ell$ an oriented geodesics of the hyperbolic plane $\H^2$. From what we have already discussed the one-parameter group of loxodromic transformation fixing $\ell$ as an \textit{oriented} geodesic constitutes a spacelike geodesic through the origin. By an argument analogous to the one given in Proposition \ref{352}, relying on the equivariance of the construction by the actions of $\PSL\times\PSL$, one proves that every spacelike geodesic is of the form: 
 \[
     L_{\ell,\jmath}=\{X\in\PSL\;|\;X\cdot\jmath=\ell\;\text{as oriented geodesics}\},
 \]
-where $\ell$ and $\jmath$ denote oriented geodesic of $\H^2$. We want to emphasize that every (unparameterized, unoriented) spacelike geodesic can be expressed in the above form in two ways, as we could change the orientation of both $\ell$ and $\jmath$. Rephrasing we can state: 
+where $\ell$ and $\jmath$ denote oriented geodesics of $\H^2$. We want to emphasize that every (unparameterized, unoriented) spacelike geodesic can be expressed in the above form in two ways, as we could change the orientation of both $\ell$ and $\jmath$. Rephrasing we can state: 
 \begin{proposition}\label{353}
     There is a homeomorphism between the space of (unparametrized) oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial\H^2\times\partial\H^2\setminus\Delta,$ the space of oriented geodesics of $\H^2$. The homeomorphism is equivariant for the action of $\text{Isom}_0(\A^{2,1})\simeq\PSL\times\PSL$.
 \end{proposition}
 
-However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath^{\prime}}$ where with $\ell^{\prime} $ with denote $\ell$ endowed with the opposite orientation.\\
-Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic, which we define using the projectivity duality between points and planes discussed in \ref{polarsec}: 
+However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath^{\prime}}$ where with $\ell^{\prime} $ we denote $\ell$ endowed with the opposite orientation.\\
+Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic, which we define using the projectivity duality between points and planes discussed in section \ref{polarsec}: 
 \begin{definition}
-    Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to point of $L_{\ell,\jmath}.$  
+    Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to points of $L_{\ell,\jmath}.$  
 \end{definition}
 
-The construction of the dual geodesic is involutive, let's see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
-We can explicitly describe the points at infinity in $\partial\A^{2,1}$ of these geodesic. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
-Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and is dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
+The construction of the dual geodesic is involutive, let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
+We can explicitly describe the points at infinity in $\partial\A^{2,1}$ of these geodesics. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
+Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and its dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
 The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
 \begin{proposition}
-    Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
+    Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath^{\prime}}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
 \end{proposition}
 
 
