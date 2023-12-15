@@ -94,7 +94,7 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts transitively on $\H^2$ via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one check immediately that $X(p)$ in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
+    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof}
 
 In dimension three, $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
@@ -161,7 +161,7 @@ with initial velocity:
         1 & 0
     \end{bmatrix}.
 \]
-In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in the particular case, $\pm 1$). 
+In the hyperbolic settings, these are loxodromic one-parameter groups, fixing two points in the boundary of $\H^2$ (in this particular case, $\pm 1$). 
 \item Finally, lightlike geodesics are the parabolic one-parameter groups conjugate to: 
 \[
     \begin{bmatrix}
@@ -202,7 +202,26 @@ Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike
     Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to points of $L_{\ell,\jmath}.$  
 \end{definition}
 
-The construction of the dual geodesic is involutive, let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
+The construction of the dual geodesic is an involution, let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. To see this we can suppose (as a consequence of the transitivity of the action of $\PSL$ on geodesic of $\H^2$ ) that $\ell$ is the imaginary axes. In this case $L_{\ell,\ell}=\{M_k|k\in\R\}$ where \[
+    M_k=\begin{bmatrix}
+        e^{-k/2} & 0 \\
+        0 & e^{k/2} \\
+    \end{bmatrix}.
+    \]
+It follows from \refeq{geoplanes} that $X\in P_{[M_k]}$ if and only if $\langle X, M_k\rangle=0$, which given a generic matrix
+\[
+    X=\begin{bmatrix}
+        a & b \\
+
+        c & d
+        \end{bmatrix}
+\]
+
+can be restated as the condition \begin{equation}\label{ellittichine} 
+    ae^{\frac{k}{2}}+de^{\frac{-k}{2}}=0.
+\end{equation}
+As we are asking that Equation \refeq{ellittichine} holds for every $k$ it must be $a=d=0$, hence $X$ (seen as a Möbius transformation) is of the form $X(z)=-\frac{b^2}{z}$ an elliptic transformation of order two with fixed point $ib\in \H^2$.\\
+In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
 We can explicitly describe the points at infinity in $\partial\A^{2,1}$ of these geodesics. Using Lemma \ref{convergenza}, if $x$ and $y$ are the endpoints at infinity of $\ell$ in $\partial\H^2,$ then any sequence diverging towards an end of $L_{\ell,\ell^{\prime}}\subset \PSL$ maps an interior point towards $x$, and the sequence of inverses towards $y$ (up to switching the two points). In other words, under the identification given by $\delta$ between $\partial\A^{2,1}\simeq\T$, the endpoints of $L_{\ell,\ell}$ are $(x,y)$ and $(y,x)$. A similar argument applied to the geodesic $L_{\ell,\ell^{\prime} },$ which consists of order-two elliptic isometries with fixed point in $\ell$ shows that its endpoints are $(x,x)$ and $(y,y).$\\
 Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and its dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
 The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
