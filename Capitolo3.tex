@@ -94,7 +94,11 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X).$ The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
+    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively \todo{controllare se funziona} to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: let $X_n$ be the divergent sequence, then for any convergent sequence $v_n \in \mathbb{C}$ that does not accumulate on $\ker X$ we have that the limit of $X_n v_n$ is a non zero vector in $\text{Im}X$, so that 
+    \[
+        [X_n][v_n]=[X_n v_n]\rightarrow\text{Im}X\in\S.
+    \]    Using this fact we have that $[A_n]\rightarrow (x,y)$ if and only if $[A_n]z\rightarrow x$ for $z\in\overline{\H^2}\setminus\{y\}$ and the convergence is uniform on compact subsets of $\overline{\H}^2\setminus\{y\}.$ \\
+    The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof}
 
 In dimension three, $\partial\A^{2,1}$ is a doubly ruled quadric, which in an affine chart looks like \textcolor{red}{inserire cono}. We shall describe such rulings in a more geometric way. Given any $(x_0,y_0)\in\partial\A^{2,1}$, 
@@ -202,7 +206,7 @@ Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike
     Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to points of $L_{\ell,\jmath}.$  
 \end{definition}
 
-The construction of the dual geodesic is an involution, let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. To see this we can suppose (as a consequence of the transitivity of the action of $\PSL$ on geodesic of $\H^2$ ) that $\ell$ is the imaginary axes. In this case $L_{\ell,\ell}=\{M_k|k\in\R\}$ where \[
+The construction of the dual geodesic is an involution, let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$, it can be checked that the dual geodesic consists of all elliptic order-two elements (hence contained in $P_{\text{Id}}$, as we could expect from the definition) whose fixed point lies in $\ell$. To see this we can suppose (as a consequence of the transitivity of the action of $\PSL$ on geodesic of $\H^2$ ) that $\ell$ is the imaginary axis. In this case $L_{\ell,\ell}=\{M_k|k\in\R\}$ where \[
     M_k=\begin{bmatrix}
         e^{-k/2} & 0 \\
         0 & e^{k/2} \\
