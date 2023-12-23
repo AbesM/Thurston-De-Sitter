@@ -83,7 +83,7 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
     The inversion map $\iota[X]=[X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y)\to(y,x)$ on the boundary $\partial\A^{2,1}.$
 \end{lemma}
 \begin{proof}
-    \todo{intendono dire che $\iota[(A,B)(X)]=(\varphi(A,B))[\iota(X)]$} It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\ 
+    It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors, more explicitly we have that for every $A,B\in\PSL$ the following holds: $\iota[(A,B)X]=(\varphi(A,B))[\iota X]=BX^{-1}A^{-1}$. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\ 
     The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now if $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
 \end{proof}
 
@@ -94,10 +94,12 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively \todo{controllare se funziona} to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: let $X_n$ be the divergent sequence, then for any convergent sequence $v_n \in \mathbb{C}$ that does not accumulate on $\ker X$ we have that the limit of $X_n v_n$ is a non zero vector in $\text{Im}X$, so that 
-    \[
-        [X_n][v_n]=[X_n v_n]\rightarrow\text{Im}X\in\S.
-    \]    Using this fact we have that $[A_n]\rightarrow (x,y)$ if and only if $[A_n]z\rightarrow x$ for $z\in\overline{\H^2}\setminus\{y\}$ and the convergence is uniform on compact subsets of $\overline{\H}^2\setminus\{y\}.$ \\
+    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: by acting via conjugation we can suppose the matrices in canonical form, let us distinguish the three cases. If $X_n$ are loxodromic they converge projectively to $X=\begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix} \\$ in the projective chart $i$ is represented with the vector $[1,0]$ hence we have the thesis. If $X_n$ are parabolic, they converge to $X=\begin{bmatrix}
+        1 & 0 \\
+        0 & 1 \end{bmatrix}$ and the thesis follows analogously. Finally if $X_n$ are elliptic, they converge to $X=\begin{bmatrix} \end{bmatrix}$
     The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof}
 
@@ -222,7 +224,7 @@ It follows from \refeq{geoplanes} that $X\in P_{[M_k]}$ if and only if $\langle 
 \]
 
 can be restated as the condition \begin{equation}\label{ellittichine} 
-    ae^{\frac{k}{2}}+de^{\frac{-k}{2}}=0.
+    ae^{\frac{k}{2}}+de^{-\frac{k}{2}}=0.
 \end{equation}
 As we are asking that Equation \refeq{ellittichine} holds for every $k$ it must be $a=d=0$, hence $X$ (seen as a Möbius transformation) is of the form $X(z)=-\frac{b^2}{z}$ an elliptic transformation of order two with fixed point $ib\in \H^2$.\\
 In other words, the dual spacelike geodesic of $L_{\ell,\ell}$ is $L_{\ell,\ell^{\prime}}.$\\
@@ -230,7 +232,7 @@ We can explicitly describe the points at infinity in $\partial\A^{2,1}$ of these
 Recall the description of the left and right rulings of $\partial\A^{2,1}$ given in \refeq{ruling}, we can conclude that the endpoints of a spacelike geodesic and its dual are mutually connected by lightlike segments in $\partial\A^{2,1}$. \textcolor{red}{Qua andrebbero inserite figure per referenza.}\\
 The naturality of the above construction with respect of the action of $\PSL\times\PSL$ let us state: 
 \begin{proposition}
-    Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath^{\prime}}$ and has endpoints $(x_1,x_2)$ and $y_1,y_2.$
+    Given a spacelike geodesic $L_{\ell,\jmath}$ of $\A^{2,1}$, its endpoints in $\partial \A^{2.1}$ are $(x_1,y_2)$ and $(y_1,x_2)$, where $x_1$ and $y_1$ are the final and initial endpoints of $\ell$ in $\partial\H^2$, and $x_2$ and $y_2$ are the final and initial endpoints of $\jmath$. The dual geodesic is $L_{\ell,\jmath^{\prime}}$ and has endpoints $(x_1,x_2)$ and $(y_1,y_2).$
 \end{proposition}
 
 

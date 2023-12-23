@@ -1,4 +1,4 @@
-\chapter{Mess' Work, causality and convexity in AdS geometry}
+\chapter{Mess' Work}
 
 In his 1990 paper “Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess' ideas, with a special attention to AdS geometry. Our treatment will follow the setting introduced by Bonsante and Seppi in \cite{bonsanteseppi}. We will give definitions of general Lorentzian sets such as \textit{achronal subsets, invisible domains, domains of dependence} and how they relate to the graphs of circle homeomorphisms (and their convex hull) in our specialized Anti-de Sitter setting. We will show that those graphs are \textit{proper achronal sets} in the projective model and always lift to achronal sets in the Poincaré model.
 
@@ -17,7 +17,7 @@ Since acausality and achronality are conformally invariant notions, it will be o
      \begin{equation}\label{soloqua}
         |f(x)-f(y)|\leq d_{\mathbb{S}^2}(x,y)
      \end{equation}
-     where $d_{\mathbb{S}^2}$ is the distance induced by the hemispherical metric. By the same reasoning we show that a 1-Lipschitz graph over $\D$ is achronal. Moreover two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $d_{\mathbb{S}^2}(x,y)=|t-s|$. Hence $X$ is acausal if and only if the inequality \refeq{soloqua} is strict. \
+     where $d_{\mathbb{S}^2}$ is the distance induced by the hemispherical metric. By the same reasoning we show that a 1-Lipschitz graph over $\D$ is achronal. Moreover two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $d_{\mathbb{S}^2}(x,y)=|t-s|$. Hence $X$ is acausal if and only if the inequality of Equation \refeq{soloqua} is strict. \
 \end{proof}
 
 Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the boundary of $D$. As a simple consequence of the previous lemma, we thus have: 
@@ -26,7 +26,7 @@ Now a 1-Lipschitz function on a region $D\subset \D$ extends uniquely to the bou
     An achronal subset $X$ in $\AS^{2,1}$ is properly embedded if and only if it is a global graph over $\D$, and in this case it extends uniquely to the global graph of a 1-Lipschitz function over $\D\cup\partial\D$.
 \end{lemma}
 
-Because of Lemma \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined in a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acausality are global conditions. 
+Because of Lemma \ref{achronalgraph} we will often refer to an \textit{achronal surface} as an achronal subset $X\subset\AS^{2,1}$ which is the graph of a 1-Lipschitz function defined on a domain in $\D.$ Before moving over to the study of properties we shall remark how achronality and acausality are global conditions. 
 
 \begin{definition} Given a surface $S$ and a Lorentzian manifold $(M,g),$ a $\mathcal{C}^1$ immersion $\sigma:S\to M$ is \textit{spacelike} if the pull-back metric $\sigma^*g$ is Riemannian. If $\sigma$ is an embedding, we refer to its image as a \textit{spacelike surface}.
 \end{definition}
@@ -58,7 +58,7 @@ We have remarked in Theorem \ref{ConformalMetric} that unparametrized lightlike 
 Invisible domains were not treated in the original work of Mess but were later introduced in the literature by Barbot in \cite{barbot2008causal}. We give general definition and properties for a generic $X$ subset of $\AS^{2,1}\cup\partial  \AS^{2,1}$ and then we will focus on $X$ entirely contained in the boundary. 
 
 \begin{definition}
-    Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset, that we will denote by $\Omega(X),$ of $\AS^{2,1}\setminus X$ defined as the set of points which are not connected to $X$ by no causal path.   
+    Given an achronal domain $X$ in $\AS^{2,1}\cup\partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset, that we will denote by $\Omega(X),$ of $\AS^{2,1}\cup\partial\AS^{2,1}$ defined as the set of points which are connected to $X$ by no causal path.   
 \end{definition}
 
 We recall that any 1-Lipschitz function on a subset of a metric space admits a $1-$Lipschitz extension everywhere (Mc Shane's theorem \cite{mcshane1934extension}). In our setting this allows us show that any achronal set $X$ is a subset of a properly embedded achronal surface.\\

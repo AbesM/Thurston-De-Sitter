@@ -32,7 +32,7 @@ We observe that such a condition is independent of the order in which we choose 
 \begin{observation} The earthquake $E$ is not required to be (and in fact in some case will not be) continuous. For instance this happens when the lamination $\lambda$ is finite, meaning that $\lambda$ is a collection of a finite number of geodesics. 
 \end{observation}
 
-Let's consider a first basic example: 
+Let us consider a first basic example: 
 
 \begin{example}\label{simplequake}
 The map 
@@ -52,7 +52,7 @@ is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamina
 Such a map is clearly not continuous along $\ell$.
 Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
 \[
-    \begin{cases}
+    \overline{E}(z)=\begin{cases}
         E(z), &\text{ if z }\in \H^2\\
         \varphi(z), &\text{ if z}\in \partial\H^2  ;\\
         
@@ -61,13 +61,13 @@ Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extend
 is continuous in any point in $\partial\H^2.$\\
 Then Thurston proved the following (in some sense \textit{dual}) theorem, that he called \textit{``geology is transitive"}:
 
-\begin{theorem}[``Geology is transitive"]
+\begin{theorem}[``Geology is transitive"]\label{earttheorem}
     Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
 \end{theorem}
 \end{example}
 
-We would like to give a different proof of the statement using the tools of Anti-de Sitter geometry developed in the previous chapters. More in detail, the key observation that we will use is due to Mess's work \cite{Mess}, that highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}\CF$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see Proposition \ref{466} and Remark \ref{467}.\\
-Let's be more precise about the detail of what is going on. Left and right projections from $\partial_+\CF$ to $\H^2$ are (right and left respectively) earthquake maps with image a straight convex set, and the earthquake \textcolor{blue}{measured} lamination coincide with the bending measured lamination. We can consider now the composition $\Pi_r\circ\Pi_l^{-1},$ that is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake measured lamination is identified to the bending measured lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
+We would like to give a different proof of the statement of Theorem \ref{earttheorem} using the tools of Anti-de Sitter geometry developed in the previous chapters. More in detail, the key observation that we will use is due to Mess' work \cite{Mess}, that highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}\CF$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see Proposition \ref{466} and Remark \ref{467}.\\
+Let us be more precise about the detail of what is going on. Left and right projections from $\partial_+\CF$ to $\H^2$ are (right and left respectively) earthquake maps with image a straight convex set, and the earthquake \textcolor{blue}{measured} lamination coincide with the bending measured lamination. We can consider now the composition $\Pi_r\circ\Pi_l^{-1},$ that is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake measured lamination is identified to the bending measured lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
 Now, when the curve $\Lambda$ is the graph of an orientation-preserving homeomorphism of $\S$, one obtains as a result earthquakes maps of $\H^2$. When moreover $\varphi$ is the homeomorphism which conjugates left and right representations $\rho_l,\rho_r:\pi_1(\Sigma)\to\PSL$ of the holonomy of a MGH Cauchy compact manifold, the naturality of the construction implies that the earthquake map descends to an earthquake map from the left to the right hyperbolic surfaces, namely $\H^2/\rho_l(\pi_1(\Sigma))$ and $\H^2/\rho_r(\pi_1(\Sigma))$.\\
 Given the previous discussion, we can now start with the details.
 
@@ -135,13 +135,12 @@ Given the previous discussion, we can now start with the details.
 % The definition is well-posed because lines and planes are well-defined in projective space, hence the change of coordinates from an affine chart to another preserves convex sets. Because of this when referring to convexity notion in the following, we will implicitly assume that we have chosen a spacelike affine chart $\mathcal{A}_\gamma$ that contains $\text{graph}(f)$.
 
 \section{Earthquake Theorem}\label{quakesection}
-We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle, and by $\Lambda_\varphi$ we denote its graph as a subset of $\T$. We recall that with the notation of the previous chapter, $\Lambda_\varphi$ is a properly achronal meridian. By means of the Gauss map we had defined left and right projections; 
+We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle, and by $\Lambda_\varphi$ we denote its graph as a subset of $\T$. We recall that with the notation of the previous chapter, $\Lambda_\varphi$ is a properly achronal meridian. By means of the Gauss map we had defined left and right projections for $\mathcal{C}^1$ embeddings; 
 
 \[
-    \Pi_l^{\pm:}\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^{\pm:}\partial_\pm\CF\to\H^2
+    \Pi_l^{\pm:}\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^{\pm:}\partial_\pm\CF\to\H^2.
 \]
-
-now we would like to extend the Gauss map even when we have weaker regularity condition. Consider a point $p \in \partial_\pm\CF$ and let $P$ be a support plane of $\CF$ at $p$. By Proposition \ref{supportinho} the support plane is necessarily spacelike, hence of the form $P=P_\gamma$ for some $\gamma\in\PSL$. What happens when $\partial_\pm\CF$ is not $C^1$ at $p$ is that we do not have a unique support plane. Hence we \textit{choose} a support plane $P_\gamma$ at $p$, requiring that the choice of support planes is made so that the support plane is constant on any connected component of the subset of $\partial_\pm\CF$ consisting of those points that admit more than one support plane. The definition of the Gauss map then \textit{depends} on the choice of $P_\gamma$ (see Corollary \ref{multipleplanes} for more details on how the choice influences the map). Once we have chosen the support planes we can just follow \textit{verbatim} the construction of the Gauss map (in what follow we will consider it as given by the construction described in Remark \ref{DiafGauss})
+Now we would like to extend the Gauss map even when we have weaker regularity condition. Consider a point $p \in \partial_\pm\CF$ and let $P$ be a support plane of $\CF$ at $p$. By Proposition \ref{supportinho} the support plane is necessarily spacelike, hence of the form $P=P_\gamma$ for some $\gamma\in\PSL$. What happens when $\partial_\pm\CF$ is not $C^1$ at $p$ is that we do not have a unique support plane. Hence we \textit{choose} a support plane $P_\gamma$ at $p$, requiring that the choice of support planes is made so that the support plane is constant on any connected component of the subset of $\partial_\pm\CF$ consisting of those points that admit more than one support plane. The definition of the Gauss map then \textit{depends} on the choice of $P_\gamma$ (see Corollary \ref{multipleplanes} for more details on how the choice influences the map). Once we have chosen the support planes we can just follow \textit{verbatim} the construction of the Gauss map (in what follow we will consider it as given by the construction described in Remark \ref{DiafGauss})
 
 % \section{Left and right projections.} We want to introduce two maps, \textit{left and right projections,} which will have a key role in the proof of the earthquake theorem. These are the maps: 
 % \[
@@ -200,8 +199,8 @@ We can now compute the map of $\H^2$ obtained by composing the inverse of the le
 In conclusion we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\sigma^{-1}}$ is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $\varphi$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $\varphi$.
 \end{example}
 
-\section{The fundamental example.} We want to move one more intermediate step towards the final theorem. After the simple case, this time we will describe what we can consider \textit{the fundamental example}. Consider a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
-Let's formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
+\section{The fundamental example} We want to move one more intermediate step towards the final theorem. After the simple case, this time we will describe what we can consider \textit{the fundamental example}. Consider piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
+Let us formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
 
 \begin{lemma}\label{Mati}
     Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ{\gamma_1^{-1}}$ is a loxodromic isometry. 
@@ -211,7 +210,7 @@ Let's formalize this idea in a more precise way. Consider the union of two half-
     We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
 \end{proof}
 
-Now consider $S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
+Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
 
 \begin{equation}
     \varphi_{\gamma_1,\gamma_2}^+(x) = \begin{dcases}
@@ -272,7 +271,7 @@ Where we are still using the notation introduced in the proof of Proposition \re
     The first two items are then clear, since $P_{\gamma_i}$ are smooth surfaces, hence $A_i$ is smooth at any interior point, and therefore has a unique support plane \textcolor{red}{at the point}. The last item can be proved in the same spirit as Proposition \ref{gettinthere}. First, we can assume $\gamma_1=\text{Id}$ and $\gamma_2=\gamma$ is a loxodromic isometry translating on the left (resp. right) along $\ell.$ By \refeq{suplane}, if $P_\sigma$ is a support plane at $p,$ then $p$ is in the convex hull of the pairs $(y,\sigma^{-1}(y))$ where $y$ satisfies the relation $\sigma^{-1}(y)=\varphi_{\text{Id},\gamma}^{\pm}(y).$ The only possibility is then for $p$ to lie in the geodesic connecting the points $(x,x)$ and $(x^{\prime},x^{\prime})$ in $\T,$ where $x,x^{\prime}$ are the fixed points of $\gamma$. Hence $\sigma$ must have the same fixed point as $\gamma$. It follows that $\sigma$ is then a loxodromic isometry with axis $\ell$ (or the identity). Moreover, following the same reasoning as in \ref{gettinthere}, $P_\sigma$ is in the future (resp. past) of $\mathcal{C}(\varphi_{\gamma_1,\gamma_2}^+)$ if and only if $\sigma$ translates on the left (resp. right), and its translation length is less than that of $\gamma.$ Hence $\gamma$ is of the form $\exp(t\mathfrak{a})$ for $t\in [0,1].$
 \end{proof}
 
-\section{Simple earthquake.}
+\section{Simple earthquake}
 We are finally arrived to the case of considering orientation-preserving homeomorphism obtained by combining two elements of $\PSL$. We want to show that in a similar setting the composition of the projections $\Pi_l^{\pm}$ and $\Pi_r^\pm$ provide the earthquake map as in Example \ref{simplequake}. At first glance this does not seem like a huge achievement as we are just recovering a simple earthquake map that we were already able to define explicitly. Nevertheless, the following proposition will be a key step to complete the proof of the earthquake theorem. 
 
 \begin{proposition}\label{estensione}
@@ -296,7 +295,7 @@ We remark that we are limiting to the case of $\varphi_{\gamma_1,\gamma_2}^+$ fo
  \textcolor{blue}{The proof when one of the two strata} $S$ or $S^{\prime}$ is $\ell$ is completely analogous, by using the third item of Corollary \ref{53}. Indeed (via Remark 4.11), by any choice of $\sigma$ of the form $\sigma=\exp(t\mathfrak{a})$ with $t\in(0,1)$, Comp($\ell,\text{int}(D_2))=\sigma\circ\gamma_2^{-1}$ translates to the left (resp. right) seen from $\ell$ to $\text{int}(D_2)$, and Comp(int($D_1$),$\ell)=\gamma_1\circ\sigma^{-1}$ translates to the left (resp. right) seen from int($D_1$) to $\ell.$ If instead $\sigma=\exp(t\mathfrak{a})$ with $t\in\{0,1\}$, then $\sigma$ coincides with $\gamma_1$ or with $\gamma_2,$ hence on of the comparison isometries Comp(int($D_1),\ell$) and Comp(int($D,2),\ell$) translates to the left, while the other it the identity, which is still \textit{allowed} in the definition of earthquake because $\ell$ is in the boundary on $\text{int}(D_i)$.
 \end{proof}
 
-\section{The example is prototypical.} We have just treated what seems to be a very \textit{special and convenient} simple earthquake. What we want to show now is that it is actually the prototypical example, that will serve to treat the general case of the earthquake theorem. The following lemma explains \textit{how} the situation of two intersecting planes is actually pretty common. 
+\section{The example is prototypical} We have just treated what seems to be a very \textit{special and convenient} simple earthquake. What we want to show now is that it is actually the prototypical example, that will serve to treat the general case of the earthquake theorem. The following lemma explains \textit{how} the situation of two intersecting planes is actually pretty common. 
 
 \begin{lemma}\label{condor}
     Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then: 
@@ -321,7 +320,7 @@ Now, if one of the two plane $P$ and $Q$ is a support plane at a point of $\CF$,
  Recall that we have defined the left and right projections $\Pi_l^\pm, \Pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chosen to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show how the projections are related to this choice:
 
 \begin{corollary}\label{multipleplanes}
-    Let $\varphi:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in \PSL,$ and suppose $p\in\partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
+    Let $\varphi:\S\to\S$ be and orientation-preversing homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
     In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\Pi_l^\pm$ and $\Pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
 \end{corollary}
 
@@ -332,17 +331,16 @@ We claim now that the set:
     I=\{s\in\R\;|\;\exp(s\widetilde{\mathfrak{a}})\;\text{is a support plane of}\;\CF\;\text{at}\;p\}
 \]
 is a compact interval. This would conclude the proof, up to applying an affine change of variable mapping to the interval $I=[s_1,s_2]$ to $[0,1]$, and defining $\gamma_i=\exp(s_i\widetilde{\mathfrak{a}}).$\\
-Let's prove the compactness of $I$, suppose $s,s^{\prime} \in I$. Now $\CF$ is contained in the past of a pleated surface obtained as the union of two half-spaces, one contained in $P_{\exp(s\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$ and the other in $P_{\exp(s^{\prime}\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$, meeting along the spacelike geodesic $P_{\widetilde{\gamma}_1}\cap P_{\widetilde{\gamma}_2}$. Then every support plane for this pleated surface is a support plane for $\CF$ as well. That is, by the last item of Corollary \ref{53}, $[s,s^{\prime}]\subset I$. This shows that $I$ is an interval. It is compact by Lemma \ref{49}, applied to the constant sequence $p_n=p$ and to $\gamma_n=\exp(s_n\widetilde{\mathfrak{a}})$, showing that $s_n$ must by converging (up to subsequences) and its limit is in $I$. This concludes the proof.  
+Let us prove the compactness of $I$, suppose $s,s^{\prime} \in I$. Now $\CF$ is contained in the past of a pleated surface obtained as the union of two half-spaces, one contained in $P_{\exp(s\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$ and the other in $P_{\exp(s^{\prime}\widetilde{\mathfrak{a}})\widetilde{\gamma}_1}$, meeting along the spacelike geodesic $P_{\widetilde{\gamma}_1}\cap P_{\widetilde{\gamma}_2}$. Then every support plane for this pleated surface is a support plane for $\CF$ as well. That is, by the last item of Corollary \ref{53}, $[s,s^{\prime}]\subset I$. This shows that $I$ is an interval. It is compact by Lemma \ref{49}, applied to the constant sequence $p_n=p$ and to $\gamma_n=\exp(s_n\widetilde{\mathfrak{a}})$, showing that $s_n$ must by converging (up to subsequences) and its limit is in $I$. This concludes the proof.  
 
 \end{proof}
 
-\section{Proof of the earthquake theorem.}
+\section{Proof of the earthquake theorem}
 
-We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $\varphi:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\Pi_l^\pm,\Pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want tho show that the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $f$. \textcolor{red}{outline the strategy}
+We have now all the tools that are required for the proof of the earthquake theorem. We outline the strategy that we will follow: given an orientation-preserving homeomorphism $\varphi:\S\to\S$ (we can assume that it is not in $\PSL$), we consider the projections $\Pi_l^\pm,\Pi_r^\mp:\partial_\pm\CF\to\H^2$, and we want to show that the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$  is well-defined and is a (left or right) earthquake map extending $\varphi$. We are going to divide the proof in the following steps: Proposition \ref{seitre}, Corollary \ref{seiquattro} and then Proposition \ref{seicinque} below.
 
 \section{Extension to the boundary}
-We study the extension of the projections $\Pi_l^\pm, \Pi_r^\pm$ to the boundary of $\CF$. 
-
+We study the extension of the projections $\Pi_l^\pm, \Pi_r^\pm$ to the boundary.
 \begin{proposition}\label{seiuno}
     The projections $\Pi_l^\pm, \Pi_r^\pm$ extend to $\Lambda_\varphi$. More precisely, if $p_n\in\partial_\pm\CF\to(x,y)\in\Lambda_\varphi,$ then $\Pi_l^\pm(p_n)\to x$ and $\Pi_r^\pm(p_n)\to y$.
 \end{proposition}
@@ -361,7 +359,7 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
     \end{equation}
   We consider the identification of $P_\text{Id}$ with $\S$ via $(x,x)\to x,$ we thus have show (choosing for instance the point $z_0=i$) that: $p_n\gamma_n^{-1}(i)\to x$ and $\gamma_n^{-1}p_n(i)\to y.$ \\
   However, since $\gamma_n\to\gamma$, $p_n\gamma_n^{-1}(i)$ is at bounded distance from $p_n\gamma^{-1}(i)$. Applying the hypothesis, namely \refeq{18}, to $z_0=\gamma^{-1}(i)$, we have $p_n\gamma^{-1}(i)\to x$ and therefore $p_n\gamma_n^{-1}(i)\to x$ as well. \\
-  The argument is analogous to show that $\gamma_n^{-1}p_n(i)\to y$, except that it it useful to observe that $\gamma_n^{-1}p_n=p_n^{-1}\gamma_n$ since it is an order-two isometry. Now $p_n^{-1}\gamma_n(i)$ is at bounded distance from $p_n^{-1}\gamma(i)$, which converges to $y$ by hypothesis. Hence $p_n^{-1}\gamma_n(i)\to y$ as well. \\
+  The argument is analogous to show that $\gamma_n^{-1}p_n(i)\to y$, except that it is useful to observe that $\gamma_n^{-1}p_n=p_n^{-1}\gamma_n$ since it is an order-two isometry. Now $p_n^{-1}\gamma_n(i)$ is at bounded distance from $p_n^{-1}\gamma(i)$, which converges to $y$ by hypothesis. Hence $p_n^{-1}\gamma_n(i)\to y$ as well. \\
   Let us move to the latter case, namely $\gamma_n$ diverges in $\PSL.$ Here we will use not only the assumption of \refeq{18}, but also: 
   \begin{equation}\label{20}
     \gamma_n(z_0)\;\text{and}\;\gamma_n^{-1}(z_0)\to y,
@@ -371,7 +369,7 @@ We want to remark that the conclusion of \ref{seiuno} hold for \textit{any choic
   \begin{equation}\label{21}
     p_n=\mathcal{R}_{\Pi_l^\pm(p_n)}\circ\gamma_n \;\;\; \text{and}\;\;\; p_n^{-1}=\mathcal{R}_{\Pi_r^\pm(p_n)}\circ\gamma_n^{-1}, 
   \end{equation} 
-  where we recall that for us $\mathcal{R}_w$ denotes the orderd two elliptic isometry with fixed point $w\in\H^2.$ \\
+  where we recall that for us $\mathcal{R}_w$ denotes the order two elliptic isometry with fixed point $w\in\H^2.$ \\
   Up to extracting a subsequence, we can assume that $\Pi_l^{\pm}(p_n)\to\widehat{x}_\pm$ and $\Pi_r^\pm{p_n}\to\widehat{y}_\pm$, for some points $\widehat{x}_\pm, \widehat{y}_\pm\in\H^2\cup\partial\H^2$. We need tho show that $\widehat{x}_\pm=x$ and $\widehat{y}_\pm=y$. \\
   In this direction, suppose by contradiction $\widehat{x}_\pm\neq x$. Suppose first that $\widehat{x}_\pm\in\H_2.$ We will use the fact (\textcolor{blue}{appendix})
   that if $w_n\to w\in \H^2,$ then $\mathcal{R}_{w_n}$ converges to $\mathcal{R}_{w_n}$ uniformly on $\H^2\cup\partial\H^2$. From \refeq{21}, and the fact that, from \refeq{18} and \refeq{20}, both $p_n(z_0)$ and $\gamma_n(z_0)$ converge to $x$, we would then have: 
@@ -394,7 +392,7 @@ In the proof we have not used the full hypothesis of a surface on which the proj
 
 As a direct consequence of Proposition \ref{seitre}, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ is well-defined and is a bijection of $\H^2$ to itself. This and Proposition \ref{seiuno} let us show the following: 
 
-\begin{corollary}
+\begin{corollary}\label{seiquattro}
     The composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ extends to a bijection from $\H^2\cup\partial\H^2$ to itself, which equals $\varphi$ on $\partial\H^2$ and is continuous at any point of $\partial\H^2$.
 \end{corollary}
 \begin{proof}
@@ -407,7 +405,7 @@ As a direct consequence of Proposition \ref{seitre}, the composition $\Pi_r^\pm\
 
 We are only left with verification that $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ satisfies the defining properties of an earthquake map. 
 
-\begin{proposition}
+\begin{proposition}\label{seicinque}
     The composition $\Pi_r^-\circ(\Pi_l^-)^{-1}:\H^2\to\H^{2}$ is a left earthquake map. Analogously, $\Pi_r^+\circ(\Pi_l^+)^{-1}:\H^2\to\H^2$ is a right earthquake map.
 \end{proposition}
 \begin{proof}
@@ -420,7 +418,7 @@ We are only left with verification that $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ satisfi
     Finally, we consider the case $\gamma_1=\gamma_2$, which can only happen either if $\Sigma_1=\Sigma_2$ (hence $S_1=S_2)$ or if $\Sigma_1$ has nonempty interior and $\Sigma_2$ is one of its boundary components (or vice versa exchanging $\Sigma_1$ with $\Sigma_2$). In this case we already have that $\text{Comp}(S_1,S_2)=\text{Id}$. But the comparison isometry is allowed to be the identity, when one of the two strata is contained in the closure of the other. This concludes the proof. 
 \end{proof}
 
-\subsection{Revovering earthquakes of closed surfaces.}
+\subsection{Revovering earthquakes of closed surfaces}
 We have proved Thurston's theorem. We would like to recover the \textit{original} earthquake theorem due to Nielsen and recover the existence of earthquake maps between two homeomorphic closed hyperbolic surfaces.\\
 We recall briefly the definition of equivariance given in \textcolor{red}{given where}. 
 
