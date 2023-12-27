@@ -24,3 +24,4 @@ submanifold
 surjective
 reparametrization
 injectivity
+inextensible

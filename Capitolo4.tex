@@ -92,12 +92,12 @@ We consider two particular extensions $f_\pm^X:\D\cup\partial\D,$ which we will 
     \begin{equation}\label{42}
         f^{X}(x)-f^X(x^{\prime})=d_{\mathbb{S}^2}(x,x^{\prime})=d_{\mathbb{S}^2}(x,y)+d_{\mathbb{S}^2}(y,x^{\prime}). 
        \end{equation}
-       Hence the points $(x,f^X(x))$ and $(x^{\prime},f^X(x^{\prime} ))$ are joined by a lightlike segment. If $x,x^{\prime}$ are not antipodal points on $\partial\D$, there is a unique hemispherical geodesic $\eta$ in $\overline{\D}$ joining $x$ to $x^{\prime}$, which must pass through $y$ by \refeq{42}, and which we may assume parametrized by arclength. In this case the geodesic segment joining $(x,f^X(x))$ to $(x^{\prime},f^X(x^{\prime} ))$ take the form $t\mapsto(\eta(t),f^X(x^{\prime})+t)$, so it passes through $(y,f_+^X(y))=(y,f_-^X(y)).$\\
-       If $x$ and $x^{\prime}$ are antipodal, then there are infinitely many geodesic joining $x$ to $x^{\prime}$, and we can pick one going through $y$. Then the same argument as above applies. 
+       Hence the points $(x,f^X(x))$ and $(x^{\prime},f^X(x^{\prime} ))$ are joined by a lightlike segment. If $x,x^{\prime}$ are not antipodal points on $\partial\D$, there is a unique hemispherical geodesic $\eta$ in $\overline{\D}$ joining $x$ to $x^{\prime}$, which must pass through $y$ by Equation \refeq{42}, and which we may assume parametrized by arc length. In this case the geodesic segment joining $(x,f^X(x))$ to $(x^{\prime},f^X(x^{\prime} ))$ takes the form $t\mapsto(\eta(t),f^X(x^{\prime})+t)$, so it passes through $(y,f_+^X(y))=(y,f_-^X(y)).$\\
+       If $x$ and $x^{\prime}$ are antipodal, then there are infinitely many geodesics joining $x$ to $x^{\prime}$, and we can pick one going through $y$. Then the same argument as above applies. 
 \end{proof}
 
 \begin{observation}\label{423}
-    Given a point $(y,t)$ the set of points $(x,s)$ satisfying $\lvert s-t \rvert<d_{\mathbb{S}^2}(x,y)$ coincides with the region of $\AS^{2,1}$ which is connected to $(y,t)$ by a spacelike geodesic for the Anti-de Sitter metric. It coincides also with the region of points connected to $(y,t)$ by a spacelike geodesic for the conformal emispherical metric. Now, since $f_-^X(y)\leq t\leq f_+^X(y)$ is equivalent to the condition that $\lvert s-t \rvert<d_{\mathbb{S}^2}(x,y)$ for all $(x,t)\in X,$ the region 
+    Given a point $(y,t)$ the set of points $(x,s)$ satisfying $\lvert s-t \rvert<d_{\mathbb{S}^2}(x,y)$ coincides with the region of $\AS^{2,1}$ which is connected to $(y,t)$ by a spacelike geodesic for the Anti-de Sitter metric. It coincides also with the region of points connected to $(y,t)$ by a spacelike geodesic for the conformal emispherical metric (although in general spacelike geodesics for the two metrics do not coincide). Now, since $f_-^X(y)\leq t\leq f_+^X(y)$ is equivalent to the condition that $\lvert s-t \rvert<d_{\mathbb{S}^2}(x,y)$ for all $(x,t)\in X,$ the region 
 
     \[
         S_+(X)\cup\Omega(X)\cup S_-(X)=\{(y,t)\;|\; f_-^X(y)\leq t\leq f_+^X(y)\}
@@ -122,14 +122,14 @@ We will need the following technical definition:
 With this definition we can state the following lemma that we will soon use: 
 
 \begin{lemma}\label{417}
-    Let $S$ be a properly embedded achronal surface, defined as the graph of $f^S:\overline{\D}\to\R$. Then $\text{osc}(f^S)\leq\pi$ moreover $\text{osc}f^S=\pi$ if and only if $S$ is a lightlike plane. 
+    Let $S$ be a properly embedded achronal surface, defined as the graph of $f^S:\overline{\D}\to\R$. Then $\text{osc}(f^S)\leq\pi$ moreover $\text{osc}(f^S)=\pi$ if and only if $S$ is a lightlike plane. 
 \end{lemma}
 \begin{proof}
-    We observe that $f^S$ is $1-$Lipschitz for the hemispherical metric, and the diameter of $\D$ for $g_{\mathbb{S}^2}$ is $\pi$, hence we easily obtain that $\text{osc}(f^S)$ is bounded by $\pi$. Moreover if the value is attained it follows that there are two antipodal points $y,y^{\prime} \in \partial\D$ such that: $f^S(y^{\prime})=f^S(y)+\pi$. We have already noticed that the lightlike plane with past and future points $(y,f^S(y))$ and $(y^{\prime},f^S(y)+\pi)$ is: 
+    We observe that $f^S$ is $1-$Lipschitz for the hemispherical metric, and the diameter of $\D$ for $g_{\mathbb{S}^2}$ is $\pi$, hence we easily obtain that $\text{osc}(f^S)$ is bounded by $\pi$. Moreover if the value is attained it follows that there are two antipodal points $y,y^{\prime} \in \partial\D$ such that: $f^S(y^{\prime})=f^S(y)+\pi$. We recall from the remark following Equation \refeq{emispherical} that the lightlike plane with past and future points $(y,f^S(y))$ and $(y^{\prime},f^S(y)+\pi)$ is: 
     \[
         P=\{(x,t)\;|\;t=f^S(x)+d_{\mathbb{S}^2}(x,y)\}
     \]
-    and it is foliated by lightlike geodesic joining $(y,f^S(y))$ to $(y^{\prime},f^S(y)+\pi)$. By Lemma \ref{containedgeo}, $P$ is included in $S$. Since both are global graph over $\overline{\D}$ we have $S=P$.
+    which moreover is foliated by lightlike geodesic joining $(y,f^S(y))$ to $(y^{\prime},f^S(y)+\pi)$. By Lemma \ref{containedgeo}, $P$ is included in $S$. Since both are global graph over $\overline{\D}$ we have $S=P$.
 \end{proof}
 
 \subsection{Achronal meridian in $\partial\AS^{2,1}$}
@@ -140,13 +140,13 @@ We will be interested in the study of invisible domains of achronal meridians $\
 \end{lemma}
 
 \begin{proof}
-    Let $f:\partial\D\to\R$ be the function whose graph is $\Lambda.$ We recall from Lemma \ref{417} that $\text{osc}(f)\leq\pi$. If there are points $x_0,x_0^{\prime}$ such that $f(x_0^{\prime})=f(x_0)+\pi$ then combining both Lemma \ref{417} and Lemma \ref{422} we deduce that $\Lambda$ is the boundary of a lightlike lane, and this lightlike plane coincides with $S_+(\Lambda)\cap S_-(\Lambda).$\\
+    Let $f:\partial\D\to\R$ be the function whose graph is $\Lambda.$ We recall from Lemma \ref{417} that $\text{osc}(f)\leq\pi$. If there are points $x_0,x_0^{\prime}$ such that $f(x_0^{\prime})=f(x_0)+\pi$ then combining both Lemma \ref{417} and Lemma \ref{422} we deduce that $\Lambda$ is the boundary of a lightlike plane, and this lightlike plane coincides with $S_+(\Lambda)\cap S_-(\Lambda).$\\
     Assume now that the maximal oscillation of $f$ is smaller than $\pi$, and let us show that $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda.$ By the assumption, if a lightlike geodesic connects $(x_0,f(x_0))$ to $(x_0^{\prime} ,f(x_0^{\prime}))$ then $x_0$ and $x_0^{\prime}$ are not antipodal. But then $x_0,x_0^{\prime}$ are connected by a unique length-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x_0,f(x_0))$ to $(x_0^{\prime},f(x_0^{\prime}))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{422} we conclude that $S_-(\Lambda)$ and $S_+(\Lambda)$ do not meet in $\AS^{2,1}$ and therefore $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda.$\\
     Finally, in this latter case the function $F=(f^\Lambda_{-}+f^\Lambda_+)/2$ is $1-$Lipschitz and defines an achronal properly embedded surface contained in $\Omega(\Lambda)$, whose boundary is $\Lambda$. 
 \end{proof}
 
 We remark that in fact for any achronal meridian there is a spacelike surface whose boundary at infinity is $\Lambda$, we will expand on this in Remark \ref{447}
-Now, given a point $x \in \AS^{2,1}$, the Dirichlet domain of $x$ is the region $R_x$ containing $x$ and bounded by two spacelike plane “dual" to $x$. Namely the planes that we denote (with a slight abuse of notation) $P_x^+$ and $P_x^-$, consisting of points at timelike distance $\pi/2$ in the future (resp. past) along timelike geodesic with initial point $x$.
+Now, given a point $x \in \AS^{2,1}$, we recall that the Dirichlet domain of $x$ is the region $R_x$ containing $x$ and bounded by two spacelike plane “dual" to $x$. Namely the planes that we denote (with a slight abuse of notation) $P_x^+$ and $P_x^-$, consisting of points at timelike distance $\pi/2$ in the future (resp. past) along timelike geodesic with initial point $x$.
 
 \begin{proposition}\label{432}
     Let $\Lambda$ be an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then: 
@@ -160,10 +160,10 @@ Now, given a point $x \in \AS^{2,1}$, the Dirichlet domain of $x$ is the region 
         \end{itemize}
 \end{proposition}
 \begin{proof}
-    By Observation \ref{423} a point $x$ lies in $\Omega(\Lambda)$ if and only if it is connected to any point of $\Lambda$ by a spacelike geodesic. The region of points connected to $x$ by a spacelike geodesic has boundary the lightcone from $x,$ whose intersection with $\partial\AS^{2,1}$ coincides with $P_x^\pm\cap \partial\AS^{2,1}.$\\
+    By Remark \ref{423} a point $x$ lies in $\Omega(\Lambda)$ if and only if it is connected to any point of $\Lambda$ by a spacelike geodesic. The region of points connected to $x$ by a spacelike geodesic has boundary the lightcone from $x,$ whose intersection with $\partial\AS^{2,1}$ coincides with $P_x^\pm\cap \partial\AS^{2,1}.$\\
     Moving on the second item we observe that the region bounded by $L_+(z)$ and $L_-(z)$ contains exactly points connected to $z$ by a spacelike geodesic. Using the characterization of $\Omega(\Lambda)$ as above, we have the second statement.   \\
-    Lastly, if a timelike geodesic $\gamma$ meets $\Omega(\Lambda)$ at a point $x$, then $\Omega(\Lambda)\subset R_x$, so that the length of $\gamma\cap\Omega(\Lambda)$ is smaller than the length of $\gamma\cap R_x$. But the latter is $\pi.$ Now assume the existance of a geodesic $\gamma$ such that the length of $\gamma\cap R_x$ equals $\pi.$ Up to applying an isometry of $\AS^{2,1}$ we may assume that $\gamma$ is vertical in the Poincaré model of $\AS^{2,1}$ and the mid-point of $\gamma\cap\Omega(\Lambda)$ is $(0,0)$. Thus $(0,-\pi/2)$ and $(0,\pi/2)$ lie on $S_-(\Lambda)$ and $S_+(\Lambda)$ respectively. \\
-    Now, again by \ref{423} points of $\Lambda$ are connected to $(0,-\pi/2)$ by a spacelike or lightlike geodesic, hence $s\leq 0$ for all $(\xi,s)\in\Lambda$ Analogously using the point $(0,\pi/2)$ we deduce that $s\geq 0$ for all $(\xi,s)\in\Lambda,$ so that $\Lambda=\partial\D\times\{0\}$.
+    Lastly, if a timelike geodesic $\gamma$ meets $\Omega(\Lambda)$ at a point $x$, then $\Omega(\Lambda)\subset R_x$, so that the length of $\gamma\cap\Omega(\Lambda)$ is smaller than the length of $\gamma\cap R_x$. But the latter is $\pi.$ Now assume the existence of a geodesic $\gamma$ such that the length of $\gamma\cap R_x$ equals $\pi.$ Up to applying an isometry of $\AS^{2,1}$ we may assume that $\gamma$ is vertical in the Poincaré model of $\AS^{2,1}$ and the mid-point of $\gamma\cap\Omega(\Lambda)$ is $(0,0)$. Thus $(0,-\pi/2)$ and $(0,\pi/2)$ lie on $S_-(\Lambda)$ and $S_+(\Lambda)$ respectively. \\
+    Now, again by \ref{423} points of $\Lambda$ are connected to $(0,-\pi/2)$ by a spacelike or lightlike geodesic, hence $s\leq 0$ for all $(\xi,s)\in\Lambda.$ Analogously using the point $(0,\pi/2)$ we deduce that $s\geq 0$ for all $(\xi,s)\in\Lambda,$ so that $\Lambda=\partial\D\times\{0\}$.
 \end{proof}
 
 Arguing in similar fashion, we obtain that the invisible domain of an achronal meridian which is not the boundary of a lightlike plane is always contained in a Dirichlet region. 
@@ -174,10 +174,10 @@ Arguing in similar fashion, we obtain that the invisible domain of an achronal m
 \begin{proof}
     We start by defining $a_+=\sup f_+^{\Lambda}$ and $a_-=\inf f_-^{\Lambda}$, and we consider the planes: 
     \[
-        Q_{a_+}=\{(x,t)\;|\;t=a_+\} \;\;\text{and}\;\; Q_{a_-}=\{(x,t)\;|\;t=a_-\}
+        P_{a_+}=\{(x,t)\;|\;t=a_+\} \;\;\text{and}\;\; P_{a_-}=\{(x,t)\;|\;t=a_-\}
    \]
 
-   in the Poincaré model. Since $\Omega(\Lambda)$ lies in the open region bounded by those planes, it is sufficient to show that $a_+-a_-\leq\pi.$ Assume by contradiction the converse. Notice tht $P_{a_+}$ meets $S_+(\Lambda)$ at some point $p_+=(x_+,a_+)$ and $P_{a_-}$ meets $S_-(\Lambda)$ at some point $p_-=(x_-,a_-)$ where $x_+$ and $x_-$ are points on $\overline{\D}$. For $\epsilon=(a_+ + a_- -\pi )/2$ we can find $x^{\prime}_+$ and $x_-^{\prime} $ in $\D$ such that $p_+^{\prime}=(x^{\prime}_+,a_+-\epsilon)$ and $p_-^{\prime}=(x_-^{\prime},a_- +\epsilon)$ lie in $\Omega(\Lambda)$ (clearly if $x_\pm$ lies in $\D$ we can take $x_\pm^{\prime}=x_\pm)$. As $(a_+-\epsilon)-(a_- - \epsilon )=\pi$, the geodesic segment $\gamma$ joining $p_+^{\prime}$ and $p_-^{\prime}$ is timelike of length $\pi$. Its end-points are in $\text{I}^+(S_-(\Lambda))\cap\text{I}^-(S_+(\Lambda))$, so $\gamma$ is entirely contained in $\Omega(\Lambda)$. As end-points of $\gamma$ are contained in $\Omega(\Lambda).$ $\gamma$ can be extended within $\Omega(\Lambda)$ but this contradicts the third point of Proposition \ref{432}.       
+   in the Poincaré model. Since $\Omega(\Lambda)$ lies in the open region bounded by those planes, it is sufficient to show that $a_+-a_-\leq\pi.$ Assume by contradiction the converse. Notice tht $P_{a_+}$ meets $S_+(\Lambda)$ at some point $p_+=(x_+,a_+)$ and $P_{a_-}$ meets $S_-(\Lambda)$ at some point $p_-=(x_-,a_-)$ where $x_+$ and $x_-$ are points on $\overline{\D}$. For $\epsilon=(a_+ + a_- -\pi )/2$ we can find $x^{\prime}_+$ and $x_-^{\prime} $ in $\D$ such that $p_+^{\prime}=(x^{\prime}_+,a_+-\epsilon)$ and $p_-^{\prime}=(x_-^{\prime},a_- +\epsilon)$ lie in $\Omega(\Lambda)$ (clearly if $x_\pm$ lies in $\D$ we can take $x_\pm^{\prime}=x_\pm)$. As $(a_+-\epsilon)-(a_- - \epsilon )=\pi$, the geodesic segment $\gamma$ joining $p_+^{\prime}$ and $p_-^{\prime}$ is timelike of length $\pi$. Its end-points are in $\text{I}^+(S_-(\Lambda))\cap\text{I}^-(S_+(\Lambda))$, so $\gamma$ is entirely contained in $\Omega(\Lambda)$. As end-points of $\gamma$ are contained in $\Omega(\Lambda),$ $\gamma$ can be extended within $\Omega(\Lambda)$ but this contradicts the third point of Proposition \ref{432}.       
    The third point of Proposition \ref{432} then shows that if $a_+-a_-=\pi$ then $\Lambda$ is the boundary of a spacelike plane. Hence, apart from this case, one has $a_+ - a_-<\pi$, so the closure of $\Omega(\Lambda)$ is contained in a Dirichlet region. 
 
 \end{proof}
@@ -192,16 +192,16 @@ We want to define and study properties of Cauchy surfaces and domains of depende
 \begin{definition}
     Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$ the \textit{domain of dependence} of $X$ is the set: 
     \[
-        \mathcal{D}(X)=\{p\in M |\;\text{every inextensible causal curve through}\; p\; \text{meets} X \}.
+        \mathcal{D}(X)=\{p\in M |\;\text{every inextensible causal curve through}\; p\; \text{meets}\; X \}.
     \]
     We say that $X$ is a \textit{Cauchy surface} of $M$ if $\mathcal{D}(X)=M$. A spacetime $M$ is called \textit{globally hyperbolic} if it admits a Cauchy surface.
 \end{definition}
     
-\begin{observation}
-    Equivalently the domain of dependence  $D(X)$ of $X$ is the set of points $p\in\A^{2,1}$ such that the plane $p^*,$ the projective dual of $p$ as introduced in \ref{polarsec} is disjoint from $X.$ Domain of dependence are always contained in an affine chart and admit only light-like support planes (for more detail about support planes we will study them in detail in \ref{sectionplanes})
-\end{observation}
+% \begin{observation}
+%     Equivalently the domain of dependence  $D(X)$ of $X$ is the set of points $p\in\A^{2,1}$ such that the plane $p^*,$ the projective dual of $p$ as introduced in \ref{polarsec} is disjoint from $X.$ Domain of dependence are always contained in an affine chart and admit only light-like support planes (for more detail about support planes we will study them in detail in \ref{sectionplanes})
+% \end{observation}
 
-The theory of globally hyperbolic spacetimes is a well-developed topic in Lorentzian geometry, we will just state the facts that we will need in the following. 
+The theory of globally hyperbolic spacetimes is a well-developed topic in Lorentzian geometry, we will just state the facts that we will need in the thesis. The following result is due to Geroch \cite{hawking2023large}. 
 
 \begin{theorem}\label{442}
     Let M be a globally hyperbolic spacetime. Then:
@@ -224,15 +224,15 @@ The theory of globally hyperbolic spacetimes is a well-developed topic in Lorent
     Given an achronal meridian $\Lambda$ in $\partial\AS^{2,1}$ any Cauchy surface in $\Omega(\Lambda)$ is properly embedded with boundary at infinity $\Lambda$. 
 \end{lemma}
 \begin{proof}
-    Let $S$ be a Cauchy surface in $\Omega(\Lambda)$. For every $x\in \D$, the vertical line through $x$ in the Poincaré model meets $\Omega(\Lambda)$, and it interesection with $\Omega(\Lambda)$ must meet $S$ by definition of Cauchy surface. This shows that $S$ is a graph over $\D$, hence properly embedded, and clearly $\partial S=\Lambda.$
+    Let $S$ be a Cauchy surface in $\Omega(\Lambda)$. For every $x\in \D$, the vertical line through $x$ in the Poincaré model meets $\Omega(\Lambda)$, and its intersection with $\Omega(\Lambda)$ must meet $S$ by definition of Cauchy surface. This shows that $S$ is a graph over $\D$, hence properly embedded, and clearly $\partial S=\Lambda.$
 \end{proof}
 
 \begin{proposition}\label{446}
     Let $\Lambda$ be an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Let S be a properly embedded achronal surface in $\Omega(\Lambda)$. Then $\mathcal{D}(S)=\Omega(\Lambda)$. In particular $\Omega(\Lambda)$ is a globally hyperbolic spacetime.
 \end{proposition}
 \begin{proof}
-    Let $x$ be any point in $\Omega(\Lambda)$ and take any inextensible causal path through $x$. A priori its future endpoint might be either in $S_+(\Lambda)$ or in $\Lambda$, but by definition of $\Omega(\Lambda$), $x$ cannot be connected by any causal path to $\Lambda$, hence the latter case is excluded. The same argument shows that the past endpoint is in $S_-(\Lambda$.) Since the inextensibile causal path meets both $S_+(\Lambda)$ and $S_-(\Lambda)$, it must meet $S$ by Lemma \ref{445}, hence $\xi\in\mathcal{D}(S)$. \\
-    Conversely, consider a $x$ that is not in $\Omega(\Lambda)$, the one can find a causal path joining $x$ to $\Lambda$, which is necessarily inextensibile. Hence $x$ is not in $\mathcal{D}(S)$.  
+    Let $x$ be any point in $\Omega(\Lambda)$ and take any inextensible causal path through $x$. A priori its future endpoint might be either in $S_+(\Lambda)$ or in $\Lambda$, but by definition of $\Omega(\Lambda$), $x$ cannot be connected by any causal path to $\Lambda$, hence the latter case is excluded. The same argument shows that the past endpoint is in $S_-(\Lambda$). Since the inextensible causal path meets both $S_+(\Lambda)$ and $S_-(\Lambda)$, it must meet $S$ by Lemma \ref{445}, hence $x\in\mathcal{D}(S)$. \\
+    Conversely, consider a $x$ that is not in $\Omega(\Lambda)$, then one can find a causal path joining $x$ to $\Lambda$, which is necessarily inextensible. Hence $x$ is not in $\mathcal{D}(S)$.  
 \end{proof}
 
 \begin{observation}\label{447}
@@ -242,7 +242,7 @@ The theory of globally hyperbolic spacetimes is a well-developed topic in Lorent
 The most remarkable property of domain of dependence of a properly embedded surface in $\AS^{2,1}$, and it is a direct consequence of Proposition \ref{446}, is that it only depends on the boundary at infinity. In detail:
 
 \begin{corollary}\label{448}
-    If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\AS^{2,1}$ , then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$.
+    If $S$ and $S^{\prime}$ are properly embedded spacelike surfaces in $\AS^{2,1}$, then $\mathcal{D}(S)=\mathcal{D}(S^{\prime})$ if and only if $\partial S=\partial S^{\prime}$.
 \end{corollary}
 
 \subsection{Properly achronal sets in $\A^{2,1}$}
@@ -254,17 +254,17 @@ For our interest will be important to consider the model $\A^{2,1}$. As $\A^{2,1
 It follows from the definition that if $X$ is a proper achronal subset of $\overline{\A^{2,1}}$, then it admits a section to $\AS^{2,1}\cup\partial\AS^{2,1}$, and the image remains achronal after the lifting. Conversely, let $\widetilde{X}$ be an achronal subset of $\AS^{2,1}$ different from a lightlike plane, then it is contained in a Dirichlet region as a consequence of Lemma \ref{417}, and the fact that any achronal subset of $\AS^{2,1}$ is contained in properly embedded one. As Dirichlet regions are projected in $\AS^{2,1}$ to the complement of a spacelike plane, the image of $\widetilde{X}$ in $\A^{2.1}$ is a proper achronal subset. The following lemma will be key in our \textit{path} to prove the earthquake theorem:\\
 
 \begin{lemma}
-    Let $\varphi:\R\text{P}^1\to\R\text{P}^1$ be an orientation preserving homeomorphism. Then the graph of $\varphi$, say $\Lambda\varphi\subset \R\text{P}^1\times\R\text{P}^1\simeq\partial\A^{2,1}$ is a proper achronal subset and any lift, denoted as $\widetilde{\Lambda_\varphi},$ is an achronal meridian in $\partial\AS^{2,1}.$  
+    Let $\varphi:\R\text{P}^1\to\R\text{P}^1$ be an orientation preserving homeomorphism. Then the graph of $\varphi$, say $\Lambda_\varphi\subset \R\text{P}^1\times\R\text{P}^1\simeq\partial\A^{2,1}$ is a proper achronal subset and any lift, denoted as $\widetilde{\Lambda_\varphi},$ is an achronal meridian in $\partial\AS^{2,1}.$  
 \end{lemma}
 \begin{proof}
-    We start by proving that $\Lambda_\varphi$ is locally achronal. Consider $U$ and $V$ intervals around $x$ and $\varphi(x)$ and $\theta_1$ and $\theta_2$ are positive coordinates on $U$ and $V$ respectively, then timelike curves $\gamma(t)=(\gamma_1(t),\gamma_2(t))$ in $U\times V$ are characterized by the property that $\theta_1^{\prime} (t)\theta_2^{\prime} (t)<0,$ where $\theta_i(t)=\theta_i(\gamma_i(t)).$ \\
+    We start by proving that $\Lambda_\varphi$ is locally achronal. Consider $U$ and $V$ intervals around $x$ and $\varphi(x)$ and $\theta_1$ and $\theta_2$ are positive coordinates on $U$ and $V$ respectively, then timelike curves $\gamma(t)=(\gamma_1(t),\gamma_2(t))$ in $U\times V$ are characterized by the property that $\theta_1^{\prime} (t)\theta_2^{\prime} (t)<0,$ where $\theta_i(t)=\theta_i(\gamma_i(t))$ as we saw in Equation \refeq{angular}. \\
     In particular points on $\Lambda_\varphi\cap U\times V$ are not related by a timelike curve contained in $U\times V$, by the assumption that $\varphi$ is orientation-preserving. \\
-    Let us prove the existance of a spacelike plane $P$ such that $\overline{P}\cap \Lambda_\varphi=\emptyset.$ Let us consider the identification $\S=\R\cup\{\infty\}$, and take $\varphi_0\in\PSL$ so that $\varphi_0^{-1}\varphi(0)=1, \varphi_0^{-1}\varphi(1)=\infty$ and $\varphi_0^{-1}\varphi(\infty)=0$ It follows that $\varphi_0^{-1}\varphi$ sends the intervals $(\infty,0), (0,1)$ and $(1,\infty$) respectively to $(0,1),(1,\infty),(\infty,0)$. Thus $\varphi_0^{-1}\varphi$ has no fixed points, that is, the graph of $\varphi$ does not intersect the graph of $\varphi_0$, which is the asymptotic boundary of the spacelike plane $P_{\varphi_0}.$\\
+    Let us prove the existence of a spacelike plane $P$ such that $\overline{P}\cap \Lambda_\varphi=\emptyset.$ Let us consider the identification $\S=\R\cup\{\infty\}$, and take $\varphi_0\in\PSL$ so that $\varphi_0^{-1}\varphi(0)=1, \varphi_0^{-1}\varphi(1)=\infty$ and $\varphi_0^{-1}\varphi(\infty)=0.$ It follows that $\varphi_0^{-1}\varphi$ sends the intervals $(\infty,0), (0,1)$ and $(1,\infty$) respectively to $(0,1),(1,\infty),(\infty,0)$. Thus $\varphi_0^{-1}\varphi$ has no fixed points, that is, the graph of $\varphi$ does not intersect the graph of $\varphi_0$, which is the asymptotic boundary of the spacelike plane $P_{\varphi_0}.$\\
     Let us consider now the lift $\widetilde{\Lambda}_\varphi$ to the boundary of $\AS^{2,1}$. As $\Lambda_\varphi$ is contained in a simply connected region of $\overline{\A^{2,1}}$, its lift is a closed locally achronal curve contained in $\partial\AS^{2,1}$. In particular the projection $\widetilde{\Lambda}_\varphi\to\partial\D$ is locally injective. As $\widetilde{\Lambda}_\varphi$ is compact, the map is a covering. On the other hand, since $\Lambda_\varphi$ is homotopic to the boundary of a plane in $\partial\A^{2.1}$, it turns out that $\widetilde{\Lambda}_\varphi$ is homotopic to $\partial\D$ in $\partial\AS^{2,1}$, so that the projections $\widetilde{\Lambda}_\varphi\to\partial\D$ is bijective. It follows that $\widetilde{\Lambda}_\varphi$ is achronal.  
 \end{proof}
 
 What we have shown until now for achronal sets in $\AS^{2,1}$ can be rephrased for proper achronal sets of $\A^{2,1}$. For example, any proper achronal set $X$ can be extended to a properly embedded proper achronal surface and there are two extremal extensions, just as in Lemma \ref{422}\\
-Now we would like to focus on proper achronal meridians in $\partial\A^{2,1}$. They lift to achronal meridians in $\partial\AS^{2,1}$ different from the boundary of lightlike planes. Indeed the boundary of a lightlike plane is not contained in a Dirichlet region. Conversely any achronal meridian on $\partial\AS^{2,1}$ different from the boundary of a lightlike plane projects to an achronal meridian of $\A^{2,1}$.
+Now we would like to focus on proper achronal meridians in $\partial\A^{2,1}$. They lift to achronal meridians in $\partial\AS^{2,1}$ different from the boundary of lightlike planes. Indeed the boundary of a lightlike plane is not contained in a Dirichlet region. Conversely, any achronal meridian on $\partial\AS^{2,1}$ different from the boundary of a lightlike plane projects to an achronal meridian of $\A^{2,1}$.
 
 \begin{proposition}\label{453}
     Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$ and denote by $\widetilde{\Lambda}$ any lift to the universal covering. Then the universal covering map of $\A^{2,1}$ maps $\Omega(\widetilde{\Lambda})$ injectively to the domain: 
@@ -303,7 +303,7 @@ When $\Lambda$ is the graph of an orientation-preserving homomorphism $\varphi:\
 
 \begin{proof}
 
-    Denote by $\widehat{S}$ the covering of $S$ admitting a lift $\widehat{\sigma}:\widehat{S}\to\H^{2.1}$. In general either $\widehat{S}=S$ or it is a $2:1$ covering. Since the covering is finite, $\widehat{\sigma}$ is a proper immersion. Let us consider the identification $\H^2\times\mathbb{S}^1$ that follows from \refeq{ogcover}. The induced projection: $\text{pr}:H^{2,1}\to\H^2$ is a proper fibration with timelike fibers. In particular $\widehat{\sigma}$ is transverse to the fibers of $\text{pr}.$ It follows that the composition $\text{pr}\circ\sigma:\widehat{S}\to\H^2$ is a proper local diffeomorphism, hence a covering map. Since $H^2$ is simply connected, we deduce that the covering is actually a homeomorphism, $\widehat{\sigma}$ is an embedding, and $\widehat{S}$ is homeomorphic to the hyperbolic plane. \\
+    Denote by $\widehat{S}$ the covering of $S$ admitting a lift $\widehat{\sigma}:\widehat{S}\to\H^{2.1}$. In general either $\widehat{S}=S$ or it is a $2:1$ covering. Since the covering is finite, $\widehat{\sigma}$ is a proper immersion. Let us consider the identification $\H^2\times\mathbb{S}^1$ that follows from \refeq{ogcover}. The induced projection: $\text{pr}:\H^{2,1}\to\H^2$ is a proper fibration with timelike fibers. In particular $\widehat{\sigma}$ is transverse to the fibers of $\text{pr}.$ It follows that the composition $\text{pr}\circ\sigma:\widehat{S}\to\H^2$ is a proper local diffeomorphism, hence a covering map. Since $\H^2$ is simply connected, we deduce that the covering is actually a homeomorphism, $\widehat{\sigma}$ is an embedding, and $\widehat{S}$ is homeomorphic to the hyperbolic plane. \\
     More is true; we can lift $\widehat{\sigma}$ to the universal covering, say $\widehat{\sigma}:\widehat{S}\to\AS^{2,1},$ which is still a proper spacelike embedding $\widehat{S}\to \AS^{2,1}$. By Lemma \ref{achronalgraph} and Lemma \ref{415} we know that the image is an achronal meridian, and it is contained in a Dirichlet domain by Lemma \ref{417}. It follows that $\widehat{\sigma}(\widehat{S})$ is contained in a Dirichlet domain of the covering map $\H^{2,1}\to\A^{2,1}$, on which we know that the covering map is injective. In particular $\sigma$ is injective, hence $S=\widehat{S}$ as desired.  
 \end{proof}
 
@@ -319,7 +319,7 @@ We therefore have an analogue version of Lemma \ref{448} in $\A^{2,1}$.
 
 \subsection{Convexity properties.}
 
-Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$. We would like to investigate convexity properties of $\Omega(\Lambda)$. We briefly recall that given $X \subset \R\text{P}^n$ is convex if it is contained in an affine chart, and it is convex in the affine chart. The notion does not depend on the affine chart containing $X$. We would say that it is a proper convex set if it compactly contained in an affine chart. 
+Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$. We would like to investigate convexity properties of $\Omega(\Lambda)$. We briefly recall that $X \subset \R\text{P}^n$ is convex if it is contained in an affine chart, and it is convex in the affine chart. The notion does not depend on the affine chart containing $X$. We would say that it is a proper convex set if it compactly contained in an affine chart. 
 
 \begin{proposition}\label{461}
     Given a proper achronal meridian $\Lambda$ in $\partial\A^{2,1}$, the invisible domain $\Omega(\Lambda)$ is convex. If $\Lambda$ is different from the boundary of a spacelike plane then $\Omega(\Lambda)$ is a proper convex set.
@@ -331,7 +331,7 @@ Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$. We would like
         \Omega(\widetilde{\Lambda})=\bigcap_{\widetilde{z}\in\widetilde{\Lambda}}I^+(L_-(\widetilde{z}))\cap I^-(L_+(\widetilde{z})).
     \]
 
-    Now if $\widetilde{z}$ projects to $z$, then the images of $L_-(\widetilde{z})$ and $L_+(\widetilde{z})$ in $V$ are the two components of $L(z)\cap \A^{2,1}$, where $L(z)$ is the affine tangent plane of $\partial\A^{2,1}\cap V$ at $z$. It turns out that te image of the region $I^+(L_-(\widetilde{z}))\cap I^-(L_+(\widetilde{z}))$ is the intersection of $\A^{2,1}$ with the half-space $U(z)$ bounded by $L(z)$ and whose closure contains $\Lambda$. This shows: 
+    Now if $\widetilde{z}$ projects to $z$, then the images of $L_-(\widetilde{z})$ and $L_+(\widetilde{z})$ in $V$ are the two components of $L(z)\cap \A^{2,1}$, where $L(z)$ is the affine tangent plane of $\partial\A^{2,1}\cap V$ at $z$. It turns out that the image of the region $I^+(L_-(\widetilde{z}))\cap I^-(L_+(\widetilde{z}))$ is the intersection of $\A^{2,1}$ with the half-space $U(z)$ bounded by $L(z)$ and whose closure contains $\Lambda$. This shows: 
 \[
     \Omega(\Lambda)=\A^{2,1}\bigcap_{z\in\Lambda}U(z).
 \] 
@@ -391,7 +391,7 @@ As a consequence $\partial\mathcal{C}(\Lambda)$ consists of points dual to suppo
 The past and future boundary components of $\mathcal{C}(\Lambda)$ are achronal surfaces.
 \end{proposition}
 \begin{proof}
-    We will show it for $\partial_+\mathcal{C}(\Lambda)$. Take $x,y\in\partial_+\mathcal{C}(\Lambda)$ and consider the segment joining $x$ to $y$ in an affine chart containing $\Lambda$. If this segment is timelike then the dual planes $P_x$ and $P_y$ would be disjoint. Then (up to switching the roles of $x$ and $y$) we may assume that, in the universal cover $P_{\widetilde{x}}^1\subset I^+(P_{\widetilde{y}}^1)$, where $\widetilde{x}$ and $\widetilde{y}$ are the lifting of $x$ and $y$ in the same Dirichlet region mapping to the fixed affine chart. But then $S_+(\widetilde{\Lambda})$ would be contained in $\text{I}^-(P_{\widetilde{y}}^1)$ and could not meet $P_{\widetilde{x}}^\$$ thus a contradiction to Proposition \ref{464}
+    We will show it for $\partial_+\mathcal{C}(\Lambda)$. Take $x,y\in\partial_+\mathcal{C}(\Lambda)$ and consider the segment joining $x$ to $y$ in an affine chart containing $\Lambda$. If this segment was timelike then the dual planes $P_x$ and $P_y$ would be disjoint. Then (up to switching the roles of $x$ and $y$) we may assume that, in the universal cover $P_{\widetilde{x}}^1\subset I^+(P_{\widetilde{y}}^1)$, where $\widetilde{x}$ and $\widetilde{y}$ are the lifting of $x$ and $y$ in the same Dirichlet region mapping to the fixed affine chart. But then $S_+(\widetilde{\Lambda})$ would be contained in $\text{I}^-(P_{\widetilde{y}}^1)$ and could not meet $P_{\widetilde{x}}^1\$$ thus a contradiction to Proposition \ref{464}
 \end{proof}
 
 \begin{observation}\label{467}
@@ -400,8 +400,8 @@ The situation is very similar to the counterpart in hyperbolic three-space. The 
 
 \end{observation}
 
-\section{Support planes.}\label{sectionplanes}
-We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $\partial K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exist a support plane at every point $p\in\partial K.$ \\
+\section{Support planes}\label{sectionplanes}
+We still need to borrow some notions and notations from convex analysis. Given a convex body $K$ in an affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $\partial K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exist a support plane at every point $p\in\partial K.$ \\
 We will adopt the terminology to the Anti-de Sitter setting, given a convex hull $\CF$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\CF$ (at $p\in\partial\CF)$ is $p\in\CF\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\Lambda_\varphi$, $\CF$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\Lambda_\varphi$.\\ 
 
 \begin{observation}\label{diffsupp}
@@ -422,12 +422,12 @@ We can also characterize what \textit{kind} of support planes of $\CF$ are allow
     \end{itemize}
 \end{proposition}
 \begin{proof}
-    The key observation is that if $P$ is a spacelike plane, then $\partial P$ and $\Lambda_\varphi=\CF\cap\partial\A^{2,1}$ do not intersect transversely. From \ref{33} if $P$ is timelike then $\partial P$ is the graph of an orientating-reversing homeomorphism of $\S$, hence it intersects $\Lambda_\varphi$ transversally. From Lemma \ref{35}, if $P$ is lightlike, then its boundary is the union of the two circles: $\{x\}\times\S$ and $\S\times{y}$. So if $p\in\partial P\cap\Lambda_\varphi$ and $p$ is not the point $p_0=(x,y),$ then $\partial P$ and $\Lambda_\varphi$ intersect transversally. Hence the only case where $P$ can be a lightlike support plane is when it intersects $\Lambda_\varphi$ only at the point $p_0.$ We are left with the task to show that $P\cap\CF=\{p_0\}$ and it does not contain any point of $\A^{2,1}.$ By contradiction suppose the existance of a $q\in P\cap\CF$ with $q$ different from $p_0,$ then by \refeq{suplane} $\partial P\cap\Lambda_\varphi$ would also contain another point different from $p_0$, a contradiction.
+    The key observation is that if $P$ is a spacelike plane, then $\partial P$ and $\Lambda_\varphi=\CF\cap\partial\A^{2,1}$ do not intersect transversely. From \ref{33} if $P$ is timelike then $\partial P$ is the graph of an orientating-reversing homeomorphism of $\S$, hence it intersects $\Lambda_\varphi$ transversally. From Lemma \ref{35}, if $P$ is lightlike, then its boundary is the union of the two circles: $\{x\}\times\S$ and $\S\times{y}$. So if $p\in\partial P\cap\Lambda_\varphi$ and $p$ is not the point $p_0=(x,y),$ then $\partial P$ and $\Lambda_\varphi$ intersect transversally. Hence the only case where $P$ can be a lightlike support plane is when it intersects $\Lambda_\varphi$ only at the point $p_0.$ We are left with the task to show that $P\cap\CF=\{p_0\}$ and it does not contain any point of $\A^{2,1}.$ By contradiction suppose the existence of a $q\in P\cap\CF$ with $q$ different from $p_0,$ then by \refeq{suplane} $\partial P\cap\Lambda_\varphi$ would also contain another point different from $p_0$, a contradiction.
 \end{proof}
 
 Now, given a spacelike support plane $P$ of $\CF$ at a point $p$, we say that $P$ is a \textit{future} (resp. \textit{past}) support plane if in a small simply connected neighbourhood of $p\in\overline{\A^{2,1}}, \CF$ is contained in the closure of the connected components of $U\setminus P$ which is the past (resp. future) of $P$. This means that there exists a future-oriented (resp. past-oriented) timelike curves leaving $\CF\cap U$ and reaching $P\cap U$. \\
 We observe that $\CF$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $\varphi$ is an element of $\PSL$, the example treated previously.\\
-We can now state the following related to convergence of support planes: 
+We can now state the following lemma related to convergence of support planes: 
 \begin{lemma}\label{49}
     Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
     \begin{itemize}
@@ -439,10 +439,10 @@ We can now state the following related to convergence of support planes:
 We can extract a converging subsequences from $p_{n}$ and $P_{\gamma_n}$, by compactness of $\CF$ and of the space of planes in projective space. Also, the limit of the sequence of support planes $P_{\gamma_n}$ at $p_n$ is a support plane of $P$ at $p$, since both conditions that $p_n\in\CF$ and that $\CF$ is contained in a closed half-space bounded by $P_{\gamma_n}$ are closed conditions. Now, by Proposition \ref{supportinho}, if the limit $p$ is in $\A^{2,1}$, then $P$ is a spacelike support plane, which is future (resp. past) if all the $P_{\gamma_n}$ are future (resp. past). The situation could also occurs analogously if $p\in\partial\A^{2,1}$; the other possibility being that $P$ is lightlike, and in this case the proof of Proposition \ref{supportinho} shows $P=P_{[A]}$ if $p$ is represented by the projective class of the one-rank matrix $A$.
 \end{proof}
 \begin{corollary}\label{nametag}
-    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support plane, and the other only admits past support plane. 
+    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then $\partial\CF$ is the disjoint union of $\text{graph}(f)=\CF\cap\partial\A^{2,1}$ and of two topological discs, of which one admits future support planes, and the other only admits past support planes. 
 \end{corollary}
 \begin{proof}
-    We have already hinted at this after Remark \cite{436}, we will now give a more detailed proof. It is a basic result in convex analysis that $\partial\CF$ is homeomorphic to $\mathbb{S}^2;$ by Proposition \ref{461} its intersection with $\partial\A^{2,1}$ equals $\Lambda_\varphi$ and is therefore a simple closed curve. By the Jordan curve theorem, the complement of $\Lambda_\varphi$ is the disjoint union of two topological discs, each of which is contained in $\A^{2,1}$. \\
+    We have already hinted at this after Remark \ref{436}, we will now give a more detailed proof. It is a basic result in convex analysis that $\partial\CF$ is homeomorphic to $\mathbb{S}^2;$ by Proposition \ref{461} its intersection with $\partial\A^{2,1}$ equals $\Lambda_\varphi$ and is therefore a simple closed curve. By the Jordan curve theorem, the complement of $\Lambda_\varphi$ is the disjoint union of two topological discs, each of which is contained in $\A^{2,1}$. \\
     Now by Lemma \ref{49}, the set of point $p\in\partial\CF$ admitting a future support plane is close. But is also open because its complement is the set of points admitting a past support plane, for which the same argument applies. Hence each connected components of the complement of $\CF$ admits only future support planes, or only past support planes. Finally, $\CF$ necessarily admits both a past and a future support plane, otherwise it would not be compact in an affine chart.    \\
 \end{proof}
 
@@ -479,24 +479,24 @@ The following is a fundamental result on the structure of globally hyperbolic Ad
 \begin{proof}
     Let $\widetilde{\text{dev}}:\widetilde{M}\to\AS^{2,1}$ be a lift of dev to the universal cover. By Theorem \ref{442}, the spacetime $M$ admits a foliation by smooth spacelike surfaces $(\Sigma_t)_{t\in\R}$ of genus $r\geq 1,$ such that $\Sigma_t\subset I^+(\Sigma_{t^{\prime}})$ for $t>t^{\prime}$. Let $\widetilde{\Sigma}_t$ the lift of the foliation on $\widetilde{M}$. Since $\Sigma_t$ is closed, the induced metric on $\Sigma_t$ is complete, and so is the induced metric on $\widetilde{\Sigma}_t$. As $\widetilde{\text{dev}}$ is a local isometry, we deduce by Lemma \ref{properembedding} that the restriction of $\widetilde{\text{dev}}$ is a proper embedding. Assume now by contradiction that $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)\cap \widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime}})\neq \emptyset$ for some $t\geq t^{\prime}.$ Then there is a point $x\in \widetilde{\Sigma}_t$ such that $\widetilde{\text{dev}}(x)\in\text{dev}(\widetilde{\Sigma}_t^{\prime}).$ By the assumption $x$ is connected to $\widetilde{\Sigma}_{t^{\prime} }$ by a timelike arc $\eta$ in $\widetilde{M}.$ Then $\widetilde{\text{dev}}(\eta)$ is a timelike arc in $\AS^{2,1}$ with end-points in $\widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime}})$ and this contradicts the achronality of $\widetilde{\text{dev}}(\widetilde{\Sigma}_{t^{\prime} }).$ This shows that $\widetilde{\text{dev}}$ is injective, and moreover we conclude that $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$ is a Cauchy surface of $\widetilde{\text{dev}}(\widetilde{M})$.\\
     It follows from Proposition \ref{455} that $\widetilde{\text{dev}}(M)\subset \mathcal{D}(\widetilde{\text{dev}}(\widetilde{\Sigma}_t))=\Omega(\widetilde{\Lambda}),$ where $\widetilde{\Lambda}$ is the boundary at infinity of $\widetilde{\text{dev}}(\widetilde{\Sigma}_t),$ and this proves the second point.       
-    Now, the map $\widetilde{\text{dev}}$ is $\widetilde{\rho}-$equivariant, for a representation $\widetilde{\rho}:\pi_1(M)\to\text{Isom}(\AS^{2,1})$ which is a lift of the holonomy of $M$. As $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$ is $\widetilde{\rho}$-invariant, the so are $\widetilde{\Lambda}$ and $\Omega(\widetilde{\Lambda})$. We shall prove that the action of $\pi_1(M)$ on $\Omega(\widetilde{\Lambda})$ given by $\widetilde{\rho}$ is proper. This will also show that the action is free since $\frac{\pi_1}(M)$ is isomorphic to $\pi_1(\Sigma_r)$ and therefore has no torsion. \\
+    Now, the map $\widetilde{\text{dev}}$ is $\widetilde{\rho}-$equivariant, for a representation $\widetilde{\rho}:\pi_1(M)\to\text{Isom}(\AS^{2,1})$ which is a lift of the holonomy of $M$. As $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$ is $\widetilde{\rho}$-invariant, the so are $\widetilde{\Lambda}$ and $\Omega(\widetilde{\Lambda})$. We shall prove that the action of $\pi_1(M)$ on $\Omega(\widetilde{\Lambda})$ given by $\widetilde{\rho}$ is proper. This will also show that the action is free since $\pi_1(M)$ is isomorphic to $\pi_1(\Sigma_r)$ and therefore has no torsion. \\
     For this purpose, let us notice that if $K$ is relatively compact in $\Omega(\widetilde{\Lambda})$ then 
     \[
-        X_k\coloneqq (I^+(K)\cup I^-(K))\cap \widetilde{\text{dev}}(\widetilde{\Sigma}_t) 
+        X_K\coloneqq (I^+(K)\cup I^-(K))\cap \widetilde{\text{dev}}(\widetilde{\Sigma}_t) 
     \]   
     is relatively compact as well. As the action of $\pi_1(M)$ on $\widetilde{\Sigma}_t$, and thus on $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)$, is proper and $X_{\gamma K}=\gamma(X_K),$ we deduce that the set of $\gamma$ such that $X_{\gamma K}\cap X_K\neq\emptyset$ is finite. On the other hand if $K\cap \gamma K\neq\emptyset$ then $X_K\cap X_{\gamma K}\neq \emptyset.$ We thus conclude that the action is proper. By applying the path lifting property, one sees that the quotient $\widetilde{\text{dev}}(\widetilde{\Sigma}_t)/\pi_1(M)$ is a Cauchy surfaces of $\Omega(\widetilde{\Lambda})/\pi_1(M)$, which is therefore globally hyperbolic. This proves the third point as by Proposition \ref{453} the restriction of the covering map $\AS^{2,1}\to \A^{2,1}$ to $\Omega(\widetilde{\Lambda})\cup \widetilde{\Lambda}$ is injective. 
 \end{proof}
 
-A remarkable difference between Lorentzian and Riemannian geometry is the that in Lorentzian geometry completeness is a very strong assumption, \textcolor{red}{reference} and in fact interesting classification results are obtained removing such condition. However, it is necessary to impose some maximality condition to compensate for non-completeness. Among several  approaches, one of the most common is the classification of a maximal globally hyperbolic spacetimes. Following \cite{bonsanteseppi} we restrict to a less general setting, but one could give similar definitions in the lager class of Einstein spacetimes.
+A remarkable difference between Lorentzian and Riemannian geometry is the that in Lorentzian geometry completeness is a very strong assumption, and there is not any counterpart to the Hopf-Rinow theorem. In fact, interesting classification results are obtained removing such condition. However, it is necessary to impose some maximality condition to compensate for non-completeness. Among several  approaches, one of the most common is the classification of maximal globally hyperbolic spacetimes. Following \cite{bonsanteseppi} we restrict to a less general setting, but one could give similar definitions in the lager class of Einstein spacetimes.
 
 \begin{definition}
     A globally hyperbolic Anti-de Sitter manifold $(M,g)$ is \textit{maximal} if any isometric embedding of $(M,g)$ into a globally hyperbolic Anti-de Sitter manifold $(M^{\prime},g^{\prime})$ which sends a Cauchy surface of $M$ to a Cauchy surface of $M^{\prime}$ is surjective.
 \end{definition}
 
-In eyesight of this definition and as a direct consequence of Proposition \ref{holorep} we have:
+As a product of this definition and as a direct consequence of Proposition \ref{holorep} we have:
 
 \begin{corollary}
-An Anti-de Sitter globally hyperbolic spacetime $M$ is maximal is and only if $\widetilde{M}$ is isometric to the invisible domain of a proper achronal meridian in $\partial\A^{2,1}.$
+An Anti-de Sitter globally hyperbolic spacetime $M$ is maximal is and only if $\widetilde{M}$ is isometric to the invisible domain of a proper achronal meridian in $\A^{2,1}.$
 \end{corollary}
 
 
@@ -509,9 +509,12 @@ Let $\Sigma_r$ be an oriented surface of genus $r\geq 2.$ We recall the definiti
     A representation $\rho:\pi_1(S)\to \text{PSL}(2,\R)$ is called positive \textit{Fuchsian} if there is a $\rho$-equivariant orientation preserving homeomorphism $\delta:\widetilde{\Sigma}_r\to\H^2$.
 \end{definition}
 
-The definition is invariant under conjugation in $\text{PSL}(2,\R)\simeq\text{Isom}_0(\H^2),$ but not under conjugation in $\text{Isom}(\H^2).$ It is a result of Goldman \textcolor{red}{Reference}, that a representation $\rho$ is positive Fuchsian if and only if the associated flat $\R\text{P}^1$ bundle $E_\rho$ constructed as the quotient of $\widetilde{\Sigma}_r\times\R\text{P}^1$ by the diagonal action of $\pi(S)$ (via deck transformation and the representation) has Euler class $2-2r.$ An equivalent condition is the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_r.$ \\   
+ The definition is invariant under conjugation in $\text{PSL}(2,\R)\simeq\text{Isom}_0(\H^2),$ but not under conjugation in $\text{Isom}(\H^2).$ 
+ 
+ 
+%  It is a result of Goldman \textcolor{red}{Reference}, that a representation $\rho$ is positive Fuchsian if and only if the associated flat $\R\text{P}^1$ bundle $E_\rho$ constructed as the quotient of $\widetilde{\Sigma}_r\times\R\text{P}^1$ by the diagonal action of $\pi(S)$ (via deck transformation and the representation) has Euler class $2-2r.$ An equivalent condition is the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_r.$ \\   
 
-Another useful tool for the classification of genus $r\geq 2$ is the following fact in Teichm\"uller theory \textcolor{red}{reference}:
+Another useful tool for the classification of genus $r\geq 2$ is the following fact in Teichm\"uller theory \cite{gardiner2000quasiconformal}:
 
 \begin{lemma}
     Given two positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$, any $(\rho_l,\rho_r)$ equivariant orientation-preserving homeomorphism of $\H^2,$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\R\text{P}^1.$ Moreover, its extension $\varphi:\R\text{P}^1\to\R\text{P}^1$ is the unique $(\rho_l,\rho_r)-$equivariant orientation homeomorphism of $\R\text{P}^1$.     
@@ -519,11 +522,9 @@ Another useful tool for the classification of genus $r\geq 2$ is the following f
 
 Here by ($\rho_l,\rho_r$)-equivariant we mean that $\varphi\circ\rho_l=\rho_r\circ\varphi.$\\
 Now let $\rho_l,\rho_r$ be two positive Fuchsian representation of $\Sigma_r.$ We will be interested in the representation:
-
 \[
     \rho=(\rho_l,\rho_r):\pi_1(S)\to\text{Isom}_0(\A^{2,1})\simeq \text{PSL}(2,\R)\times\text{PSL}(2,\R).
 \]
-
 \begin{definition}
     Given a pair of positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$ we define $\Lambda(\rho)$ to be the graph in $\R\text{P}^1\times\R\text{P}^1$ of the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1,$ and $\Omega_\rho \coloneqq \Omega(\Lambda(\rho))$ its invisibile domain in $\A^{2,1}$
 \end{definition}
