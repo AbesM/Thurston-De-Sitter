@@ -1,0 +1,134 @@
+\chapter{Thurston's earthquake theorem}
+We are finally ready to prove Thurston's earthquake theorem. We will recall some basic facts about measured geodesic lamination and earthquake theory, then move on to the study of \textit{fundamental example} of a piecewise totally geodesic surfaces (which corresponds simply to Dhen twist) and then move one to prove the \textit{full} theorem with an approximation argument as in \cite{benedetti2009canonical}. 
+
+\section{Earthquake theory}
+
+The theory of earthquakes was introduced by Thurston and is treated in detail in \cite{kapovich2001hyperbolic}, we will just summarize the main results and definitions. 
+
+\begin{definition}
+    Let $S$ be a hyperbolic closed surface. A \textit{geodesic lamination} $L$ on $S$ is a disjoint union of simple geodesic. 
+\end{definition}
+
+\begin{definition}
+    A \textit{measured geodesic lamination} $\lambda$ is a geodesic lamination $L$ on $S$ together with a \textit{transverse measure} $\mu$ on $L$. We call $L$ the support of $\lambda$. Given $L,$ we consider a collection $\mathcal{J}$ of all compact smooth 1-dimensional submanifolds in $S$ with endpoints in $S\setminus L$ that are transveral to $L$. A transverse measure $\mu$ is a function: 
+    \begin{equation}
+        \mu: \mathcal{J} \rightarrow \mathbb{R}^+
+    \end{equation}
+    with the following properties: 
+    \begin{itemize}
+        \item On each $J\in\mathcal{J},$ the restriction $\restr{\mu}{J}$ is a $\sigma-$additive Borel measure. 
+        \item $\mu(J)=\mu(J^{\prime})$ if $J,J^{\prime} $ are isotopic through elements of $\mathcal{J}$. 
+        \item For each $J\in\mathcal{J}$, $\mu(J)>0$ if and only if $J\cap L\neq \emptyset$.   
+    \end{itemize}
+\end{definition}
+
+We want to focus our attention on simple earthquakes (in this case they are hyperbolic Dehn twists). 
+
+\begin{example}\label{simplequake}
+    The map 
+    \[
+        E:\H^2\to\H^2
+    \]
+    defined by:
+    \[
+      E(z)= \begin{cases}
+        z & \text{if Re(z)}<0 \\
+        az & \text{if Re(z)}=0 \\
+        bz & \text{if Re(z)}>0 \\    
+    \end{cases}
+    \]
+    
+    is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition is composed of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
+    Such a map is clearly not continuous along $\ell$.    
+\end{example}
+
+Now we denote by $S$ an hyperbolic structure on a surface $\Sigma$. If $\lambda$ is a weighted multicurve on $S$ then the \textit{left earthquake} along $\lambda$ is the fractional Dehn twist along each curve with shear factor the corresponding weight. And the corresponding point in $\mathcal{T_\Sigma}$ will be denoted by $E_\lambda^l(S)$. \\
+In the following proposition we want to show that the definition of an earthquake map extend with continuity to every measured geodesic lamination. 
+
+\begin{proposition}
+    Let $(\lambda_k)$ be a sequence of weighted multicurves converging to a measured geodesic lamination $\lambda$. Then the sequence $E_{\lambda_k}^l(S)$ of hyperbolic surfaces is convergent in $\mathcal{T}_\Sigma.$
+\end{proposition}
+
+\begin{proof}
+Denote by $\widetilde{\Sigma}$ the universal cover of $\Sigma$ and consider the developing map of $S$ dev:$\widetilde{\Sigma}\to\H^2.$ Given a weighted multicurve $\lambda$, let $\widetilde{\lambda}$ be its lifting in the universal cover. Given an oriented arc $c$ (with boundary points $x,y$) in $\widetilde{\Sigma}$ transverse to $\widetilde{\lambda}$, consider the leaves of $\widetilde{\lambda}$, say $\ell_1,\dots,\ell_n,$ cutting $c$. An orientation is induced on each $\ell_i$, by requiring it to be oriented as the half-pane containing $x$.      
+\end{proof}
+    
+Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
+    \[
+        \overline{E}(z)=\begin{cases}
+            E(z), &\text{ if z }\in \H^2\\
+            \varphi(z), &\text{ if z}\in \partial\H^2  ;\\
+            
+        \end{cases}
+    \]
+    is continuous in any point in $\partial\H^2.$\\
+
+    Then Thurston proved the following (in some sense \textit{dual}) theorem, that he called \textit{``geology is transitive"}:
+
+    \begin{theorem}[``Geology is transitive"]\label{earttheorem}
+        Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
+    \end{theorem}
+    
+
+We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle, and by $\Lambda_\varphi$ we denote its graph as a subset of $\T$. We recall that with the notation of the previous chapter, $\Lambda_\varphi$ is a properly achronal meridian. By means of the Gauss map we had defined left and right projections for $\mathcal{C}^1$ embeddings; 
+\[
+    \Pi_l^{\pm:}\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^{\pm:}\partial_\pm\CF\to\H^2.
+\]
+Now we would like to extend the Gauss map even when we have weaker regularity condition. Consider a point $p \in \partial_\pm\CF$ and let $P$ be a support plane of $\CF$ at $p$. By Proposition \ref{supportinho} the support plane is necessarily spacelike, hence of the form $P=P_\gamma$ for some $\gamma\in\PSL$. What happens when $\partial_\pm\CF$ is not $C^1$ at $p$ is that we do not have a unique support plane. Hence we \textit{choose} a support plane $P_\gamma$ at $p$, requiring that the choice of support planes is made so that the support plane is constant on any connected component of the subset of $\partial_\pm\CF$ consisting of those points that admit more than one support plane. The definition of the Gauss map then \textit{depends} on the choice of $P_\gamma$ (see Corollary \ref{multipleplanes} for more details on how the choice influences the map). Once we have chosen the support planes we can just follow \textit{verbatim} the construction of the Gauss map (in what follow we will consider it as given by the construction described in Remark \ref{DiafGauss})
+
+\begin{example}\label{413} Let us consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous Example \ref{43}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition of the Gauss map we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
+    \begin{equation}
+        \Pi_l(p)=\text{Fix}(p\circ\varphi)\;\;\Pi_r(p)=\text{Fix}(\varphi\circ p).
+    \end{equation}   
+    We can also extend the two map to the boundary of $P_{\varphi^{-1}}$: recalling that its boundary coincides with the graph of $\varphi$ (Lemma \ref{32}) we have: 
+    \begin{equation}\label{simproj}
+        \Pi_l(x,\varphi(x))=x \;\;\;\Pi_r(x,\varphi(x))=\varphi(x). 
+    \end{equation}
+    
+    Equation \refeq{simproj} is immediately checked when $\varphi=\text{Id},$ because in that case we have that $\Pi_l,\Pi_r$ simply coincide with the fixed point map $\text{Fix}:P_{\text{Id}}\to\H^2$, and we observed previously that $\text{Fix}$ extends to the map $(x,x)\to x$ from $\partial P_{\text{Id}}$ to $\partial\H^2$. The general case of Equation \refeq{simproj} is then consequences of the equivariance of the Gauss map, with the additional observation that the isometry $(\text{Id},\varphi)$ maps $\text{graph}(\text{Id})$ to $\text{graph}(\varphi)$ and $P_\text{Id}$ to $P_{\varphi^{-1}}$. \\
+    We can now compute the map of $\H^2$ obtained by composing the inverse of the left projection with the right projection. Indeed, this is induced by the map $P_{\text{Id}}\to P_\text{Id}$ sending an order-two elliptic element $\mathcal{R}=p\circ\varphi\in P_{\text{Id}}$ to $\varphi\circ p=\varphi\circ\mathcal{R}\circ\varphi^{-1}$. Hence we have   
+    \begin{equation}\label{composition}
+        \Pi_r\circ\Pi_l^{-1}=\varphi:\H^2\to\H^2.
+    \end{equation}
+    In conclusion we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\sigma^{-1}}$ is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $\varphi$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $\varphi$.
+    \end{example}
+
+    \section{The fundamental example} We want to move one more intermediate step towards the final theorem. After the simple case, this time we will describe what we can consider \textit{the fundamental example}. Consider $S$ a piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
+Let us formalize this idea in a more precise way. Consider the union of two half-planes, each contained in a totally geodesic spacelike plane $P_{\gamma_1},P_{\gamma_2}$. The first key fact is the following:
+
+\begin{lemma}\label{Mati}
+    Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ{\gamma_1^{-1}}$ is a loxodromic isometry. 
+\end{lemma}
+\begin{proof}
+    As in Example \ref{43} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by equation \refeq{suplane}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
+    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
+\end{proof}
+
+Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
+
+\begin{equation}
+    \varphi_{\gamma_1,\gamma_2}^+(x) = \begin{dcases}
+        \gamma_1^{-1}, & \text{if } x \in I_1; \\
+        \gamma_2^{-1}, & \text{if } x \in I_2;
+    \end{dcases}
+    \;\text{and}\;
+    \varphi^-_{\gamma_1,\gamma_2}(x) = \begin{dcases}
+        \gamma_2^{-1}, & \text{if } x \in I_1 ;\\
+        \gamma_1^{-1} , & \text{if } x \in I_2.
+    \end{dcases}
+    \end{equation}
+    
+Both $\varphi_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
+We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. 
+We observe that the projections $\Pi_l, \Pi_r$ are well defined isometries on each (totally geodesic) connected component of the complement of such bending geodesic in $S$. We may assume that $D_1$ is contained in the plane $P_{Id}$, which we recall consisting of order two-elliptic elements of $\PSL$. Therefore the bending locus is a spacelike geodesic contained in $P_{Id}$, namely the set of order-two elliptic elements of $\PSL$ having fixed point in a geodesic $\ell$ of $\H^2$. \\ 
+With the notation that we introduced in \ref{geosection}, it has the form: 
+\[
+    L_{\ell,\ell^{\prime}}=\{X\in\PSL\;|\;X\cdot\ell^{\prime} =\ell\; \text{as oriented geodesic}\}, 
+\]
+where $\ell^{\prime}$ is the geodesic having the same support of $\ell$ but the opposite orientation. The stabilizer of this spacelike geodesic is a subgroup of $\PSL\times\PSL$ isomorphic to $\R^2$ and consisting of pairs $(A,B)\in\PSL\times\PSL$ where both $A,B$ are loxodromic isometries preserving $\ell$. The stabilizer of $L_{\ell,\ell^{\prime}}$ fixes (setwise) also the dual geodesic $L_{\ell,\ell}$ \textcolor{red}{reference}. \\
+Actually more is true, it follows from the definition of dual geodesic, that the dual point of the spacelike plane $D_2$ lies in the dual geodesic, and it therefore a hyperbolic transformation $\sigma_0$ with axis $\ell$. Now, it follows from the definion of the Gauss map that the left projection: \(\Pi_l:S_1\cup S_2\to\H^2\) is the identity on $D_1$ (we remark that we identify $P_{Id}$ with an isometric copy of $\H^2$), while on $D_2$ it is given by the multiplication on the right by $\sigma_0^{-1}$. Similarly, the right projection is the identity on $D_2$ and the multiplication on the left by $\sigma_0^{-1}$ on $D_2$.\\
+In conclusion, the composition $\Pi_r\circ\Pi_l^{-1}$ acts on $P_{\text{Id}}$ as the identity on one connected component of the complement of $L_{\ell,\ell^{\prime}}$ and conjugates by $\sigma_0$ on the other connected components, which simply means acting by the loxodormic transformation $\sigma_0$ under the identification of $P_{\text{Id}}$ with $\H^2$.\\
+This is exactly the simple earthquake map with associated geodesic lamination $\ell$. Since the angle between the spacelike planes containing $D_1$ and $D_2$ equals the distance in the dual geodesic $L_{\ell,\ell}$ between the corresponding dual points, we also conclude that the bending measure equals the measure associated with the earthquake map. The bending and earthquake measured lamination are identified. 
+
+\section{AdS bending cocyle} 
+We can finally define the bending along a measured geodesic lamination. Consider $(\lambda,\mu)$ a finite (as in the cardinality of the support $L$ of the lamination) measured geodesic lamination of $\H^2$. Take a pair of points $x,y\in \H^2$ and enumerate the geodesic in $\lambda$ that cut the segment $[x,y]$ in the natural way $\ell_1,\dots,\ell_n$. We can also orient $\ell_i$ as the boundary of the half-plane containing $x$. Now (with a slight abuse of notation) consider the $\ell_1,\dots,\ell_n$ geodesics in $P_{\text{Id}}$ after the identification with the hyperbolic plane. And let $\beta(x,y)$ be the isometry of $\A^{2,1}$ obtained by composition of positive rotation around $\ell_i$ of angle $a_i$ equal to the weight of $\ell_i$.  
