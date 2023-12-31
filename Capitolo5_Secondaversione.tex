@@ -1,5 +1,5 @@
 \chapter{Thurston's earthquake theorem}
-We are finally ready to prove Thurston's earthquake theorem. We will recall some basic facts about measured geodesic lamination and earthquake theory, then move on to the study of \textit{fundamental example} of a piecewise totally geodesic surfaces (which corresponds simply to Dhen twist) and then move one to prove the \textit{full} theorem with an approximation argument as in \cite{benedetti2009canonical}. 
+We are finally ready to prove Thurston's earthquake theorem. We will recall some basic facts about measured geodesic lamination and earthquake theory, then move on to the study of \textit{fundamental example} of a piecewise totally geodesic surfaces (which corresponds simply to Dhen twist) and then move on to prove the \textit{full} theorem with an approximation argument as in \cite{benedetti2009canonical}. 
 
 \section{Earthquake theory}
 
@@ -22,7 +22,7 @@ The theory of earthquakes was introduced by Thurston and is treated in detail in
     \end{itemize}
 \end{definition}
 
-We want to focus our attention on simple earthquakes (in this case they are hyperbolic Dehn twists). 
+For the moment we want to focus our attention on simple earthquakes (in this case they are hyperbolic Dehn twists). 
 
 \begin{example}\label{simplequake}
     The map 
@@ -42,7 +42,7 @@ We want to focus our attention on simple earthquakes (in this case they are hype
     Such a map is clearly not continuous along $\ell$.    
 \end{example}
 
-Now we denote by $S$ an hyperbolic structure on a surface $\Sigma$. If $\lambda$ is a weighted multicurve on $S$ then the \textit{left earthquake} along $\lambda$ is the fractional Dehn twist along each curve with shear factor the corresponding weight. And the corresponding point in $\mathcal{T_\Sigma}$ will be denoted by $E_\lambda^l(S)$. \\
+Now we denote by $S$ an hyperbolic structure on a surface $\Sigma$. If $\lambda$ is a weighted multicurve on $S$ then the \textit{left earthquake} along $\lambda$ is the fractional Dehn twist along each curve with shear factor the corresponding weight. And the corresponding point in $\mathcal{T}_\Sigma$ will be denoted by $E_\lambda^l(S)$. \\
 In the following proposition we want to show that the definition of an earthquake map extend with continuity to every measured geodesic lamination. 
 
 \begin{proposition}
@@ -50,7 +50,7 @@ In the following proposition we want to show that the definition of an earthquak
 \end{proposition}
 
 \begin{proof}
-Denote by $\widetilde{\Sigma}$ the universal cover of $\Sigma$ and consider the developing map of $S$ dev:$\widetilde{\Sigma}\to\H^2.$ Given a weighted multicurve $\lambda$, let $\widetilde{\lambda}$ be its lifting in the universal cover. Given an oriented arc $c$ (with boundary points $x,y$) in $\widetilde{\Sigma}$ transverse to $\widetilde{\lambda}$, consider the leaves of $\widetilde{\lambda}$, say $\ell_1,\dots,\ell_n,$ cutting $c$. An orientation is induced on each $\ell_i$, by requiring it to be oriented as the half-pane containing $x$.      
+Denote by $\widetilde{\Sigma}$ the universal cover of $\Sigma$ and consider the developing map of $S$ dev:$\widetilde{\Sigma}\to\H^2.$ Given a weighted multicurve $\lambda$, let $\widetilde{\lambda}$ be its lifting in the universal cover. Given an oriented arc $c$ (with boundary points $x,y$) in $\widetilde{\Sigma}$ transverse to $\widetilde{\lambda}$, consider the leaves of $\widetilde{\lambda}$, say $\ell_1,\dots,\ell_n,$ cutting $c$. An orientation is induced on each $\ell_i$, by requiring it to be oriented as the boundary of the half-plane containing $x$.      
 \end{proof}
     
 Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
@@ -130,5 +130,32 @@ Actually more is true, it follows from the definition of dual geodesic, that the
 In conclusion, the composition $\Pi_r\circ\Pi_l^{-1}$ acts on $P_{\text{Id}}$ as the identity on one connected component of the complement of $L_{\ell,\ell^{\prime}}$ and conjugates by $\sigma_0$ on the other connected components, which simply means acting by the loxodormic transformation $\sigma_0$ under the identification of $P_{\text{Id}}$ with $\H^2$.\\
 This is exactly the simple earthquake map with associated geodesic lamination $\ell$. Since the angle between the spacelike planes containing $D_1$ and $D_2$ equals the distance in the dual geodesic $L_{\ell,\ell}$ between the corresponding dual points, we also conclude that the bending measure equals the measure associated with the earthquake map. The bending and earthquake measured lamination are identified. 
 
-\section{AdS bending cocyle} 
-We can finally define the bending along a measured geodesic lamination. Consider $(\lambda,\mu)$ a finite (as in the cardinality of the support $L$ of the lamination) measured geodesic lamination of $\H^2$. Take a pair of points $x,y\in \H^2$ and enumerate the geodesic in $\lambda$ that cut the segment $[x,y]$ in the natural way $\ell_1,\dots,\ell_n$. We can also orient $\ell_i$ as the boundary of the half-plane containing $x$. Now (with a slight abuse of notation) consider the $\ell_1,\dots,\ell_n$ geodesics in $P_{\text{Id}}$ after the identification with the hyperbolic plane. And let $\beta(x,y)$ be the isometry of $\A^{2,1}$ obtained by composition of positive rotation around $\ell_i$ of angle $a_i$ equal to the weight of $\ell_i$.  
+\section{The example is prototypical}
+The case just treated might seem a bit too particular, but it is actually prototypical of the general case. The following lemma shows that the situation of two intersecting planes occurs often. 
+
+\begin{lemma}\label{condor}
+    Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$. Then: 
+    \begin{itemize}
+        \item Any two support panes of $\mathcal{C}(\Lambda_\varphi)$ at points of $\partial_+\CF$ intersects in $\A^{2,1}$. Analogously, any two past support planes of $\CF$ at points of $\partial_-\CF$ intersects in $\A^{2,1}$.
+        \item Given a point $p\in\partial_\pm\CF,$ if there exist two support planes at $p$, then their intersection (which is a spacelike geodesic) is contained in $\partial_\pm\CF$. As a consequence, any other support plane at $p$ contains this spacelike geodesic.
+    \end{itemize}
+\end{lemma}
+
+\begin{proof}
+    Let us consider future support planes, the other case being analogous, For the first item, let $P$ and $Q$ be support planes intersecting $\partial_+\CF$, which are spacelike by Proposition \ref{supportinho}, and suppose by contradiction that $P$ and $Q$ are disjoint. Then we can slightly move them in the future to get spacelike planes, $P^{\prime}, Q^{\prime}$ such that $P,Q,P^{\prime}$ and $Q^{\prime}$ are mutually disjoint and $P^{\prime}\cap \partial_+\CF=Q^{\prime}\cap\partial_+\CF=\emptyset.$ (For example, if $P=P_{\gamma_1}$ and $Q=P_{\gamma_2}$ then we can use Lemma \ref{Mati} and consider $P^{\prime}=P_{\sigma\gamma_1}$ for $\sigma$ an elliptic element of small clockwise angle of rotation.)\\
+    Now notice that the complement of $P^{\prime}\cup Q^{\prime}$ in $\A^{2,1}$ is the disjoint union of two cylinders and $P$ and $Q$ lie in different connected components of this complement. See \textcolor{blue}{Figura}. However, $\partial_+\CF$ is connected, and has empty intersection with $P$ and $Q$, leading to a contradiction. \\
+    Let us move on to the second item. Let $P=P_{\gamma_1}$ and $Q=P_{\gamma_2}$ be support planes such that $p\in\partial_+\CF\cap P\cap Q.$ By Lemma \ref{Mati}, $\gamma_2\circ\gamma_1^{-1}$ is loxodromic.  Up to switching the roles of $\gamma_1$ and $\gamma_2$ we can assume that $\gamma_2\circ\gamma_1^{-1}$ translates to the left seen from $D_1$ and $D_2$, where as usual $D_i$ is the convex hull of the interval $I_i,$ and the common endpoints $x,x^{\prime}$ of $I_1$ and $I_2$ are the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Hence $\partial P_{\gamma_1}\cap\partial P_{\gamma_2}=\{(x,y),(x^{\prime}, y^{\prime})\}$ where $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$ and $y^{\prime}=\gamma_1^{-1}(x^{\prime})=\gamma_2^{-1}(x^{\prime})$. \\
+    Now, via \refeq{suplane}, $P_{\gamma_i}\cap\text{graph}(f)$ consist of at least two points for $i=1,2$. We claim that the aforementioned interections contains at least $(x,y)$ and $(x^{\prime},y^{\prime})$. Indeed, since $P_{\gamma_2}$ is a support plane, $\CF\cap P_{\gamma_1}$ is contained in the half-plane $A_1 \subset P_{\gamma_1}.$ If $\text{graph}(f)\cap P_{\gamma_1}$ had not contained $(x,y)$ and $(x^{\prime} ,y^{\prime}),$ then $\CF\cap P_{\gamma_1}$ would not contain the boundary geodesic $A_1 \cap A_2$, and thus would not contain $p$. A \textit{verbatim} argument holds also for $P_{\gamma_2}$. This shows that both $(x,y)$ and $(x^{\prime},y^{\prime})$ are in $\CF$, and therefore the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ is in $\partial_\pm\CF$. \\ 
+\end{proof}
+
+\begin{observation}
+In the first item of \ref{condor}, the hypothesis that $P$ and $Q$ are support planes at points of $\partial_\pm\CF$ (and not at points of $\Lambda_\varphi$ $\subset\partial\A^{2,1}$) is necessary. In light of Proposition \ref{supportinho} we know support planes of $\CF$ are either spacelike or lightlike, and they are necessarily spacelike if they intersect $\CF$ at points of $\partial_\pm\CF$. \\
+Now, if one of the two plane $P$ and $Q$ is a support plane at a point of $\CF$, then the proog shows that $P$ and $Q$ must intersect in $\overline{\A^{2,1}}$, but not necessarily in the interior. It can happen that two future (or past) support planes (one of which possibly lightlike) at a point $(x,\varphi(x))$ intersect at $(x,\varphi(x))$ but not in the interior of $\A^{2,1}$.
+\end{observation}
+
+Recall that we have defined the left and right projections $\Pi_l^\pm, \Pi_r^\pm$, and they depended on the choice of a support plane at all points $p$ that admit more than one support plane. Moreover, we require that this support plane is chosen to be constant on any connected component of the subset of $\partial_\pm\CF$ consisting of points that admit more than one support plane. We want to show how the projections are related to this choice:
+
+\begin{corollary}\label{multipleplanes}
+    Let $\varphi:\S\to\S$ be and orientation-preserving homeomorphism which is not in $\PSL$, and suppose $p\in \partial_\pm\CF$ has at least two support planes. Then there exist $\gamma_1,\gamma_2\in\PSL$ such that $\gamma_2\circ\gamma_1^{-1}=\exp(\mathfrak{a})$ is a loxodromic element, such that all support planes at $p$ are precisely those of the form $P_{\sigma\gamma_1}$ where $\sigma=\exp(t\mathfrak{a})$ for $t\in [0,1].$ The same conclusion holds for all other point $p^{\prime}\in P_{\gamma_1}\cap P_{\gamma_2}$. \\
+    In particular, the image of the spacelike geodesic $P_{\gamma_1}\cap P_{\gamma_2}$ under the projections $\Pi_l^\pm$ and $\Pi_r^\pm$ is a geodesic in $\H^2$ that does not depend on the choice of the support plane as in the definition of the projections.  
+\end{corollary}

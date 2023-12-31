@@ -2,9 +2,29 @@
 
 We pause for the moment with our exploration of the Anti-de Sitter realm. We want to recall basic definitions of geodesic lamination and earthquakes, with the introduction of a first \textit{basic} example. We will then give an outline of the deep underlying relation between pleated surfaces and earthquakes discovered by Mess and then finally move on the proof of the earthquake theorem. 
 
+
+\section{Earthquake theory}
+The theory of earthquakes was introduced by Thurston and is treated in detail in \cite{kapovich2001hyperbolic}, we will just summarize the main results and definitions. 
+
 \begin{definition}
     A geodesic lamination $\lambda$ of $\H^2$ is a collection of disjoint geodesics that foliate a closed subset $X$ of $\H^2$. The set $X$ is called the \textit{support} of $\lambda.$ The geodesics in $\lambda$ are called \textit{leaves} (as in classic foliation terminology). The connected components of $\H^2\;\setminus\;X$ are called \textit{gaps}. The \textit{strata} of $\lambda$ are the leaves and the gaps.
 \end{definition}
+
+While geodesic lamination are \textit{sufficient} to the case if simple earthquake (namely hyperbolic Dehn twist) they are not enough to describe the general case. We need to introduce the notion of \textit{measured} geodesic lamination, with some abuse of notation we will still call such a lamination $\lambda$.
+
+\begin{definition}
+    A \textit{measured geodesic lamination} $\lambda$ is a geodesic lamination $L$ on $S$ together with a \textit{transverse measure} $\mu$ on $L$. We call $L$ the support of $\lambda$. Given $L,$ we consider a collection $\mathcal{J}$ of all compact smooth 1-dimensional submanifolds in $S$ with endpoints in $S\setminus L$ that are transveral to $L$. A transverse measure $\mu$ is a function: 
+    \begin{equation}
+        \mu: \mathcal{J} \rightarrow \mathbb{R}^+
+    \end{equation}
+    with the following properties: 
+    \begin{itemize}
+        \item On each $J\in\mathcal{J},$ the restriction $\restr{\mu}{J}$ is a $\sigma-$additive Borel measure. 
+        \item $\mu(J)=\mu(J^{\prime})$ if $J,J^{\prime} $ are isotopic through elements of $\mathcal{J}$. 
+        \item For each $J\in\mathcal{J}$, $\mu(J)>0$ if and only if $J\cap L\neq \emptyset$.   
+    \end{itemize}
+\end{definition}
+
 
 \noindent Consider $\gamma$ a loxodromic isometry of $\H^2$, the \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. It follows from the classification of Möbius transformation that the geodesic is preserved by the isometry, and when restricted to such a curve $\restr{\gamma}{\ell}:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
 Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly separates} $A$ and $B$ if $A$ and $B$ are contained in the closure of different connected components of $\H^2\;\setminus\;\ell.$ 
@@ -27,14 +47,45 @@ Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly sepa
 Let us explain more carefully what we mean by the last condition. Suppose $f:[0,1]\to\H^2$ is a smooth path such that $f(0)\in S,\;f(1)\in S^{\prime}$ and the image of $f$ intersects $\ell$ transversally and exactly at one point $z_0=f(t_0)\in\ell.$ Let $v=f^{\prime}(t_0)\in T_{z_0}\H^2$ be the tangent vector at the intersection point. Let $w\in T_{z_0}\H^2$ be a vector tangent to the geodesic $\ell$ pointing towards $\gamma(z_0).$ Then we say that $\gamma$ translates to the left seen from $S$ to $S^{\prime} $ if $v,w$ is a positive basis of $T_{z_0}\H^2$, for the standard orientation of $\H^2.$\\
 We observe that such a condition is independent of the order in which we choose $S$ and $S^{\prime},$  if $\text{Comp}(S,S^{\prime})$ translates to the left seen from $S$ to $S^{\prime},$ then $\text{Comp}(S^{\prime} ,S)$ translates to the left seen from $S^{\prime} $ to $S.$ 
 
-%ok ma cosa vuol dire davvero questa cosa?
+In the following proposition we want to show that the definition of an earthquake map given in the simple case extend with continuity to every measured geodesic lamination. 
 
+\begin{proposition}
+    Let $(\lambda_k)$ be a sequence of weighted multicurves converging to a measured geodesic lamination $\lambda$. Then the sequence $E_{\lambda_k}^l(S)$ of hyperbolic surfaces is convergent in $\mathcal{T}_\Sigma.$
+\end{proposition}
+
+\begin{proof}
+Denote by $\widetilde{\Sigma}$ the universal cover of $\Sigma$ and consider the developing map of $S$ dev:$\widetilde{\Sigma}\to\H^2.$ Given a weighted multicurve $\lambda$, let $\widetilde{\lambda}$ be its lifting in the universal cover. Given an oriented arc $c$ (with boundary points $x,y$) in $\widetilde{\Sigma}$ transverse to $\widetilde{\lambda}$, consider the leaves of $\widetilde{\lambda}$, say $\ell_1,\dots,\ell_n,$ cutting $c$. An orientation is induced on each $\ell_i$, by requiring it to be oriented as the boundary of the half-plane containing $x$.      
+\end{proof}
 \begin{observation} The earthquake $E$ is not required to be (and in fact in some case will not be) continuous. For instance this happens when the lamination $\lambda$ is finite, meaning that $\lambda$ is a collection of a finite number of geodesics. 
 \end{observation}
 
 Let us consider a first basic example: 
 
+\begin{example}\label{simplequake}
+The map 
+\[
+    E:\H^2\to\H^2
+\]
+defined by:
+\[
+  E(z)= \begin{cases}
+    z & \text{if Re(z)}<0 \\
+    az & \text{if Re(z)}=0 \\
+    bz & \text{if Re(z)}>0 \\    
+\end{cases}
+\]
 
+is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition is composed of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
+Such a map is clearly not continuous along $\ell$.
+Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
+\[
+    \overline{E}(z)=\begin{cases}
+        E(z), &\text{ if z }\in \H^2\\
+        \varphi(z), &\text{ if z}\in \partial\H^2  ;\\
+        
+    \end{cases}
+\]
+is continuous in any point in $\partial\H^2.$\\
 Then Thurston proved the following (in some sense \textit{dual}) theorem, that he called \textit{``geology is transitive"}:
 
 \begin{theorem}[``Geology is transitive"]\label{earttheorem}
@@ -200,9 +251,17 @@ Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that
     \end{dcases}
     \end{equation}
     
-Both $\varphi_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
-We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. Then with these notations we can state: 
-
+    Both $\varphi_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
+    We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. 
+    We observe that the projections $\Pi_l, \Pi_r$ are well defined isometries on each (totally geodesic) connected component of the complement of such bending geodesic in $S$. We may assume that $D_1$ is contained in the plane $P_{Id}$, which we recall consisting of order two-elliptic elements of $\PSL$. Therefore the bending locus is a spacelike geodesic contained in $P_{Id}$, namely the set of order-two elliptic elements of $\PSL$ having fixed point in a geodesic $\ell$ of $\H^2$. \\ 
+    With the notation that we introduced in \ref{geosection}, it has the form: 
+    \[
+        L_{\ell,\ell^{\prime}}=\{X\in\PSL\;|\;X\cdot\ell^{\prime} =\ell\; \text{as oriented geodesic}\}, 
+    \]
+    where $\ell^{\prime}$ is the geodesic having the same support of $\ell$ but the opposite orientation. The stabilizer of this spacelike geodesic is a subgroup of $\PSL\times\PSL$ isomorphic to $\R^2$ and consisting of pairs $(A,B)\in\PSL\times\PSL$ where both $A,B$ are loxodromic isometries preserving $\ell$. The stabilizer of $L_{\ell,\ell^{\prime}}$ fixes (setwise) also the dual geodesic $L_{\ell,\ell}$ \textcolor{red}{reference}. \\
+    Actually more is true, it follows from the definition of dual geodesic, that the dual point of the spacelike plane $D_2$ lies in the dual geodesic, and it therefore a hyperbolic transformation $\sigma_0$ with axis $\ell$. Now, it follows from the definion of the Gauss map that the left projection: \(\Pi_l:S_1\cup S_2\to\H^2\) is the identity on $D_1$ (we remark that we identify $P_{Id}$ with an isometric copy of $\H^2$), while on $D_2$ it is given by the multiplication on the right by $\sigma_0^{-1}$. Similarly, the right projection is the identity on $D_2$ and the multiplication on the left by $\sigma_0^{-1}$ on $D_2$.\\
+    In conclusion, the composition $\Pi_r\circ\Pi_l^{-1}$ acts on $P_{\text{Id}}$ as the identity on one connected component of the complement of $L_{\ell,\ell^{\prime}}$ and conjugates by $\sigma_0$ on the other connected components, which simply means acting by the loxodormic transformation $\sigma_0$ under the identification of $P_{\text{Id}}$ with $\H^2$.\\
+    This is exactly the simple earthquake map with associated geodesic lamination $\ell$. Since the angle between the spacelike planes containing $D_1$ and $D_2$ equals the distance in the dual geodesic $L_{\ell,\ell}$ between the corresponding dual points, we also conclude that the bending measure equals the measure associated with the earthquake map. The bending and earthquake measured lamination are identified. 
 \begin{proposition}\label{gettinthere}
     Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a loxodromic isometry that translates along $\ell$ to the left, as seen from $D_1$ to $D_2$. Then:
     \begin{itemize}
