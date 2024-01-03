@@ -1,7 +1,7 @@
 \chapter{Anti-de Sitter space in dimension (2+1)}
 We will now restrict our attention to dimension three Anti-de Sitter geometry, as it will be the specific model geometry of the manifolds of our next interest. In this chapter we will highlight the structure of Lie group that $\A^{2,1}$ has in this specific dimension and we will study its geometry using tools of Lie group theory. Most of the results are just a particular case of the theory developed in the previous chapter, but the Lie structure permits to give a more explicit description of the geometry of the phenomena we are interested in.\\
 
-\section{The {PSL}$(2,\R)$ model.} 
+\section{The {PSL}$(2,\R)$ model} 
 The fundamental observation is the existence of a special model in dimension three which endows Anti-de Sitter space with a Lie group structure. To construct such a model we observe that $q=-$det is a quadratic form with signature (2,2) over the real vector space $\mathcal{M}(2,\R)$ (the signature is evident when we consider the basis consisting of elementary matrices). The associated bilinear form is expressed by the formula:
 \begin{equation}\label{quadratic}
     \langle A,B\rangle=-\frac{1}{2}\text{tr}(A\cdot\text{adj}(B))
@@ -21,7 +21,7 @@ hence, via Sylvester's theorem, there is an identification between $(\mathcal{M}
 Let us observe that $\text{SL}(2,\R)\times \text{SL}(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
 $$(A,B)\cdot X=AXB^{-1}.$$
 
-As a direct consequence of the Binet formula, the action preserves the quadratic form $q=$-det and thus induces a representation: 
+As a direct consequence of the Binet formula, the action preserves the quadratic form $q$    and thus induces a representation: 
 
 \[ \rho:\text{SL}(2,\R)\times \text{SL}(2,\R)\to O(\mathcal{M}(2,\R),q). \]
 
@@ -84,7 +84,7 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
 \end{lemma}
 \begin{proof}
     It follows from definition that $\iota$ is equivariant with respect to the isomorphism of $\PSL\times\PSL$ which switches left and right factors, more explicitly we have that for every $A,B\in\PSL$ the following holds: $\iota[(A,B)X]=(\varphi(A,B))[\iota X]=BX^{-1}A^{-1}$. As $\text{d}_\text{Id}\iota=-\text{Id}$ is a linear isometry, $\iota$ is an isometry, the differential being minus the identity also shows time-reversal. \\ 
-    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)(\text{Id}-X),$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now if $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
+    The second part of the statement can be checked via the following. For a $2\times2$ matrix the Cayley-Hamilton theorem implies the equality $(\det X)X^{-1}=(\text{tr}X)\text{Id}-X,$ so that projectively we have $[X^{-1}]=[\text{tr}X\text{Id}-X].$ Hence $\iota$ extends to the transformation $[X]\to[\text{tr}X\text{Id}-X]$ on $\partial\A^{2,1}.$ Now if $X$ is a rank $1$ matrix, it is traceless if and only if $X^2=0$, hence $\text{Ker}(X)=\text{Im}(X).$ If $\text{tr}(X)\neq 0$, then $X$ is diagonalizable with eigenvalues $0$ and $\text{tr}(X)$. Moreover $\text{Ker}(X)$ and $\text{Im}(X)$ are the corresponding eigenspaces. It follows then that $\text{Ker}(\text{tr}X\text{Id}-X)=\text{Im}(X)$ and $\text{Im}(\text{tr}X\text{Id}-X)=\text{Ker}X$ 
 \end{proof}
 
 
@@ -94,7 +94,7 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    $\PSL$ acts on $\H^2$ transitively via isometries, hence if the conditions holds for some $p$ then it holds for all $p\in\H^2$. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: by acting via conjugation we can suppose the matrices in canonical form, let us distinguish the three cases. If $X_n$ are loxodromic they converge projectively to $X=\begin{bmatrix}
+    Since $\PSL$ acts on $\H^2$ via isometries, if the conditions holds for some $p$ then it holds for all $p\in\H^2$, as the distance from $i$ to any other point is bounded. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: by acting via conjugation we can suppose the matrices in canonical form, let us distinguish the three cases. If $X_n$ are loxodromic they converge projectively to $X=\begin{bmatrix}
         1 & 0 \\
         0 & 0
     \end{bmatrix} \\$ in the projective chart $i$ is represented with the vector $[1,0]$ hence we have the thesis. If $X_n$ are parabolic, they converge to $X=\begin{bmatrix}
@@ -117,7 +117,7 @@ We refer to $\lambda_{y_0}$ as the \textit{left ruling} through $(x_0,y_0)$, and
 \[
     \mu_{x_0}\coloneqq\{(x_0,y)|y\in\R\text{P}^1\}.
 \]
-We can express the conformal Lorentzian strucutre of $\partial\A^{2,1}$ with the rulings. The action of $\text{PSO}(2,\R)\times\{\text{Id}\}$ on $\A^{2,1}$ yields a flow on $A^{2,1}$ generated by a right-invariant vector field, which at Id is the \textit{positive } tangent vector of $\text{PSO}(2,\R).$ So orbits are all timelike and \textit{future directed}. In similar fashion the action of $\{\text{Id}\}\times\text{PSO}(2,\R)$ yields a flow generated by a left-invariant vector field, which at Id is the \textit{negative} tangent vector at $\text{PSO}(2,\R)$, and its orbits are all timelike and \textit{past directed}. 
+We can express the conformal Lorentzian structure of $\partial\A^{2,1}$ with the rulings. The action of $\text{PSO}(2,\R)\times\{\text{Id}\}$ on $\A^{2,1}$ yields a flow on $A^{2,1}$ generated by a right-invariant vector field, which at Id is the \textit{positive } tangent vector of $\text{PSO}(2,\R).$ So orbits are all timelike and \textit{future directed}. In similar fashion the action of $\{\text{Id}\}\times\text{PSO}(2,\R)$ yields a flow generated by a left-invariant vector field, which at Id is the \textit{negative} tangent vector at $\text{PSO}(2,\R)$, and its orbits are all timelike and \textit{past directed}. 
 \begin{proposition}
     Let $\pi_l,\pi_r:\S\times\S\to\S$ be the canonical projection and $d\theta$ be the angular form on $\S\simeq\partial\H^2$. Then the symmetric product $\pi_l^*(d\theta)\pi_r^*(d\theta)$ is in the conformal class of $\partial\A^{2,1}$.
 \end{proposition}  
