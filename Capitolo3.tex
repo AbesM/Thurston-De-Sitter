@@ -88,18 +88,29 @@ In this setting our choice of a time-orientation \textit{can be modified} accord
 \end{proof}
 
 
-Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ and $\PSL$ is identified to $\text{Isom}_0(\H^2$). From this perspective we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
+Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ correspond to the boundary at infinity $\partial\H^2$ via the identification mapping the line spanned by $(a,b)$ to $\frac{a}{b}$ and $\PSL$ is identified to $\text{Isom}_0(\H^2$). From this perspective we can consider $\partial\A^{2,1}$ as $\partial\H^2\times\partial\H^2$,. We can then interpret the convergence to $\partial\A^{2,1}$ in this setting:
 
 \begin{lemma}\label{convergenza}
     A sequence $[X_n]\in\A^{2,1}$ converges to $(x,y)\in\partial\A^{2,1}\simeq\T$ if and only if for every $p\in\H^2,$ $X_n(p)\to x$ and $X_n^{-1}(p)\to y.$ 
 \end{lemma}
 \begin{proof}
-    Since $\PSL$ acts on $\H^2$ via isometries, if the conditions holds for some $p$ then it holds for all $p\in\H^2$, as the distance from $i$ to any other point is bounded. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $X_n$ converges projectively to a rank 1 matrix $X$, one checks immediately that $X(p)$ is in the projective class of $x=\text{Im}(X)$ as follows: by acting via conjugation we can suppose the matrices in canonical form, let us distinguish the three cases. If $X_n$ are loxodromic they converge projectively to $X=\begin{bmatrix}
-        1 & 0 \\
-        0 & 0
-    \end{bmatrix} \\$ in the projective chart $i$ is represented with the vector $[1,0]$ hence we have the thesis. If $X_n$ are parabolic, they converge to $X=\begin{bmatrix}
-        1 & 0 \\
-        0 & 1 \end{bmatrix}$ and the thesis follows analogously. Finally if $X_n$ are elliptic, they converge to $X=\begin{bmatrix} \end{bmatrix}$
+    Since $\PSL$ acts on $\H^2$ via isometries, if the conditions holds for some $p$ then it holds for all $q\in\H^2$, as the distance from $p$ to any other point $q$ is bounded. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $[X_n]=\begin{bmatrix}
+        a_n & b_n \\
+        c_n & d_n
+    \end{bmatrix}$ converges projectively to a rank 1 matrix, we have that $a_nd_n-b_nc_n\rightarrow0$. We show some cases:
+    \begin{itemize}
+        \item If $c=0$ and $d=0$, then $[X_n]$ converges to $[X]=\begin{bmatrix}
+            1 & b \\
+            0 & 0\end{bmatrix}$, $X(i)=\infty=\frac{1}{0}$
+
+        \item If $b=0$ and $d=0$, then $[X_n]$ converges to $[X]$ with $X=\begin{bmatrix}
+            1 & 0 \\
+            c & 0 \end{bmatrix}$, $X(i)=\frac{1}{c}$
+        \item If $ad=bc,$ suppose $a=1$, then $[X_n]$ converges to $[X]$ with $X=\begin{bmatrix}
+            1 & b \\
+            c & d \end{bmatrix}$, $X(i)=\frac{i+b}{ci+d}=\frac{i+b}{ci+1\cdot d}=\frac{i+b}{ci+bc}=\frac{1}{c}$.
+    \end{itemize}
+    All the (finite) case left are similar.
     The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof}
 
