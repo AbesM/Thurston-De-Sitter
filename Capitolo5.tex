@@ -41,13 +41,13 @@ The map
 defined by:
 \[
   E(z)= \begin{cases}
-    z & \text{if Re(z)}<0 \\
-    az & \text{if Re(z)}=0 \\
-    bz & \text{if Re(z)}>0 \\    
+    z & \text{if Re}(z)<0 \\
+    az & \text{if Re}(z)=0 \\
+    bz & \text{if Re}(z)>0 \\    
 \end{cases}
 \]
 
-is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition is composed of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
+is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition consists of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
 Such a map is clearly not continuous along $\ell$.
 Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
 \[
@@ -61,10 +61,13 @@ is continuous at any point of $\partial\H^2.$\\
 Then Thurston proved the following (in some sense \textit{dual}) theorem, that he called \textit{``geology is transitive"}:
 
 \begin{theorem}[``Geology is transitive"]\label{earttheorem}
-    Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
+    Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a (unique) left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
 \end{theorem}
 \end{example}
 
+\begin{observation}
+    The uniqueness in Theorem \ref{earttheorem} is understood except for the choice of "speed" of the shearing on leaves where the earthquake has a discontinuity.
+\end{observation}
 % While geodesic laminations are \textit{sufficient} to the case of simple earthquakes (namely hyperbolic Dehn twist) they are not enough to describe the general case. We need to introduce the notion of \textit{measured} geodesic lamination with some abuse of notation we will still call such a lamination $\lambda$.
 
 % \begin{definition}
@@ -94,7 +97,7 @@ Then Thurston proved the following (in some sense \textit{dual}) theorem, that h
 
 Having all the needed definition we would now like to give a different proof of the statement of Theorem \ref{earttheorem} using the tools of Anti-de Sitter geometry developed in the previous chapters. More in detail, the key observation that we will use is due to Mess' work \cite{Mess}, that highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}\CF$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see Proposition \ref{466} and Remark \ref{467}.\\
 Let us be more precise about the detail of what is going on. Consider left and right projections from $\partial_+\CF$ to $\H^2,$ now the composition $\Pi_r\circ\Pi_l^{-1}$  is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake lamination is identified to the bending lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
-Now, when the curve $\Lambda$ is the graph of an orientation-preserving homeomorphism of $\S$, one obtains as a result earthquakes maps of $\H^2$. When moreover $\varphi$ is the homeomorphism which conjugates left and right representations $\rho_l,\rho_r:\pi_1(\Sigma)\to\PSL$ of the holonomy of a MGH Cauchy compact manifold, the naturality of the construction implies that the earthquake map descends to an earthquake map from the left to the right hyperbolic surfaces, namely $\H^2/\rho_l(\pi_1(\Sigma))$ and $\H^2/\rho_r(\pi_1(\Sigma))$, and we can recover the earthquake theorem as in Kerchoff (weaker) formulation \cite{kerckhoff1983nielsen}.\\
+Now, when the curve $\Lambda$ is the graph of an orientation-preserving homeomorphism of $\S$, one obtains as a result earthquakes maps of $\H^2$. When moreover $\varphi$ is the homeomorphism which conjugates left and right representations $\rho_l,\rho_r:\pi_1(\Sigma)\to\PSL$ of the holonomy of a MGH Cauchy compact manifold, the naturality of the construction implies that the earthquake map descends to an earthquake map from the left to the right hyperbolic surfaces, namely $\H^2/\rho_l(\pi_1(\Sigma))$ and $\H^2/\rho_r(\pi_1(\Sigma))$, and we can recover the earthquake theorem as in Kerchoff's (weaker) original formulation \cite{kerckhoff1983nielsen}.\\
 Given the previous discussion, we can now start with the details.
 
 
@@ -258,7 +261,7 @@ Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that
         L_{\ell,\ell^{\prime}}=\{X\in\PSL\;|\;X\cdot\ell^{\prime} =\ell\; \text{as oriented geodesic}\}, 
     \]
     where $\ell^{\prime}$ is the geodesic having the same support of $\ell$ but the opposite orientation. The stabilizer of this spacelike geodesic is a subgroup of $\PSL\times\PSL$ isomorphic to $\R^2$ and consisting of pairs $(A,B)\in\PSL\times\PSL$ where both $A,B$ are loxodromic isometries preserving $\ell$. The stabilizer of $L_{\ell,\ell^{\prime}}$ fixes (setwise) also the dual geodesic $L_{\ell,\ell}$ \textcolor{red}{reference}. \\
-    Actually more is true, it follows from the definition of dual geodesic, that the dual point of the spacelike plane $D_2$ lies in the dual geodesic, and it therefore a hyperbolic transformation $\sigma_0$ with axis $\ell$. Now, it follows from the definion of the Gauss map that the left projection: \(\Pi_l:S_1\cup S_2\to\H^2\) is the identity on $D_1$ (we remark that we identify $P_{Id}$ with an isometric copy of $\H^2$), while on $D_2$ it is given by the multiplication on the right by $\sigma_0^{-1}$. Similarly, the right projection is the identity on $D_2$ and the multiplication on the left by $\sigma_0^{-1}$ on $D_2$.\\
+    Actually more is true, it follows from the definition of dual geodesic, that the dual point of the spacelike plane $D_2$ lies in the dual geodesic, and it is therefore a loxodromic transformation $\sigma_0$ with axis $\ell$. Now, it follows from the definition of the Gauss map that the left projection: \(\Pi_l:S_1\cup S_2\to\H^2\) is the identity on $D_1$ (we remark that we identify $P_{Id}$ with an isometric copy of $\H^2$), while on $D_2$ it is given by the multiplication on the right by $\sigma_0^{-1}$. Similarly, the right projection is the identity on $D_2$ and the multiplication on the left by $\sigma_0^{-1}$ on $D_2$.\\
     In conclusion, the composition $\Pi_r\circ\Pi_l^{-1}$ acts on $P_{\text{Id}}$ as the identity on one connected component of the complement of $L_{\ell,\ell^{\prime}}$ and conjugates by $\sigma_0$ on the other connected components, which simply means acting by the loxodormic transformation $\sigma_0$ under the identification of $P_{\text{Id}}$ with $\H^2$.\\
     This is exactly the simple earthquake map with associated geodesic lamination $\ell$. Since the angle between the spacelike planes containing $D_1$ and $D_2$ equals the distance in the dual geodesic $L_{\ell,\ell}$ between the corresponding dual points, we also conclude that the bending measure equals the measure associated with the earthquake map (this will not be used as we are interested only in closed surfaces but shows how we could recover the \textit{full} Thurston's theorem from AdS geometry as in \cite{benedetti2009canonical}). The bending and earthquake lamination are identified. 
 % \begin{proposition}\label{gettinthere}
