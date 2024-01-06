@@ -1,6 +1,31 @@
 \chapter*{Introduction}
-In Riemannian geometry the \textit{most interesting} geometry of constant sectional curvature is the hyperbolic one, the analogous in Lorentzian geometry  (as in with constant negative curvature) is the \textit{Anti-de Sitter} geometry. In the first chapter we will introduce the basic concepts of Lorentzian geometry and explore the relationships between \textit{any} spaces with constant sectional curvature and spaces with maximal isometry group \textit{and} constant sectional curvature.
-We would then like to expand the study of Anti-de Sitter geometry in chapter two with a brief exposition of the most common models of AdS spaces and the study of geodesics in this manifolds. 
-In chapter three we would like to specialize to $2+1$ Anti-de Sitter geometry fixing the dimension and working with explicit models, the main result of this section is the identification of AdS spaces with groups of matrices. 
-In chapter four, with this ``newly introduced" concepts, we would like to recover a celebrated theorem of Thurston \cite{thurston1986earthquakes} related to hyperbolic surfaces following the pioneeristic work of G. Mess \cite{Mess}. \\
-The \textit{fil rouge} of the all thesis is the identification of the graph of an orientation preserving homeomorphism of the circle with a subset in the boundary of Anti-de Sitter space in dimension 3, considering \textit{convex hull} of such subsets gives rise to canonical projections that compose (with the right precautions) to an earthquake map.
+%  In the first chapter we will introduce the basic concepts of Lorentzian geometry and explore the relationships between \textit{any} spaces with constant sectional curvature and spaces with maximal isometry group \textit{and} constant sectional curvature.
+% We would then like to expand the study of Anti-de Sitter geometry in chapter two with a brief exposition of the most common models of AdS spaces and the study of geodesics in this manifolds. 
+% In chapter three we would like to specialize to $2+1$ Anti-de Sitter geometry fixing the dimension and working with explicit models, the main result of this section is the identification of AdS spaces with groups of matrices. 
+% In chapter four, with this ``newly introduced" concepts, we would like to recover a celebrated theorem of Thurston \cite{thurston1986earthquakes} related to hyperbolic surfaces following the pioneeristic work of G. Mess \cite{Mess}. \\
+% The \textit{fil rouge} of the all thesis is the identification of the graph of an orientation preserving homeomorphism of the circle with a subset in the boundary of Anti-de Sitter space in dimension 3, considering \textit{convex hull} of such subsets gives rise to canonical projections that compose (with the right precautions) to an earthquake map.
+
+
+In Riemannian geometry the \textit{most interesting} geometry of constant sectional curvature is the hyperbolic one, the analogous in Lorentzian geometry  (as in with constant negative curvature) is \textit{Anti-de Sitter} geometry. The thesis presents Anti-de Sitter (AdS) geometry in dimension 3 and its relationship with the theory of earthquakes on hyperbolic surfaces.\\ After a brief introduction to Lorentzian geometry, we will introduce the most common models of AdS spaces in any dimension following \cite{bonsanteseppi}. The focus will rapidly shift to dimension 3 (2+1) where the model space $\A^{2,1}$ (known as the Klein model in the literature) can be identified with the Lie group $\PSL$ which moreover is isomorphic to $\text{Isom}_0(\H^2)$.\\ Following the pioneering work of Geoffrey Mess in 1990 \cite{Mess} we will develop the classification of maximal globally hyperbolic (MGH) AdS spacetimes of genus $r>2$, 3-manifolds locally isometric to $\A^{2,1}$ characterized by the existance of a \textit{Cauchy surfaces} of genus $r,$ namely a surface $\Sigma$ of genus $r$ that intersects every inextensible timelike curve exactly once and a property of \textit{maximal} inclusion that we will investigate in the thesis.\\ A first result due to Geroch \cite{hawking2023large} states that such spacetimes have to be diffeomorphic to $\Sigma\times\R$. Even when the topological data of the surface $\Sigma$ is fixed the geometry of the resulting spacetime can vary significantly. If $\Sigma_r$ is a closed surface of genus $g$ we denote the \textit{deformation space} of MGH spacetimes of genus $r$ by:
+
+\[
+    \mathcal{MGH}(\Sigma_r)=\{g\;\text{MGH AdS metric on}\;\Sigma_r\times\R\}/\text{Diff}_0(\Sigma_r\times\R)
+\] and with $\mathcal{T}(\Sigma_g)$ the Teichmüller space of the surface $\Sigma_r$ the main result of the classification (in \ref{chapterr4}) will be the following: 
+
+\begin{theorem}[Mess \cite{Mess}]
+    The holonomy map $\rho:\mathcal{MGH}(\Sigma_r)\to\mathcal{T}(\Sigma_r)\times\mathcal{T}(\Sigma_r)$ is a homeomorphism.
+\end{theorem}
+
+To obtain such a result we will develop the theory of \textit{achronal surfaces}, surfaces which points are not connected via timelike curves, and the related theory of \textit{achronal meridian}. The observation that the graph $\Lambda_\varphi$ of any orientation-preserving homeomorphism $\varphi$ of the circle can be identified with an achronal meridian in the universal cover of $\A^{2,1}$ will help us relating Ads geometry to the theory of earthquakes on hyperbolic surfaces developed by Thurston in \cite{thurston1986earthquakes}.\\ 
+
+Following again Mess we will explain the example of pleated surfaces in $\A^{2,1}$, relating bending lamination to geodesic lamination and the earthquake map to projections from the boundary of the convex hull of $\Lambda_\varphi$, the projections will be related to the \textit{Gauss map} an adaption to non-flat spaces of the classical Gauss map for embedded surfaces in $\mathbb{R}^3.$ With the assist of the Gauss map we will be able to recover Thurston's earthquakes theorem: 
+
+\begin{theorem}[``Geology is transitive", Thurston \cite{thurston1986earthquakes}]
+    Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a (unique) left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
+\end{theorem}
+
+and as a corollary the classical Kerchoff's formulation of the earthquakes theorem for hyperbolic surfaces: 
+
+\begin{corollary}
+    Let $S$ be a closed oriented surface and let $\rho,\varrho:\pi_1(S)\to\PSL$ be two Fuchsian representations. Then there exists a $(\rho,\varrho)-$equivariant left earthquake map of $\H^2$, and a $(\rho,\varrho)-$equivariant right earthquake map. 
+\end{corollary}

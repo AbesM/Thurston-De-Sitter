@@ -1,4 +1,4 @@
-\chapter{Mess' Work}
+\chapter{Mess' Work}\label{chapterr4}
 
 In his 1990 paper “Lorentz Spacetimes of Constant Curvature" \cite{Mess}, Geoffrey Mess offered a completely new approach to the study of spacetimes in 2+1-dimension by employing tools and techniques from low-dimensional geometry and topology. The aim of this chapter is to give a brief introduction to Mess' ideas, with a special attention to AdS geometry. Our treatment will follow the setting introduced by Bonsante and Seppi in \cite{bonsanteseppi}. We will give definitions of general Lorentzian sets such as \textit{achronal subsets, invisible domains, domains of dependence} and how they relate to the graphs of circle homeomorphisms (and their convex hull) in our specialized Anti-de Sitter setting. We will show that those graphs are \textit{proper achronal sets} in the projective model and always lift to achronal sets in the Poincaré model.
 
@@ -383,7 +383,7 @@ As a consequence $\partial\mathcal{C}(\Lambda)$ consists of points dual to suppo
 \end{proof}
 
 \begin{observation}\label{465}
-    It may happen that a boundary component of $\mathcal{C}(\Lambda)$ meets the boundary of $\Omega(\Lambda)$. This exactly happens when the curve $\Lambda$ contains a \textit{sawtooth}, namely two consecutive lightlike segments in $\A^{2,1},$ one past directed and the other future-directed. In this case the lighltike plane $L(z)$ tangent to $\partial\A^{2,1}$ at the vertex $z$ of the sawtooth contains a lightlike traingle contained in $L(z)$. This is however not contained in $\Omega(\Lambda)$. If the curve $\Lambda$ does not contain any sawtooth, then $\mathcal{C}({\Lambda})\setminus\Lambda$ is entirely contained in $\Omega(\Lambda)$.\\
+    It may happen that a boundary component of $\mathcal{C}(\Lambda)$ meets the boundary of $\Omega(\Lambda)$. This exactly happens when the curve $\Lambda$ contains a \textit{sawtooth}, namely two consecutive lightlike segments in $\A^{2,1},$ one past directed and the other future-directed. In this case the lighltike plane $L(z)$ tangent to $\partial\A^{2,1}$ at the vertex $z$ of the sawtooth contains a lightlike triangle contained in $L(z)$. This is however not contained in $\Omega(\Lambda)$. If the curve $\Lambda$ does not contain any sawtooth, then $\mathcal{C}({\Lambda})\setminus\Lambda$ is entirely contained in $\Omega(\Lambda)$.\\
     The fundamental example is given in \textcolor{red}{inserire figura 8}, where the yellow refion represents at the same time the convex hull of the proper achronal meridian $\Lambda$ in $\partial\A^{2,1}$ composed of four lightlike segments, two past-directed and two future-directed, and the closure of $\Omega(\Lambda).$ \textcolor{red}{Vedi anche remark 8.1.3 e la figura 14.} 
 \end{observation}
 
@@ -453,12 +453,10 @@ We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de 
 
 \subsection{General facts.} We will now state some general that will be useful in our classification.
 
-\begin{lemma}\label{properembedding}
+\begin{lemma}\label{properembedding}[Bonsante-Seppi \cite{bonsanteseppi}]
     Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion. If $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$
 \end{lemma}
-\begin{proof}
-    
-\end{proof}
+
 
 As an immediate consequence there cannot be any globally hyperbolic spacetime with genus $0$. In fact, suppose such a spacetime exists and denote by $\Sigma$ the Cauchy surfaces diffeomorphic to $\mathbb{S}^2$, the developing map restricted to $\Sigma$ would be a spacelike immersion, and the pull-back metric would be complete by compactness. But this contradicts \ref{properembedding}. Hence: 
 
@@ -505,7 +503,7 @@ An Anti-de Sitter globally hyperbolic spacetime $M$ is maximal is and only if $\
 \subsection{Examples of genus $r\geq 2$}
 Let $\Sigma_r$ be an oriented surface of genus $r\geq 2.$ We recall the definition of Fuchsian representation. 
 
-\begin{definition}
+\begin{definition}\label{positivefuc}
     A representation $\rho:\pi_1(S)\to \text{PSL}(2,\R)$ is called positive \textit{Fuchsian} if there is a $\rho$-equivariant orientation preserving homeomorphism $\delta:\widetilde{\Sigma}_r\to\H^2$.
 \end{definition}
 
@@ -517,16 +515,16 @@ Let $\Sigma_r$ be an oriented surface of genus $r\geq 2.$ We recall the definiti
 Another useful tool for the classification of genus $r\geq 2$ is the following fact in Teichm\"uller theory \cite{gardiner2000quasiconformal}:
 
 \begin{lemma}
-    Given two positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$, any $(\rho_l,\rho_r)$ equivariant orientation-preserving homeomorphism of $\H^2,$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\R\text{P}^1.$ Moreover, its extension $\varphi:\R\text{P}^1\to\R\text{P}^1$ is the unique $(\rho_l,\rho_r)-$equivariant orientation homeomorphism of $\R\text{P}^1$.     
+    Given two positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$, any $(\rho_l,\rho_r)$ equivariant orientation-preserving homeomorphism of $\H^2,$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\R\text{P}^1$ (we can consider $\delta_r^{-1}\circ\delta_l$ given by Definition \ref{positivefuc}). Moreover, its extension $\varphi:\R\text{P}^1\to\R\text{P}^1$ is the unique $(\rho_l,\rho_r)-$equivariant orientation homeomorphism of $\R\text{P}^1$.     
 \end{lemma}
 
-Here by ($\rho_l,\rho_r$)-equivariant we mean that $\varphi\circ\rho_l=\rho_r\circ\varphi.$\\
+Here by ($\rho_l,\rho_r$)-equivariant we mean that for every $\gamma\in \pi_1(S)$:$$\varphi\circ\rho_l(\gamma)=\rho_r(\gamma)\circ\varphi.$$\\
 Now let $\rho_l,\rho_r$ be two positive Fuchsian representation of $\Sigma_r.$ We will be interested in the representation:
 \[
-    \rho=(\rho_l,\rho_r):\pi_1(S)\to\text{Isom}_0(\A^{2,1})\simeq \text{PSL}(2,\R)\times\text{PSL}(2,\R).
+    \rho=(\rho_l,\rho_r):\pi_1(\Sigma_r)\to\text{Isom}_0(\A^{2,1})\simeq \text{PSL}(2,\R)\times\text{PSL}(2,\R).
 \]
 \begin{definition}
-    Given a pair of positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$ we define $\Lambda(\rho)$ to be the graph in $\R\text{P}^1\times\R\text{P}^1$ of the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1,$ and $\Omega_\rho \coloneqq \Omega(\Lambda(\rho))$ its invisibile domain in $\A^{2,1}$
+    Given a pair of positive Fuchsian representation $\rho_l,\rho_r:\pi_1(\Sigma_r)\to\text{PSL}(2,\R)$ we define $\Lambda(\rho)$ to be the graph in $\R\text{P}^1\times\R\text{P}^1$ of the unique $(\rho_l,\rho_r)-$equivariant orientation-preserving homeomorphism of $\R\text{P}^1,$ and $\Omega_\rho \coloneqq \Omega(\Lambda(\rho))$ its invisible domain in $\A^{2,1}$
 \end{definition}
 
 Using the above construction, we can build examples of MGH spacetimes having holonomy any $\rho=(\rho_l,\rho_r)$ of this form. 
