@@ -215,7 +215,7 @@ When looking for a complete description of timelike geodesics it suffices to let
 \end{proof}
 
 \subsection{Spacelike geodesics}
-Let us consider $\ell$ an oriented geodesics of the hyperbolic plane $\H^2$. From what we have already discussed the one-parameter group of loxodromic transformation fixing $\ell$ as an \textit{oriented} geodesic constitutes a spacelike geodesic through the origin. By an argument analogous to the one given in Proposition \ref{352}, relying on the equivariance of the construction by the actions of $\PSL\times\PSL$, one proves that every spacelike geodesic is of the form: 
+Let us consider $\ell$ an oriented geodesics of the hyperbolic plane $\H^2$. From what we have already discussed the one-parameter group of loxodromic transformation fixing $\ell$ as an \textit{oriented} geodesic constitutes a spacelike geodesic through the origin. By an argument analogous to the one given in Proposition \ref{352}, relying on the equivariance of the construction by the action of $\PSL\times\PSL$, one proves that every spacelike geodesic is of the form: 
 \[
     L_{\ell,\jmath}=\{X\in\PSL\;|\;X\cdot\jmath=\ell\;\text{as oriented geodesics}\},
 \]
@@ -265,7 +265,7 @@ Now we want to study totally geodesic spacelike planes in $\A^{2,1}.$ They are a
 \end{equation}
 for some non-zero matrix $A$. The notation is justified by the observation that the plane defined by $P_A$ depends only on the projective class of $A$. The totally geodesic plane is spacelike if and only if $q(A)=-\det A$ is negative. We will call such a plane \textit{dual plane} of $A$, in particular the dual plane $P_\gamma$  of an element $\gamma\in\PSL$ is a spacelike totally geodesic plane. \\
 \begin{example}\label{spacelikeisometry}
-Before the general treatment we want to focus on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of unit matrices $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the actions of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_{\text{Id}}$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
+Before the general treatment we want to focus on a concrete example. Consider $\gamma=\text{Id}\in\PSL.$ Now because of Equation \refeq{quadratic}, $P_{\text{Id}}$ is the subset of $\PSL$ consisting of projective class of $X$ with $\text{tr}(X)=0$. By the Cayley-Hamilton theorem, $X^2=-\text{Id},$ hence the elements of $P_{\text{Id}}$ are order-two isometries of $\H^2,$ that is, elliptic elements with rotation angle $\pi$.  We can also observe that $P_{\text{Id}}$ is invariant under the action of $\PSL$ by conjugation, which corresponds to the diagonal in the isometry group $\PSL\times\PSL$ of $\A^{2,1}$. Using Lemma \ref{convergenza}, we can see that the boundary of $P_{\text{Id}}$ in $\partial\A^{2,1}\simeq \R\text{P}^1\times\R\text{P}^1$ is the diagonal; more precisely: 
 \begin{equation}\label{graphino}
     \partial P_{\text{Id}}=\text{graph(Id)}\subset \T.
 \end{equation}
@@ -289,13 +289,13 @@ This simple example is actually the key case to understand general spacelike tot
     \]
 \end{lemma}
 \section{Timelike planes}
-Let us now consider a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_{[A]}$ by $P_\eta$. \\
-The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map: 
+Let us now consider a matrix $A\in\mathcal{M}(2,\R)$ such that $\det(A)=-1.$ The corresponding plane $P_A$ defined by Equation \refeq{geoplanes} is a timelike totally geodesic plane. Associated with $[A]$ is an orientation-reversing isometry $\eta$ of $\H^2.$ Moreover, the action of $A$ by homography on $\mathbb{C}\text{P}^1$ preserves $\S$ and switches the two connected components of the complement. The matrix $A$ thus induces an orientation-reversing isometry, up to identifying the two components via $z\to\overline{z}$. We will thus denote $P_{[A]}$ by $P_\eta$. \\
+The totally geodesic timelike plane $P_\eta$ can now be parametrized as follows. We have a map of pre-composition: 
 \begin{equation}\label{refspa}
-    \mathcal{I}\to\mathcal{I}\eta
+    \mathcal{I}\to\mathcal{I}\circ\eta
 \end{equation}
-from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. Its image it precisely $P_\eta.$ As seen in the proof of \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined in Equation \refeq{refspa} is the entire plane $P_\eta$.\\  
-In similar fashion to the spacelike case, using the transitivity of the group of isometries on timelike planes, every timelike planes is of the form above. We can show the following: 
+from the spaces of reflections $\mathcal{I}$ along geodesic of $\H^2$, with values in $\PSL\simeq\A^{2,1}$. Its image its precisely $P_\eta.$ As seen in the proof of Lemma \ref{invertime} we have that an $X$ with determinant $-1$ is an inversion if and only if traceless. As $\det(A)=-1$ we have $\text{adj}(A)=-A^{-1}$, therefore $\langle XA,A\rangle=0$ if and only if $\text{tr}(X)=0$, that is $X$ is traceless hence an involution. This shows that the image of the map defined in Equation \refeq{refspa} is the entire plane $P_\eta$.\\  
+In similar fashion to the spacelike case, using the transitivity of the group of isometries on timelike planes, every timelike plane is of the form above. We can show the following: 
 \begin{lemma}\label{33}
     Every timelike totally geodesic plane of $\A^{2,1}$ is of the form $P_\eta$ for some orientation-reversing isometry $\eta\in\PSL,$ and 
     \[
@@ -305,9 +305,7 @@ In similar fashion to the spacelike case, using the transitivity of the group of
 \begin{proof}
     We want to use Lemma \ref{convergenza} and the parametrization given in Equation \refeq{refspa}. Suppose we have a sequence $\mathcal{I}_n$ such that $\mathcal{I}_n\eta(z)\to x\in\partial\H^2$, for any $z\in\H^2$. Then, using that $\mathcal{I}_n$ is an involution and the continuity of the action of $\eta$ on $\overline{\H}^2$, $(\mathcal{I}_n\eta)^{-1}(z)=\eta^{-1}\mathcal{I}_n^{-1}(z)=\eta^{-1}\mathcal{I}_n(z)=\eta^{-1}(x).$ 
 \end{proof}
-\begin{observation}
-    Since reflections of $\H^2$ are uniquely determined by (unoriented) geodesics, we can consider the map defined in \refeq{refspa} as a map from the space $\mathcal{G}(\H^2)$ of unoriented geodesics of $\H^2$ to $\PSL.$ This map is isometric with respect to the natural metric on $\mathcal{G}(\H^2)$ which makes it identified with the two-dimensional space $\A^{1,1}$ as treated more in detail by El Emam e Seppi in \cite{emam2022gauss} (Example $6.1$).
-    \end{observation}
+
 \section{Lightlike planes}
 We are only left with case of lightlike totally geodesic planes. Those are the form $P_{[A]}$ for a nonzero matrix $A$ with $\det(A)=0$. Before giving an explicit description of such planes, we want to observe that their boundary will not be a graph in $\T$, unlike the case of spacelike and timelike planes. 
 
@@ -320,9 +318,9 @@ We are only left with case of lightlike totally geodesic planes. Those are the f
 \begin{proof}
     The point in $\partial P_{[A]}$ are projective class of rank one matrices satisfying $\langle X,A\rangle=0$, that is, such that $\text{tr}(X\text{adj}(A))=0.$ Given that $X\text{adj}(A)$ has vanishing determinant, by the Cayley-Hamilton theorem $X\text{adj}(A)$ is traceless if and only if it is nilpotent, that is, if and only if $X\text{adj}(A)X\text{adj}(A)=0.$ Now, given that image and kernel of both $X$ and $\text{adj}(A)$ have dimension 1, this happens if and only if: 
     \begin{equation}
-        \text{Im}(X)=\text{Ker}(\text{adj}(A))\;\text{or}\;\text{Im}(\text{adj}(A))=\text{Ker}(A).
+        \text{Im}(X)=\text{Ker}(\text{adj}(A))\;\text{or}\;\text{Im}(\text{adj}(A))=\text{Ker}(X).
     \end{equation}
-    Now, since $\det(A)=0$ implies $\text{adj}(A)A=A\text{adj}(A)=0$, the relations $\text{Ker}(\text{adj}(A))=\text{Im}(A)$ and $\text{Im}(\text{adj}(A))=\text{Ker}(A)$ hold. Hence $X\in P_{[A]}$ if and only if $\text{Im}(X)=\text{Im}(A)$ or $\text{Ker}(X)=\text{Ker}(A),$ which concludes because of the definition of the homeomorphism $\delta$.  
+    Now, since $\det(A)=0$ implies $\text{adj}(A)A=A\text{adj}(A)=0$, the relations $\text{Ker}(\text{adj}(A))=\text{Im}(A)$ and $\text{Im}(\text{adj}(A))=\text{Ker}(A)$ hold. Hence $X\in P_{[A]}$ if and only if $\text{Im}(X)=\text{Im}(A)$ or $\text{Ker}(X)=\text{Ker}(A),$ which concludes the proof because of the definition of the homeomorphism $\delta$.  
 \end{proof}
 
 Geometrically $\partial P_{[A]}$ is the union of two circles in $\T,$ one horizontal and one vertical, which intersect exactly at the point in $\T$ corresponding to $[A]\in \partial\A^{2,1}$ via $\delta$.\\
