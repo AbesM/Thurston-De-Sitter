@@ -4,13 +4,13 @@ We pause for the moment with our exploration of the Anti-de Sitter realm. We wan
 
 
 \section{Earthquake theory}
-The theory of earthquakes was introduced by Thurston as a tool to study the Teichmüller space of closed surfaces and is treated in detail in \cite{kapovich2001hyperbolic}, we will just summarize the main results and definitions that we need to set up our proof. 
+The theory of earthquakes was introduced by Thurston as a tool to study the Teichmüller space of closed surfaces and is treated in detail in \cite{kapovich2001hyperbolic}. We will just summarize the main results and definitions that we need to set up our proof. 
 
 \begin{definition}
     A geodesic lamination $\lambda$ of $\H^2$ is a collection of disjoint geodesics that foliate a closed subset $X$ of $\H^2$. The set $X$ is called the \textit{support} of $\lambda.$ The geodesics in $\lambda$ are called \textit{leaves} (as in classic foliation terminology). The connected components of $\H^2\;\setminus\;X$ are called \textit{gaps}. The \textit{strata} of $\lambda$ are the leaves and the gaps.
 \end{definition}
 
-\noindent Consider $\gamma$ a loxodromic isometry of $\H^2$, the \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. It follows from the classification of Möbius transformation that the geodesic is preserved by the isometry, and when restricted to such a curve $\restr{\gamma}{\ell}:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
+\noindent Consider $\gamma$ a loxodromic isometry of $\H^2$. The \textit{axis} of the isometry is the geodesic $\ell$ of $\H^2$ connecting the two fixed points of $\gamma$ in $\partial\H^2$. It follows from the classification of Möbius transformations that the geodesic is preserved by the isometry, and when restricted to such a curve $\restr{\gamma}{\ell}:\ell\to\ell$ acts as a translation with respect to any constant speed parametrization of $\ell$.\\
 Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly separates} $A$ and $B$ if $A$ and $B$ are contained in the closure of different connected components of $\H^2\;\setminus\;\ell.$ 
 
 \begin{definition}
@@ -20,7 +20,7 @@ Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly sepa
         \text{Comp}(S,S^{\prime})\coloneqq (\restr{E}{S})^{-1}\circ \restr{E}{S^{\prime} }
     \]
 
-    is the restriction of an isometry of $\H^2$ such that:
+    is the restriction of an isometry $\gamma$ of $\H^2$ such that:
     \begin{itemize}
         \item $\gamma$ is different from the identity, unless possibly where one of the two strata $S$ and $S^{\prime}$ is contained in the closure of the other;
         \item when it is not the identity, $\gamma$ is a loxodromic transformation whose axis $\ell$ weakly separates $S$ and $S^{\prime};$
@@ -29,7 +29,7 @@ Given $A,B$ subsets of $\H^2,$ we say that a geodesic $\ell$ \textit{weakly sepa
 \end{definition}
 
 Let us explain more carefully what we mean by the last condition. Suppose $f:[0,1]\to\H^2$ is a smooth path such that $f(0)\in S,\;f(1)\in S^{\prime}$ and the image of $f$ intersects $\ell$ transversally and exactly at one point $z_0=f(t_0)\in\ell.$ Let $v=f^{\prime}(t_0)\in T_{z_0}\H^2$ be the tangent vector at the intersection point. Let $w\in T_{z_0}\H^2$ be a vector tangent to the geodesic $\ell$ pointing towards $\gamma(z_0).$ Then we say that $\gamma$ translates to the left seen from $S$ to $S^{\prime} $ if $v,w$ is a positive basis of $T_{z_0}\H^2$, for the standard orientation of $\H^2.$\\
-We observe that such a condition is independent of the order in which we choose $S$ and $S^{\prime},$  if $\text{Comp}(S,S^{\prime})$ translates to the left seen from $S$ to $S^{\prime},$ then $\text{Comp}(S^{\prime} ,S)$ translates to the left seen from $S^{\prime} $ to $S.$ 
+We observe that such a condition is independent of the order in which we choose $S$ and $S^{\prime}.$ If $\text{Comp}(S,S^{\prime})$ translates to the left seen from $S$ to $S^{\prime},$ then $\text{Comp}(S^{\prime} ,S)$ translates to the left seen from $S^{\prime} $ to $S.$ 
 
 Let us consider a first basic example: 
 
@@ -49,11 +49,11 @@ defined by:
 
 is a left earthquake if $1<a<b,$ and a right earthquake if $0<b<a<1$. The lamination $\lambda$ that satisfies the definition consists of a unique geodesic, namely the geodesic $\ell$ corresponding to the imaginary axis. \\
 Such a map is clearly not continuous along $\ell$.
-Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exist a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
+Thurston proved in \cite{thurston1986earthquakes} that any earthquake map extends continuously to an orientation-preserving homeomorphism of $\partial\H^2$ meaning that there exists a (unique) orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2$ such that the map:
 \[
     \overline{E}(z)=\begin{cases}
-        E(z), &\text{ if z }\in \H^2\\
-        \varphi(z), &\text{ if z}\in \partial\H^2  ;\\
+        E(z), &\text{ if}\; z\in \H^2\\
+        \varphi(z), &\text{ if}\; z\in \partial\H^2  ;\\
         
     \end{cases}
 \]
@@ -61,13 +61,13 @@ is continuous at any point of $\partial\H^2.$\\
 Then Thurston proved the following (in some sense \textit{dual}) theorem, that he called \textit{``geology is transitive"}:
 
 \begin{theorem}[``Geology is transitive"]\label{earttheorem}
-    Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a (unique) left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
+    Given any orientation-preserving homeomorphism $\varphi:\partial\H^2\to\partial\H^2,$ there exists a left earthquake map of $\H^2,$ and a right earthquake map, that extends continuously to $\varphi$ on $\partial\H^2.$
 \end{theorem}
 \end{example}
 
-\begin{observation}
-    The uniqueness in Theorem \ref{earttheorem} is understood except for the choice of "speed" of the shearing on leaves where the earthquake has a discontinuity.
-\end{observation}
+% \begin{observation}
+%     The uniqueness in Theorem \ref{earttheorem} is understood except for the choice of "speed" of the shearing on leaves where the earthquake has a discontinuity.
+% \end{observation}
 % While geodesic laminations are \textit{sufficient} to the case of simple earthquakes (namely hyperbolic Dehn twist) they are not enough to describe the general case. We need to introduce the notion of \textit{measured} geodesic lamination with some abuse of notation we will still call such a lamination $\lambda$.
 
 % \begin{definition}
@@ -96,7 +96,7 @@ Then Thurston proved the following (in some sense \textit{dual}) theorem, that h
 % \end{observation}
 
 Having all the needed definition we would now like to give a different proof of the statement of Theorem \ref{earttheorem} using the tools of Anti-de Sitter geometry developed in the previous chapters. More in detail, the key observation that we will use is due to Mess' work \cite{Mess}, that highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}\CF$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see Proposition \ref{466}.\\
-Let us be more precise about the detail of what is going on. Consider left and right projections from $\partial_+\CF$ to $\H^2,$ now the composition $\Pi_r\circ\Pi_l^{-1}$  is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake lamination is identified to the bending lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
+We give a brief sketch of the idea of the proof and then will fill in the details. Consider left and right projections from $\partial_+\CF$ to $\H^2,$ now the composition $\Pi_r\circ\Pi_l^{-1}$  is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake lamination is identified to the bending lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
 Now, when the curve $\Lambda$ is the graph of an orientation-preserving homeomorphism of $\S$, one obtains as a result earthquakes maps of $\H^2$. When moreover $\varphi$ is the homeomorphism which conjugates left and right representations $\rho_l,\rho_r:\pi_1(\Sigma)\to\PSL$ of the holonomy of a MGH Cauchy compact manifold, the naturality of the construction implies that the earthquake map descends to an earthquake map from the left to the right hyperbolic surfaces, namely $\H^2/\rho_l(\pi_1(\Sigma))$ and $\H^2/\rho_r(\pi_1(\Sigma))$, and we can recover the earthquake theorem as in Kerchoff's (weaker) original formulation \cite{kerckhoff1983nielsen}.\\
 Given the previous discussion, we can now start with the details.
 
@@ -164,11 +164,10 @@ Given the previous discussion, we can now start with the details.
 % The definition is well-posed because lines and planes are well-defined in projective space, hence the change of coordinates from an affine chart to another preserves convex sets. Because of this when referring to convexity notion in the following, we will implicitly assume that we have chosen a spacelike affine chart $\mathcal{A}_\gamma$ that contains $\text{graph}(f)$.
 
 \section{Earthquake Theorem}\label{quakesection}
-We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle, and by $\Lambda_\varphi$ we denote its graph as a subset of $\T$ identified as $\partial\A^{2,1}$. We recall that with the notation of the previous chapter, $\Lambda_\varphi$ is a properly achronal meridian. By means of the Gauss map we had defined left and right projections for $\mathcal{C}^1$ embeddings; 
-
-\[
-    \Pi_l^{\pm:}\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^{\pm:}\partial_\pm\CF\to\H^2.
-\]
+We consider $\varphi:\S\to\S$ an orientation-preserving homeomorphism of the circle, and by $\Lambda_\varphi$ we denote its graph as a subset of $\T$ identified as $\partial\A^{2,1}$. We recall that with the notation of the previous chapter, $\Lambda_\varphi$ is a properly achronal meridian. By means of the Gauss map we had defined left and right projections for $\mathcal{C}^1$ embeddings.
+% \[
+%     \Pi_l^{\pm:}\partial_\pm\CF\to\H^2 \;\;\; \Pi_r^{\pm:}\partial_\pm\CF\to\H^2.
+% \]
 Now we would like to extend the Gauss map even when we have weaker regularity condition. Consider a point $p \in \partial_\pm\CF$ and let $P$ be a support plane of $\CF$ at $p$. By Proposition \ref{supportinho} the support plane is necessarily spacelike, hence of the form $P=P_\gamma$ for some $\gamma\in\PSL$. What happens when $\partial_\pm\CF$ is not $C^1$ at $p$ is that we do not have a unique support plane. Hence we \textit{choose} a support plane $P_\gamma$ at $p$, requiring that the choice of support planes is made so that the support plane is constant on any connected component of the subset of $\partial_\pm\CF$ consisting of those points that admit more than one support plane. The definition of the Gauss map then \textit{depends} on the choice of $P_\gamma$ (see Corollary \ref{multipleplanes} for more details on how the choice influences the map). Once we have chosen the support planes we can just follow \textit{verbatim} the construction of the Gauss map given in the smooth case.
 
 % \section{Left and right projections.} We want to introduce two maps, \textit{left and right projections,} which will have a key role in the proof of the earthquake theorem. These are the maps: 
@@ -211,11 +210,11 @@ Now we would like to extend the Gauss map even when we have weaker regularity co
 %     And a completely analogous argument holds for the right projection.
 % \end{proof}
 
-\begin{example}\label{413} Let us consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous Example \ref{43}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} makes sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition of the Gauss map we have the following expressions for the left and right projections $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
+\begin{example}\label{413} Let us consider a toy case where $\varphi\in\PSL$ so that $\CF=P_{\varphi^{-1}}$ as in the previous Example \ref{43}. This is in some sense a degenerate case, as $\CF$ has empty interior, hence Corollary \ref{nametag} does not apply and it does not \textit{really} make sense to talk about the future and the past component boundary. However, we can still define a left and right projections. Since $P_{\varphi^{-1}}$ itself is the unique support plane at any of its points, from the definition of the Gauss map we have the following expressions for the left and right projection $\Pi_l,\Pi_r:P_{\varphi^{-1}}\to\H^2:$
 \begin{equation}
     \Pi_l(p)=\text{Fix}(p\circ\varphi)\;\;\Pi_r(p)=\text{Fix}(\varphi\circ p).
 \end{equation}   
-We can also extend the two map to the boundary of $P_{\varphi^{-1}}$: recalling that its boundary coincides with the graph of $\varphi$ (Lemma \ref{32}) we have: 
+We can also extend the two maps to the boundary of $P_{\varphi^{-1}}$: recalling that its boundary coincides with the graph of $\varphi$ (Lemma \ref{32}) we have: 
 \begin{equation}\label{simproj}
     \Pi_l(x,\varphi(x))=x \;\;\;\Pi_r(x,\varphi(x))=\varphi(x). 
 \end{equation}
@@ -225,7 +224,7 @@ We can now compute the map of $\H^2$ obtained by composing the inverse of the le
 \begin{equation}\label{composition}
     \Pi_r\circ\Pi_l^{-1}=\varphi:\H^2\to\H^2.
 \end{equation}
-In conclusion, we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\sigma^{-1}}$ is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $\varphi$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $\varphi$.
+In conclusion, we have that the composition of the maps $\Pi_r\circ\Pi_l^{-1}$ is an isometry and its extension to the boundary of $\H^2$ is precisely the map $f=\varphi$ of which $\partial P_{\varphi^{-1}}$ is the graph. In what follows we will observe that this is what happens in the general case, that is, given an orientation-preserving homeomorphism of the circle $\varphi$, the composition $\Pi_r^\pm\circ(\Pi_l^\pm)^{-1}$ associated with $\partial_\pm\CF$ will be the left and right earthquake extending $\varphi$.
 \end{example}
 
 \section{The fundamental example}\label{fundamentalexamplesec} We want to move one more intermediate step towards the final theorem. After the simple case, this time we will describe what we can consider \textit{the fundamental example}. Consider piecewise totally geodesic surfaces in $\A^{2,1},$ which are obtained as the union of two connected subsets, each contained in a totally geodesic spacelike plane, meeting along a common geodesic. \\
@@ -235,11 +234,11 @@ Let us formalize this idea in a more precise way. Consider the union of two half
     Let $\gamma_1\neq\gamma_2\in\PSL$. Then $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\gamma_2\circ{\gamma_1^{-1}}$ is a loxodromic isometry. 
 \end{lemma}
 \begin{proof}
-    As in Example \ref{43} $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by equation \refeq{suplane}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
-    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent as asking $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed point in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
+    As in Example \ref{43}, $P_{\gamma_i}$ is the convex hull of $\partial P_{\gamma_i}=\text{graph}(\gamma_i^{-1}),$ the closures $\overline{P}_{\gamma_i}$  intersect in $\overline{\A^{2,1}}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)\neq\emptyset$. Moreover, by Equation \refeq{suplane}, $P_{\gamma_1}$ and $P_{\gamma_2}$ intersect in $\A^{2,1}$ if and only if $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ contains at least two different points. \\
+    We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent to asking that $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed points in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
 \end{proof}
 
-Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consist exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
+Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consists exactly of the fixed points of $\gamma_2\circ\gamma_1^{-1}.$ Clearly there are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
 
 \begin{equation}
     \varphi_{\gamma_1,\gamma_2}^+(x) = \begin{dcases}
@@ -256,7 +255,7 @@ Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that
     Both $\varphi_{\gamma_1,\gamma_2}^{\pm}$ are orientation-preserving homeomorphism, since $\gamma_1^{-1}$ and $\gamma_2^{-1}$ map homeomorphically the intervals $I_1$ and $I_2$ to the same intervals $J_1\coloneqq\gamma_1^{-1}(I_1)=\gamma_2^{-1}(I_1)$ and $J_2\coloneqq\gamma_1^{-1}(I_2)=\gamma_2^{-1}(I_2)$ which intersects only at their endpoints. \\
     We denote by $D_i$ the convex hull of $I_i$ in $\H^2,$ and by $\ell=D_1\cap D_2$ the axis of $\gamma_2\circ\gamma_1^{-1}$. 
     We observe that the projections $\Pi_l, \Pi_r$ are well defined isometries on each (totally geodesic) connected component of the complement of such bending geodesic in $S$. We may assume that $D_1$ is contained in the plane $P_{\text{Id}}$, which we recall consisting of order two-elliptic elements of $\PSL$. Therefore the bending locus is a spacelike geodesic contained in $P_{\text{Id}}$, namely the set of order-two elliptic elements of $\PSL$ having fixed point in a geodesic $\ell$ of $\H^2$. \\ 
-    With the notation that we introduced in \ref{geosection}, it has the form: 
+    With the notation that we introduced in Section \ref{geosection}, it has the form: 
     \[
         L_{\ell,\ell^{\prime}}=\{X\in\PSL\;|\;X\cdot\ell^{\prime} =\ell\; \text{as oriented geodesic}\}, 
     \]
