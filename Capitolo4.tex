@@ -274,7 +274,7 @@ Now we would like to focus on proper achronal meridians in $\partial\A^{2,1}$. T
     
 \begin{proof}
 Consider the covering $p:\AS^{2,1}\to \A^{2,1}$, by Proposition \ref{433} the invisible domain $\Omega(\widetilde{\Lambda})$ is contained in a Dirichlet region $R_{\widetilde{x}}$, hence the restriction of $p$ to $\Omega(\widetilde{\Lambda})$ is injective and its image is contained in $p(R_{\widetilde{x}}),$ namely the complement in $\overline{\A^{2,1}}$ of the spacelike plane $P_x$ dual to $x=p(\widetilde{x})$. Moreover, by the first item of Proposition \ref{432}, one can actually pick for $\widetilde{x}$ any point in $\Omega(\widetilde{\Lambda})$, which shows that the image $p(\Omega(\widetilde{\Lambda}))$ is contained in $\Omega(\Lambda)$ defined as in the proposition. \\ 
-For the converse inclusion, let $x\in\A^{2.1}$ be a point whose dual plane $P_x$ does not meet $\Lambda$. The preimage $p^{-1}(P_x)$ is a countable disjoint union of planes which disconnect $\AS^{2,1}\cup \partial\AS^{2,1}$ in a disjoint union of Dirichlet regions centered at preimages of $x$. The lift $\widetilde{\Lambda}$ is then contained in exactly one such region, say $R_{\widetilde{x}}$. By the first item of Proposition \ref{432} $\widetilde{x}\in\Omega(\widetilde{\Lambda})$ which implies that   $x=p(\widetilde{x})$ lies in $p(\Omega(\widetilde{\Lambda}))$. 
+For the converse inclusion, let $x\in\A^{2.1}$ be a point whose dual plane $P_x$ does not meet $\Lambda$. The preimage $p^{-1}(P_x)$ is a countable disjoint union of planes which disconnect $\AS^{2,1}\cup \partial\AS^{2,1}$ in a disjoint union of Dirichlet regions centered at preimages of $x$. The lift $\widetilde{\Lambda}$ is then contained in exactly one such region, say $R_{\widetilde{x}}$. By the first item of Proposition \ref{432}, $\widetilde{x}\in\Omega(\widetilde{\Lambda})$ which implies that   $x=p(\widetilde{x})$ lies in $p(\Omega(\widetilde{\Lambda}))$. 
 \end{proof}
 
 
@@ -360,7 +360,26 @@ What we have implicitly proved is that given $\Lambda$ an achronal meridian in $
     It follows, from the characterization of $\Omega(\Lambda)$ as the intersection of the $U(z)$ given in Proposition \ref{461}, that if $x$ is not in $\overline{\Omega(\Lambda)}$ it cannot be in $K$. Hence $\overline{\Omega(\Lambda)}$ is the biggest convex set of $\A^{2,1}$ containing $\Lambda$.
 \end{observation}
 
-Suppose now that $\Lambda$ is not the boundary of a spacelike plane. Now the topological frontiers in $\R\text{P}^3$ of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ are Lipschitz surfaces homeomorphic to a sphere. This sphere is disconnected by $\Lambda$ in two regions, homeomorphic to disks, which form the boundary of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ in $\A^{2,1}$. For $\Omega(\Lambda)$ those components are the image of $S_\pm(\widetilde{\Lambda})$ and will be denoted by $S_\pm(\Lambda$). \\
+% \begin{observation}\label{467}
+% The past and future boundary components of $\mathcal{C}(\Lambda)$ are not smooth, but only Lipschitz surfaces. Indeed the complement of $\Lambda$ and of the lightlike triangles (as described in \ref{465}) is locally connected by acausal Lipschitz arcs, and one can define a pseudo-distance, that in fact turns out to be a distance and makes $\mathcal{C}(\Lambda)$ locally isometric to the hyperbolic plane. \\
+% The situation is very similar to the counterpart in hyperbolic three-space. The intersection of a spacelike support plane with $\mathcal{C}(\Lambda)$ is either a geodesic or a straight convex subset of $\H^2$, i.e. a subset bounded by geodesics. Thus $\partial\mathcal{C}(\Lambda)\setminus\Lambda$ is intrinsically a hyperbolic surface pleated along a measured geodesic lamination. A remarkable difference with respect to the hyperbolic case \textcolor{red}{si ma quale} is that in general those surfaces may be not complete, but they are always isometric to straight convex subset of $\H^2$. \textcolor{red}{Per espandere su questo consigliano Multi-black holes and earthquakes on Riemann surfaces with boundaries.}
+
+% \end{observation}
+
+\section{Support planes}\label{sectionplanes}
+We still need to borrow some notions and notation from convex analysis. Given a convex body $K$ in an affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $\partial K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exist a support plane at every point $p\in\partial K.$ \\
+We will adapt the terminology to the Anti-de Sitter setting. Given a convex hull $\CF$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\CF$ (at $p\in\partial\CF)$ is $p\in\CF\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\Lambda_\varphi$, $\CF$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\Lambda_\varphi$.\\ 
+
+ \begin{observation}\label{diffsupp}
+     We could rephrase the condition of being a support plane as the following: a totally geodesic plane $P$ is support plane for $\CF$ if there exists a continuous family $\{P_t\}_{t\in[0,\epsilon)}$ of totally geodesic planes, pairwise disjoint in $\overline{\A^{2,1}}$, such that $P_0=P$ and $P_t\cap\CF=\emptyset$ for $t>0$. 
+ \end{observation}
+We observe that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
+
+\begin{equation}\label{suplane}
+    P\cap\CF=\mathcal{C}(\partial P\cap\Lambda_\varphi).
+\end{equation}
+
+With this new \textit{borrowed tool} of support planes we can make study more carefully the structure of the convex body of our interest. Suppose that $\Lambda$ is not the boundary of a spacelike plane. Now the topological frontiers in $\R\text{P}^3$ of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ are Lipschitz surfaces homeomorphic to a sphere. This sphere is disconnected by $\Lambda$ in two regions, homeomorphic to disks, which form the boundary of $\Omega(\Lambda)$ and of $\mathcal{C}(\Lambda)$ in $\A^{2,1}$. For $\Omega(\Lambda)$ those components are the image of $S_\pm(\widetilde{\Lambda})$ and will be denoted by $S_\pm(\Lambda$). \\
 For $\mathcal{C}(\Lambda),$ let $\mathcal{C}(\widetilde{\Lambda})$ be a lifting, which is necessarily contained in a Dirichlet region, say $R$. Let $P$ be a support plane for $\mathcal{C}(\Lambda)$, which is necessarily either spacelike or lightlike, and let $\widetilde{P}$ be its lift which touches $\mathcal{C}(\widetilde{\Lambda}).$ Hence either $\widetilde{\Lambda}$ is in $I^+(\widetilde{P})\cup\widetilde{P}$ or in $I^-(\widetilde{P})\cup\widetilde{P}$. This permits to distinguish the components of $\partial\mathcal{C}(\Lambda)\setminus\Lambda:$ the \textit{past boundary component} $\partial\mathcal{C}_-(\Lambda)$ has the property that $\widetilde{\Lambda}$ is contained in $I^+(\widetilde{P})\cup \widetilde{P}$ for all support planes which touch $\partial_-\mathcal{C}(\Lambda)$, and analogously for the \textit{future boundary component} $\partial_+\mathcal{C}(\Lambda)$.\\
 We want to show a kind of duality between boundary components $\partial_\pm\mathcal{C}(\Lambda)$ and $S_\pm(\Lambda)$. 
 
@@ -392,25 +411,6 @@ The past and future boundary components of $\mathcal{C}(\Lambda)$ are achronal s
 \begin{proof}
     We will show it for $\partial_+\mathcal{C}(\Lambda)$. Take $x,y\in\partial_+\mathcal{C}(\Lambda)$ and consider the segment joining $x$ to $y$ in an affine chart containing $\Lambda$. If this segment was timelike then the dual planes $P_x$ and $P_y$ would be disjoint. Then (up to switching the roles of $x$ and $y$) we may assume that, in the universal cover $P_{\widetilde{x}}^1\subset I^+(P_{\widetilde{y}}^1)$, where $\widetilde{x}$ and $\widetilde{y}$ are the lifting of $x$ and $y$ in the same Dirichlet region mapping to the fixed affine chart. But then $S_+(\widetilde{\Lambda})$ would be contained in $\text{I}^-(P_{\widetilde{y}}^1)$ and could not meet $P_{\widetilde{x}}^1$ thus a contradiction to Proposition \ref{464}
 \end{proof}
-
-% \begin{observation}\label{467}
-% The past and future boundary components of $\mathcal{C}(\Lambda)$ are not smooth, but only Lipschitz surfaces. Indeed the complement of $\Lambda$ and of the lightlike triangles (as described in \ref{465}) is locally connected by acausal Lipschitz arcs, and one can define a pseudo-distance, that in fact turns out to be a distance and makes $\mathcal{C}(\Lambda)$ locally isometric to the hyperbolic plane. \\
-% The situation is very similar to the counterpart in hyperbolic three-space. The intersection of a spacelike support plane with $\mathcal{C}(\Lambda)$ is either a geodesic or a straight convex subset of $\H^2$, i.e. a subset bounded by geodesics. Thus $\partial\mathcal{C}(\Lambda)\setminus\Lambda$ is intrinsically a hyperbolic surface pleated along a measured geodesic lamination. A remarkable difference with respect to the hyperbolic case \textcolor{red}{si ma quale} is that in general those surfaces may be not complete, but they are always isometric to straight convex subset of $\H^2$. \textcolor{red}{Per espandere su questo consigliano Multi-black holes and earthquakes on Riemann surfaces with boundaries.}
-
-% \end{observation}
-
-\section{Support planes}\label{sectionplanes}
-We still need to borrow some notions and notation from convex analysis. Given a convex body $K$ in an affine space of dimension three, a \textit{support plane} of $K$ is an affine plane $Q$ such that $K$ is contained in a closed half-space bounded by $Q$, and $\partial K\cap Q\neq\emptyset.$ If $p$ is in the intersection of $\partial K$ with $Q$ we will say that $Q$ is a \textit{support plane} at $p$. As a consequence of the Hahn-Banach theorem there exist a support plane at every point $p\in\partial K.$ \\
-We will adapt the terminology to the Anti-de Sitter setting. Given a convex hull $\CF$ in $\A^{2,1}$, we say that a totally geodesic plane $P$ is a support plane of $\CF$ (at $p\in\partial\CF)$ is $p\in\CF\cap \overline{P}\subset\overline{\A^{2,1}}$ and, in an affine chart containing $\Lambda_\varphi$, $\CF$ lies in a closed half-space bounded by the affine plane that contains $P$. Even this definition does not depend on the choice of the affine chart as long this one contains $\Lambda_\varphi$.\\ 
-
-% \begin{observation}\label{diffsupp}
-%     We could rephrase the condition of being a support plane as the following: a totally geodesic plane $P$ is support plane for $\CF$ if there exists a continuous family $\{P_t\}_{t\in[0,\epsilon)}$ of totally geodesic planes, pairwise disjoint in $\overline{\A^{2,1}}$, such that $P_0=P$ and $P_t\cap\CF=\emptyset$ for $t>0$. 
-% \end{observation}
-We observe that if $X$ is a set, $\mathcal{C}(X)$ its convex hull and $Q$ an affine support plane for $\mathcal{C}(X)$, then $Q\cap\mathcal{C}(X)=\mathcal{C}(Q\cap X).$ Applying this identity in our setting, we get that for any totally geodesic support plane $P$: 
-
-\begin{equation}\label{suplane}
-    P\cap\CF=\mathcal{C}(\partial P\cap\Lambda_\varphi).
-\end{equation}
     
 We can also characterize what \textit{kind} of support planes of $\CF$ are allowed by considering how such planes touch $\CF$ at a boundary point. 
 \begin{proposition}\label{supportinho}
@@ -450,12 +450,15 @@ We can extract a converging subsequence from $p_{n}$ and $P_{\gamma_n}$, by comp
 \section{Globally Hyperbolic three-manifolds}
 We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surfaces of genus $r$ (we will, with a slight abuse of notation, say that the spacetime has genus $r$.) We will show that there are no such manifolds when $r=0$. We will then focus on the most interesting case, $r\geq 2$, that will lead to a complete classification.
 
-\subsection{General facts.} We will now state some general facts that will be useful in our classification.
+\subsection{General facts} We will now state some general facts that will be useful in our classification.
 
-\begin{lemma}\label{properembedding}[Bonsante-Seppi \cite{bonsanteseppi}]
+\begin{lemma}\label{properembedding}
     Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion. If $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$
 \end{lemma}
-
+\begin{proof}
+    Thanks to Proposition \ref{455} it suffices to prove that $\sigma$ is a proper immersion. We keep the notation of the proof of Proposition \ref{455}, consider a lift $\widehat{\sigma}:\widehat{S}\to\H^{2,1}$ We need to show that the map $\widehat{\sigma}$ is proper. We will show that if $\gamma:[0,1)\to\widehat{S}$ is a path such taht the limit $\lim_{t\to 1}\widehat{\sigma}(\gamma(t))$ exists, then also $\lim_{t \to 1}\gamma(t)$ exists. \\
+    Using the expression for the metric on $H^{2,1}$ given by Equation \refeq{metricdisk} (under the identification of $H^{2,1}$ with $H^{2}\times\mathbb{S}^{1}$ given by the composition of the projection from the universal cover with the map $\pi$ given in Equation \refeq{ogcover}), we see that the lenght of $\gamma$ for the pull-back metric is smaller than the lenght of the projection of $\gamma$ to the $\H^2$ factor, with respect to the hyperbolic metric on $\H^2$. The latter hyperbolic lenght is finite by the assumption, hence the lenght of $\gamma$ is also finite for the pull-back metric. Now the assumption of completeness on the pull-back metric implies the existence of the limit point for $\gamma(t)$.
+\end{proof}
 
 As an immediate consequence there cannot be any globally hyperbolic spacetime with genus $0$. In fact, suppose such a spacetime exists and denote by $\Sigma$ a Cauchy surface diffeomorphic to $\mathbb{S}^2$, the developing map restricted to $\Sigma$ would be a spacelike immersion, and the pull-back metric would be complete by compactness. But this contradicts Lemma \ref{properembedding}. Hence: 
 
@@ -679,7 +682,12 @@ More can be proved: $\rho$ is a group representation and changing $\widetilde{\s
 where $I,II,III$ are the first, second and third fundamental form of $\sigma$ respectively. We recall that the third fundamental form can be expressed as $III(\cdot,\cdot)=I(B(\cdot),B(\cdot))$ where $B$ is the shape operator.
 \end{lemma}
 \begin{proof}
-    For ease, we will use the quadric model of $\A^{2,1}$. By Equation (\refeq{212}), we have $\exp_{\sigma(x)}(t\nu(x))=\cos(t)\sigma(x)+\sin(t)\nu(x)$. The differential in $t$ gives the vector $-\sin(t)\sigma(x)+\cos(t)\nu(x),$ while the differential in the space direction gives the vector $\cos(t)d\sigma_x(v)+\sin(t)d_x\nu(v)$. The two vectors are orthogonal. Recalling that $I(\cdot,\cdot)=\langle d\sigma(\cdot),d\sigma(\cdot)\rangle$ by definition and that the differential of $\sigma$ identifies $B(v)$ and $\nabla_v\nu$, namely the tangential component of $d\nu(v)$, the expression of the pull-back metric follows. 
+    For ease, we will use the quadric model of $\A^{2,1}$. By Equation (\refeq{212}), we have $\exp_{\sigma(x)}(t\nu(x))=\cos(t)\sigma(x)+\sin(t)\nu(x)$. The differential in $t$ gives the vector $u=-\sin(t)\sigma(x)+\cos(t)\nu(x),$ while the differential in the space direction gives the vector $w=\cos(t)d\sigma_x(v)+\sin(t)d\nu_x(v)$. The two vectors are orthogonal. Recalling that $I(\cdot,\cdot)=\langle d\sigma(\cdot),d\sigma(\cdot)\rangle$ by definition and that the differential of $\sigma$ identifies $B(v)$ and $\nabla_v\nu$, namely the tangential component of $d\nu(v)$. Consider now $z=u+w$, we have the following expression:
+    \begin{align*}
+        \langle z,z\rangle_{g_{\A^{2,1}}}=&\sin^{2}(t)\langle \sigma(x),\sigma(x)\rangle+\cos^{2}(t)\langle \nu(x),\nu(x)\rangle-2\cos(t)\sin(t)\langle \sigma(x),\nu(x)\rangle+\\&+\cos^2(t)\langle d_{\sigma_x}(v),d_{\sigma_x}(v)\rangle+2\cos(t)\sin(t)\langle d_{\sigma_x}(v),d_x\nu(v)\rangle+\\&+\sin^2(t)\langle d_x\nu(v),d_x\nu(v)\rangle \\
+        =&-dt^{2}+\cos^2(t)I+2\cos(t)\sin(t)II+\sin^{2}(t)III. 
+    \end{align*}
+    Where in the last equality we have use the aforementioned properties of $I,II,III$ and the orthogonality of $\sigma$ and $\nu(x).$
 \end{proof}
 
 In short, given a pair $(I,II)$, Expression \refeq{64} provides a Lorentzian metric of constant curvature $-1$ on an open set $U$ in $\Sigma\times\R$ containing the slice $\Sigma\times\{0\}$, and thus a germ of immersion of $\Sigma$ into an Anti-de Sitter three-manifold with immersion data $(I,II)$. We summarize what we have accomplished so far: 
