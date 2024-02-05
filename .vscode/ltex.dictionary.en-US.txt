@@ -25,3 +25,4 @@ surjective
 reparametrization
 injectivity
 inextensible
+neighbourhoods
