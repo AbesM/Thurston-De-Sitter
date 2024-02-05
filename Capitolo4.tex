@@ -682,7 +682,15 @@ More can be proved: $\rho$ is a group representation and changing $\widetilde{\s
 where $I,II,III$ are the first, second and third fundamental form of $\sigma$ respectively. We recall that the third fundamental form can be expressed as $III(\cdot,\cdot)=I(B(\cdot),B(\cdot))$ where $B$ is the shape operator.
 \end{lemma}
 \begin{proof}
-    For ease, we will use the quadric model of $\A^{2,1}$. By Equation (\refeq{212}), we have $\exp_{\sigma(x)}(t\nu(x))=\cos(t)\sigma(x)+\sin(t)\nu(x)$. The differential in $t$ gives the vector $u=-\sin(t)\sigma(x)+\cos(t)\nu(x),$ while the differential in the space direction gives the vector $w=\cos(t)d\sigma_x(v)+\sin(t)d\nu_x(v)$. The two vectors are orthogonal. Recalling that $I(\cdot,\cdot)=\langle d\sigma(\cdot),d\sigma(\cdot)\rangle$ by definition and that the differential of $\sigma$ identifies $B(v)$ and $\nabla_v\nu$, namely the tangential component of $d\nu(v)$. Consider now $z=u+w$, we have the following expression:
+    For ease, we will use the quadric model of $\A^{2,1}$. We fix $(x,t)\in\Sigma\times\mathbb{R},$ and a vector $(v,\frac{\partial}{\partial t})\in T_{(x,t)}\Sigma\times\mathbb{R}.$ By Equation (\refeq{212}), we have $\exp_{\sigma(x)}(t\nu(x))=\cos(t)\sigma(x)+\sin(t)\nu(x)$. The differential in $t$ gives the vector $u=-\sin(t)\sigma(x)+\cos(t)\nu(x),$ while the differential in the space direction gives the vector $w=\cos(t)d\sigma_x(v)+\sin(t)d\nu_x(v)$. The two vectors are orthogonal: 
+
+    \begin{align*}
+          \langle u,w\rangle_{g_{\A^{2,1}}}=&-\sin(t)\cos(t)\langle \sigma(x),d\sigma_x(v)\rangle+\cos^2(t)\langle\nu(x),d\sigma_x(v)\rangle+\\-&\sin^2(t)\langle \sigma(x),d\nu_x(v)\rangle+\cos(t)\sin(t)\langle \nu(x),d\nu_x(v)\rangle=0
+    \end{align*}
+      
+    
+    
+    Recalling that $I(\cdot,\cdot)=\langle d\sigma(\cdot),d\sigma(\cdot)\rangle$ by definition and that the differential of $\sigma$ identifies $B(v)$ and $\nabla_v\nu$, namely the tangential component of $d\nu(v)$. Consider now $z=u+w$, we have the following expression:
     \begin{align*}
         \langle z,z\rangle_{g_{\A^{2,1}}}=&\sin^{2}(t)\langle \sigma(x),\sigma(x)\rangle+\cos^{2}(t)\langle \nu(x),\nu(x)\rangle-2\cos(t)\sin(t)\langle \sigma(x),\nu(x)\rangle+\\&+\cos^2(t)\langle d_{\sigma_x}(v),d_{\sigma_x}(v)\rangle+2\cos(t)\sin(t)\langle d_{\sigma_x}(v),d_x\nu(v)\rangle+\\&+\sin^2(t)\langle d_x\nu(v),d_x\nu(v)\rangle \\
         =&-dt^{2}+\cos^2(t)I+2\cos(t)\sin(t)II+\sin^{2}(t)III. 
