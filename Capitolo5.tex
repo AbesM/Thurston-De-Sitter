@@ -105,6 +105,13 @@ Having all the needed definition we would now like to give a different proof of 
     If $(S,f)$ is a pleated surface, then we define its \textit{pleating locus} to be those points of $S$ contained in the interior of one and only one geodesic arc which is mapped by $f$ to a geodesics arc.   
 \end{definition}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{bendinglocus.pdf}
+    \caption{A bending surface in $\A^{2,1}$, consisting of two half-planes meeting along a common geodesic. The bending geodesic is the axis of the loxodromic isometry $\sigma$.}
+    \label{pleatedinho}
+\end{figure}
+
 More in detail, the key observation that we will use is due to Mess' work \cite{Mess}, that highlighted the relation between pleated surfaces and earthquake maps. Recall that given an achronal meridian $\Lambda\subset\A^{2,1},$ the upper and lower boundary components $\partial_{\pm}\CF$ of the convex hull of $\Lambda$ are a convex and a concave pleated surface, see Proposition \ref{466}.\\
 We give a brief sketch of the idea of the proof and then will fill in the details. Consider left and right projections from $\partial_+\CF$ to $\H^2,$ now the composition $\Pi_r\circ\Pi_l^{-1}$  is a left earthquake map defined in the complement of the simplicial leaves of the lamination, and its earthquake lamination is identified to the bending lamination of $\partial_{+}\CF$. A completely analogous statement holds for $\partial_{-}\CF$ by reversing the roles of left and right.\\  
 Now, when the curve $\Lambda$ is the graph of an orientation-preserving homeomorphism of $\S$, one obtains as a result earthquakes maps of $\H^2$. When moreover $\varphi$ is the homeomorphism which conjugates left and right representations $\rho_l,\rho_r:\pi_1(\Sigma)\to\PSL$ of the holonomy of a MGH Cauchy compact manifold, the naturality of the construction implies that the earthquake map descends to an earthquake map from the left to the right hyperbolic surfaces, namely $\H^2/\rho_l(\pi_1(\Sigma))$ and $\H^2/\rho_r(\pi_1(\Sigma))$, and we can recover the earthquake theorem as in Kerchoff's (weaker) original formulation \cite{kerckhoff1983nielsen}.\\
@@ -248,6 +255,7 @@ Let us formalize this idea in a more precise way. Consider the union of two half
     We know that $(x,y)\in\T$ is in $\text{graph}(\gamma_1)\cap\text{graph}(\gamma_2)$ if and only if $y=\gamma_1^{-1}(x)=\gamma_2^{-1}(x)$, which is equivalent to asking that $x\in\text{Fix}(\gamma_2\circ\gamma_1^{-1})$. But the composition $\gamma_2\circ\gamma_1^{-1}$ is an element of $\PSL$, hence it has two fixed points in $\partial\H^2\simeq\S$ if and only if it is a loxodromic isometry.
 \end{proof}
 
+
 Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that $I_1\cap I_2$ consists exactly of the two fixed points of $\gamma_2\circ\gamma_1^{-1}.$ There are two possibilities to produce a homeomorphism of $\S$ by composing the restriction of $\gamma_1^{-1}$ and $\gamma_2^{-1}$ to the intervals $I_j$'s, namely: 
 
 \begin{equation}\label{17}
@@ -273,6 +281,8 @@ Now consider $\S=I_1\cup I_2$ where $I_1,I_2$ are two closed intervals such that
     % Actually more is true, it follows from the definition of dual geodesic that the dual point of the spacelike plane $D_2$ lies in the dual geodesic, and it is therefore a loxodromic transformation $\sigma_0$ with axis $\ell$. Now, it follows from the definition of the Gauss map that the left projection: \(\Pi_l:D_1\cup D_2\to\H^2\) is the identity on $D_1$ (we remark that we identify $P_{Id}$ with an isometric copy of $\H^2$), while on $D_2$ it is given by the multiplication on the right by $\sigma_0^{-1}$. Similarly, the right projection is the identity on $D_2$ and the multiplication on the left by $\sigma_0^{-1}$ on $D_2$.\\
     % In conclusion, the composition $\Pi_r\circ\Pi_l^{-1}$ acts on $P_{\text{Id}}$ as the identity on one connected component of the complement of $L_{\ell,\ell^{\prime}}$ and conjugates by $\sigma_0$ on the other connected components, which simply means acting by the loxodormic transformation $\sigma_0$ under the identification of $P_{\text{Id}}$ with $\H^2$.\\
     % This is exactly the simple earthquake map with associated geodesic lamination $\ell$. Since the angle between the spacelike planes containing $D_1$ and $D_2$ equals the distance in the dual geodesic $L_{\ell,\ell}$ between the corresponding dual points, we also conclude that the bending measure equals the measure associated with the earthquake map (this will not be used as we are interested only in closed surfaces but shows how we could recover the \textit{full} Thurston's theorem from AdS geometry as in \cite{benedetti2009canonical}). The bending and earthquake lamination are identified. 
+
+    
  \begin{proposition}\label{gettinthere}
     Suppose that $\gamma_2\circ\gamma_1^{-1}$ is a loxodromic isometry that translates along $\ell$ to the left, as seen from $D_1$ to $D_2$. Then:
      \begin{itemize}
