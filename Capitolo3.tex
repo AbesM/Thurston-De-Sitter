@@ -16,7 +16,6 @@ for $A,B\in\mathcal{M}(2,\R)$, where adj denotes the adjugate matrix, namely:
     -c & a
 \end{bmatrix}
 \]
-
 hence, via Sylvester's theorem, there is an identification between $(\mathcal{M}(2,\R),q)$ and $(\R^{2,2}, q_{2,2}),$ unique up to composition by elements in $O(2,2)$. Under this isomorphism $\H^{2,1}$ is identified with the Lie group $\text{SL}(2,\R).$\\
 Let us observe that $\text{SL}(2,\R)\times \text{SL}(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
 $$(A,B)\cdot X=AXB^{-1}.$$
@@ -35,7 +34,7 @@ Using this model, one has a natural identification between $\A^{2,1}$ and the Li
     \text{Isom}_0(\A^{2,1})\simeq \PSL\times\PSL
 \end{equation}
     
-acting by left and right multiplication on $\PSL$.\\ We are mostly interested in orientation-preserving and time-preserving notions that do not depend on a chosen orientation, nevertheless we will fix here an orientation and a time-orientation of $\A^{2,1}\simeq\PSL.$ As we are dealing with a Lie group it is sufficient to define an orientation of the Lie algebra, namely the tangent at the identity Id. We declare as (positive) oriented basis of $\mathfrak{sl}(2,\R):$ 
+acting by left and right multiplication on $\PSL$.\\ We are mostly interested in orientation-preserving and time-preserving notions that do not depend on a chosen orientation, nevertheless we will fix here an orientation and a time-orientation of $\A^{2,1}\simeq\PSL.$ As we are dealing with a Lie group it is sufficient to define an orientation of the Lie algebra, namely the tangent at the identity $\text{Id}$. We declare as (positive) oriented basis of $\mathfrak{sl}(2,\R):$ 
 \begin{equation}\label{tangent}
 V=\begin{pmatrix}
   0 & 1 \\ 1 & 0
@@ -49,7 +48,7 @@ U=\begin{pmatrix}
 \end{pmatrix}
 \end{equation}
 
-The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ fixing $i\in\H^2$, parametrized by the angle of clockwise rotations; $V,W$ are vectors tangent to the one-parameter groups of loxodromic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is a future-pointing timelike vector. \\
+The first two vectors $V,W$ are spacelike, while $U$ is timelike. $U$ is the tangent vector to the one-parameter group of elliptic isometries of $\H^2$ fixing $i\in\H^2$, parametrized by the angle of clockwise rotations; $V$ and $W$ are vectors tangent to the one-parameter groups of loxodromic isometries fixing the geodesic with endpoints $(-1,1)$ and $(0,\infty)$ respectively. Time-orientation can also be inherited by the Lie algebra, we declare that $U$ is a future-pointing timelike vector. \\
 
 The stabilizer of the identity in Isom$_0(\A^{2,1})$ is the diagonal subgroup $\Delta<\PSL\times\PSL$. Under the obvious identification of $\PSL$ and $\Delta,$ the action of the identity stabilizer on the Lie algebra $\mathfrak{sl}(2,\R)=T_{\text{Id}}\PSL$ is the adjoint action of $\PSL$. A direct consequence of this construction is the bi-invariance of the quadratic form $q$. Indeed, denoting by $q_{\text{Id}}$ the restriction of $q$ to $T_{\text{Id}}\text{SL}(2,\R)$, a direct computation shows that $q_\text{Id}$ equals $(1/8)\kappa$ where $\kappa(X,Y)=4tr(XY)$ is the Killing form of $\mathfrak{sl}(2, \R)$.
 
@@ -97,7 +96,7 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
     Since $\PSL$ acts on $\H^2$ via isometries, if the conditions holds for some $p$ then it holds for all $q\in\H^2$, as the distance from $p$ to any other point $q$ is bounded. Without loss of generality we can assume $p=i$ in the upper half-plane. Assuming $[X_n]=\begin{bmatrix}
         a_n & b_n \\
         c_n & d_n
-    \end{bmatrix}$ converges projectively to a rank 1 matrix means that there exists a sequence of real numbers $\lambda_n\to 0$ such that $\lambda_n X_n\to X$. As the limit matrix has rank one at least one of the successions of coefficient (when multiplied by $\lambda_n$) does not converge to zero. We can assume that $\lambda_n a_n\to a$ does not converge to 0, the other cases are all analogous. The assumption of  $a\neq 0$ and rank$(X)=1$, leave us with the following possibilities for $X$:
+    \end{bmatrix}$ converges projectively to a rank 1 matrix means that there exists a sequence of real numbers $\lambda_n\to 0$ such that $\lambda_n X_n\to X$. As the limit matrix has rank one at least one of the successions of coefficient (when multiplied by $\lambda_n$) does not converge to zero. We can assume that $\lambda_n a_n\to a$ does not converge to 0, the other cases are all analogous. The assumption of  $a\neq 0$ and and rank$(X)=1$, leave us with the following possibilities for $X$:
     \begin{itemize}
         \item Assume $\lambda_{n}c_n\to 0$ and $\lambda_n d_n\to0$, then we have that $[X_n]$ converges to a $[X]$ of the form: $$\begin{bmatrix}
             a & b \\
@@ -108,9 +107,9 @@ Consider the hyperbolic model of the upper half-plane $\H^2.$ $\R\text{P}^1$ cor
             c & 0 \end{bmatrix},\; X(i)=\lim_{n\to\infty} \lambda_n\frac{a_n i+b_n }{c_n i+d_n}=\frac{a}{c}$$
         \item If $b,c \neq 0$ it follows from the rank one condition that $d=bc$, then $[X_n]$ converges to $[X]$ with $$X=\begin{bmatrix}
             a & b \\
-            c & \frac{bc}{a} \end{bmatrix},\; X(i)=\lim_{n\to\infty}\frac{a_ni+b_n}{c_{n}i+d_n }=\frac{a^{2}i+ab}{aci+bc}=\frac{a(ai+b)}{c(ai+b)}=\frac{a}{c}.$$
+            c & \frac{bc}{a} \end{bmatrix},\; X(i)=\lim_{n\to\infty}\lambda_n\frac{a_ni+b_n}{c_{n}i+d_n }=\frac{a^{2}i+ab}{aci+bc}=\frac{a(ai+b)}{c(ai+b)}=\frac{a}{c}.$$
     \end{itemize}
-    All the (finite) case left are similar.
+   
     % The convergence of $X_n^{-1}(p)\to y$ is just a straightforward application of Lemma \ref{invertime} and an analogous argument to the one given for $X_n(p)$.
 \end{proof} 
 
@@ -147,7 +146,7 @@ We can express the conformal Lorentzian structure of $\partial\A^{2,1}$ with the
  Since we already know that the left and right rulings are lightlike for the conformal class of $\partial\A^{2,1}$, it only remains to check the sign of time orientation. We observe that $\lambda_{y_0}$ is the orbit of the action of $\text{PSO}(2,\R)\times\{\text{Id}\}$, while $\mu_{x_0}$ is the orbit of the action of $\{\text{Id}\}\times\text{PSO}(2,\R),$ the induced orientation agrees with the one given by the pullback of the metrics. 
 \end{proof}
 
-\noindent It follows, from the conformal structure that $\partial\A^{2,1}$ inherited from the rulings, that a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation-preserving function (the product of the pullbacks is different from zero and we can use the implicit function theorem), and timelike when it is locally the graph of an orientation-reversing function. Given two intervals $I_1,I_2$ in $\partial\H^2$ and assuming that $\theta_1,\theta_2$ are angle determination over the two intervals, the future $I^+_{I_1\times I_2}(p_0,q_0)$ of a point $(p_0,q_0)$ in $I_1\times I_2$ is the region made up of points $(p,q)$ where $\theta_1(p)-\theta_2(p_0)>0$ and $\theta_2(q)-\theta_2(q_0)<0$. The past is determined by reversing both inequalities. In conclusion: 
+\noindent It follows, from the conformal structure that $\partial\A^{2,1}$ inherits from the rulings, that a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation-preserving function (the product of the pullbacks is different from zero and we can use the implicit function theorem), and timelike when it is locally the graph of an orientation-reversing function. Given two intervals $I_1,I_2$ in $\partial\H^2$ and assuming that $\theta_1,\theta_2$ are angle determination over the two intervals, the future $I^+_{I_1\times I_2}(p_0,q_0)$ of a point $(p_0,q_0)$ in $I_1\times I_2$ is the region made up of points $(p,q)$ where $\theta_1(p)-\theta_2(p_0)>0$ and $\theta_2(q)-\theta_2(q_0)<0$. The past is determined by reversing both inequalities. In conclusion: 
 \begin{equation}\label{angular}
     I^+_{I_1\times I_2}(p_0,q_0)\cup I^-_{I_1\times I_2}(p_0,q_0)=\{(p,q)\in I_1\times I_2\;|\;(\theta_1(p)-\theta_1(p_0))(\theta_2(q)-\theta_2(q_0))<0\}.
 \end{equation}
@@ -157,7 +156,7 @@ We want to stress that our interest in $\partial\A^{2,1}$ is mainly justified by
 \end{equation}
 We remark one last time that we will consider $\partial\A^{2,1}$ as always implicitly identified with $\T$ via $\delta$.
 
-\section{Geodesics in $\PSL$}\label{geosection} We have already seen geodesics in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie group theory. In particular we recall the following (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}): 
+\section{Geodesics in $\PSL$}\label{geosection} We have already seen geodesics in the general Anti-de Sitter space, we would like to specialize here using the model of $\PSL$ and tools from general Lie groups theory. In particular we recall the following (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}): 
 \begin{lemma}\label{331}
     Given left-invariant vector fields $V$ and $W$ on a Lie group $G$, the Levi-Civita connection of a bi-invariant metric has the expression: 
     \[
@@ -169,7 +168,7 @@ We remark one last time that we will consider $\partial\A^{2,1}$ as always impli
 
 
 
-We would like to start by considering geodesics through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point (namely $\PSL$ acting by means of the adjoint action) corresponds to the group of linear isometries of Minkowski space. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
+We would like to start by considering geodesics through the identity. The Lie algebra of $\PSL$ is isometrically identified with Minkowski space, as seen in Remark \ref{311}, where under such an isometry the stabilizer of a point corresponds to the group of linear isometries of Minkowski space. Moreover, by Lemma \ref{331} it suffices to understand the one-parameter group for the Lie group structure of $\PSL$. We immediately get the following:
 
 \begin{itemize}
     \item Timelike geodesics are, up to conjugacy, of the form: 
@@ -236,7 +235,7 @@ where $\ell$ and $\jmath$ denote oriented geodesics of $\H^2$. We want to emphas
 \end{proposition}
 
 However we will not be really interested in oriented geodesics, hence we will have identification $L_{\ell,\jmath}=L_{\ell^{\prime},\jmath^{\prime}}$ where with $\ell^{\prime} $ we denote $\ell$ endowed with the opposite orientation.\\
-Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic, which we define using the projectivity duality between points and planes discussed in section \ref{polarsec}: 
+Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike geodesic (\ref{dualitinho}), which we define using the projectivity duality between points and planes discussed in section \ref{polarsec}: 
 \begin{definition}
     Given a spacelike geodesic $L_{\ell,\jmath}$ in $\A^{2,1}$, the \textit{dual spacelike geodesic} is the intersection of all the spacelike planes dual to points of $L_{\ell,\jmath}.$  
 \end{definition}
@@ -249,7 +248,7 @@ Given a spacelike geodesic, there is a natural notion of \textit{dual} spacelike
     \label{dualitinho}
 \end{figure}
 
-Let us see it with an explicit example. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$. It can be checked that the dual geodesic consists of all elliptic order-two elements whose fixed point lies in $\ell$. To see this we can suppose (as a consequence of the transitivity of the action of $\PSL$ on geodesics of $\H^2$ ) that $\ell$ is the imaginary axis. In this case $L_{\ell,\ell}=\{M_k|k\in\R\}$ where \[
+Let us see it with an explicit. Consider the geodesic $L_{\ell,\ell}$ through the origin, which consists of the one-parameter loxodromic group of $\PSL$ translating along $\ell$. It can be checked that the dual geodesic consists of all elliptic order-two elements whose fixed point lies in $\ell$. To see this we can suppose (as a consequence of the transitivity of the action of $\PSL$ on geodesics of $\H^2$ ) that $\ell$ is the imaginary axis. In this case $L_{\ell,\ell}=\{M_k|k\in\R\}$ where \[
     M_k=\begin{bmatrix}
         e^{-k/2} & 0 \\
         0 & e^{k/2} \\

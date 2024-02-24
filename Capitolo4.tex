@@ -9,7 +9,7 @@ We begin by giving some definitions:
 \end{definition}
 Since acausality and achronality are conformally invariant notions, it will be often convenient to consider the metric $g_{\mathbb{S}^2}-dt^2$ on $\D\times\R$ introduced in \refeq{emispherical} which is conformal to the Poincaré model. We give now a first useful characterization of achronal and acausal sets.
 \begin{lemma}
-    A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if and only if it is the graph of a function $f:D\to\R$ which is 1-Lipschitz, (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2}$ where we have denoted $D=\pi_{\D}(X).$ 
+    A subset $X$ of $\AS^{2,1}\cup \partial\AS^{2,1}$ is achronal (respectively acausal) if and only if it is the graph of a function $f:D\to\R$ which is 1-Lipschitz, (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2},$ where we have denoted $D=\pi_{\D}(X).$ 
 \end{lemma}
 \begin{proof}
      Let us assume $X$ is achronal. Now, since vertical lines in the Poincaré model are of timelike type, the restriction of the projection $\pi_\D:\D\times\R\to\D$ to $X$ is injective. But then, $X$ can be interpreted as the graph of a function $f:D\to\R$. By imposing that $(x,f(x))$ and $(y,f(y))$ are not connected by a timelike curve we deduce that: 
@@ -397,7 +397,7 @@ In particular if $\Lambda$ is not the boundary of a spacelike plane, then:
 \end{proposition}
 \begin{proof}
 From Proposition \ref{453}, points in $\Omega(\Lambda)$ are dual to planes disjoint from $\Lambda$, which are precisely those which do not intersect $\mathcal{C}(\Lambda)$, by the definition of convex hull. For the second statement, fix $x$ and observe that $z\in P_x$ if and only if $x\in P_z$. Hence there exists a point $z$ in the intersection $P_x\cap \Omega(\Lambda)$ if and only if $x$ is in a plane $P_z$ which is disjoint from $\Lambda$, namely when $x$ is not in $\mathcal{C}(\Lambda)$. \\
-As a consequence $\partial\mathcal{C}(\Lambda)$ consists of points dual to support planes of $\Omega(\Lambda)$. Take a support plane $P_x$ of $S_+(\Lambda)$ (hence dual to a point $x$) which meets $S_+(\Lambda)$ at $z$. If $\widetilde{z}$ denotes the corresponding point of $S_+(\widetilde{\Lambda}),$ then $\widetilde{\Lambda}\subset I^+(P_{\widetilde{z}}^-),$ and $P_{\widetilde{z}}^-\cap\widetilde{\Lambda}=\emptyset.$ Thus $P_z$, which is the projection of $P_{\widetilde{z}}^-$, is a support plane of $\mathcal{C}(\Lambda)$ touching the past boundary. As $x\in P_z$ we conclude that $x$ lies in the past boundary. Similary points of the future boundary of $\mathcal{C}(\Lambda)$ correspond to support planes for $S_-(\Lambda)$.
+As a consequence $\partial\mathcal{C}(\Lambda)$ consists of points dual to support planes of $\Omega(\Lambda)$. Take a support plane $P_x$ of $S_+(\Lambda)$ (hence dual to a point $x$) which meets $S_+(\Lambda)$ at $z$. If $\widetilde{z}$ denotes the corresponding point of $S_+(\widetilde{\Lambda}),$ then $\widetilde{\Lambda}\subset I^+(P_{\widetilde{z}}^-),$ and $P_{\widetilde{z}}^-\cap\widetilde{\Lambda}=\emptyset.$ Thus $P_z$, which is the projection of $P_{\widetilde{z}}^-$, is a support plane of $\mathcal{C}(\Lambda)$ touching the past boundary. As $x\in P_z$ we conclude that $x$ lies in the past boundary. Similarly points of the future boundary of $\mathcal{C}(\Lambda)$ correspond to support planes for $S_-(\Lambda)$.
 \end{proof}
 
 % \begin{observation}\label{465}
@@ -425,7 +425,7 @@ We can also characterize what \textit{kind} of support planes of $\CF$ are allow
 \end{proof}
 
 Now, given a spacelike support plane $P$ of $\CF$ at a point $p$, we say that $P$ is a \textit{future} (resp. \textit{past}) support plane if in a small simply connected neighbourhood of $p\in\overline{\A^{2,1}}, \CF$ is contained in the closure of the connected components of $U\setminus P$ which is the past (resp. future) of $P$. This means that there exists a future-oriented (resp. past-oriented) timelike curve leaving $\CF\cap U$ and reaching $P\cap U$. \\
-We observe that $\CF$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $\varphi$ is an element of $\PSL$, see Example \textcolor{red}{mettilo}.\\
+We observe that $\CF$ cannot have both a future and past support plane at $p$ unless $\CF$ has empty interior, a situation that happens exactly when $\varphi$ is an element of $\PSL$, see Example \ref{43}.\\
 We can now state the following lemma related to convergence of support planes: 
 \begin{lemma}\label{49}
     Let $\varphi:\S\to\S$ be an orientation-preserving homeomorphism which is not in $\PSL$, $p_n$ a sequence of points in $\partial\CF$, and $P_{\gamma_n}$ a sequence of future (resp. past) spacelike supports planes at $p_n$, for $\gamma_n\in\PSL$. Up to extracting a subsequence, we can assume $p_n\to p$ and $P_{\gamma_n}\to P.$ Then: 
@@ -457,7 +457,7 @@ We want now to focus our attention on maximal globally hyperbolic (MGH) Anti-de 
 \end{lemma}
 \begin{proof}
     Thanks to Proposition \ref{455} it suffices to prove that $\sigma$ is a proper immersion. We keep the notation of the proof of Proposition \ref{455}, consider a lift $\widehat{\sigma}:\widehat{S}\to\H^{2,1}$ We need to show that the map $\widehat{\sigma}$ is proper. We will show that if $\gamma:[0,1)\to\widehat{S}$ is a path such taht the limit $\lim_{t\to 1}\widehat{\sigma}(\gamma(t))$ exists, then also $\lim_{t \to 1}\gamma(t)$ exists. \\
-    Using the expression for the metric on $H^{2,1}$ given by Equation \refeq{metricdisk} (under the identification of $H^{2,1}$ with $H^{2}\times\mathbb{S}^{1}$ given by the composition of the projection from the universal cover with the map $\pi$ given in Equation \refeq{ogcover}), we see that the lenght of $\gamma$ for the pull-back metric is smaller than the lenght of the projection of $\gamma$ to the $\H^2$ factor, with respect to the hyperbolic metric on $\H^2$. The latter hyperbolic lenght is finite by the assumption, hence the lenght of $\gamma$ is also finite for the pull-back metric. Now the assumption of completeness on the pull-back metric implies the existence of the limit point for $\gamma(t)$.
+    Using the expression for the metric on $\H^{2,1}$ given by Equation \refeq{metricdisk} (under the identification of $\H^{2,1}$ with $\H^{2}\times\mathbb{S}^{1}$ given by the composition of the projection from the universal cover with the map $\pi$ given in Equation \refeq{ogcover}), we see that the lenght of $\gamma$ for the pull-back metric is smaller than the lenght of the projection of $\gamma$ to the $\H^2$ factor, with respect to the hyperbolic metric on $\H^2$. The latter hyperbolic lenght is finite by the assumption, hence the lenght of $\gamma$ is also finite for the pull-back metric. Now the assumption of completeness on the pull-back metric implies the existence of the limit point for $\gamma(t)$.
 \end{proof}
 
 As an immediate consequence there cannot be any globally hyperbolic spacetime with genus $0$. In fact, suppose such a spacetime exists and denote by $\Sigma$ a Cauchy surface diffeomorphic to $\mathbb{S}^2$, the developing map restricted to $\Sigma$ would be a spacelike immersion, and the pull-back metric would be complete by compactness. But this contradicts Lemma \ref{properembedding}. Hence: 
@@ -649,7 +649,7 @@ The first and second fundamental form of an immersion $\sigma$ satisfy constrain
 \begin{equation}\label{Gauss}
     K_I=-1-\text{det}_I II
 \end{equation}
-where $K_I$ is the curvature of $I$ and $\det_I II$ is $\det B$ by definition. On the other hand the Codazzi equation states that $\nabla^III$ is a totally symmetric $3-$form. I.e. 
+where $K_I$ is the curvature of $I$ and $\det_I II$ is $\det B$ by definition. On the other hand the Codazzi equation states that $\nabla^III$ is a totally symmetric $3-$form:
 \begin{equation}\label{Codazzi}
     (\nabla_V^{I}II)(W,U)=(\nabla_W^I II)(V,U).  
 \end{equation}

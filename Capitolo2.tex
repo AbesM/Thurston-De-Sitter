@@ -125,7 +125,7 @@ The Poincaré model of AdS geometry is then the cylinder $\D^n\times \R$ endowed
     \frac{4}{(1-r^2)^2}(dx_1^2+\dots+dx_n^2)-\Big(\frac{1+r^2}{1-r^2}\Big)^{2}dt^2. 
 \end{equation}
 
-It follows from the definition that each slice $\{t=c\}$ is a totally geodesic copy of $\H^n$. The metric defined in \eqref{metricdisk} also shows that the vector field $\partial/\partial t$ is a timelike non vanishing vector field on $\AS^{n,1}$, giving it the structure of a time-orientable manifold. Any choice of time orientation is preserved by the action of the deck transformations of the covering from the Poincaré to the Klein model, hence both $\H^{n,1}$ and $\A^{n,1}$ are time-orientable. \\
+It follows from the definition that each slice $\{t=c\}$ is a totally geodesic copy of $\H^n$. The metric defined in \eqref{metricdisk} also shows that the vector field $\partial/\partial t$ is a timelike non-vanishing vector field on $\AS^{n,1}$, giving it the structure of a time-orientable manifold. Any choice of time orientation is preserved by the action of the deck transformations of the covering from the Poincaré to the Klein model, hence both $\H^{n,1}$ and $\A^{n,1}$ are time-orientable. \\
 % \begin{observation}
 %     Exception made for the central line passing through $x_1=\dots=x_n=t=0,$ vertical lines are not geodesic for the metric defined in \refeq{metricdisk}.  
 % \end{observation}
@@ -179,15 +179,21 @@ In particular the light cone through a point $[x]\in \A^{n,1}$ coincides with th
  \[
     \partial\A^{n,1}\cap\mathbb{A}_{n+2}=\{y_1^2+\dots+y_n^2-y_{n+1}^2=1\}.
 \]
-In an affine chart, timelike geodesics correspond to affine lines which are entirely contained in the Anti-de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one sheeted hyperboloid, or are asymptotic to it (tangent at infinity). Spacelike geodesics are the last case, they are the intersection of two spacelike planes and meet the boundary transversally in two points.\\
+In an affine chart, timelike geodesics correspond to affine lines which are entirely contained in the Anti-de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one sheeted hyperboloid, or are asymptotic to it (tangent at infinity). Spacelike geodesics are the last case, they are the intersection of two spacelike planes and meet the boundary transversally in two points.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{projectivechart.pdf}
+    \caption{Geodesics in $\A^{2,1}$}
+    \label{projchart}
+\end{figure}
 
 %\begin{observation} Any timelike line is the projectivisation of a negative definite plane. As Isom$(\A^{n,1})\simeq \text{PO}(n,2)$ acts transitively on the space of timelike lines, and since the stabilizer of a timelike line is the group $\text{P}(O(n)\times O(2))$ which is the maximal compact subgroup of $\text{PO}(n,2)$, the space of timelike geodesics of $\A^{n,1}$ is naturally identified with the Riemannian symmetric space of PO$(n,2)$. \textcolor{red}{è una curiosità, non viene favvero utilizzato nel seguito, si potrebbe togliere.}
 %\end{observation}
 
 \subsection{Totally geodesic subspaces} Totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $\text{P}(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1.$ The negative index of $W$ can be $1, 2,$ for otherwise the intersection $\A^{n,1}\cap \text{P}(W)$ would be empty. We have several cases: 
 \begin{itemize}
-    \item If $W$ has signature ($k-1$,2), then $\text{P}(W)\cap \A^{n,1}$ is isometric to $\A^{k-1,1}$. 
+    \item If $W$ has signature ($k-1$, 2), then $\text{P}(W)\cap \A^{n,1}$ is isometric to $\A^{k-1,1}$. 
     \item If $W$ has signature $(k-2, 1)$, then it is a copy of Minkowski space $\R^{k-2,1}$, hence $\text{P}(W)\cap \A^{n,1}$ is a copy of the Klein model of hyperbolic space. 
     \item If $W$ is degenerate, then $\text{P}(W)\cap \A^{n,1},$ is a lightlike subspace foliated by lightlike geodesics tangent to the same point of $\partial\A^{n,1}$. 
 \end{itemize}  
